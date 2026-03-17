@@ -1,98 +1,92 @@
 import json
 import mimetypes
 import urllib.parse
-from http import HTTPStatus
-from http.server import BaseHTTPRequestHandler
 from pathlib import Path
-from typing import Any
+from typing import Callable, Iterable
 
 from app import ASSETS_DIR, CONFERENCES, REPOSITORY
 
 
-class handler(BaseHTTPRequestHandler):
-    def do_GET(self) -> None:
-        parsed = urllib.parse.urlparse(self.path)
-        params = urllib.parse.parse_qs(parsed.query)
-        route_path = params.get("path", [parsed.path])[0]
+def json_response(status: str, payload: dict) -> tuple[str, list[tuple[str, str]], list[bytes]]:
+    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    headers = [
+        ("Content-Type", "application/json; charset=utf-8"),
+        ("Content-Length", str(len(body))),
+        ("Cache-Control", "no-store"),
+    ]
+    return status, headers, [body]
 
-        if route_path == "/":
-            self._send_asset("index.html")
-            return
-        if route_path.startswith("/assets/"):
-            self._send_asset(route_path.removeprefix("/assets/"))
-            return
-        if route_path == "/api/papers":
-            self._handle_api_papers(params)
-            return
-        self._send_json({"error": "Not found"}, status=HTTPStatus.NOT_FOUND)
 
-    def _handle_api_papers(self, params: dict[str, list[str]]) -> None:
-        conference = params.get("conference", ["osdi"])[0].lower()
-        if conference not in CONFERENCES:
-            self._send_json(
-                {"error": f"Unsupported conference: {conference}"},
-                status=HTTPStatus.BAD_REQUEST,
-            )
-            return
+def asset_response(asset_name: str) -> tuple[str, list[tuple[str, str]], list[bytes]]:
+    assets_root = ASSETS_DIR.resolve()
+    asset_path = (ASSETS_DIR / asset_name).resolve()
+    if assets_root not in asset_path.parents and asset_path != assets_root:
+        return json_response("400 Bad Request", {"error": "Invalid asset path"})
+    if not asset_path.exists() or not asset_path.is_file():
+        return json_response("404 Not Found", {"error": "Asset not found"})
 
-        papers = REPOSITORY.get_cached_papers(conference)
-        years = sorted({paper["year"] for paper in papers}, reverse=True)
-        if not papers:
-            self._send_json(
-                {
-                    "error": "No cached data available.",
-                    "detail": "Build the local cache before deploying to Vercel.",
-                },
-                status=HTTPStatus.SERVICE_UNAVAILABLE,
-            )
-            return
+    payload = asset_path.read_bytes()
+    content_type, _ = mimetypes.guess_type(str(asset_path))
+    if asset_path.suffix == ".js":
+        content_type = "application/javascript; charset=utf-8"
+    elif asset_path.suffix == ".css":
+        content_type = "text/css; charset=utf-8"
+    elif asset_path.suffix == ".html":
+        content_type = "text/html; charset=utf-8"
+    elif asset_path.suffix == ".svg":
+        content_type = "image/svg+xml"
 
-        self._send_json(
+    headers = [
+        ("Content-Type", content_type or "application/octet-stream"),
+        ("Content-Length", str(len(payload))),
+        ("Cache-Control", "no-store"),
+    ]
+    return "200 OK", headers, [payload]
+
+
+def papers_response(query_string: str) -> tuple[str, list[tuple[str, str]], list[bytes]]:
+    params = urllib.parse.parse_qs(query_string)
+    conference = params.get("conference", ["osdi"])[0].lower()
+    if conference not in CONFERENCES:
+        return json_response("400 Bad Request", {"error": f"Unsupported conference: {conference}"})
+
+    papers = REPOSITORY.get_cached_papers(conference)
+    years = sorted({paper["year"] for paper in papers}, reverse=True)
+    if not papers:
+        return json_response(
+            "503 Service Unavailable",
             {
-                "conference": conference,
-                "conference_label": CONFERENCES[conference]["label"],
-                "available_years": years,
-                "count": len(papers),
-                "papers": papers,
-            }
+                "error": "No cached data available.",
+                "detail": "Build the local cache before deploying to Vercel.",
+            },
         )
 
-    def _send_asset(self, asset_name: str) -> None:
-        assets_root = ASSETS_DIR.resolve()
-        asset_path = (ASSETS_DIR / asset_name).resolve()
-        if assets_root not in asset_path.parents and asset_path != assets_root:
-            self._send_json({"error": "Invalid asset path"}, status=HTTPStatus.BAD_REQUEST)
-            return
-        if not asset_path.exists() or not asset_path.is_file():
-            self._send_json({"error": "Asset not found"}, status=HTTPStatus.NOT_FOUND)
-            return
+    return json_response(
+        "200 OK",
+        {
+            "conference": conference,
+            "conference_label": CONFERENCES[conference]["label"],
+            "available_years": years,
+            "count": len(papers),
+            "papers": papers,
+        },
+    )
 
-        payload = asset_path.read_bytes()
-        content_type, _ = mimetypes.guess_type(str(asset_path))
-        if asset_path.suffix == ".js":
-            content_type = "application/javascript; charset=utf-8"
-        elif asset_path.suffix == ".css":
-            content_type = "text/css; charset=utf-8"
-        elif asset_path.suffix == ".html":
-            content_type = "text/html; charset=utf-8"
-        elif asset_path.suffix == ".svg":
-            content_type = "image/svg+xml"
 
-        self.send_response(HTTPStatus.OK)
-        self.send_header("Content-Type", content_type or "application/octet-stream")
-        self.send_header("Content-Length", str(len(payload)))
-        self.send_header("Cache-Control", "no-store")
-        self.end_headers()
-        self.wfile.write(payload)
+def app(environ: dict, start_response: Callable) -> Iterable[bytes]:
+    path = environ.get("PATH_INFO", "/")
+    query_string = environ.get("QUERY_STRING", "")
+    params = urllib.parse.parse_qs(query_string)
+    route_path = params.get("path", [path])[0]
 
-    def _send_json(self, payload: dict[str, Any], status: HTTPStatus = HTTPStatus.OK) -> None:
-        data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-        self.send_response(status)
-        self.send_header("Content-Type", "application/json; charset=utf-8")
-        self.send_header("Content-Length", str(len(data)))
-        self.send_header("Cache-Control", "no-store")
-        self.end_headers()
-        self.wfile.write(data)
+    if route_path == "/":
+        status, headers, body = asset_response("index.html")
+    elif route_path.startswith("/assets/"):
+        status, headers, body = asset_response(route_path.removeprefix("/assets/"))
+    elif route_path == "/api/papers":
+        status, headers, body = papers_response(query_string)
+    else:
+        status, headers, body = json_response("404 Not Found", {"error": "Not found"})
 
-    def log_message(self, format: str, *args: Any) -> None:
-        return
+    start_response(status, headers)
+    return body
