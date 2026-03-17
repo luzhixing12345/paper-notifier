@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A 类系统会议论文浏览</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
@@ -11,8 +12,7 @@
     <section class="hero">
       <div class="hero-copy">
         <div class="eyebrow">Paper Abstract Viewer</div>
-        <h1>系统 A 类会议近 3 年录稿论文</h1>
-        <p class="hero-text">先覆盖 OSDI、NSDI、SOSP。后端从 DBLP 获取论文列表，并用 OpenAlex 尽量补摘要。页面支持按会议、年份、关键词和摘要状态筛选。</p>
+        <h1>系统领域会议录稿论文</h1>
       </div>
       <div class="hero-note">
         <span class="note-label">数据源</span>
@@ -20,13 +20,28 @@
       </div>
     </section>
 
-    <section class="panel filters">
+    <section class="view-tabs">
+      <button class="view-tab is-active" data-view="browse">浏览论文</button>
+      <button class="view-tab" data-view="favorites">我的喜欢</button>
+      <button class="view-tab" data-view="viewed">已看完</button>
+    </section>
+
+    <section class="panel filters" id="filtersPanel">
       <label class="field">
         <span>会议</span>
         <select id="conference">
           <option value="osdi">OSDI</option>
           <option value="nsdi">NSDI</option>
           <option value="sosp">SOSP</option>
+          <option value="asplos">ASPLOS</option>
+          <option value="eurosys">EuroSys</option>
+          <option value="fast">FAST</option>
+          <option value="dac">DAC</option>
+          <option value="isca">ISCA</option>
+          <option value="micro">MICRO</option>
+          <option value="hpca">HPCA</option>
+          <option value="sigmod">SIGMOD</option>
+          <option value="sigcomm">SIGCOMM</option>
         </select>
       </label>
       <label class="field">
@@ -37,7 +52,7 @@
       </label>
       <label class="field field-grow">
         <span>关键词</span>
-        <input id="keyword" type="search" placeholder="标题 / 作者 / 摘要">
+        <input id="keyword" type="search" placeholder="标题 / 作者 / 摘要" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
       </label>
       <label class="field">
         <span>排序</span>

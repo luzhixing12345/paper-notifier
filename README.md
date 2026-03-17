@@ -1,6 +1,6 @@
-# 论文会议近 3 年录稿论文浏览
+# paper-notifier
 
-本项目提供一个本地 Python HTTP 服务，用于浏览 OSDI、NSDI、SOSP 近 3 年录稿论文，并尽量补齐摘要。
+系统A会论文更新速览过滤，用于浏览 OSDI、NSDI、SOSP、ASPLOS、EuroSys、FAST、DAC、ISCA、MICRO、HPCA、SIGMOD、SIGCOMM 近 5 年录稿论文，并尽量补齐摘要。
 
 ## 使用方式
 
@@ -22,7 +22,7 @@ python3 app.py serve
 python3 app.py
 ```
 
-默认行为是先构建缓存，再启动本地网页服务。
+默认行为是检查缓存；如果缺少新增会议或缺失年份，再增量构建缓存，然后启动本地网页服务。
 
 ## 数据来源
 
@@ -32,7 +32,8 @@ python3 app.py
 
 ## 说明
 
-- 服务会把拉取结果缓存在 `data/papers_cache.json`
+- 服务会把拉取结果缓存在 `paper_cache/`
+- 目录结构为 `paper_cache/<year>/<conference>/info.json`
 - 网页服务本身只读取本地缓存，不再实时联网抓取
-- 如果需要更新数据，重新执行 `python3 app.py build-cache`
-- 目前只支持 `osdi`、`nsdi`、`sosp`
+- `python3 app.py build-cache` 默认只补新增会议和缺失年份，不会全量重建已有年份
+- 当前支持 `osdi`、`nsdi`、`sosp`、`asplos`、`eurosys`、`fast`、`dac`、`isca`、`micro`、`hpca`、`sigmod`、`sigcomm`
