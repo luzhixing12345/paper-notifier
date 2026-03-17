@@ -1,6 +1,9 @@
+import argparse
 import difflib
 import json
+import mimetypes
 import re
+from html import unescape
 import socket
 import threading
 import time
@@ -13,10 +16,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
 from bs4 import BeautifulSoup
+from tqdm import tqdm
 
 
 BASE_DIR = Path(__file__).resolve().parent
 CACHE_PATH = BASE_DIR / "data" / "papers_cache.json"
+ASSETS_DIR = BASE_DIR / "assets"
 USER_AGENT = "paper-abstract-local-service/1.0"
 REQUEST_TIMEOUT = 20
 CACHE_TTL_SECONDS = 60 * 60 * 24
@@ -25,6 +30,7 @@ MAX_OPENALEX_CANDIDATES = 10
 ABSTRACT_WORKERS = 8
 SERVER_HOST = "0.0.0.0"
 SERVER_PORT = 12315
+TRANSLATE_CHAR_LIMIT = 5000
 
 CONFERENCES = {
     "osdi": {"label": "OSDI", "dblp_slug": "osdi"},
@@ -79,6 +85,35 @@ def detect_local_ip() -> str:
         sock.close()
 
 
+def strip_jats_tags(value: str) -> str:
+    value = re.sub(r"</?(jats:)?(p|i|b|sup|sub|sc|italic|bold)>", " ", value, flags=re.I)
+    value = re.sub(r"<[^>]+>", " ", value)
+    return compact_spaces(unescape(value))
+
+
+def is_probable_abstract(text: str) -> bool:
+    normalized = compact_spaces(text)
+    if len(normalized) < 120:
+        return False
+    lowered = normalized.lower()
+    blocked_fragments = [
+        "usenix is a nonprofit organization",
+        "page not found",
+        "javascript is disabled",
+        "skip to main content",
+        "access provided by",
+        "you do not have access",
+    ]
+    return not any(fragment in lowered for fragment in blocked_fragments)
+
+
+def extract_doi(url: str) -> str:
+    if not url:
+        return ""
+    match = re.search(r"10\.\d{4,9}/[-._;()/:a-z0-9]+", url, flags=re.I)
+    return match.group(0) if match else ""
+
+
 class PaperRepository:
     def __init__(self, cache_path: Path) -> None:
         self.cache_path = cache_path
@@ -87,6 +122,9 @@ class PaperRepository:
         self.session = requests.Session()
         self.session.headers.update({"User-Agent": USER_AGENT})
         self.session.trust_env = False
+        self.translation_session = requests.Session()
+        self.translation_session.headers.update({"User-Agent": USER_AGENT})
+        self.translation_session.trust_env = True
         self.cache = self._load_cache()
 
     def _load_cache(self) -> dict[str, Any]:
@@ -144,21 +182,100 @@ class PaperRepository:
             self._save_cache()
         return years
 
-    def get_papers(self, conference: str, force_refresh: bool = False) -> list[dict[str, Any]]:
+    def get_cached_latest_years(self, conference: str) -> list[int]:
+        cached = self.cache["conference_years"].get(conference, {})
+        return list(cached.get("years", []))
+
+    def has_usable_cache(self, conferences: list[str] | None = None) -> bool:
+        conferences = conferences or list(CONFERENCES.keys())
+        for conference in conferences:
+            years = self.get_cached_latest_years(conference)
+            if not years:
+                return False
+            has_any_papers = any(
+                self.cache["papers"].get(f"{conference}:{year}", {}).get("items")
+                for year in years
+            )
+            if not has_any_papers:
+                return False
+        return True
+
+    def get_papers(self, conference: str, force_refresh: bool = False, show_progress: bool = False) -> list[dict[str, Any]]:
         years = self.get_latest_years(conference)
         papers: list[dict[str, Any]] = []
-        for year in years:
-            papers.extend(self._get_papers_for_year(conference, year, force_refresh=force_refresh))
+        year_iter = tqdm(years, desc=f"{conference} years", unit="year", leave=False) if show_progress else years
+        for year in year_iter:
+            papers.extend(
+                self._get_papers_for_year(
+                    conference,
+                    year,
+                    force_refresh=force_refresh,
+                    show_progress=show_progress,
+                )
+            )
         papers.sort(key=lambda item: (-int(item["year"]), item["title"].lower()))
         return papers
 
-    def _get_papers_for_year(self, conference: str, year: int, force_refresh: bool = False) -> list[dict[str, Any]]:
+    def get_cached_papers(self, conference: str) -> list[dict[str, Any]]:
+        years = self.get_cached_latest_years(conference)
+        papers: list[dict[str, Any]] = []
+        for year in years:
+            cache_key = f"{conference}:{year}"
+            cached = self.cache["papers"].get(cache_key, {})
+            items = cached.get("items", [])
+            if self._cached_items_need_upgrade(items):
+                items = self._upgrade_cached_items(items, conference=conference, year=year, show_progress=False)
+                self.cache["papers"][cache_key] = {
+                    "items": items,
+                    "expires_at": cached.get("expires_at", 0),
+                    "updated_at": time.time(),
+                }
+                self._save_cache()
+            papers.extend(items)
+        papers.sort(key=lambda item: (-int(item["year"]), item["title"].lower()))
+        return papers
+
+    def build_cache(
+        self,
+        conferences: list[str] | None = None,
+        force_refresh: bool = True,
+        show_progress: bool = True,
+    ) -> dict[str, int]:
+        conferences = conferences or list(CONFERENCES.keys())
+        summary: dict[str, int] = {}
+        conference_iter = tqdm(conferences, desc="conferences", unit="conf") if show_progress else conferences
+        for conference in conference_iter:
+            papers = self.get_papers(conference, force_refresh=force_refresh, show_progress=show_progress)
+            summary[conference] = len(papers)
+        self.cache.setdefault("metadata", {})
+        self.cache["metadata"]["last_build_at"] = time.time()
+        self.cache["metadata"]["mode"] = "prefetched"
+        self._save_cache()
+        return summary
+
+    def _get_papers_for_year(
+        self,
+        conference: str,
+        year: int,
+        force_refresh: bool = False,
+        show_progress: bool = False,
+    ) -> list[dict[str, Any]]:
         cache_key = f"{conference}:{year}"
         cached = self.cache["papers"].get(cache_key)
         if cached and cached.get("expires_at", 0) > time.time() and not force_refresh:
-            return cached["items"]
+            items = cached["items"]
+            if self._cached_items_need_upgrade(items):
+                items = self._upgrade_cached_items(items, conference=conference, year=year, show_progress=show_progress)
+                with self.lock:
+                    self.cache["papers"][cache_key] = {
+                        "items": items,
+                        "expires_at": time.time() + CACHE_TTL_SECONDS,
+                        "updated_at": time.time(),
+                    }
+                    self._save_cache()
+            return items
 
-        items = self._fetch_dblp_papers(conference, year)
+        items = self._fetch_dblp_papers(conference, year, show_progress=show_progress)
         with self.lock:
             self.cache["papers"][cache_key] = {
                 "items": items,
@@ -168,11 +285,20 @@ class PaperRepository:
             self._save_cache()
         return items
 
-    def _fetch_dblp_papers(self, conference: str, year: int) -> list[dict[str, Any]]:
+    def _fetch_dblp_papers(self, conference: str, year: int, show_progress: bool = False) -> list[dict[str, Any]]:
         slug = CONFERENCES[conference]["dblp_slug"]
+        list_progress = tqdm(
+            total=1,
+            desc=f"{conference} {year} 抓论文列表",
+            unit="step",
+            leave=False,
+            disable=not show_progress,
+        )
         query = urllib.parse.quote(f'toc:db/conf/{slug}/{slug}{year}.bht:')
         url = f"https://dblp.org/search/publ/api?format=json&h=1000&q={query}"
         payload = self._get_json(url)
+        list_progress.update(1)
+        list_progress.close()
         raw_hits = payload.get("result", {}).get("hits", {}).get("hit", [])
         if isinstance(raw_hits, dict):
             raw_hits = [raw_hits]
@@ -199,22 +325,193 @@ class PaperRepository:
                 "dblp_url": info.get("url", ""),
                 "source_url": info.get("ee", ""),
                 "abstract": "",
+                "abstract_zh": "",
                 "abstract_source": "",
                 "openalex_id": "",
-                "doi": "",
+                "doi": extract_doi(info.get("ee", "")),
             }
             papers.append(paper)
 
+        self._populate_abstracts(
+            papers,
+            conference=conference,
+            year=year,
+            show_progress=show_progress,
+        )
+        self._populate_translations(
+            papers,
+            conference=conference,
+            year=year,
+            show_progress=show_progress,
+        )
+        return papers
+
+    def _populate_abstracts(
+        self,
+        papers: list[dict[str, Any]],
+        conference: str,
+        year: int,
+        show_progress: bool = False,
+    ) -> None:
+        progress = tqdm(
+            total=len(papers),
+            desc=f"{conference} {year} 抓原始摘要",
+            unit="paper",
+            leave=False,
+            disable=not show_progress,
+        )
         with ThreadPoolExecutor(max_workers=ABSTRACT_WORKERS) as executor:
             future_map = {
-                executor.submit(self._find_openalex_abstract, paper["title"], paper["year"]): paper
+                executor.submit(self._find_best_abstract, paper): paper
                 for paper in papers
             }
             for future in as_completed(future_map):
                 abstract_info = future.result()
                 if abstract_info:
                     future_map[future].update(abstract_info)
-        return papers
+                progress.update(1)
+        progress.close()
+
+    def _populate_translations(
+        self,
+        papers: list[dict[str, Any]],
+        conference: str,
+        year: int,
+        show_progress: bool = False,
+    ) -> None:
+        targets = [paper for paper in papers if paper.get("abstract")]
+        progress = tqdm(
+            total=len(targets),
+            desc=f"{conference} {year} 翻译中文摘要",
+            unit="paper",
+            leave=False,
+            disable=not show_progress or not targets,
+        )
+        with ThreadPoolExecutor(max_workers=ABSTRACT_WORKERS) as executor:
+            future_map = {
+                executor.submit(self._translate_paper_abstract, paper): paper
+                for paper in targets
+            }
+            for future in as_completed(future_map):
+                translated = future.result()
+                if translated:
+                    future_map[future]["abstract_zh"] = translated
+                progress.update(1)
+        progress.close()
+
+    def _cached_items_need_upgrade(self, items: list[dict[str, Any]]) -> bool:
+        return any(
+            "abstract_zh" not in item
+            or (item.get("abstract") and not item.get("abstract_zh"))
+            or (
+                item.get("source_url")
+                and item.get("abstract_source") in {"", "OpenAlex"}
+            )
+            for item in items
+        )
+
+    def _upgrade_cached_items(
+        self,
+        items: list[dict[str, Any]],
+        conference: str = "",
+        year: int | None = None,
+        show_progress: bool = False,
+    ) -> list[dict[str, Any]]:
+        targets = [
+            item
+            for item in items
+            if (
+                "abstract_zh" not in item
+                or (item.get("abstract") and not item.get("abstract_zh"))
+                or (
+                    item.get("source_url")
+                    and item.get("abstract_source") in {"", "OpenAlex"}
+                )
+            )
+        ]
+        self._populate_abstracts(targets, conference=conference, year=year or 0, show_progress=show_progress)
+        self._populate_translations(targets, conference=conference, year=year or 0, show_progress=show_progress)
+        for item in items:
+            item.setdefault("abstract_zh", "")
+        return items
+
+    def _find_best_abstract(self, paper: dict[str, Any]) -> dict[str, str]:
+        abstract_info = self._find_source_abstract(paper)
+        if not abstract_info:
+            abstract_info = self._find_openalex_abstract(paper["title"], paper["year"])
+        return abstract_info
+
+    def _translate_paper_abstract(self, paper: dict[str, Any]) -> str:
+        return self._translate_to_chinese(paper.get("abstract", ""))
+
+    def _find_source_abstract(self, paper: dict[str, Any]) -> dict[str, str]:
+        url = paper.get("source_url", "")
+        if not url:
+            return {}
+        try:
+            html_text = self._get_text(url)
+        except requests.RequestException:
+            doi = extract_doi(url)
+            if not doi:
+                return {}
+            return self._find_acm_abstract_by_doi(doi)
+
+        abstract = self._extract_abstract_from_html(html_text)
+        if not abstract:
+            doi = extract_doi(url)
+            if doi:
+                return self._find_acm_abstract_by_doi(doi)
+            return {}
+
+        return {
+            "abstract": abstract,
+            "abstract_source": "Source Page",
+        }
+
+    def _extract_abstract_from_html(self, html_text: str) -> str:
+        soup = BeautifulSoup(html_text, "html.parser")
+
+        # Prefer site-specific content blocks before generic meta descriptions.
+        selectors = [
+            ".field-name-field-paper-description",
+            "section#abstract",
+            ".abstractSection",
+            "#abstract",
+            "[data-title='Abstract']",
+        ]
+        for selector in selectors:
+            for node in soup.select(selector):
+                text = compact_spaces(node.get_text(" ", strip=True))
+                if is_probable_abstract(text):
+                    return text
+
+        meta_keys = {"citation_abstract", "description", "og:description", "twitter:description"}
+        for meta in soup.find_all("meta"):
+            key = (meta.get("name") or meta.get("property") or "").lower()
+            if key not in meta_keys:
+                continue
+            text = compact_spaces(meta.get("content") or "")
+            if is_probable_abstract(text):
+                return text
+
+        return ""
+
+    def _find_acm_abstract_by_doi(self, doi: str) -> dict[str, str]:
+        api_url = f"https://api.crossref.org/works/{urllib.parse.quote(doi)}"
+        try:
+            message = self._get_json(api_url).get("message", {})
+        except requests.RequestException:
+            return {}
+
+        abstract = strip_jats_tags(message.get("abstract") or "")
+        if not is_probable_abstract(abstract):
+            return {}
+
+        return {
+            "abstract": abstract,
+            "abstract_source": "Crossref",
+            "doi": doi,
+        }
 
     def _find_openalex_abstract(self, title: str, year: int) -> dict[str, str]:
         encoded_title = urllib.parse.quote(title)
@@ -250,412 +547,42 @@ class PaperRepository:
             "abstract": inverted_index_to_abstract(selected.get("abstract_inverted_index")),
             "abstract_source": "OpenAlex",
             "openalex_id": selected.get("id", ""),
-            "doi": selected.get("doi") or "",
+            "doi": extract_doi(selected.get("doi") or ""),
         }
+
+    def _translate_to_chinese(self, text: str) -> str:
+        source = compact_spaces(text)
+        if not source or len(source) > TRANSLATE_CHAR_LIMIT:
+            return ""
+        try:
+            url = "https://translate.googleapis.com/translate_a/single"
+            response = self.translation_session.get(
+                url,
+                params={"client": "gtx", "sl": "en", "tl": "zh-CN", "dt": "t", "q": source},
+                timeout=REQUEST_TIMEOUT,
+            )
+            response.raise_for_status()
+            payload = response.json()
+        except (requests.RequestException, ValueError, json.JSONDecodeError):
+            return ""
+
+        if not isinstance(payload, list) or not payload or not isinstance(payload[0], list):
+            return ""
+        translated_parts = [part[0] for part in payload[0] if isinstance(part, list) and part and part[0]]
+        return compact_spaces("".join(translated_parts))
 
 
 REPOSITORY = PaperRepository(CACHE_PATH)
-
-
-def build_frontend_html() -> str:
-    conference_options = "\n".join(
-        f'<option value="{key}">{value["label"]}</option>'
-        for key, value in CONFERENCES.items()
-    )
-    return f"""<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A 类系统会议论文浏览</title>
-  <style>
-    :root {{
-      --bg: #f3efe5;
-      --panel: rgba(255, 250, 242, 0.92);
-      --ink: #1f1a16;
-      --muted: #665d55;
-      --accent: #9f3d1d;
-      --accent-soft: #f0d6ca;
-      --border: rgba(31, 26, 22, 0.12);
-      --shadow: 0 24px 60px rgba(53, 35, 24, 0.14);
-    }}
-    * {{ box-sizing: border-box; }}
-    body {{
-      margin: 0;
-      font-family: "Noto Serif SC", "Source Han Serif SC", serif;
-      background:
-        radial-gradient(circle at top left, rgba(159, 61, 29, 0.18), transparent 32%),
-        radial-gradient(circle at right 15%, rgba(33, 106, 89, 0.18), transparent 28%),
-        linear-gradient(180deg, #faf6ee 0%, var(--bg) 100%);
-      color: var(--ink);
-    }}
-    .shell {{
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 32px 20px 56px;
-    }}
-    .hero {{
-      margin-bottom: 18px;
-      padding: 28px;
-      border-radius: 24px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.78), rgba(246, 230, 219, 0.94));
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,0.8);
-    }}
-    h1 {{
-      margin: 0 0 12px;
-      font-size: clamp(30px, 4vw, 48px);
-      line-height: 1.08;
-    }}
-    .sub {{
-      margin: 0;
-      color: var(--muted);
-      max-width: 860px;
-      line-height: 1.7;
-    }}
-    .toolbar {{
-      position: sticky;
-      top: 16px;
-      z-index: 2;
-      margin: 18px 0 24px;
-      padding: 18px;
-      border-radius: 20px;
-      background: var(--panel);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 12px;
-    }}
-    label {{
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      font-size: 13px;
-      color: var(--muted);
-      letter-spacing: 0.02em;
-    }}
-    select, input {{
-      width: 100%;
-      padding: 12px 14px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.86);
-      color: var(--ink);
-      font: inherit;
-    }}
-    .toggle {{
-      align-self: end;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.86);
-      color: var(--ink);
-    }}
-    .summary {{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 20px;
-    }}
-    .stat {{
-      min-width: 180px;
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(255,255,255,0.8);
-      box-shadow: 0 12px 30px rgba(53, 35, 24, 0.08);
-    }}
-    .stat strong {{
-      display: block;
-      font-size: 28px;
-      margin-bottom: 4px;
-    }}
-    .results {{
-      display: grid;
-      gap: 16px;
-    }}
-    .paper {{
-      padding: 22px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.78);
-      border: 1px solid rgba(255,255,255,0.86);
-      box-shadow: 0 16px 36px rgba(53, 35, 24, 0.08);
-      animation: rise 320ms ease;
-    }}
-    .meta {{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 10px;
-      color: var(--muted);
-      font-size: 13px;
-    }}
-    .tag {{
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-    }}
-    .paper h2 {{
-      margin: 0 0 12px;
-      font-size: 24px;
-      line-height: 1.35;
-    }}
-    .authors {{
-      margin: 0 0 14px;
-      color: var(--muted);
-      line-height: 1.6;
-    }}
-    .abstract {{
-      margin: 0;
-      line-height: 1.75;
-    }}
-    .links {{
-      display: flex;
-      gap: 14px;
-      margin-top: 14px;
-      flex-wrap: wrap;
-    }}
-    a {{
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(159, 61, 29, 0.25);
-    }}
-    .empty {{
-      padding: 42px 20px;
-      text-align: center;
-      color: var(--muted);
-      background: rgba(255,255,255,0.72);
-      border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.86);
-    }}
-    .loading {{
-      color: var(--muted);
-      margin-bottom: 16px;
-    }}
-    @keyframes rise {{
-      from {{ opacity: 0; transform: translateY(10px); }}
-      to {{ opacity: 1; transform: translateY(0); }}
-    }}
-    @media (max-width: 960px) {{
-      .toolbar {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
-    }}
-    @media (max-width: 640px) {{
-      .shell {{ padding: 18px 14px 40px; }}
-      .hero {{ padding: 22px; }}
-      .toolbar {{ grid-template-columns: 1fr; top: 8px; }}
-      .paper h2 {{ font-size: 21px; }}
-    }}
-  </style>
-</head>
-<body>
-  <div class="shell">
-    <section class="hero">
-      <h1>系统 A 类会议近 3 年录稿论文浏览</h1>
-      <p class="sub">当前先覆盖 OSDI、NSDI、SOSP。后端实时从 DBLP 获取论文列表，并尝试用 OpenAlex 补摘要；页面支持按会议、年份、关键词和是否有摘要筛选。</p>
-    </section>
-
-    <section class="toolbar">
-      <label>会议
-        <select id="conference">{conference_options}</select>
-      </label>
-      <label>年份
-        <select id="year">
-          <option value="">全部年份</option>
-        </select>
-      </label>
-      <label>关键词
-        <input id="keyword" type="search" placeholder="标题 / 作者 / 摘要">
-      </label>
-      <label>排序
-        <select id="sort">
-          <option value="year_desc">年份降序</option>
-          <option value="title_asc">标题 A-Z</option>
-        </select>
-      </label>
-      <label class="toggle">
-        <input id="hasAbstract" type="checkbox">
-        只看有摘要
-      </label>
-    </section>
-
-    <section class="summary" id="summary"></section>
-    <div class="loading" id="loading">正在加载数据...</div>
-    <section class="results" id="results"></section>
-  </div>
-
-  <script>
-    const state = {{
-      raw: [],
-      filtered: [],
-      conference: 'osdi',
-    }};
-
-    const conferenceEl = document.getElementById('conference');
-    const yearEl = document.getElementById('year');
-    const keywordEl = document.getElementById('keyword');
-    const hasAbstractEl = document.getElementById('hasAbstract');
-    const sortEl = document.getElementById('sort');
-    const summaryEl = document.getElementById('summary');
-    const resultsEl = document.getElementById('results');
-    const loadingEl = document.getElementById('loading');
-
-    conferenceEl.addEventListener('change', () => {{
-      state.conference = conferenceEl.value;
-      loadData();
-    }});
-    yearEl.addEventListener('change', render);
-    keywordEl.addEventListener('input', render);
-    hasAbstractEl.addEventListener('change', render);
-    sortEl.addEventListener('change', render);
-
-    function escapeHtml(value) {{
-      return value
-        .replaceAll('&', '&amp;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;')
-        .replaceAll('"', '&quot;')
-        .replaceAll("'", '&#39;');
-    }}
-
-    async function loadData() {{
-      loadingEl.textContent = '正在加载数据...';
-      resultsEl.innerHTML = '';
-      summaryEl.innerHTML = '';
-      try {{
-        const res = await fetch(`/api/papers?conference=${{encodeURIComponent(state.conference)}}`);
-        const payload = await res.json();
-        state.raw = payload.papers || [];
-        fillYears(payload.available_years || []);
-        render();
-        loadingEl.textContent = '';
-      }} catch (error) {{
-        loadingEl.textContent = `加载失败：${{error.message}}`;
-      }}
-    }}
-
-    function fillYears(years) {{
-      const current = yearEl.value;
-      yearEl.innerHTML = '<option value="">全部年份</option>';
-      years.forEach((year) => {{
-        const option = document.createElement('option');
-        option.value = String(year);
-        option.textContent = String(year);
-        yearEl.appendChild(option);
-      }});
-      if ([...yearEl.options].some((item) => item.value === current)) {{
-        yearEl.value = current;
-      }}
-    }}
-
-    function render() {{
-      const year = yearEl.value;
-      const keyword = keywordEl.value.trim().toLowerCase();
-      const requireAbstract = hasAbstractEl.checked;
-      const sort = sortEl.value;
-
-      let papers = state.raw.filter((paper) => {{
-        if (year && String(paper.year) !== year) {{
-          return false;
-        }}
-        if (requireAbstract && !paper.abstract) {{
-          return false;
-        }}
-        if (!keyword) {{
-          return true;
-        }}
-        const haystack = [
-          paper.title,
-          ...(paper.authors || []),
-          paper.abstract || '',
-        ].join(' ').toLowerCase();
-        return haystack.includes(keyword);
-      }});
-
-      papers.sort((a, b) => {{
-        if (sort === 'title_asc') {{
-          return a.title.localeCompare(b.title);
-        }}
-        return Number(b.year) - Number(a.year) || a.title.localeCompare(b.title);
-      }});
-
-      state.filtered = papers;
-      renderSummary();
-      renderResults();
-    }}
-
-    function renderSummary() {{
-      const total = state.filtered.length;
-      const abstractCount = state.filtered.filter((item) => item.abstract).length;
-      const yearCount = new Set(state.filtered.map((item) => item.year)).size;
-      summaryEl.innerHTML = `
-        <article class="stat"><strong>${{total}}</strong>当前结果</article>
-        <article class="stat"><strong>${{abstractCount}}</strong>带摘要论文</article>
-        <article class="stat"><strong>${{yearCount}}</strong>覆盖年份</article>
-      `;
-    }}
-
-    function renderResults() {{
-      if (!state.filtered.length) {{
-        resultsEl.innerHTML = '<div class="empty">当前筛选条件下没有结果。</div>';
-        return;
-      }}
-
-      resultsEl.innerHTML = state.filtered.map((paper) => {{
-        const tags = [
-          `<span class="tag">${{paper.conference_label}}</span>`,
-          `<span class="tag">${{paper.year}}</span>`,
-        ];
-        if (paper.pages) {{
-          tags.push(`<span class="tag">pp. ${{escapeHtml(paper.pages)}}</span>`);
-        }}
-        if (paper.abstract_source) {{
-          tags.push(`<span class="tag">摘要: ${{escapeHtml(paper.abstract_source)}}</span>`);
-        }}
-
-        const links = [];
-        if (paper.source_url) {{
-          links.push(`<a href="${{paper.source_url}}" target="_blank" rel="noreferrer">原始页面</a>`);
-        }}
-        if (paper.dblp_url) {{
-          links.push(`<a href="${{paper.dblp_url}}" target="_blank" rel="noreferrer">DBLP</a>`);
-        }}
-        if (paper.openalex_id) {{
-          links.push(`<a href="${{paper.openalex_id}}" target="_blank" rel="noreferrer">OpenAlex</a>`);
-        }}
-        if (paper.doi) {{
-          links.push(`<a href="${{paper.doi}}" target="_blank" rel="noreferrer">DOI</a>`);
-        }}
-
-        return `
-          <article class="paper">
-            <div class="meta">${{tags.join('')}}</div>
-            <h2>${{escapeHtml(paper.title)}}</h2>
-            <p class="authors">${{escapeHtml((paper.authors || []).join(', '))}}</p>
-            <p class="abstract">${{escapeHtml(paper.abstract || '暂无摘要')}}</p>
-            <div class="links">${{links.join('')}}</div>
-          </article>
-        `;
-      }}).join('');
-    }}
-
-    loadData();
-  </script>
-</body>
-</html>
-"""
 
 
 class PaperRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:
         parsed = urllib.parse.urlparse(self.path)
         if parsed.path == "/":
-            self._send_html(build_frontend_html())
+            self._send_asset("index.html")
+            return
+        if parsed.path.startswith("/assets/"):
+            self._send_asset(parsed.path.removeprefix("/assets/"))
             return
         if parsed.path == "/api/papers":
             self._handle_api_papers(parsed.query)
@@ -665,7 +592,6 @@ class PaperRequestHandler(BaseHTTPRequestHandler):
     def _handle_api_papers(self, query_string: str) -> None:
         params = urllib.parse.parse_qs(query_string)
         conference = params.get("conference", ["osdi"])[0].lower()
-        force_refresh = params.get("refresh", ["0"])[0] == "1"
         if conference not in CONFERENCES:
             self._send_json(
                 {"error": f"Unsupported conference: {conference}"},
@@ -673,32 +599,51 @@ class PaperRequestHandler(BaseHTTPRequestHandler):
             )
             return
 
-        try:
-            papers = REPOSITORY.get_papers(conference, force_refresh=force_refresh)
-            years = sorted({paper["year"] for paper in papers}, reverse=True)
+        papers = REPOSITORY.get_cached_papers(conference)
+        years = sorted({paper["year"] for paper in papers}, reverse=True)
+        if not papers:
             self._send_json(
                 {
-                    "conference": conference,
-                    "conference_label": CONFERENCES[conference]["label"],
-                    "available_years": years,
-                    "count": len(papers),
-                    "papers": papers,
-                }
-            )
-        except requests.RequestException as exc:
-            self._send_json(
-                {
-                    "error": "Failed to fetch remote conference data.",
-                    "detail": str(exc),
+                    "error": "No cached data available.",
+                    "detail": "Run `python3 app.py build-cache` first, then open the web page.",
                 },
-                status=HTTPStatus.BAD_GATEWAY,
+                status=HTTPStatus.SERVICE_UNAVAILABLE,
             )
+            return
 
-    def _send_html(self, content: str, status: HTTPStatus = HTTPStatus.OK) -> None:
-        payload = content.encode("utf-8")
-        self.send_response(status)
-        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self._send_json(
+            {
+                "conference": conference,
+                "conference_label": CONFERENCES[conference]["label"],
+                "available_years": years,
+                "count": len(papers),
+                "papers": papers,
+            }
+        )
+
+    def _send_asset(self, asset_name: str) -> None:
+        assets_root = ASSETS_DIR.resolve()
+        asset_path = (ASSETS_DIR / asset_name).resolve()
+        if assets_root not in asset_path.parents and asset_path != assets_root:
+            self._send_json({"error": "Invalid asset path"}, status=HTTPStatus.BAD_REQUEST)
+            return
+        if not asset_path.exists() or not asset_path.is_file():
+            self._send_json({"error": "Asset not found"}, status=HTTPStatus.NOT_FOUND)
+            return
+
+        payload = asset_path.read_bytes()
+        content_type, _ = mimetypes.guess_type(str(asset_path))
+        if asset_path.suffix == ".js":
+            content_type = "application/javascript; charset=utf-8"
+        elif asset_path.suffix == ".css":
+            content_type = "text/css; charset=utf-8"
+        elif asset_path.suffix == ".html":
+            content_type = "text/html; charset=utf-8"
+
+        self.send_response(HTTPStatus.OK)
+        self.send_header("Content-Type", content_type or "application/octet-stream")
         self.send_header("Content-Length", str(len(payload)))
+        self.send_header("Cache-Control", "no-store")
         self.end_headers()
         self.wfile.write(payload)
 
@@ -707,6 +652,7 @@ class PaperRequestHandler(BaseHTTPRequestHandler):
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(data)))
+        self.send_header("Cache-Control", "no-store")
         self.end_headers()
         self.wfile.write(data)
 
@@ -714,12 +660,50 @@ class PaperRequestHandler(BaseHTTPRequestHandler):
         return
 
 
-def main() -> None:
+def run_server() -> None:
     server = ThreadingHTTPServer((SERVER_HOST, SERVER_PORT), PaperRequestHandler)
     local_ip = detect_local_ip()
     print(f"Serving on http://127.0.0.1:{SERVER_PORT}")
     print(f"Serving on http://{local_ip}:{SERVER_PORT}")
-    server.serve_forever()
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print("\nStopping server...")
+    finally:
+        server.shutdown()
+        server.server_close()
+        print("Server stopped.")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Conference paper cache builder and local viewer")
+    parser.add_argument(
+        "command",
+        nargs="?",
+        default="run",
+        choices=["run", "build-cache", "serve"],
+        help="run: build cache then serve; build-cache: only build cache; serve: only serve cached data",
+    )
+    args = parser.parse_args()
+
+    if args.command == "build-cache":
+        print("Building local cache...")
+        summary = REPOSITORY.build_cache(force_refresh=True, show_progress=True)
+        for conference, count in summary.items():
+            print(f"{conference}: {count} papers cached")
+
+    if args.command == "run":
+        if REPOSITORY.has_usable_cache():
+            print("Cache found, starting server directly...")
+        else:
+            print("No usable cache found, building local cache...")
+            summary = REPOSITORY.build_cache(force_refresh=True, show_progress=True)
+            for conference, count in summary.items():
+                print(f"{conference}: {count} papers cached")
+        run_server()
+
+    if args.command == "serve":
+        run_server()
 
 
 if __name__ == "__main__":

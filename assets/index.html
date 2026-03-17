@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A 类系统会议论文浏览</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Paper Abstract Viewer</div>
+        <h1>系统 A 类会议近 3 年录稿论文</h1>
+        <p class="hero-text">先覆盖 OSDI、NSDI、SOSP。后端从 DBLP 获取论文列表，并用 OpenAlex 尽量补摘要。页面支持按会议、年份、关键词和摘要状态筛选。</p>
+      </div>
+      <div class="hero-note">
+        <span class="note-label">数据源</span>
+        <span class="note-value">DBLP + OpenAlex</span>
+      </div>
+    </section>
+
+    <section class="panel filters">
+      <label class="field">
+        <span>会议</span>
+        <select id="conference">
+          <option value="osdi">OSDI</option>
+          <option value="nsdi">NSDI</option>
+          <option value="sosp">SOSP</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>年份</span>
+        <select id="year">
+          <option value="">全部年份</option>
+        </select>
+      </label>
+      <label class="field field-grow">
+        <span>关键词</span>
+        <input id="keyword" type="search" placeholder="标题 / 作者 / 摘要">
+      </label>
+      <label class="field">
+        <span>排序</span>
+        <select id="sort">
+          <option value="year_desc">年份降序</option>
+          <option value="title_asc">标题 A-Z</option>
+        </select>
+      </label>
+      <label class="check">
+        <input id="hasAbstract" type="checkbox">
+        <span>只看有摘要</span>
+      </label>
+    </section>
+
+    <section class="stats" id="summary"></section>
+    <div class="status" id="loading">正在加载数据...</div>
+    <section class="results" id="results"></section>
+  </main>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
