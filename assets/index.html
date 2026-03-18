@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A 类系统会议论文浏览</title>
+  <title>A 类系统会议期刊论文浏览</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -12,7 +12,7 @@
     <section class="hero">
       <div class="hero-copy">
         <div class="eyebrow">Paper Abstract Viewer</div>
-        <h1>系统领域会议录稿论文</h1>
+        <h1>系统领域会议期刊录稿论文</h1>
       </div>
       <div class="hero-note">
         <span class="note-label">数据源</span>
@@ -28,23 +28,25 @@
     </section>
 
     <section class="panel filters" id="filtersPanel">
-      <div class="filter-group">
-        <span class="filter-label">会议</span>
-        <div class="filter-chips" id="conferenceFilters"></div>
-      </div>
-      <div class="filter-group">
-        <span class="filter-label">年份</span>
-        <div class="filter-chips" id="yearFilters"></div>
-      </div>
-      <div class="filter-toolbar">
-        <label class="field field-grow">
-        <span>关键词</span>
-        <input id="keyword" type="search" placeholder="标题 / 作者 / 摘要" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-        </label>
-        <label class="check">
-          <input id="hasAbstract" type="checkbox">
-          <span>只看有摘要</span>
-        </label>
+      <div class="filters-body" id="filtersBody">
+        <div class="filter-group">
+          <span class="filter-label">会议</span>
+          <div class="filter-chips" id="conferenceFilters"></div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">年份</span>
+          <div class="filter-chips" id="yearFilters"></div>
+        </div>
+        <div class="filter-toolbar">
+          <label class="field field-grow">
+          <span>关键词</span>
+          <input id="keyword" type="search" placeholder="标题 / 作者 / 摘要" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+          </label>
+          <label class="check">
+            <input id="hasAbstract" type="checkbox">
+            <span>只看有摘要</span>
+          </label>
+        </div>
       </div>
     </section>
 

@@ -6,22 +6,22 @@
       "year": 2022,
       "title": "Predictable vFabric on informative data plane.",
       "authors": [
-        "Shuai Wang 0028",
+        "Shuai Wang",
         "Kaihui Gao",
-        "Kun Qian 0004",
-        "Dan Li 0001",
-        "Rui Miao 0001",
-        "Bo Li 0061",
-        "Yu Zhou 0008",
+        "Kun Qian",
+        "Dan Li",
+        "Rui Miao",
+        "Bo Li",
+        "Yu Zhou",
         "Ennan Zhai",
-        "Chen Sun 0005",
+        "Chen Sun",
         "Jiaqi Gao",
         "Dai Zhang",
         "Binzhang Fu",
         "Frank Kelly",
         "Dennis Cai",
         "Hongqiang Harry Liu",
-        "Ming Zhang 0005"
+        "Ming Zhang"
       ],
       "pages": "615-632",
       "type": "Conference and Workshop Papers",
@@ -45,7 +45,7 @@
         "Vamsi Addanki",
         "Maria Apostolaki",
         "Manya Ghobadi",
-        "Stefan Schmid 0001",
+        "Stefan Schmid",
         "Laurent Vanbever"
       ],
       "pages": "36-52",
@@ -86,7 +86,7 @@
         "Mikel Jimenez Fernandez",
         "Petr Lapukhov",
         "Guyue Liu",
-        "Ying Zhang 0022"
+        "Ying Zhang"
       ],
       "pages": "250-263",
       "type": "Conference and Workshop Papers",
@@ -186,7 +186,7 @@
         "Nirav Atre",
         "Hugo Sadok",
         "Erica Chiang",
-        "Weina Wang 0001",
+        "Weina Wang",
         "Justine Sherry"
       ],
       "pages": "723-738",
@@ -210,7 +210,7 @@
       "authors": [
         "Qizhe Cai",
         "Mina Tahmasbi Arashloo",
-        "Rachit Agarwal 0001"
+        "Rachit Agarwal"
       ],
       "pages": "53-65",
       "type": "Conference and Workshop Papers",
@@ -235,7 +235,7 @@
         "Midhul Vuppalapati",
         "Jaehyun Hwang",
         "Christos Kozyrakis",
-        "Rachit Agarwal 0001"
+        "Rachit Agarwal"
       ],
       "pages": "767-779",
       "type": "Conference and Workshop Papers",
@@ -281,12 +281,12 @@
       "authors": [
         "Huangxun Chen",
         "Yukai Miao",
-        "Li Chen 0008",
-        "Haifeng Sun 0001",
-        "Hong Xu 0001",
-        "Libin Liu 0001",
-        "Gong Zhang 0001",
-        "Wei Wang 0011"
+        "Li Chen",
+        "Haifeng Sun",
+        "Hong Xu",
+        "Libin Liu",
+        "Gong Zhang",
+        "Wei Wang"
       ],
       "pages": "281-297",
       "type": "Conference and Workshop Papers",
@@ -336,7 +336,7 @@
         "Zheng Gong",
         "Lubing Han",
         "Zhenlin An",
-        "Lei Yang 0025",
+        "Lei Yang",
         "Siqi Ding",
         "Yu Xiang"
       ],
@@ -360,7 +360,7 @@
       "title": "Elasticity detection: a building block for internet congestion control.",
       "authors": [
         "Prateesh Goyal",
-        "Akshay Narayan 0001",
+        "Akshay Narayan",
         "Frank Cangialosi",
         "Srinivas Narayana",
         "Mohammad Alizadeh",
@@ -387,9 +387,9 @@
       "authors": [
         "Dong Guo",
         "Shenshen Chen",
-        "Kai Gao 0001",
+        "Kai Gao",
         "Qiao Xiang",
-        "Ying Zhang 0022",
+        "Ying Zhang",
         "Y. Richard Yang"
       ],
       "pages": "314-335",
@@ -411,11 +411,11 @@
       "year": 2022,
       "title": "Cyclops: an FSO-based wireless link for VR headsets.",
       "authors": [
-        "Himanshu Gupta 0001",
+        "Himanshu Gupta",
         "Max Curran",
         "Jon P. Longtin",
         "Torin Rockwell",
-        "Kai Zheng 0017",
+        "Kai Zheng",
         "Mallesham Dasari"
       ],
       "pages": "601-614",
@@ -437,15 +437,15 @@
       "year": 2022,
       "title": "Vivisecting mobility management in 5G cellular networks.",
       "authors": [
-        "Ahmad Hassan 0004",
+        "Ahmad Hassan",
         "Arvind Narayanan",
         "Anlan Zhang",
-        "Wei Ye 0009",
+        "Wei Ye",
         "Ruiyang Zhu",
         "Shuowei Jin",
         "Jason Carpenter",
         "Z. Morley Mao",
-        "Feng Qian 0001",
+        "Feng Qian",
         "Zhi-Li Zhang"
       ],
       "pages": "86-100",
@@ -520,7 +520,7 @@
       "authors": [
         "Yiran Lei",
         "Liangcheng Yu",
-        "Vincent Liu 0001",
+        "Vincent Liu",
         "Mingwei Xu"
       ],
       "pages": "516-529",
@@ -542,8 +542,8 @@
       "year": 2022,
       "title": "LiveNet: a low-latency video transport network for large-scale live streaming.",
       "authors": [
-        "Jinyang Li 0009",
-        "Zhenyu Li 0001",
+        "Jinyang Li",
+        "Zhenyu Li",
         "Ri Lu",
         "Kai Xiao",
         "Songlin Li",
@@ -551,7 +551,7 @@
         "Jingyu Yang",
         "Chunli Zong",
         "Aiyun Chen",
-        "Qinghua Wu 0004",
+        "Qinghua Wu",
         "Chen Sun",
         "Gareth Tyson",
         "Hongqiang Harry Liu"
@@ -576,7 +576,7 @@
       "title": "SimBricks: end-to-end network system evaluation with modular simulation.",
       "authors": [
         "Hejing Li",
-        "Jialin Li 0001",
+        "Jialin Li",
         "Antoine Kaufmann"
       ],
       "pages": "380-396",
@@ -600,12 +600,12 @@
       "authors": [
         "Yuanjie Li",
         "Hewu Li",
-        "Wei Liu 0192",
+        "Wei Liu",
         "Lixin Liu",
         "Yimei Chen",
         "Jianping Wu",
-        "Qian Wu 0001",
-        "Jun Liu 0063",
+        "Qian Wu",
+        "Jun Liu",
         "Zeqi Lai"
       ],
       "pages": "298-313",
@@ -636,7 +636,7 @@
         "Ziyue Zhang",
         "Dennis Cai",
         "Hongqiang Harry Liu",
-        "Ming Zhang 0005"
+        "Ming Zhang"
       ],
       "pages": "826-839",
       "type": "Conference and Workshop Papers",
@@ -686,11 +686,11 @@
       "authors": [
         "Zili Meng",
         "Yaning Guo",
-        "Chen Sun 0005",
-        "Bo Wang 0066",
+        "Chen Sun",
+        "Bo Wang",
         "Justine Sherry",
         "Hongqiang Harry Liu",
-        "Mingwei Xu 0001"
+        "Mingwei Xu"
       ],
       "pages": "193-206",
       "type": "Conference and Workshop Papers",
@@ -711,12 +711,12 @@
       "year": 2022,
       "title": "From luna to solar: the evolutions of the compute-to-storage networks in Alibaba cloud.",
       "authors": [
-        "Rui Miao 0001",
+        "Rui Miao",
         "Lingjun Zhu",
         "Shu Ma",
-        "Kun Qian 0004",
+        "Kun Qian",
         "Shujun Zhuang",
-        "Bo Li 0061",
+        "Bo Li",
         "Shuguang Cheng",
         "Jiaqi Gao",
         "Yan Zhuang",
@@ -798,7 +798,7 @@
         "Joon Ong",
         "Arjun Singh",
         "Muhammad Mukarram Bin Tariq",
-        "Rui Wang 0025",
+        "Rui Wang",
         "Jianan Zhang",
         "Virginia Beauregard",
         "Patrick Conner",
@@ -865,7 +865,7 @@
         "Yuchung Cheng",
         "Qianwen Yin",
         "Qiaobin Fu",
-        "Gautam Kumar 0001",
+        "Gautam Kumar",
         "Masoud Moshref",
         "Junhua Yan",
         "Van Jacobson",
@@ -915,7 +915,7 @@
       "title": "RF-protect: privacy against device-free human tracking.",
       "authors": [
         "Jayanth Shenoy",
-        "Zikun Liu 0002",
+        "Zikun Liu",
         "Bill Tao",
         "Zachary Kabelac",
         "Deepak Vasisht"
@@ -1141,14 +1141,14 @@
       "title": "Mobile access bandwidth in practice: measurement, analysis, and implications.",
       "authors": [
         "Xinlei Yang",
-        "Hao Lin 0005",
-        "Zhenhua Li 0001",
-        "Feng Qian 0001",
+        "Hao Lin",
+        "Zhenhua Li",
+        "Feng Qian",
         "Xingyao Li",
         "Zhiming He",
         "Xudong Wu",
-        "Xianlong Wang 0003",
-        "Yunhao Liu 0001",
+        "Xianlong Wang",
+        "Yunhao Liu",
         "Zhi Liao",
         "Daqiang Hu",
         "Tianyin Xu"
@@ -1173,13 +1173,13 @@
       "title": "DeepQueueNet: towards scalable and generalized network performance estimation with packet-level visibility.",
       "authors": [
         "Qingqing Yang",
-        "Xi Peng 0006",
-        "Li Chen 0008",
-        "Libin Liu 0001",
+        "Xi Peng",
+        "Li Chen",
+        "Libin Liu",
         "Jingze Zhang",
-        "Hong Xu 0001",
+        "Hong Xu",
         "Baochun Li",
-        "Gong Zhang 0001"
+        "Gong Zhang"
       ],
       "pages": "441-457",
       "type": "Conference and Workshop Papers",
@@ -1202,7 +1202,7 @@
       "authors": [
         "Hyunho Yeo",
         "Hwijoon Lim",
-        "Jaehong Kim 0002",
+        "Jaehong Kim",
         "Youngmok Jung",
         "Juncheol Ye",
         "Dongsu Han"
@@ -1227,7 +1227,7 @@
       "title": "Practical GAN-based synthetic IP header trace generation using NetShare.",
       "authors": [
         "Yucheng Yin",
-        "Zinan Lin 0001",
+        "Zinan Lin",
         "Minhao Jin",
         "Giulia Fanti",
         "Vyas Sekar"
@@ -1253,7 +1253,7 @@
       "authors": [
         "Liangcheng Yu",
         "John Sonchack",
-        "Vincent Liu 0001"
+        "Vincent Liu"
       ],
       "pages": "219-232",
       "type": "Conference and Workshop Papers",
@@ -1276,12 +1276,12 @@
       "authors": [
         "Xinjie Yuan",
         "Mingzhou Wu",
-        "Zhi Wang 0001",
-        "Yifei Zhu 0001",
+        "Zhi Wang",
+        "Yifei Zhu",
         "Ming Ma",
         "Junjian Guo",
         "Zhi-Li Zhang",
-        "Wenwu Zhu 0001"
+        "Wenwu Zhu"
       ],
       "pages": "101-113",
       "type": "Conference and Workshop Papers",
@@ -1302,10 +1302,10 @@
       "year": 2022,
       "title": "Aequitas: admission control for performance-critical RPCs in datacenters.",
       "authors": [
-        "Yiwen Zhang 0008",
-        "Gautam Kumar 0001",
+        "Yiwen Zhang",
+        "Gautam Kumar",
         "Nandita Dukkipati",
-        "Xian Wu 0001",
+        "Xian Wu",
         "Priyaranjan Jha",
         "Mosharaf Chowdhury",
         "Amin Vahdat"
@@ -1329,7 +1329,7 @@
       "year": 2022,
       "title": "Symbolic router execution.",
       "authors": [
-        "Peng Zhang 0011",
+        "Peng Zhang",
         "Dan Wang",
         "Aaron Gember-Jacobson"
       ],
@@ -1352,11 +1352,11 @@
       "year": 2022,
       "title": "LiteFlow: towards high-performance adaptive neural networks for kernel datapath.",
       "authors": [
-        "Junxue Zhang 0001",
+        "Junxue Zhang",
         "Chaoliang Zeng",
-        "Hong Zhang 0025",
+        "Hong Zhang",
         "Shuihai Hu",
-        "Kai Chen 0005"
+        "Kai Chen"
       ],
       "pages": "414-427",
       "type": "Conference and Workshop Papers",
@@ -1380,9 +1380,9 @@
         "Yihao Zhao",
         "Yuanqiang Liu",
         "Yanghua Peng",
-        "Yibo Zhu 0001",
+        "Yibo Zhu",
         "Xuanzhe Liu",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "428-440",
       "type": "Conference and Workshop Papers",
@@ -1429,10 +1429,10 @@
       "title": "FlyMon: enabling on-the-fly task reconfiguration for network measurement.",
       "authors": [
         "Hao Zheng",
-        "Chen Tian 0001",
-        "Tong Yang 0003",
+        "Chen Tian",
+        "Tong Yang",
         "Huiping Lin",
-        "Chang Liu 0001",
+        "Chang Liu",
         "Zhaochen Zhang",
         "Wanchun Dou",
         "Guihai Chen"
@@ -1457,13 +1457,13 @@
       "title": "Meissa: scalable network testing for programmable data planes.",
       "authors": [
         "Naiqian Zheng",
-        "Mengqi Liu 0001",
+        "Mengqi Liu",
         "Ennan Zhai",
         "Hongqiang Harry Liu",
         "Yifan Li",
-        "Kaicheng Yang 0001",
+        "Kaicheng Yang",
         "Xuanzhe Liu",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "350-364",
       "type": "Conference and Workshop Papers",

@@ -6,14 +6,14 @@
       "year": 2024,
       "title": "Microkernel Goes General: Performance and Compatibility in the HongMeng Production Microkernel.",
       "authors": [
-        "Haibo Chen 0001",
+        "Haibo Chen",
         "Xie Miao",
-        "Ning Jia 0004",
+        "Ning Jia",
         "Nan Wang",
         "Yu Li",
         "Nian Liu",
         "Yutao Liu",
-        "Fei Wang 0130",
+        "Fei Wang",
         "Qiang Huang",
         "Kun Li",
         "Hongyang Yang",
@@ -41,7 +41,7 @@
       "year": 2024,
       "title": "Performance Interfaces for Hardware Accelerators.",
       "authors": [
-        "Jiacheng Ma 0002",
+        "Jiacheng Ma",
         "Rishabh R. Iyer",
         "Sahand Kashani",
         "Mahyar Emami",
@@ -67,8 +67,8 @@
       "year": 2024,
       "title": "Data-flow Availability: Achieving Timing Assurance in Autonomous Systems.",
       "authors": [
-        "Ao Li 0006",
-        "Ning Zhang 0017"
+        "Ao Li",
+        "Ning Zhang"
       ],
       "pages": "445-463",
       "type": "Conference and Workshop Papers",
@@ -89,11 +89,11 @@
       "year": 2024,
       "title": "Fairness in Serving Large Language Models.",
       "authors": [
-        "Ying Sheng 0007",
+        "Ying Sheng",
         "Shiyi Cao",
         "Dacheng Li",
         "Banghua Zhu",
-        "Zhuohan Li 0001",
+        "Zhuohan Li",
         "Danyang Zhuo",
         "Joseph E. Gonzalez",
         "Ion Stoica"
@@ -117,15 +117,15 @@
       "year": 2024,
       "title": "Anvil: Verifying Liveness of Cluster Management Controllers.",
       "authors": [
-        "Xudong Sun 0013",
+        "Xudong Sun",
         "Wenjie Ma",
         "Jiawei Tyler Gu",
         "Zicheng Ma",
         "Tej Chajed",
         "Jon Howell",
-        "Andrea Lattuada 0001",
+        "Andrea Lattuada",
         "Oded Padon",
-        "Lalith Suresh 0001",
+        "Lalith Suresh",
         "Adriana Szekeres",
         "Tianyin Xu"
       ],
@@ -254,16 +254,16 @@
       "authors": [
         "Lei Chen",
         "Shi Liu",
-        "Chenxi Wang 0005",
+        "Chenxi Wang",
         "Haoran Ma",
-        "Yifan Qiao 0002",
-        "Zhe Wang 0017",
-        "Chenggang Wu 0002",
+        "Yifan Qiao",
+        "Zhe Wang",
+        "Chenggang Wu",
         "Youyou Lu",
-        "Xiaobing Feng 0002",
+        "Xiaobing Feng",
         "Huimin Cui",
-        "Shan Lu 0001",
-        "Harry Xu 0001"
+        "Shan Lu",
+        "Harry Xu"
       ],
       "pages": "77-95",
       "type": "Conference and Workshop Papers",
@@ -285,7 +285,7 @@
       "title": "MAST: Global Scheduling of ML Training across Geo-Distributed Datacenters at Hyperscale.",
       "authors": [
         "Arnab Choudhury",
-        "Yang Wang 0009",
+        "Yang Wang",
         "Tuomas Pelkonen",
         "Kutta Srinivasan",
         "Abha Jain",
@@ -318,7 +318,7 @@
       "title": "ServiceLab: Preventing Tiny Performance Regressions at Hyperscale through Pre-Production Testing.",
       "authors": [
         "Mike Chow",
-        "Yang Wang 0009",
+        "Yang Wang",
         "William Wang",
         "Ayichew Hailu",
         "Rohan Bopardikar",
@@ -406,7 +406,7 @@
       "year": 2024,
       "title": "ServerlessLLM: Low-Latency Serverless Inference for Large Language Models.",
       "authors": [
-        "Yao Fu 0013",
+        "Yao Fu",
         "Leyang Xue",
         "Yeqi Huang",
         "Andrei-Octavian Brabete",
@@ -509,7 +509,7 @@
       "title": "Detecting Logic Bugs in Database Engines via Equivalent Expression Transformation.",
       "authors": [
         "Zu-Ming Jiang",
-        "Zhendong Su 0001"
+        "Zhendong Su"
       ],
       "pages": "821-835",
       "type": "Conference and Workshop Papers",
@@ -554,7 +554,7 @@
       "year": 2024,
       "title": "Optimizing Resource Allocation in Hyperscale Datacenters: Scalability, Usability, and Experiences.",
       "authors": [
-        "Neeraj Kumar 0004",
+        "Neeraj Kumar",
         "Pol Mauri Ruiz",
         "Vijay Menon",
         "Igor Kabiljo",
@@ -661,9 +661,9 @@
         "Chaofan Lin",
         "Zhenhua Han",
         "Chengruidong Zhang",
-        "Yuqing Yang 0001",
-        "Fan Yang 0024",
-        "Chen Chen 0067",
+        "Yuqing Yang",
+        "Fan Yang",
+        "Chen Chen",
         "Lili Qiu"
       ],
       "pages": "929-945",
@@ -688,15 +688,15 @@
         "Zhiqi Lin",
         "Youshan Miao",
         "Quanlu Zhang",
-        "Fan Yang 0024",
+        "Fan Yang",
         "Yi Zhu",
-        "Cheng Li 0001",
+        "Cheng Li",
         "Saeed Maleki",
         "Xu Cao",
         "Ning Shang",
         "Yilei Yang",
         "Weijiang Xu",
-        "Mao Yang 0004",
+        "Mao Yang",
         "Lintao Zhang",
         "Lidong Zhou"
       ],
@@ -719,12 +719,12 @@
       "year": 2024,
       "title": "ChameleonAPI: Automatic and Efficient Customization of Neural Networks for ML Applications.",
       "authors": [
-        "Yuhan Liu 0004",
-        "Chengcheng Wan 0001",
+        "Yuhan Liu",
+        "Chengcheng Wan",
         "Kuntai Du",
         "Henry Hoffmann",
         "Junchen Jiang",
-        "Shan Lu 0001",
+        "Shan Lu",
         "Michael Maire"
       ],
       "pages": "365-386",
@@ -771,15 +771,15 @@
       "title": "DRust: Language-Guided Distributed Shared Memory with Fine Granularity, Full Transparency, and Ultra Efficiency.",
       "authors": [
         "Haoran Ma",
-        "Yifan Qiao 0002",
+        "Yifan Qiao",
         "Shi Liu",
         "Shan Yu",
         "Yuanjiang Ni",
         "Qingda Lu",
         "Jiesheng Wu",
-        "Yiying Zhang 0005",
+        "Yiying Zhang",
         "Miryung Kim",
-        "Harry Xu 0001"
+        "Harry Xu"
       ],
       "pages": "97-115",
       "type": "Conference and Workshop Papers",
@@ -850,10 +850,10 @@
       "title": "Burstable Cloud Block Storage with Data Processing Units.",
       "authors": [
         "Junyi Shu",
-        "Kun Qian 0004",
+        "Kun Qian",
         "Ennan Zhai",
         "Xuanzhe Liu",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "783-799",
       "type": "Conference and Workshop Papers",
@@ -909,7 +909,7 @@
         "Vitaly Mayatskikh",
         "Raghu Raja",
         "Daniel Walton",
-        "Rachit Agarwal 0001",
+        "Rachit Agarwal",
         "Shrijeet Mukherjee",
         "Christos Kozyrakis"
       ],
@@ -932,8 +932,8 @@
       "year": 2024,
       "title": "Validating the eBPF Verifier via State Embedding.",
       "authors": [
-        "Hao Sun 0021",
-        "Zhendong Su 0001"
+        "Hao Sun",
+        "Zhendong Su"
       ],
       "pages": "615-628",
       "type": "Conference and Workshop Papers",
@@ -954,13 +954,13 @@
       "year": 2024,
       "title": "Llumnix: Dynamic Scheduling for Large Language Model Serving.",
       "authors": [
-        "Biao Sun 0002",
+        "Biao Sun",
         "Ziming Huang",
         "Hanyu Zhao",
         "Wencong Xiao",
         "Xinyi Zhang",
-        "Yong Li 0045",
-        "Wei Lin 0016"
+        "Yong Li",
+        "Wei Lin"
       ],
       "pages": "173-191",
       "type": "Conference and Workshop Papers",
@@ -984,12 +984,12 @@
         "Rui Wang",
         "Devin Gibson",
         "Kirk Rodrigues",
-        "Yu Luo 0006",
+        "Yu Luo",
         "Yun Zhang",
         "Kaibo Wang",
         "Yupeng Fu",
         "Ting Chen",
-        "Ding Yuan 0004"
+        "Ding Yuan"
       ],
       "pages": "529-544",
       "type": "Conference and Workshop Papers",
@@ -1010,18 +1010,18 @@
       "year": 2024,
       "title": "Ladder: Enabling Efficient Low-Precision Deep Learning Computing through Hardware-aware Tensor Transformation.",
       "authors": [
-        "Lei Wang 0222",
+        "Lei Wang",
         "Lingxiao Ma",
         "Shijie Cao",
         "Quanlu Zhang",
         "Jilong Xue",
-        "Yining Shi 0001",
+        "Yining Shi",
         "Ningxin Zheng",
         "Ziming Miao",
-        "Fan Yang 0024",
-        "Ting Cao 0003",
-        "Yuqing Yang 0001",
-        "Mao Yang 0004"
+        "Fan Yang",
+        "Ting Cao",
+        "Yuqing Yang",
+        "Mao Yang"
       ],
       "pages": "307-323",
       "type": "Conference and Workshop Papers",
@@ -1077,7 +1077,7 @@
         "Yilun Wu",
         "Byounguk Min",
         "Mohannad Ismail",
-        "Wenjie Xiong 0001",
+        "Wenjie Xiong",
         "Changhee Jung",
         "Dongyoon Lee"
       ],
@@ -1103,9 +1103,9 @@
         "Bingyang Wu",
         "Ruidong Zhu",
         "Zili Zhang",
-        "Peng Sun 0006",
+        "Peng Sun",
         "Xuanzhe Liu",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "911-927",
       "type": "Conference and Workshop Papers",
@@ -1129,10 +1129,10 @@
         "Lingfeng Xiang",
         "Zhen Lin",
         "Weishu Deng",
-        "Hui Lu 0001",
+        "Hui Lu",
         "Jia Rao",
         "Yifan Yuan",
-        "Ren Wang 0001"
+        "Ren Wang"
       ],
       "pages": "19-35",
       "type": "Conference and Workshop Papers",
@@ -1155,10 +1155,10 @@
       "authors": [
         "Liangcheng Yu",
         "Xiao Zhang",
-        "Haoran Zhang 0009",
+        "Haoran Zhang",
         "John Sonchack",
         "Dan R. K. Ports",
-        "Vincent Liu 0001"
+        "Vincent Liu"
       ],
       "pages": "233-249",
       "type": "Conference and Workshop Papers",
@@ -1179,16 +1179,16 @@
       "year": 2024,
       "title": "Enabling Tensor Language Model to Assist in Generating High-Performance Tensor Programs for Deep Learning.",
       "authors": [
-        "Yi Zhai 0005",
+        "Yi Zhai",
         "Sijia Yang",
         "Keyu Pan",
         "Renwei Zhang",
-        "Shuo Liu 0019",
+        "Shuo Liu",
         "Chao Liu",
         "Zichun Ye",
         "Jianmin Ji",
-        "Jie Zhao 0002",
-        "Yu Zhang 0086",
+        "Jie Zhao",
+        "Yu Zhang",
         "Yanyong Zhang"
       ],
       "pages": "289-305",
@@ -1211,7 +1211,7 @@
       "title": "Motor: Enabling Multi-Versioning for Distributed Transactions on Disaggregated Memory.",
       "authors": [
         "Ming Zhang",
-        "Yu Hua 0001",
+        "Yu Hua",
         "Zhijun Yang"
       ],
       "pages": "801-819",
@@ -1235,8 +1235,8 @@
       "authors": [
         "Hanze Zhang",
         "Ke Cheng",
-        "Rong Chen 0001",
-        "Haibo Chen 0001"
+        "Rong Chen",
+        "Haibo Chen"
       ],
       "pages": "251-268",
       "type": "Conference and Workshop Papers",
@@ -1283,11 +1283,11 @@
       "title": "Caravan: Practical Online Learning of In-Network ML Models with Labeling Agents.",
       "authors": [
         "Qizheng Zhang",
-        "Ali Imran 0005",
+        "Ali Imran",
         "Enkeleda Bardhi",
         "Tushar Swamy",
         "Nathan Zhang",
-        "Muhammad Shahbaz 0001",
+        "Muhammad Shahbaz",
         "Kunle Olukotun"
       ],
       "pages": "325-345",
@@ -1344,10 +1344,10 @@
         "Shengyu Liu",
         "Junda Chen",
         "Jianbo Hu",
-        "Yibo Zhu 0001",
+        "Yibo Zhu",
         "Xuanzhe Liu",
-        "Xin Jin 0008",
-        "Hao Zhang 0025"
+        "Xin Jin",
+        "Hao Zhang"
       ],
       "pages": "193-210",
       "type": "Conference and Workshop Papers",
@@ -1399,7 +1399,7 @@
         "Haojun Xia",
         "Xiafei Qiu",
         "Junjie Bai",
-        "Wei Lin 0016",
+        "Wei Lin",
         "Shuaiwen Leon Song"
       ],
       "pages": "989-1005",
@@ -1422,9 +1422,9 @@
       "title": "Using Dynamically Layered Definite Releases for Verifying the RefFS File System.",
       "authors": [
         "Mo Zou",
-        "Dong Du 0003",
-        "Mingkai Dong 0002",
-        "Haibo Chen 0001"
+        "Dong Du",
+        "Mingkai Dong",
+        "Haibo Chen"
       ],
       "pages": "629-648",
       "type": "Conference and Workshop Papers",

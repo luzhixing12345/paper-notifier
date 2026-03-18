@@ -6,7 +6,7 @@
       "year": 2024,
       "title": "SuperBench: Improving Cloud AI Infrastructure Reliability with Proactive Validation.",
       "authors": [
-        "Yifan Xiong 0001",
+        "Yifan Xiong",
         "Yuting Jiang",
         "Ziyue Yang",
         "Lei Qu",
@@ -14,8 +14,8 @@
         "Shuguang Liu",
         "Dong Zhong",
         "Boris Pinzur",
-        "Jie Zhang 0048",
-        "Yang Wang 0053",
+        "Jie Zhang",
+        "Yang Wang",
         "Jithin Jose",
         "Hossein Pourreza",
         "Jeff Baxter",
@@ -23,7 +23,7 @@
         "Prabhat Ram",
         "Luke Melton",
         "Joe Chau",
-        "Peng Cheng 0005",
+        "Peng Cheng",
         "Yongqiang Xiong",
         "Lidong Zhou"
       ],
@@ -46,8 +46,8 @@
       "year": 2024,
       "title": "RL-Watchdog: A Fast and Predictable SSD Liveness Watchdog on Storage Systems.",
       "authors": [
-        "Jinyong Ha 0001",
-        "Sangjin Lee 0003",
+        "Jinyong Ha",
+        "Sangjin Lee",
         "Heon Young Yeom",
         "Yongseok Son"
       ],
@@ -70,13 +70,13 @@
       "year": 2024,
       "title": "Taming Hot Bloat Under Virtualization with HUGESCOPE.",
       "authors": [
-        "Chuandong Li 0004",
+        "Chuandong Li",
         "Sai Sha",
         "Yangqing Zeng",
         "Xiran Yang",
         "Yingwei Luo",
-        "Xiaolin Wang 0001",
-        "Zhenlin Wang 0003",
+        "Xiaolin Wang",
+        "Zhenlin Wang",
         "Diyu Zhou"
       ],
       "pages": "999-1012",
@@ -98,12 +98,12 @@
       "year": 2024,
       "title": "Monarch: A Fuzzing Framework for Distributed File Systems.",
       "authors": [
-        "Tao Lyu 0004",
+        "Tao Lyu",
         "Liyi Zhang",
         "Zhiyao Feng",
         "Yueyang Pan",
         "Yujie Ren",
-        "Meng Xu 0001",
+        "Meng Xu",
         "Mathias Payer",
         "Sanidhya Kashyap"
       ],
@@ -126,7 +126,7 @@
       "year": 2024,
       "title": "TileClipper: Lightweight Selection of Regions of Interest from Videos for Traffic Surveillance.",
       "authors": [
-        "Shubham Chaudhary 0006",
+        "Shubham Chaudhary",
         "Aryan Taneja",
         "Anjali Singh",
         "Purbasha Roy",
@@ -153,12 +153,12 @@
       "year": 2024,
       "title": "WingFuzz: Implementing Continuous Fuzzing for DBMSs.",
       "authors": [
-        "Jie Liang 0006",
-        "Zhiyong Wu 0010",
+        "Jie Liang",
+        "Zhiyong Wu",
         "Jingzhou Fu",
         "Yiyuan Bai",
         "Qiang Zhang",
-        "Yu Jiang 0001"
+        "Yu Jiang"
       ],
       "pages": "479-492",
       "type": "Conference and Workshop Papers",
@@ -179,14 +179,14 @@
       "year": 2024,
       "title": "StreamBox: A Lightweight GPU SandBox for Serverless Inference Workflow.",
       "authors": [
-        "Hao Wu 0010",
+        "Hao Wu",
         "Yue Yu",
         "Junxiao Deng",
         "Shadi Ibrahim",
-        "Song Wu 0001",
-        "Hao Fan 0006",
+        "Song Wu",
+        "Hao Fan",
         "Ziyue Cheng",
-        "Hai Jin 0001"
+        "Hai Jin"
       ],
       "pages": "59-73",
       "type": "Conference and Workshop Papers",
@@ -207,7 +207,7 @@
       "year": 2024,
       "title": "Diagnosing Application-network Anomalies for Millions of IPs in Production Clouds.",
       "authors": [
-        "Zhe Wang 0015",
+        "Zhe Wang",
         "Huanwu Hu",
         "Linghe Kong",
         "Xinlei Kang",
@@ -217,8 +217,8 @@
         "Zhuo Song",
         "Peihao Yang",
         "Jiejian Wu",
-        "Yong Yang 0013",
-        "Tao Ma 0006",
+        "Yong Yang",
+        "Tao Ma",
         "Zheng Liu",
         "Xianlong Zeng",
         "Dennis Cai",
@@ -243,7 +243,7 @@
       "year": 2024,
       "title": "Efficient Large Graph Processing with Chunk-Based Graph Representation Model.",
       "authors": [
-        "Rui Wang 0076",
+        "Rui Wang",
         "Weixu Zong",
         "Shuibing He",
         "Xinyu Chen",
@@ -296,7 +296,7 @@
       "year": 2024,
       "title": "Ethane: An Asymmetric File System for Disaggregated Persistent Memory.",
       "authors": [
-        "Miao Cai 0001",
+        "Miao Cai",
         "Junru Shen",
         "Baoliu Ye"
       ],
@@ -345,12 +345,12 @@
       "title": "Efficient Decentralized Federated Singular Vector Decomposition.",
       "authors": [
         "Di Chai",
-        "Junxue Zhang 0001",
-        "Liu Yang 0008",
+        "Junxue Zhang",
+        "Liu Yang",
         "Yilun Jin",
         "Leye Wang",
-        "Kai Chen 0005",
-        "Qiang Yang 0001"
+        "Kai Chen",
+        "Qiang Yang"
       ],
       "pages": "1029-1047",
       "type": "Conference and Workshop Papers",
@@ -372,7 +372,7 @@
       "title": "Limitations and Opportunities of Modern Hardware Isolation Mechanisms.",
       "authors": [
         "Xiangdong Chen",
-        "Zhaofeng Li 0004",
+        "Zhaofeng Li",
         "Tirth Jain",
         "Vikram Narayanan",
         "Anton Burtsev"
@@ -400,7 +400,7 @@
         "Zeyu Mi",
         "Yubin Xia",
         "Haibing Guan",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "1065-1082",
       "type": "Conference and Workshop Papers",
@@ -475,7 +475,7 @@
         "Yinghan Kou",
         "Runhuai Li",
         "Jianfeng Zhu",
-        "Lei Wu 0012",
+        "Lei Wu",
         "Yajin Zhou"
       ],
       "pages": "1257-1272",
@@ -525,7 +525,7 @@
         "Ruizhe Shi",
         "Haoliang Wang",
         "Songqing Chen",
-        "Yue Cheng 0001"
+        "Yue Cheng"
       ],
       "pages": "19-36",
       "type": "Conference and Workshop Papers",
@@ -603,7 +603,7 @@
       "authors": [
         "Chen Gao",
         "Xiangwei Meng",
-        "Wei Li 0262",
+        "Wei Li",
         "Jinhui Lai",
         "Yiran Zhang",
         "Fengyuan Ren"
@@ -677,7 +677,7 @@
       "title": "gVulkan: Scalable GPU Pooling for Pixel-Grained Rendering in Ray Tracing.",
       "authors": [
         "Yicheng Gu",
-        "Yun Wang 0039",
+        "Yun Wang",
         "Yunfan Sun",
         "Yuxin Xiang",
         "Xuyan Hu",
@@ -704,11 +704,11 @@
       "title": "ETC: An Elastic Transmission Control Using End-to-End Available Bandwidth Perception.",
       "authors": [
         "Feixue Han",
-        "Qing Li 0006",
-        "Peng Zhang 0104",
+        "Qing Li",
+        "Peng Zhang",
         "Gareth Tyson",
-        "Yong Jiang 0001",
-        "Mingwei Xu 0001",
+        "Yong Jiang",
+        "Mingwei Xu",
         "Yulong Lan",
         "Zhicheng Li"
       ],
@@ -732,7 +732,7 @@
       "title": "Every Mapping Counts in Large Amounts: Folio Accounting.",
       "authors": [
         "David Hildenbrand",
-        "Martin Schulz 0001",
+        "Martin Schulz",
         "Nadav Amit"
       ],
       "pages": "1273-1282",
@@ -756,7 +756,7 @@
       "authors": [
         "Joo Young Hwang",
         "Seokhwan Kim",
-        "Daejun Park 0002",
+        "Daejun Park",
         "Yong-Gil Song",
         "Junyoung Han",
         "Seunghyun Choi",
@@ -809,8 +809,8 @@
       "authors": [
         "Jinghao Jia",
         "Michael V. Le",
-        "Salman Ahmed 0001",
-        "Dan Williams 0001",
+        "Salman Ahmed",
+        "Dan Williams",
         "Hani Jamjoom",
         "Tianyin Xu"
       ],
@@ -912,7 +912,7 @@
       "title": "PUZZLE: Efficiently Aligning Large Language Models through Light-Weight Context Switch.",
       "authors": [
         "Kinman Lei",
-        "Yuyang Jin 0001",
+        "Yuyang Jin",
         "Mingshu Zhai",
         "Kezhao Huang",
         "Haoxing Ye",
@@ -941,7 +941,7 @@
         "Liwei Guo",
         "Yexuan Yang",
         "Shangguang Wang",
-        "Mengwei Xu 0001"
+        "Mengwei Xu"
       ],
       "pages": "425-443",
       "type": "Conference and Workshop Papers",
@@ -1033,12 +1033,12 @@
       "authors": [
         "Qingyuan Liu",
         "Yanning Yang",
-        "Dong Du 0003",
+        "Dong Du",
         "Yubin Xia",
         "Ping Zhang",
         "Jia Feng",
         "James R. Larus",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "1-17",
       "type": "Conference and Workshop Papers",
@@ -1087,7 +1087,7 @@
       "year": 2024,
       "title": "HydraRPC: RPC in the CXL Era.",
       "authors": [
-        "Teng Ma 0006",
+        "Teng Ma",
         "Zheng Liu",
         "Chengkun Wei",
         "Jialiang Huang",
@@ -1097,7 +1097,7 @@
         "Yijin Guan",
         "Dimin Niu",
         "Mingxing Zhang",
-        "Tao Ma 0006"
+        "Tao Ma"
       ],
       "pages": "387-395",
       "type": "Conference and Workshop Papers",
@@ -1148,8 +1148,8 @@
         "Yanze Zhang",
         "Liu Liu",
         "Dazhao Cheng",
-        "Chengzhong Xu 0001",
-        "Xiaobo Zhou 0002"
+        "Chengzhong Xu",
+        "Xiaobo Zhou"
       ],
       "pages": "985-998",
       "type": "Conference and Workshop Papers",
@@ -1173,10 +1173,10 @@
         "Li Peng",
         "Yuda An",
         "You Zhou",
-        "Chenxi Wang 0005",
-        "Qiao Li 0001",
+        "Chenxi Wang",
+        "Qiao Li",
         "Chuanning Cheng",
-        "Jie Zhang 0048"
+        "Jie Zhang"
       ],
       "pages": "1185-1202",
       "type": "Conference and Workshop Papers",
@@ -1202,7 +1202,7 @@
         "Archit Patke",
         "Shengkun Cui",
         "Saurabh Jha",
-        "Chen Wang 0039",
+        "Chen Wang",
         "Hubertus Franke",
         "Zbigniew Kalbarczyk",
         "Tamer Basar",
@@ -1276,12 +1276,12 @@
       "year": 2024,
       "title": "SimEnc: A High-Performance Similarity-Preserving Encryption Approach for Deduplication of Encrypted Docker Images.",
       "authors": [
-        "Tong Sun 0006",
+        "Tong Sun",
         "Bowen Jiang",
-        "Borui Li 0001",
+        "Borui Li",
         "Jiamei Lv",
-        "Yi Gao 0001",
-        "Wei Dong 0001"
+        "Yi Gao",
+        "Wei Dong"
       ],
       "pages": "615-630",
       "type": "Conference and Workshop Papers",
@@ -1392,8 +1392,8 @@
         "Haikun Liu",
         "Zhuohui Duan",
         "Xiaofei Liao",
-        "Hai Jin 0001",
-        "Yu Zhang 0027"
+        "Hai Jin",
+        "Yu Zhang"
       ],
       "pages": "1135-1150",
       "type": "Conference and Workshop Papers",
@@ -1443,14 +1443,14 @@
       "year": 2024,
       "title": "OPER: Optimality-Guided Embedding Table Parallelization for Large-scale Recommendation Model.",
       "authors": [
-        "Zheng Wang 0075",
+        "Zheng Wang",
         "Yuke Wang",
         "Boyuan Feng",
         "Guyue Huang",
         "Dheevatsa Mudigere",
         "Bharath Muthiah",
-        "Ang Li 0006",
-        "Yufei Ding 0001"
+        "Ang Li",
+        "Yufei Ding"
       ],
       "pages": "667-682",
       "type": "Conference and Workshop Papers",
@@ -1471,13 +1471,13 @@
       "year": 2024,
       "title": "QDSR: Accelerating Layer-7 Load Balancing by Direct Server Return with QUIC.",
       "authors": [
-        "Ziqi Wei 0004",
+        "Ziqi Wei",
         "Zhiqiang Wang",
-        "Qing Li 0006",
-        "Yuan Yang 0001",
+        "Qing Li",
+        "Yuan Yang",
         "Cheng Luo",
         "Fuyu Wang",
-        "Yong Jiang 0001",
+        "Yong Jiang",
         "Sijie Yang",
         "Zhenhui Yuan"
       ],
@@ -1547,7 +1547,7 @@
       "authors": [
         "Ronglong Wu",
         "Shuyue Zhou",
-        "Jiahao Lu 0003",
+        "Jiahao Lu",
         "Zhirong Shen",
         "Zikang Xu",
         "Jiwu Shu",
@@ -1577,7 +1577,7 @@
         "Haojun Xia",
         "Zhen Zheng",
         "Xiaoxia Wu",
-        "Shiyang Chen 0004",
+        "Shiyang Chen",
         "Zhewei Yao",
         "Stephen Youn",
         "Arash Bakhtiari",
@@ -1611,7 +1611,7 @@
         "Diman Zad Tootaghaj",
         "Aditya Dhakal",
         "Lianjie Cao",
-        "Puneet Sharma 0001",
+        "Puneet Sharma",
         "Aleksandar Kuzmanovic"
       ],
       "pages": "767-784",
@@ -1635,11 +1635,11 @@
       "authors": [
         "Zhen Xie",
         "Murali Emani",
-        "Xiaodong Yu 0001",
+        "Xiaodong Yu",
         "Dingwen Tao",
         "Xin He",
-        "Pengfei Su 0001",
-        "Keren Zhou 0001",
+        "Pengfei Su",
+        "Keren Zhou",
         "Venkatram Vishwanath"
       ],
       "pages": "1203-1221",
@@ -1662,10 +1662,10 @@
       "title": "Models on the Move: Towards Feasible Embedded AI for Intrusion Detection on Vehicular CAN Bus.",
       "authors": [
         "He Xu",
-        "Di Wu 0002",
+        "Di Wu",
         "Yufeng Lu",
         "Jiwu Lu",
-        "Haibo Zeng 0001"
+        "Haibo Zeng"
       ],
       "pages": "1049-1063",
       "type": "Conference and Workshop Papers",
@@ -1686,10 +1686,10 @@
       "year": 2024,
       "title": "FwdLLM: Efficient Federated Finetuning of Large Language Models with Perturbed Inferences.",
       "authors": [
-        "Mengwei Xu 0001",
-        "Dongqi Cai 0001",
+        "Mengwei Xu",
+        "Dongqi Cai",
         "Yaozong Wu",
-        "Xiang Li 0067",
+        "Xiang Li",
         "Shangguang Wang"
       ],
       "pages": "579-596",
@@ -1711,11 +1711,11 @@
       "year": 2024,
       "title": "FlexMem: Adaptive Page Profiling and Migration for Tiered Memory.",
       "authors": [
-        "Dong Xu 0024",
+        "Dong Xu",
         "Junhee Ryu",
         "Kwangsik Shin",
         "Pengfei Su",
-        "Dong Li 0001"
+        "Dong Li"
       ],
       "pages": "817-833",
       "type": "Conference and Workshop Papers",
@@ -1738,12 +1738,12 @@
       "authors": [
         "Tingting Xu",
         "Bengbeng Xue",
-        "Yang Song 0031",
+        "Yang Song",
         "Xiaomin Wu",
         "Xiaoxin Peng",
         "Yilong Lyu",
-        "Xiaoliang Wang 0001",
-        "Chen Tian 0001",
+        "Xiaoliang Wang",
+        "Chen Tian",
         "Baoliu Ye",
         "Cam-Tu Nguyen",
         "Biao Lyu",
@@ -1770,12 +1770,12 @@
       "year": 2024,
       "title": "Full Lifecycle Data Analysis on a Large-scale and Leadership Supercomputer: What Can We Learn from It?",
       "authors": [
-        "Bin Yang 0043",
+        "Bin Yang",
         "Hao Wei",
         "Wenhao Zhu",
         "Yuhao Zhang",
         "Weiguo Liu",
-        "Wei Xue 0003"
+        "Wei Xue"
       ],
       "pages": "917-933",
       "type": "Conference and Workshop Papers",
@@ -1797,10 +1797,10 @@
       "title": "KEPC-Push: A Knowledge-Enhanced Proactive Content Push Strategy for Edge-Assisted Video Feed Streaming.",
       "authors": [
         "Ziwen Ye",
-        "Qing Li 0006",
+        "Qing Li",
         "Chunyu Qiao",
         "Xiaoteng Ma",
-        "Yong Jiang 0001",
+        "Yong Jiang",
         "Qian Ma",
         "Shengbin Meng",
         "Zhenhui Yuan",
@@ -1827,12 +1827,12 @@
       "authors": [
         "Shushu Yi",
         "Xiurui Pan",
-        "Qiao Li 0001",
+        "Qiao Li",
         "Qiang Li",
-        "Chenxi Wang 0005",
-        "Bo Mao 0003",
+        "Chenxi Wang",
+        "Bo Mao",
         "Myoungsoo Jung",
-        "Jie Zhang 0048"
+        "Jie Zhang"
       ],
       "pages": "141-156",
       "type": "Conference and Workshop Papers",
@@ -1907,7 +1907,7 @@
       "title": "Enhancing Resource Management of the World's Largest PCDN System for On-Demand Video Streaming.",
       "authors": [
         "Ruixiao Zhang",
-        "Haiping Wang 0002",
+        "Haiping Wang",
         "Shu Shi",
         "Xiaofei Pang",
         "Yajie Peng",
@@ -1933,9 +1933,9 @@
       "year": 2024,
       "title": "MAGPY: Compiling Eager Mode DNN Programs by Monitoring Execution States.",
       "authors": [
-        "Chen Zhang 0001",
+        "Chen Zhang",
         "Rongchao Dong",
-        "Haojie Wang 0004",
+        "Haojie Wang",
         "Runxin Zhong",
         "Jike Chen",
         "Jidong Zhai"
@@ -1959,16 +1959,16 @@
       "year": 2024,
       "title": "More is Different: Prototyping and Analyzing a New Form of Edge Server with Massive Mobile SoCs.",
       "authors": [
-        "Li Zhang 0133",
+        "Li Zhang",
         "Zhe Fu",
         "Boqing Shi",
-        "Xiang Li 0067",
+        "Xiang Li",
         "Rujin Lai",
-        "Chenyang Yang 0004",
-        "Ao Zhou 0001",
-        "Xiao Ma 0009",
+        "Chenyang Yang",
+        "Ao Zhou",
+        "Xiao Ma",
         "Shangguang Wang",
-        "Mengwei Xu 0001"
+        "Mengwei Xu"
       ],
       "pages": "285-302",
       "type": "Conference and Workshop Papers",
@@ -1989,9 +1989,9 @@
       "year": 2024,
       "title": "High-density Mobile Cloud Gaming on Edge SoC Clusters.",
       "authors": [
-        "Li Zhang 0133",
+        "Li Zhang",
         "Shangguang Wang",
-        "Mengwei Xu 0001"
+        "Mengwei Xu"
       ],
       "pages": "339-347",
       "type": "Conference and Workshop Papers",

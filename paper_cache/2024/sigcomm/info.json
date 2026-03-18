@@ -6,15 +6,15 @@
       "year": 2024,
       "title": "R-Pingmesh: A Service-Aware RoCE Network Monitoring and Diagnostic System.",
       "authors": [
-        "Kefei Liu 0004",
+        "Kefei Liu",
         "Zhuo Jiang",
-        "Jiao Zhang 0002",
+        "Jiao Zhang",
         "Shixian Guo",
         "Xuan Zhang",
         "Yangyang Bai",
         "Yongbin Dong",
         "Feng Luo",
-        "Zhang Zhang 0003",
+        "Zhang Zhang",
         "Lei Wang",
         "Xiang Shi",
         "Haohan Xu",
@@ -23,8 +23,8 @@
         "Haoran Wei",
         "Bo Li",
         "Yongchen Pan",
-        "Tian Pan 0001",
-        "Tao Huang 0005"
+        "Tian Pan",
+        "Tao Huang"
       ],
       "pages": "554-567",
       "type": "Conference and Workshop Papers",
@@ -45,14 +45,14 @@
       "year": 2024,
       "title": "NegotiaToR: Towards A Simple Yet Effective On-demand Reconfigurable Datacenter Network.",
       "authors": [
-        "Cong Liang 0005",
+        "Cong Liang",
         "Xiangli Song",
         "Jing Cheng",
         "Mowei Wang",
         "Yashe Liu",
-        "Zhenhua Liu 0008",
+        "Zhenhua Liu",
         "Shizhen Zhao",
-        "Yong Cui 0001"
+        "Yong Cui"
       ],
       "pages": "415-432",
       "type": "Conference and Workshop Papers",
@@ -73,15 +73,15 @@
       "year": 2024,
       "title": "Fast, Scalable, and Accurate Rate Limiter for RDMA NICs.",
       "authors": [
-        "Zilong Wang 0007",
+        "Zilong Wang",
         "Xinchen Wan",
         "Luyang Li",
         "Yijun Sun",
         "Peng Xie",
         "Xin Wei",
         "Qingsong Ning",
-        "Junxue Zhang 0001",
-        "Kai Chen 0005"
+        "Junxue Zhang",
+        "Kai Chen"
       ],
       "pages": "568-580",
       "type": "Conference and Workshop Papers",
@@ -102,17 +102,17 @@
       "year": 2024,
       "title": "Dissecting Carrier Aggregation in 5G Networks: Measurement, QoE Implications and Prediction.",
       "authors": [
-        "Wei Ye 0009",
+        "Wei Ye",
         "Xinyue Hu",
         "Steven Sleder",
         "Anlan Zhang",
         "Udhaya Kumar Dayalan",
-        "Ahmad Hassan 0004",
+        "Ahmad Hassan",
         "Rostand A. K. Fezeu",
         "Akshay Jajoo",
         "Myungjin Lee",
         "Eman Ramadan",
-        "Feng Qian 0001",
+        "Feng Qian",
         "Zhi-Li Zhang"
       ],
       "pages": "340-357",
@@ -134,7 +134,7 @@
       "year": 2024,
       "title": "dAuth: A Resilient Authentication Architecture for Federated Private Cellular Networks.",
       "authors": [
-        "Matthew Johnson 0011",
+        "Matthew Johnson",
         "Sudheesh Singanamalla",
         "Nick Durand",
         "Esther Han Beol Jang",
@@ -164,9 +164,9 @@
         "Yuanjun Yao",
         "Zhaodong Wang",
         "Satyajeet Singh Ahuja",
-        "Ying Zhang 0022",
+        "Ying Zhang",
         "Sanjay G. Rao",
-        "Bruno Ribeiro 0001",
+        "Bruno Ribeiro",
         "Mohit Tawarmalani"
       ],
       "pages": "86-102",
@@ -240,7 +240,7 @@
       "title": "SUSS: Improving TCP Performance by Speeding Up Slow-Start.",
       "authors": [
         "Mahdi Arghavani",
-        "Haibo Zhang 0001",
+        "Haibo Zhang",
         "David M. Eyers",
         "Abbas Arghavani"
       ],
@@ -267,7 +267,7 @@
         "Vipul Harsh",
         "Brighten Godfrey",
         "Radhika Mittal",
-        "Srinivasan Parthasarathy 0002",
+        "Srinivasan Parthasarathy",
         "Larisa Shwartz"
       ],
       "pages": "828-842",
@@ -300,7 +300,7 @@
         "Rajiv Krishnamurthy",
         "Srikanth Sundaresan",
         "Neil Spring",
-        "Ying Zhang 0022"
+        "Ying Zhang"
       ],
       "pages": "721-734",
       "type": "Conference and Workshop Papers",
@@ -324,7 +324,7 @@
         "Lloyd Brown",
         "Albert Gran Alcoz",
         "Frank Cangialosi",
-        "Akshay Narayan 0001",
+        "Akshay Narayan",
         "Mohammad Alizadeh",
         "Hari Balakrishnan",
         "Eric J. Friedman",
@@ -386,8 +386,8 @@
       "title": "Crux: GPU-Efficient Communication Scheduling for Deep Learning Training.",
       "authors": [
         "Jiamin Cao",
-        "Yu Guan 0005",
-        "Kun Qian 0004",
+        "Yu Guan",
+        "Kun Qian",
         "Jiaqi Gao",
         "Wencong Xiao",
         "Jianbo Dong",
@@ -442,12 +442,12 @@
         "Zhikang Chen",
         "Yong Feng",
         "Shuxin Liu",
-        "Haoyu Song 0001",
+        "Haoyu Song",
         "Hanyi Zhou",
         "Tong Yun",
         "Wenquan Xu",
-        "Tian Pan 0001",
-        "Bin Liu 0001"
+        "Tian Pan",
+        "Bin Liu"
       ],
       "pages": "904-920",
       "type": "Conference and Workshop Papers",
@@ -469,7 +469,7 @@
       "title": "SODA: An Adaptive Bitrate Controller for Consistent High-Quality Video Streaming.",
       "authors": [
         "Tianyu Chen",
-        "Yiheng Lin 0001",
+        "Yiheng Lin",
         "Nicolas Christianson",
         "Zahaib Akhtar",
         "Sharath Dharmaji",
@@ -504,12 +504,12 @@
         "Jie Zhou",
         "Licheng Song",
         "Yi Liang",
-        "Jie Wu 0042",
+        "Jie Wu",
         "Wei Zheng",
-        "Wei Liu 0248",
+        "Wei Liu",
         "Linfeng Li",
         "Fangming Liu",
-        "Kun Tan 0003"
+        "Kun Tan"
       ],
       "pages": "843-859",
       "type": "Conference and Workshop Papers",
@@ -530,16 +530,16 @@
       "year": 2024,
       "title": "Eagle: Toward Scalable and Near-Optimal Network-Wide Sketch Deployment in Network Measurement.",
       "authors": [
-        "Xiang Chen 0017",
+        "Xiang Chen",
         "Qingjiang Xiao",
-        "Hongyan Liu 0001",
-        "Qun Huang 0001",
-        "Dong Zhang 0010",
-        "Xuan Liu 0006",
+        "Hongyan Liu",
+        "Qun Huang",
+        "Dong Zhang",
+        "Xuan Liu",
         "Longbing Hu",
         "Haifeng Zhou",
-        "Chunming Wu 0001",
-        "Kui Ren 0001"
+        "Chunming Wu",
+        "Kui Ren"
       ],
       "pages": "291-310",
       "type": "Conference and Workshop Papers",
@@ -560,13 +560,13 @@
       "year": 2024,
       "title": "RD-Probe: Scalable Monitoring With Sufficient Coverage In Complex Datacenter Networks.",
       "authors": [
-        "Rui Ding 0014",
+        "Rui Ding",
         "Xunpeng Liu",
         "Shibo Yang",
-        "Qun Huang 0001",
+        "Qun Huang",
         "Baoshu Xie",
         "Ronghua Sun",
-        "Zhi Zhang 0016",
+        "Zhi Zhang",
         "Bolong Cui"
       ],
       "pages": "258-273",
@@ -594,9 +594,9 @@
         "Jason Carpenter",
         "Lilian Coelho de Freitas",
         "Faaiq Bilal",
-        "Wei Ye 0009",
+        "Wei Ye",
         "Joerg Widmer",
-        "Feng Qian 0001",
+        "Feng Qian",
         "Zhi-Li Zhang"
       ],
       "pages": "358-372",
@@ -619,7 +619,7 @@
       "title": "RDMA over Ethernet for Distributed Training at Meta Scale.",
       "authors": [
         "Adithya Gangidi",
-        "Rui Miao 0001",
+        "Rui Miao",
         "Shengbao Zheng",
         "Sai Jayesh Bondu",
         "Guilherme Goes",
@@ -701,11 +701,11 @@
       "authors": [
         "Fei Gui",
         "Songtao Wang",
-        "Dan Li 0001",
-        "Li Chen 0008",
+        "Dan Li",
+        "Li Chen",
         "Kaihui Gao",
         "Congcong Min",
-        "Yi Wang 0004"
+        "Yi Wang"
       ],
       "pages": "71-85",
       "type": "Conference and Workshop Papers",
@@ -732,13 +732,13 @@
         "Zihao Zhao",
         "Bin Lei",
         "Edison Liu",
-        "Xiang Li 0223",
+        "Xiang Li",
         "Zekun He",
         "Yachen Wang",
         "Xianneng Zou",
         "Chongqing Zhao",
         "Jinhui Chu",
-        "Jilong Wang 0001",
+        "Jilong Wang",
         "Congcong Miao"
       ],
       "pages": "540-553",
@@ -817,12 +817,12 @@
       "year": 2024,
       "title": "Uniform-Cost Multi-Path Routing for Reconfigurable Data Center Networks.",
       "authors": [
-        "Jialong Li 0006",
+        "Jialong Li",
         "Haotian Gong",
-        "Federico De Marchi 0002",
+        "Federico De Marchi",
         "Aoyu Gong",
         "Yiming Lei",
-        "Wei Bai 0001",
+        "Wei Bai",
         "Yiting Xia"
       ],
       "pages": "433-448",
@@ -844,20 +844,20 @@
       "year": 2024,
       "title": "Triton: A Flexible Hardware Offloading Architecture for Accelerating Apsara vSwitch in Alibaba Cloud.",
       "authors": [
-        "Xing Li 0007",
+        "Xing Li",
         "Xiaochong Jiang",
         "Ye Yang",
         "Lilong Chen",
-        "Yi Wang 0004",
+        "Yi Wang",
         "Chao Wang",
-        "Chao Xu 0017",
+        "Chao Xu",
         "Yilong Lv",
         "Bowen Yang",
         "Taotao Wu",
         "Haifeng Gao",
         "Zikang Chen",
         "Yisong Qiao",
-        "Hongwei Ding 0004",
+        "Hongwei Ding",
         "Yijian Dong",
         "Hang Yang",
         "Jianming Song",
@@ -916,9 +916,9 @@
       "title": "A General and Efficient Approach to Verifying Traffic Load Properties under Arbitrary k Failures.",
       "authors": [
         "Ruihan Li",
-        "Yifei Yuan 0001",
+        "Yifei Yuan",
         "Fangdan Ye",
-        "Mengqi Liu 0001",
+        "Mengqi Liu",
         "Ruizhen Yang",
         "Yang Yu",
         "Tianchen Guo",
@@ -971,11 +971,11 @@
       "year": 2024,
       "title": "Rethinking Machine Learning Collective Communication as a Multi-Commodity Flow Problem.",
       "authors": [
-        "Xuting Liu 0003",
+        "Xuting Liu",
         "Behnaz Arzani",
         "Siva Kesava Reddy Kakarla",
         "Liangyu Zhao",
-        "Vincent Liu 0001",
+        "Vincent Liu",
         "Miguel Castro",
         "Srikanth Kandula",
         "Luke Marshall"
@@ -999,7 +999,7 @@
       "year": 2024,
       "title": "CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving.",
       "authors": [
-        "Yuhan Liu 0004",
+        "Yuhan Liu",
         "Hanchen Li",
         "Yihua Cheng",
         "Siddhant Ray",
@@ -1007,7 +1007,7 @@
         "Qizheng Zhang",
         "Kuntai Du",
         "Jiayi Yao",
-        "Shan Lu 0001",
+        "Shan Lu",
         "Ganesh Ananthanarayanan",
         "Michael Maire",
         "Henry Hoffmann",
@@ -1035,7 +1035,7 @@
       "authors": [
         "Ximeng Liu",
         "Shizhen Zhao",
-        "Yong Cui 0001",
+        "Yong Cui",
         "Xinbing Wang"
       ],
       "pages": "117-135",
@@ -1218,7 +1218,7 @@
       "authors": [
         "Ryu Okubo",
         "Luke Jacobs",
-        "Jinhua Wang 0007",
+        "Jinhua Wang",
         "Steven M. Bowers",
         "Elahe Soltanaghai"
       ],
@@ -1323,18 +1323,18 @@
       "year": 2024,
       "title": "Alibaba HPN: A Data Center Network for Large Language Model Training.",
       "authors": [
-        "Kun Qian 0004",
+        "Kun Qian",
         "Yongqing Xi",
         "Jiamin Cao",
         "Jiaqi Gao",
         "Yichi Xu",
-        "Yu Guan 0005",
+        "Yu Guan",
         "Binzhang Fu",
         "Xuemei Shi",
         "Fangbo Zhu",
-        "Rui Miao 0001",
+        "Rui Miao",
         "Chao Wang",
-        "Peng Wang 0185",
+        "Peng Wang",
         "Pengcheng Zhang",
         "Xianlong Zeng",
         "Eddie Ruan",
@@ -1362,9 +1362,9 @@
       "title": "Canal Mesh: A Cloud-Scale Sidecar-Free Multi-Tenant Service Mesh Architecture.",
       "authors": [
         "Enge Song",
-        "Yang Song 0031",
+        "Yang Song",
         "Chengyun Lu",
-        "Tian Pan 0001",
+        "Tian Pan",
         "Shaokai Zhang",
         "Jianyuan Lu",
         "Jiangu Zhao",
@@ -1376,7 +1376,7 @@
         "Biao Lyu",
         "Pengyu Zhang",
         "Rong Wen",
-        "Li Yi 0003",
+        "Li Yi",
         "Zhigang Zong",
         "Shunmin Zhu"
       ],
@@ -1401,10 +1401,10 @@
       "authors": [
         "Lide Suo",
         "Yiren Pang",
-        "Wenxin Li 0001",
+        "Wenxin Li",
         "Renjie Pei",
         "Keqiu Li",
-        "Xiulong Liu 0001",
+        "Xiulong Liu",
         "Xin He",
         "Yitao Hu",
         "Guyue Liu"
@@ -1458,7 +1458,7 @@
         "Henry Schuh",
         "Baris Kasikci",
         "Arvind Krishnamurthy",
-        "Rachit Agarwal 0001"
+        "Rachit Agarwal"
       ],
       "pages": "581-594",
       "type": "Conference and Workshop Papers",
@@ -1505,7 +1505,7 @@
       "title": "Expresso: Comprehensively Reasoning About External Routes Using Symbolic Simulation.",
       "authors": [
         "Dan Wang",
-        "Peng Zhang 0011",
+        "Peng Zhang",
         "Aaron Gember-Jacobson"
       ],
       "pages": "197-212",
@@ -1556,10 +1556,10 @@
         "Duo Wu",
         "Xianda Wang",
         "Yaqi Qiao",
-        "Zhi Wang 0001",
+        "Zhi Wang",
         "Junchen Jiang",
         "Shuguang Cui",
-        "Fangxin Wang 0001"
+        "Fangxin Wang"
       ],
       "pages": "661-678",
       "type": "Conference and Workshop Papers",
@@ -1582,9 +1582,9 @@
       "authors": [
         "Yongji Wu",
         "Yechen Xu",
-        "Jingrong Chen 0002",
+        "Jingrong Chen",
         "Zhaodong Wang",
-        "Ying Zhang 0022",
+        "Ying Zhang",
         "Matthew Lentz",
         "Danyang Zhuo"
       ],
@@ -1608,11 +1608,11 @@
       "title": "Relational Network Verification.",
       "authors": [
         "Xieyang Xu",
-        "Yifei Yuan 0001",
+        "Yifei Yuan",
         "Zachary Kincaid",
         "Arvind Krishnamurthy",
         "Ratul Mahajan",
-        "David Walker 0001",
+        "David Walker",
         "Ennan Zhai"
       ],
       "pages": "213-227",
@@ -1634,7 +1634,7 @@
       "year": 2024,
       "title": "Practical Rateless Set Reconciliation.",
       "authors": [
-        "Lei Yang 0031",
+        "Lei Yang",
         "Yossi Gilad",
         "Mohammad Alizadeh"
       ],
@@ -1657,12 +1657,12 @@
       "year": 2024,
       "title": "P4runpro: Enabling Runtime Programmability for RMT Programmable Switches.",
       "authors": [
-        "Yifan Yang 0009",
-        "Lin He 0004",
+        "Yifan Yang",
+        "Lin He",
         "Jiasheng Zhou",
         "Xiaoyi Shi",
         "Jiamin Cao",
-        "Ying Liu 0024"
+        "Ying Liu"
       ],
       "pages": "921-937",
       "type": "Conference and Workshop Papers",
@@ -1684,7 +1684,7 @@
       "title": "In-Network Address Caching for Virtual Networks.",
       "authors": [
         "Lior Zeno",
-        "Ang Chen 0001",
+        "Ang Chen",
         "Mark Silberstein"
       ],
       "pages": "735-749",
@@ -1706,18 +1706,18 @@
       "year": 2024,
       "title": "vPIFO: Virtualized Packet Scheduler for Programmable Hierarchical Scheduling in High-Speed Networks.",
       "authors": [
-        "Zhiyu Zhang 0012",
+        "Zhiyu Zhang",
         "Shili Chen",
         "Ruyi Yao",
         "Ruoshi Sun",
         "Hao Mei",
-        "Hao Wang 0231",
+        "Hao Wang",
         "Zixuan Chen",
         "Gaojian Fang",
         "Yibo Fan",
         "Wanxin Shi",
-        "Sen Liu 0002",
-        "Yang Xu 0010"
+        "Sen Liu",
+        "Yang Xu"
       ],
       "pages": "983-999",
       "type": "Conference and Workshop Papers",
@@ -1741,9 +1741,9 @@
         "Hao Zheng",
         "Chengyuan Huang",
         "Xiangyu Han",
-        "Jiaqi Zheng 0001",
-        "Xiaoliang Wang 0001",
-        "Chen Tian 0001",
+        "Jiaqi Zheng",
+        "Xiaoliang Wang",
+        "Chen Tian",
         "Wanchun Dou",
         "Guihai Chen"
       ],

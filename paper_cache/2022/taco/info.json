@@ -106,7 +106,7 @@
       "year": 2022,
       "title": "ERASE: Energy Efficient Task Mapping and Resource Management for Work Stealing Runtimes.",
       "authors": [
-        "Jing Chen 0038",
+        "Jing Chen",
         "Madhavan Manivannan",
         "Mustafa Abduljabbar",
         "Miquel Pericàs"
@@ -158,7 +158,7 @@
         "Juan L. Aragón",
         "Martí Anglada",
         "Joan-Manuel Parcerisa",
-        "Antonio González 0001"
+        "Antonio González"
       ],
       "pages": "39:1-39:20",
       "type": "Journal Articles",
@@ -180,7 +180,7 @@
       "title": "LiteCON: An All-photonic Neuromorphic Accelerator for Energy-efficient Deep Learning.",
       "authors": [
         "Dharanidhar Dang",
-        "Bill Lin 0001",
+        "Bill Lin",
         "Debashis Sahoo"
       ],
       "pages": "43:1-43:22",
@@ -205,10 +205,10 @@
         "Bang Di",
         "Daokun Hu",
         "Zhen Xie",
-        "Jianhua Sun 0002",
-        "Hao Chen 0002",
+        "Jianhua Sun",
+        "Hao Chen",
         "Jinkui Ren",
-        "Dong Li 0001"
+        "Dong Li"
       ],
       "pages": "9:1-9:23",
       "type": "Journal Articles",
@@ -229,8 +229,8 @@
       "year": 2022,
       "title": "CARL: Compiler Assigned Reference Leasing.",
       "authors": [
-        "Chen Ding 0001",
-        "Dong Chen 0015",
+        "Chen Ding",
+        "Dong Chen",
         "Fangzhou Liu",
         "Benjamin Reber",
         "Wesley Smith"
@@ -279,8 +279,8 @@
       "year": 2022,
       "title": "Adaptive Contention Management for Fine-Grained Synchronization on Commodity GPUs.",
       "authors": [
-        "Lan Gao 0004",
-        "Jing Wang 0055",
+        "Lan Gao",
+        "Jing Wang",
         "Weigong Zhang"
       ],
       "pages": "58:1-58:21",
@@ -427,7 +427,7 @@
       "authors": [
         "Ali Jahanshahi",
         "Nanpeng Yu",
-        "Daniel Wong 0001"
+        "Daniel Wong"
       ],
       "pages": "36:1-36:27",
       "type": "Journal Articles",
@@ -499,7 +499,7 @@
       "year": 2022,
       "title": "Dependence-aware Slice Execution to Boost MLP in Slice-out-of-order Cores.",
       "authors": [
-        "Rakesh Kumar 0003",
+        "Rakesh Kumar",
         "Mehdi Alipour",
         "David Black-Schaffer"
       ],
@@ -571,7 +571,7 @@
       "title": "SMT-Based Contention-Free Task Mapping and Scheduling on 2D/3D SMART NoC with Mixed Dimension-Order Routing.",
       "authors": [
         "Daeyeal Lee",
-        "Bill Lin 0001",
+        "Bill Lin",
         "Chung-Kuan Cheng"
       ],
       "pages": "5:1-5:21",
@@ -595,8 +595,8 @@
       "authors": [
         "Mengya Lei",
         "Fan Li",
-        "Fang Wang 0001",
-        "Dan Feng 0001",
+        "Fang Wang",
+        "Dan Feng",
         "Xiaomin Zou",
         "Renzhi Xiao"
       ],
@@ -665,16 +665,16 @@
       "title": "An Application-oblivious Memory Scheduling System for DNN Accelerators.",
       "authors": [
         "Jiansong Li",
-        "Xueying Wang 0003",
+        "Xueying Wang",
         "Xiaobing Chen",
         "Guangli Li",
         "Xiao Dong",
-        "Peng Zhao 0008",
+        "Peng Zhao",
         "Xianzhi Yu",
         "Yongxin Yang",
-        "Wei Cao 0010",
-        "Lei Liu 0030",
-        "Xiaobing Feng 0002"
+        "Wei Cao",
+        "Lei Liu",
+        "Xiaobing Feng"
       ],
       "pages": "47:1-47:26",
       "type": "Journal Articles",
@@ -695,9 +695,9 @@
       "year": 2022,
       "title": "Iterative Compilation Optimization Based on Metric Learning and Collaborative Filtering.",
       "authors": [
-        "Hongzhi Liu 0001",
+        "Hongzhi Liu",
         "Jie Luo",
-        "Ying Li 0012",
+        "Ying Li",
         "Zhonghai Wu"
       ],
       "pages": "2:1-2:25",
@@ -722,7 +722,7 @@
         "Yiding Liu",
         "Xingyao Zhang",
         "Donglin Zhuang",
-        "Xin Fu 0001",
+        "Xin Fu",
         "Shuaiwen Song"
       ],
       "pages": "60:1-60:26",
@@ -794,7 +794,7 @@
       "authors": [
         "George Michelogiannakis",
         "Benjamin Klenk",
-        "Brandon Cook 0001",
+        "Brandon Cook",
         "Min Yee Teh",
         "Madeleine Glick",
         "Larry Dennison",
@@ -943,7 +943,7 @@
       "authors": [
         "Hugo Pompougnac",
         "Ulysse Beaugnon",
-        "Albert Cohen 0001",
+        "Albert Cohen",
         "Dumitru Potop-Butucaru"
       ],
       "pages": "22:1-22:25",
@@ -966,7 +966,7 @@
       "title": "Joint Program and Layout Transformations to Enable Convolutional Operators on Specialized Hardware Based on Constraint Programming.",
       "authors": [
         "Dennis Rieber",
-        "Axel Acosta 0001",
+        "Axel Acosta",
         "Holger Fröning"
       ],
       "pages": "7:1-7:26",
@@ -990,7 +990,7 @@
       "authors": [
         "Gururaj Saileshwar",
         "Rick Boivie",
-        "Tong Chen 0001",
+        "Tong Chen",
         "Benjamin Segal",
         "Alper Buyuktosunoglu"
       ],
@@ -1114,7 +1114,7 @@
       "authors": [
         "Franyell Silfa",
         "José-María Arnau",
-        "Antonio González 0001"
+        "Antonio González"
       ],
       "pages": "14:1-14:23",
       "type": "Journal Articles",
@@ -1306,7 +1306,7 @@
       "year": 2022,
       "title": "Optimizing Small-Sample Disk Fault Detection Based on LSTM-GAN Model.",
       "authors": [
-        "Yufei Wang 0008",
+        "Yufei Wang",
         "Xiaoshe Dong",
         "Longxiang Wang",
         "Weiduo Chen",
@@ -1334,7 +1334,7 @@
         "Qihan Wang",
         "Zhen Peng",
         "Bin Ren",
-        "Jie Chen 0010",
+        "Jie Chen",
         "Robert G. Edwards"
       ],
       "pages": "24:1-24:26",
@@ -1356,8 +1356,8 @@
       "year": 2022,
       "title": "SIMD-Matcher: A SIMD-based Arbitrary Matching Framework.",
       "authors": [
-        "Ping Wang 0043",
-        "Fei Wen 0003",
+        "Ping Wang",
+        "Fei Wen",
         "Paul V. Gratz",
         "Alex Sprintson"
       ],
@@ -1382,7 +1382,7 @@
       "authors": [
         "Peng Xu",
         "Nannan Zhao",
-        "Jiguang Wan 0001",
+        "Jiguang Wan",
         "Wei Liu",
         "Shuning Chen",
         "Yuanhui Zhou",
@@ -1410,10 +1410,10 @@
       "year": 2022,
       "title": "Preserving Addressability Upon GC-Triggered Data Movements on Non-Volatile Memory.",
       "authors": [
-        "Chencheng Ye 0001",
-        "Yuanchao Xu 0001",
+        "Chencheng Ye",
+        "Yuanchao Xu",
         "Xipeng Shen",
-        "Hai Jin 0001",
+        "Hai Jin",
         "Xiaofei Liao",
         "Yan Solihin"
       ],
@@ -1464,7 +1464,7 @@
       "year": 2022,
       "title": "ASA: Accelerating Sparse Accumulation in Column-wise SpGEMM.",
       "authors": [
-        "Chao Zhang 0039",
+        "Chao Zhang",
         "Maximilian H. Bremer",
         "Cy P. Chan",
         "John Shalf",

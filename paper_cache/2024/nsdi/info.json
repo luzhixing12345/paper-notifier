@@ -6,15 +6,15 @@
       "year": 2024,
       "title": "Flow Scheduling with Imprecise Knowledge.",
       "authors": [
-        "Wenxin Li 0001",
+        "Wenxin Li",
         "Xin He",
         "Yuan Liu",
         "Keqiu Li",
-        "Kai Chen 0005",
+        "Kai Chen",
         "Zhao Ge",
         "Zewei Guan",
         "Heng Qi",
-        "Song Zhang 0008",
+        "Song Zhang",
         "Guyue Liu"
       ],
       "pages": "95-111",
@@ -36,7 +36,7 @@
       "year": 2024,
       "title": "LuoShen: A Hyper-Converged Programmable Gateway for Multi-Tenant Multi-Service Edge Clouds.",
       "authors": [
-        "Tian Pan 0001",
+        "Tian Pan",
         "Kun Liu",
         "Xionglie Wei",
         "Yisong Qiao",
@@ -57,8 +57,8 @@
         "Jun Zeng",
         "Biao Lyu",
         "Ennan Zhai",
-        "Jiao Zhang 0002",
-        "Tao Huang 0005",
+        "Jiao Zhang",
+        "Tao Huang",
         "Dennis Cai",
         "Shunmin Zhu"
       ],
@@ -81,7 +81,7 @@
       "year": 2024,
       "title": "OctoSketch: Enabling Real-Time, Continuous Network Monitoring over Multiple Cores.",
       "authors": [
-        "Yinda Zhang 0002",
+        "Yinda Zhang",
         "Peiqing Chen",
         "Zaoxing Liu"
       ],
@@ -104,7 +104,7 @@
       "year": 2024,
       "title": "MadEye: Boosting Live Video Analytics Accuracy with Adaptive Camera Configurations.",
       "authors": [
-        "Mike Wong 0003",
+        "Mike Wong",
         "Murali Ramanujam",
         "Guha Balakrishnan",
         "Ravi Netravali"
@@ -128,7 +128,7 @@
       "year": 2024,
       "title": "Approximate Caching for Efficiently Serving Text-to-Image Diffusion Models.",
       "authors": [
-        "Shubham Agarwal 0007",
+        "Shubham Agarwal",
         "Subrata Mitra",
         "Sarthak Chakraborty",
         "Srikrishna Karanam",
@@ -154,7 +154,7 @@
       "year": 2024,
       "title": "DINT: Fast In-Kernel Distributed Transactions with eBPF.",
       "authors": [
-        "Yang Zhou 0008",
+        "Yang Zhou",
         "Xingyu Xiang",
         "Matthew Kiley",
         "Sowmya Dharanipragada",
@@ -179,10 +179,10 @@
       "year": 2024,
       "title": "LiFteR: Unleash Learned Codecs in Video Streaming with Loose Frame Referencing.",
       "authors": [
-        "Bo Chen 0025",
+        "Bo Chen",
         "Zhisheng Yan",
         "Yinjie Zhang",
-        "Zhe Yang 0010",
+        "Zhe Yang",
         "Klara Nahrstedt"
       ],
       "pages": "533-548",
@@ -204,16 +204,16 @@
       "year": 2024,
       "title": "Towards Domain-Specific Network Transport for Distributed DNN Training.",
       "authors": [
-        "Hao Wang 0116",
+        "Hao Wang",
         "Han Tian",
-        "Jingrong Chen 0004",
+        "Jingrong Chen",
         "Xinchen Wan",
         "Jiacheng Xia",
         "Gaoxiong Zeng",
-        "Wei Bai 0001",
+        "Wei Bai",
         "Junchen Jiang",
-        "Yong Wang 0046",
-        "Kai Chen 0005"
+        "Yong Wang",
+        "Kai Chen"
       ],
       "pages": "",
       "type": "Conference and Workshop Papers",
@@ -235,8 +235,8 @@
       "title": "Reverie: Low Pass Filter-Based Switch Buffer Sharing for Datacenters with RDMA and TCP Traffic.",
       "authors": [
         "Vamsi Addanki",
-        "Wei Bai 0001",
-        "Stefan Schmid 0001",
+        "Wei Bai",
+        "Stefan Schmid",
         "Maria Apostolaki"
       ],
       "pages": "651-668",
@@ -260,7 +260,7 @@
       "authors": [
         "Vamsi Addanki",
         "Maciej Pacut",
-        "Stefan Schmid 0001"
+        "Stefan Schmid"
       ],
       "pages": "613-634",
       "type": "Conference and Workshop Papers",
@@ -308,7 +308,7 @@
       "authors": [
         "Saksham Agarwal",
         "Qizhe Cai",
-        "Rachit Agarwal 0001",
+        "Rachit Agarwal",
         "David B. Shmoys",
         "Amin Vahdat"
       ],
@@ -334,7 +334,7 @@
         "Ahmed Alquraan",
         "Sreeharsha Udayashankar",
         "Virendra J. Marathe",
-        "Bernard Wong 0001",
+        "Bernard Wong",
         "Samer Al-Kiswany"
       ],
       "pages": "41-54",
@@ -387,7 +387,7 @@
         "André Breda",
         "Matheus Guilherme Franco",
         "Henrique Moniz",
-        "Rodrigo Rodrigues 0001"
+        "Rodrigo Rodrigues"
       ],
       "pages": "313-328",
       "type": "Conference and Workshop Papers",
@@ -484,7 +484,7 @@
         "Daniele De Sensi",
         "Jens Domke",
         "Hussein Harake",
-        "Shigang Li 0002",
+        "Shigang Li",
         "Patrick Iff",
         "Marek Konieczny",
         "Kartik Lakhotia",
@@ -545,7 +545,7 @@
         "Zhenzhe Lin",
         "Kangmin Bae",
         "Song Min Kim",
-        "Parth Pathak 0001"
+        "Parth Pathak"
       ],
       "pages": "",
       "type": "Conference and Workshop Papers",
@@ -568,7 +568,7 @@
       "authors": [
         "Shawn Shuoshuo Chen",
         "Keqiang He",
-        "Rui Wang 0025",
+        "Rui Wang",
         "Srinivasan Seshan",
         "Peter Steenkiste"
       ],
@@ -597,7 +597,7 @@
         "Anton Arapin",
         "Yue Zhang",
         "Qizheng Zhang",
-        "Yuhan Liu 0004",
+        "Yuhan Liu",
         "Kuntai Du",
         "Xu Zhang",
         "Francis Y. Yan",
@@ -626,7 +626,7 @@
       "authors": [
         "Inho Cho",
         "Seo Jin Park",
-        "Ahmed Saeed 0001",
+        "Ahmed Saeed",
         "Mohammad Alizadeh",
         "Adam Belay"
       ],
@@ -652,7 +652,7 @@
         "Jiahe Cui",
         "Shuyao Shi",
         "Yuze He",
-        "Jianwei Niu 0002",
+        "Jianwei Niu",
         "Guoliang Xing",
         "Zhenchao Ouyang"
       ],
@@ -679,7 +679,7 @@
         "Zhenlin An",
         "Zheng Gong",
         "Qingrui Pan",
-        "Lei Yang 0025"
+        "Lei Yang"
       ],
       "pages": "",
       "type": "Conference and Workshop Papers",
@@ -734,7 +734,7 @@
         "Caihui Du",
         "Jihong Yu",
         "Rongrong Zhang",
-        "Ju Ren 0001",
+        "Ju Ren",
         "Jianping An"
       ],
       "pages": "",
@@ -761,7 +761,7 @@
         "Xupeng Miao",
         "Xiaoli Xi",
         "Dahua Lin",
-        "Harry Xu 0001",
+        "Harry Xu",
         "Minjia Zhang",
         "Zhihao Jia"
       ],
@@ -788,10 +788,10 @@
         "Zhongming Lin",
         "Yuming Hu",
         "Tianrui Jiang",
-        "Feng Qian 0001",
-        "Zhimeng Yin 0001",
+        "Feng Qian",
+        "Zhimeng Yin",
         "S.-H. Gary Chan",
-        "Dapeng Wu 0001"
+        "Dapeng Wu"
       ],
       "pages": "",
       "type": "Conference and Workshop Papers",
@@ -814,16 +814,16 @@
       "authors": [
         "Yong Feng",
         "Zhikang Chen",
-        "Haoyu Song 0001",
+        "Haoyu Song",
         "Yinchao Zhang",
         "Hanyi Zhou",
-        "Ruoyu Sun 0009",
+        "Ruoyu Sun",
         "Wenkuo Dong",
         "Peng Lu",
         "Shuxin Liu",
         "Chuwen Zhang",
-        "Yang Xu 0010",
-        "Bin Liu 0001"
+        "Yang Xu",
+        "Bin Liu"
       ],
       "pages": "491-508",
       "type": "Conference and Workshop Papers",
@@ -850,8 +850,8 @@
         "Jiahang Xu",
         "Chengruidong Zhang",
         "Zhiyuan Wang",
-        "Ting Cao 0003",
-        "Mao Yang 0004",
+        "Ting Cao",
+        "Mao Yang",
         "Haisheng Tan"
       ],
       "pages": "",
@@ -954,7 +954,7 @@
         "Jiaqi Gao",
         "Jiamin Cao",
         "Yifan Li",
-        "Mengqi Liu 0001",
+        "Mengqi Liu",
         "Ming Tang",
         "Dennis Cai",
         "Ennan Zhai"
@@ -982,7 +982,7 @@
         "Anthony Dalleggio",
         "Jiajin Liu",
         "Chen Peng",
-        "Yang Xu 0010",
+        "Yang Xu",
         "H. Jonathan Chao"
       ],
       "pages": "75-95",
@@ -1084,9 +1084,9 @@
       "title": "Understanding Routable PCIe Performance for Composable Infrastructures.",
       "authors": [
         "Wentao Hou",
-        "Jie Zhang 0081",
+        "Jie Zhang",
         "Zeke Wang",
-        "Ming Liu 0027"
+        "Ming Liu"
       ],
       "pages": "297-312",
       "type": "Conference and Workshop Papers",
@@ -1108,7 +1108,7 @@
       "title": "NetVigil: Robust and Low-Cost Anomaly Detection for East-West Data Center Security.",
       "authors": [
         "Kevin Hsieh",
-        "Mike Wong 0003",
+        "Mike Wong",
         "Santiago Segarra",
         "Sathiya Kumaran Mani",
         "Trevor Eberl",
@@ -1136,18 +1136,18 @@
       "year": 2024,
       "title": "Characterization of Large Language Model Development in the Datacenter.",
       "authors": [
-        "Qinghao Hu 0004",
-        "Zhisheng Ye 0002",
+        "Qinghao Hu",
+        "Zhisheng Ye",
         "Zerui Wang",
         "Guoteng Wang",
-        "Meng Zhang 0045",
+        "Meng Zhang",
         "Qiaoling Chen",
-        "Peng Sun 0006",
+        "Peng Sun",
         "Dahua Lin",
-        "Xiaolin Wang 0001",
+        "Xiaolin Wang",
         "Yingwei Luo",
-        "Yonggang Wen 0001",
-        "Tianwei Zhang 0004"
+        "Yonggang Wen",
+        "Tianwei Zhang"
       ],
       "pages": "709-729",
       "type": "Conference and Workshop Papers",
@@ -1169,10 +1169,10 @@
       "title": "DISTMM: Accelerating Distributed Multimodal Model Training.",
       "authors": [
         "Jun Huang",
-        "Zhen Zhang 0063",
-        "Shuai Zheng 0004",
+        "Zhen Zhang",
+        "Shuai Zheng",
         "Feng Qin",
-        "Yida Wang 0003"
+        "Yida Wang"
       ],
       "pages": "",
       "type": "Conference and Workshop Papers",
@@ -1224,7 +1224,7 @@
         "Yangrui Chen",
         "Zhi Zhang",
         "Yanghua Peng",
-        "Xiang Li 0067",
+        "Xiang Li",
         "Cong Xie",
         "Shibiao Nong",
         "Yulu Jia",
@@ -1238,17 +1238,17 @@
         "Zhuo Jiang",
         "Haohan Xu",
         "Haoran Wei",
-        "Zhang Zhang 0003",
+        "Zhang Zhang",
         "Pengfei Nie",
         "Leqi Zou",
         "Sida Zhao",
         "Liang Xiang",
         "Zherui Liu",
         "Zhe Li",
-        "Xiaoying Jia 0001",
+        "Xiaoying Jia",
         "Jianxi Ye",
-        "Xin Jin 0008",
-        "Xin Liu 0086"
+        "Xin Jin",
+        "Xin Liu"
       ],
       "pages": "745-760",
       "type": "Conference and Workshop Papers",
@@ -1271,7 +1271,7 @@
       "authors": [
         "Lin Jiang",
         "Feiyu Zhang",
-        "Jiang Ming 0002"
+        "Jiang Ming"
       ],
       "pages": "205-219",
       "type": "Conference and Workshop Papers",
@@ -1296,7 +1296,7 @@
         "Ryan Beckett",
         "Xiaoqi Chen",
         "Ratul Mahajan",
-        "David Walker 0001"
+        "David Walker"
       ],
       "pages": "",
       "type": "Conference and Workshop Papers",
@@ -1462,8 +1462,8 @@
       "year": 2024,
       "title": "ExChain: Exception Dependency Analysis for Root Cause Diagnosis.",
       "authors": [
-        "Ao Li 0009",
-        "Shan Lu 0001",
+        "Ao Li",
+        "Shan Lu",
         "Suman Nath",
         "Rohan Padhye",
         "Vyas Sekar"
@@ -1487,7 +1487,7 @@
       "year": 2024,
       "title": "THC: Accelerating Distributed Deep Learning Using Tensor Homomorphic Compression.",
       "authors": [
-        "Minghao Li 0003",
+        "Minghao Li",
         "Ran Ben Basat",
         "Shay Vargaftik",
         "ChonLam Lao",
@@ -1517,7 +1517,7 @@
         "Liyao Li",
         "Bozhao Shang",
         "Yun Wu",
-        "Jie Xiong 0001",
+        "Jie Xiong",
         "Xiaojiang Chen",
         "Yaxiong Xie"
       ],
@@ -1565,7 +1565,7 @@
       "authors": [
         "Ruihan Li",
         "Fangdan Ye",
-        "Yifei Yuan 0001",
+        "Yifei Yuan",
         "Ruizhen Yang",
         "Bingchuan Tian",
         "Tianchen Guo",
@@ -1601,13 +1601,13 @@
         "Yuanjie Li",
         "Hewu Li",
         "Jiabo Yang",
-        "Wei Liu 0192",
+        "Wei Liu",
         "Jingyi Lan",
         "Yufeng Wang",
         "Jiarui Li",
         "Jianping Wu",
-        "Qian Wu 0001",
-        "Jun Liu 0063",
+        "Qian Wu",
+        "Jun Liu",
         "Zeqi Lai"
       ],
       "pages": "791-808",
@@ -1671,8 +1671,8 @@
       "authors": [
         "Jiaqi Lou",
         "Xinhao Kong",
-        "Jinghan Huang 0001",
-        "Wei Bai 0001",
+        "Jinghan Huang",
+        "Wei Bai",
         "Nam Sung Kim",
         "Danyang Zhuo"
       ],
@@ -1697,7 +1697,7 @@
       "authors": [
         "Biao Lyu",
         "Enge Song",
-        "Tian Pan 0001",
+        "Tian Pan",
         "Jianyuan Lu",
         "Shize Zhang",
         "Xiaoqing Sun",
@@ -1712,11 +1712,11 @@
         "Yanfeng Wang",
         "Kunpeng Zhou",
         "Zhigang Zong",
-        "Xing Li 0007",
+        "Xing Li",
         "Guangwang Li",
         "Pengyu Zhang",
-        "Peng Cheng 0001",
-        "Jiming Chen 0001",
+        "Peng Cheng",
+        "Jiming Chen",
         "Shunmin Zhu"
       ],
       "pages": "",
@@ -1741,14 +1741,14 @@
         "Tie Ma",
         "Long Luo",
         "Hongfang Yu",
-        "Xi Chen 0026",
+        "Xi Chen",
         "Jingzhao Xie",
         "Chongxi Ma",
         "Yunhan Xie",
-        "Gang Sun 0001",
+        "Gang Sun",
         "Tianxi Wei",
-        "Li Chen 0008",
-        "Yanwei Xu 0004",
+        "Li Chen",
+        "Yanwei Xu",
         "Nicholas Zhang"
       ],
       "pages": "",
@@ -1803,8 +1803,8 @@
         "Zili Meng",
         "Xiao Kong",
         "Jing Chen",
-        "Bo Wang 0066",
-        "Mingwei Xu 0001",
+        "Bo Wang",
+        "Mingwei Xu",
         "Rui Han",
         "Honghao Liu",
         "Venkat Arun",
@@ -1888,7 +1888,7 @@
       "authors": [
         "Yajuan Peng",
         "Shuang Chen",
-        "Yi Zhao 0018",
+        "Yi Zhao",
         "Zhibin Yu"
       ],
       "pages": "",
@@ -1910,7 +1910,7 @@
       "year": 2024,
       "title": "Automatic Parallelization of Software Network Functions.",
       "authors": [
-        "Francisco Pereira 0004",
+        "Francisco Pereira",
         "Fernando M. V. Ramos",
         "Luis Pedrosa"
       ],
@@ -1933,12 +1933,12 @@
       "year": 2024,
       "title": "Harvesting Idle Memory for Application-managed Soft State with Midas.",
       "authors": [
-        "Yifan Qiao 0002",
+        "Yifan Qiao",
         "Zhenyuan Ruan",
         "Haoran Ma",
         "Adam Belay",
         "Miryung Kim",
-        "Harry Xu 0001"
+        "Harry Xu"
       ],
       "pages": "",
       "type": "Conference and Workshop Papers",
@@ -2034,7 +2034,7 @@
         "Jayaram Raghuram",
         "Bhuvana Krishnaswamy",
         "Krishna Chintalapudi",
-        "Suman Banerjee 0001"
+        "Suman Banerjee"
       ],
       "pages": "",
       "type": "Conference and Workshop Papers",
@@ -2057,7 +2057,7 @@
       "authors": [
         "Rob Sherwood",
         "Jinghao Shi",
-        "Ying Zhang 0022",
+        "Ying Zhang",
         "Neil Spring",
         "Srikanth Sundaresan",
         "Jasmeet Bagga",
@@ -2231,15 +2231,15 @@
       "year": 2024,
       "title": "AutoSketch: Automatic Sketch-Oriented Compiler for Query-driven Network Telemetry.",
       "authors": [
-        "Haifeng Sun 0004",
-        "Qun Huang 0001",
+        "Haifeng Sun",
+        "Qun Huang",
         "Jinbo Sun",
-        "Wei Wang 0011",
+        "Wei Wang",
         "Jiaheng Li",
         "Fuliang Li",
         "Yungang Bao",
         "Xin Yao",
-        "Gong Zhang 0001"
+        "Gong Zhang"
       ],
       "pages": "",
       "type": "Conference and Workshop Papers",
@@ -2347,9 +2347,9 @@
         "Jiazhao Wang",
         "Wenchao Jiang",
         "Ruofeng Liu",
-        "Bin Hu 0022",
+        "Bin Hu",
         "Demin Gao",
-        "Shuai Wang 0008"
+        "Shuai Wang"
       ],
       "pages": "775-789",
       "type": "Conference and Workshop Papers",
@@ -2396,10 +2396,10 @@
       "title": "SMUFF: Towards Line Rate Wi-Fi Direct Transport with Orchestrated On-device Buffer Management.",
       "authors": [
         "Chengke Wang",
-        "Hao Wang 0035",
+        "Hao Wang",
         "Yuhan Zhou",
         "Yunzhe Ni",
-        "Feng Qian 0001",
+        "Feng Qian",
         "Chenren Xu"
       ],
       "pages": "",
@@ -2421,18 +2421,18 @@
       "year": 2024,
       "title": "Pudica: Toward Near-Zero Queuing Delay in Congestion Control for Cloud Gaming.",
       "authors": [
-        "Shibo Wang 0002",
+        "Shibo Wang",
         "Shusen Yang",
         "Xiao Kong",
         "Chenglei Wu",
         "Longwei Jiang",
         "Chenren Xu",
-        "Cong Zhao 0001",
+        "Cong Zhao",
         "Xuesong Yang",
-        "Jianjun Xiao 0003",
+        "Jianjun Xiao",
         "Xin Liu",
         "Changxi Zheng",
-        "Jing Wang 0077",
+        "Jing Wang",
         "Honghao Liu"
       ],
       "pages": "113-129",
@@ -2483,10 +2483,10 @@
       "authors": [
         "Sarah Wooders",
         "Shu Liu",
-        "Paras Jain 0001",
+        "Paras Jain",
         "Xiangxi Mo",
         "Joseph E. Gonzalez",
-        "Vincent Liu 0001",
+        "Vincent Liu",
         "Ion Stoica"
       ],
       "pages": "281-296",
@@ -2537,7 +2537,7 @@
       "authors": [
         "Haoze Wu",
         "Jia Pan",
-        "Peng Huang 0005"
+        "Peng Huang"
       ],
       "pages": "",
       "type": "Conference and Workshop Papers",
@@ -2585,9 +2585,9 @@
         "Jinzhu Yan",
         "Haotian Xu",
         "Zhuotao Liu",
-        "Qi Li 0002",
-        "Ke Xu 0002",
-        "Mingwei Xu 0001",
+        "Qi Li",
+        "Ke Xu",
+        "Mingwei Xu",
         "Jianping Wu"
       ],
       "pages": "419-440",
@@ -2610,7 +2610,7 @@
       "title": "Horus: Granular In-Network Task Scheduler for Cloud Datacenters.",
       "authors": [
         "Parham Yassini",
-        "Khaled Diab 0001",
+        "Khaled Diab",
         "Saeed Mahloujifar",
         "Mohamed Hefeeda"
       ],
@@ -2634,12 +2634,12 @@
       "title": "BFMSense: WiFi Sensing Using Beamforming Feedback Matrix.",
       "authors": [
         "Enze Yi",
-        "Dan Wu 0007",
-        "Jie Xiong 0001",
+        "Dan Wu",
+        "Jie Xiong",
         "Fusang Zhang",
-        "Kai Niu 0003",
+        "Kai Niu",
         "Wenwei Li",
-        "Daqing Zhang 0001"
+        "Daqing Zhang"
       ],
       "pages": "",
       "type": "Conference and Workshop Papers",
@@ -2719,8 +2719,8 @@
         "Xiaodian Cheng",
         "Han Tian",
         "Xinchen Wan",
-        "Hao Wang 0116",
-        "Kai Chen 0005"
+        "Hao Wang",
+        "Kai Chen"
       ],
       "pages": "",
       "type": "Conference and Workshop Papers",
@@ -2769,7 +2769,7 @@
       "authors": [
         "Zili Zhang",
         "Chao Jin",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "167-183",
       "type": "Conference and Workshop Papers",
@@ -2790,12 +2790,12 @@
       "year": 2024,
       "title": "MuCache: A General Framework for Caching in Microservice Graphs.",
       "authors": [
-        "Haoran Zhang 0009",
+        "Haoran Zhang",
         "Konstantinos Kallas",
         "Spyros Pavlatos",
         "Rajeev Alur",
         "Sebastian Angel",
-        "Vincent Liu 0001"
+        "Vincent Liu"
       ],
       "pages": "221-238",
       "type": "Conference and Workshop Papers",
@@ -2818,9 +2818,9 @@
       "authors": [
         "Zili Zhang",
         "Fangyue Liu",
-        "Gang Huang 0001",
+        "Gang Huang",
         "Xuanzhe Liu",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "23-40",
       "type": "Conference and Workshop Papers",
@@ -2842,7 +2842,7 @@
       "title": "Revisiting Congestion Control for Lossless Ethernet.",
       "authors": [
         "Yiran Zhang",
-        "Qingkai Meng 0001",
+        "Qingkai Meng",
         "Chaolei Hu",
         "Fengyuan Ren"
       ],
@@ -2868,10 +2868,10 @@
         "Anlan Zhang",
         "Chendong Wang",
         "Yuming Hu",
-        "Ahmad Hassan 0004",
-        "Zejun Zhang 0002",
-        "Bo Han 0001",
-        "Feng Qian 0001",
+        "Ahmad Hassan",
+        "Zejun Zhang",
+        "Bo Han",
+        "Feng Qian",
         "Shichang Xu"
       ],
       "pages": "",
@@ -2896,14 +2896,14 @@
         "Jiaxing Zhang",
         "Furong Yang",
         "Ting Liu",
-        "Qinghua Wu 0004",
+        "Qinghua Wu",
         "Wu Zhao",
         "Yuanbo Zhang",
         "Wentao Chen",
         "Yanmei Liu",
         "Hongyu Guo",
         "Yunfei Ma",
-        "Zhenyu Li 0001"
+        "Zhenyu Li"
       ],
       "pages": "253-266",
       "type": "Conference and Workshop Papers",
@@ -2949,7 +2949,7 @@
       "year": 2024,
       "title": "Vulcan: Automatic Query Planning for Live ML Analytics.",
       "authors": [
-        "Yiwen Zhang 0008",
+        "Yiwen Zhang",
         "Xumiao Zhang",
         "Ganesh Ananthanarayanan",
         "Anand P. Iyer",
@@ -2977,12 +2977,12 @@
       "year": 2024,
       "title": "EPVerifier: Accelerating Update Storms Verification with Edge-Predicate.",
       "authors": [
-        "Chenyang Zhao 0005",
+        "Chenyang Zhao",
         "Yuebin Guo",
-        "Jingyu Wang 0001",
-        "Qi Qi 0001",
+        "Jingyu Wang",
+        "Qi Qi",
         "Zirui Zhuang",
-        "Haifeng Sun 0001",
+        "Haifeng Sun",
         "Lingqi Guo",
         "Yuming Xie",
         "Jianxin Liao"
@@ -3008,14 +3008,14 @@
       "authors": [
         "Yuhan Zhou",
         "Tingfeng Wang",
-        "Liying Wang 0011",
+        "Liying Wang",
         "Nian Wen",
         "Rui Han",
-        "Jing Wang 0077",
+        "Jing Wang",
         "Chenglei Wu",
         "Jiafeng Chen",
         "Longwei Jiang",
-        "Shibo Wang 0002",
+        "Shibo Wang",
         "Honghao Liu",
         "Chenren Xu"
       ],
@@ -3042,7 +3042,7 @@
         "Alireza Ghaffarkhah",
         "Hoang-Vu Dang",
         "Brian Towles",
-        "Steven Hand 0001",
+        "Steven Hand",
         "Safeen Huda",
         "Adekunle Bello",
         "Alexander Kolbasov",

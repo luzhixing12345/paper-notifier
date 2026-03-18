@@ -8,7 +8,7 @@
       "authors": [
         "Muhammad Adnan",
         "Yassaman Ebrahimzadeh Maboud",
-        "Divya Mahajan 0001",
+        "Divya Mahajan",
         "Prashant J. Nair"
       ],
       "pages": "1063-1079",
@@ -30,7 +30,7 @@
       "year": 2024,
       "title": "HEAP: A Fully Homomorphic Encryption Accelerator with Parallelized Bootstrapping.",
       "authors": [
-        "Rashmi S. Agrawal 0001",
+        "Rashmi S. Agrawal",
         "Anantha P. Chandrakasan",
         "Ajay Joshi"
       ],
@@ -53,7 +53,7 @@
       "year": 2024,
       "title": "Triangel: A High-Performance, Accurate, Timely On-Chip Temporal Prefetcher.",
       "authors": [
-        "Sam Ainsworth 0001",
+        "Sam Ainsworth",
         "Lev Mukhanov"
       ],
       "pages": "1202-1216",
@@ -77,7 +77,7 @@
       "authors": [
         "Daehyeon Baek",
         "Soojin Hwang",
-        "Jaehyuk Huh 0001"
+        "Jaehyuk Huh"
       ],
       "pages": "354-367",
       "type": "Conference and Workshop Papers",
@@ -175,7 +175,7 @@
       "title": "GameStreamSR: Enabling Neural-Augmented Game Streaming on Commodity Mobile Platforms.",
       "authors": [
         "Sandeepa Bhuyan",
-        "Ziyu Ying 0001",
+        "Ziyu Ying",
         "Mahmut T. Kandemir",
         "Mahanth Gowda",
         "Chita R. Das"
@@ -207,7 +207,7 @@
         "Panagiotis-Eleftherios Eleftherakis",
         "Sotirios Xydis",
         "Dimitrios Soudris",
-        "Tyler Sorensen 0001",
+        "Tyler Sorensen",
         "Simone Campanoni",
         "Tor M. Aamodt",
         "David I. August"
@@ -237,7 +237,7 @@
         "Zizhao Mo",
         "Huanle Xu",
         "Kejiang Ye",
-        "ChengZhong Xu 0001"
+        "ChengZhong Xu"
       ],
       "pages": "424-436",
       "type": "Conference and Workshop Papers",
@@ -260,7 +260,7 @@
       "authors": [
         "Shuangliang Chen",
         "Saptadeep Pal",
-        "Rakesh Kumar 0002"
+        "Rakesh Kumar"
       ],
       "pages": "215-229",
       "type": "Conference and Workshop Papers",
@@ -329,8 +329,8 @@
       "title": "MetaLeak: Uncovering Side Channels in Secure Processor Architectures Exploiting Metadata.",
       "authors": [
         "Md Hafizul Islam Chowdhuryy",
-        "Hao Zheng 0005",
-        "Fan Yao 0001"
+        "Hao Zheng",
+        "Fan Yao"
       ],
       "pages": "693-707",
       "type": "Conference and Workshop Papers",
@@ -355,9 +355,9 @@
         "Salonik Resch",
         "Zamshed I. Chowdhury",
         "Masoud Zabihi",
-        "Yang Lv 0003",
+        "Yang Lv",
         "Brandon Zink",
-        "Jianping Wang 0006",
+        "Jianping Wang",
         "Sachin S. Sapatnekar",
         "Ulya R. Karpuzcu"
       ],
@@ -388,7 +388,7 @@
         "Davide Giri",
         "Alper Buyuktosunoglu",
         "Tianyu Jia",
-        "David Brooks 0001",
+        "David Brooks",
         "Gu-Yeon Wei",
         "Kenneth L. Shepard",
         "Luca P. Carloni",
@@ -414,7 +414,7 @@
       "title": "Mirage: An RNS-Based Photonic Accelerator for DNN Training.",
       "authors": [
         "Cansu Demirkiran",
-        "Guowei Yang 0005",
+        "Guowei Yang",
         "Darius Bunandar",
         "Ajay Joshi"
       ],
@@ -437,7 +437,7 @@
       "year": 2024,
       "title": "Alternate Path Fetch.",
       "authors": [
-        "Aniket Deshmukh 0002",
+        "Aniket Deshmukh",
         "Lingzhe Chester Cai",
         "Yale N. Patt"
       ],
@@ -460,7 +460,7 @@
       "year": 2024,
       "title": "A New Formulation of Neural Data Prefetching.",
       "authors": [
-        "Quang Duong 0002",
+        "Quang Duong",
         "Akanksha Jain",
         "Calvin Lin"
       ],
@@ -485,9 +485,9 @@
       "authors": [
         "Erhu Feng",
         "Dahu Feng",
-        "Dong Du 0003",
+        "Dong Du",
         "Yubin Xia",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "708-723",
       "type": "Conference and Workshop Papers",
@@ -508,11 +508,11 @@
       "year": 2024,
       "title": "Cicero: Addressing Algorithmic and Architectural Bottlenecks in Neural Rendering by Radiance Warping and Memory Optimizations.",
       "authors": [
-        "Yu Feng 0007",
-        "Zihan Liu 0002",
+        "Yu Feng",
+        "Zihan Liu",
         "Jingwen Leng",
         "Minyi Guo",
-        "Yuhao Zhu 0001"
+        "Yuhao Zhu"
       ],
       "pages": "1293-1308",
       "type": "Conference and Workshop Papers",
@@ -533,10 +533,10 @@
       "year": 2024,
       "title": "BlissCam: Boosting Eye Tracking Efficiency with Learned In-Sensor Sparse Sampling.",
       "authors": [
-        "Yu Feng 0007",
+        "Yu Feng",
         "Tianrui Ma",
-        "Yuhao Zhu 0001",
-        "Xuan Zhang 0001"
+        "Yuhao Zhu",
+        "Xuan Zhang"
       ],
       "pages": "1262-1277",
       "type": "Conference and Workshop Papers",
@@ -585,7 +585,7 @@
         "Seungjae Moon",
         "Teokkyu Suh",
         "Jaehoon Heo",
-        "Joo-Young Kim 0001"
+        "Joo-Young Kim"
       ],
       "pages": "582-596",
       "type": "Conference and Workshop Papers",
@@ -607,7 +607,7 @@
       "title": "BitNN: A Bit-Serial Accelerator for K-Nearest Neighbor Search in Point Clouds.",
       "authors": [
         "Meng Han",
-        "Liang Wang 0020",
+        "Liang Wang",
         "Limin Xiao",
         "Hao Zhang",
         "Tianhao Cai",
@@ -637,10 +637,10 @@
       "authors": [
         "Xiaofeng Hou",
         "Tongqiao Xu",
-        "Chao Li 0009",
+        "Chao Li",
         "Cheng Xu",
-        "Jiacheng Liu 0001",
-        "Yang Hu 0001",
+        "Jiacheng Liu",
+        "Yang Hu",
         "Jieru Zhao",
         "Jingwen Leng",
         "Kwang-Ting Cheng",
@@ -671,7 +671,7 @@
         "Newsha Ardalani",
         "Zachary DeVito",
         "Gu-Yeon Wei",
-        "David Brooks 0001",
+        "David Brooks",
         "Carole-Jean Wu"
       ],
       "pages": "818-833",
@@ -693,7 +693,7 @@
       "year": 2024,
       "title": "HAL: Hardware-assisted Load Balancing for Energy-efficient SNIC-Host Cooperative Computing.",
       "authors": [
-        "Jinghan Huang 0001",
+        "Jinghan Huang",
         "Jiaqi Lou",
         "Srikar Vanavasam",
         "Xinhao Kong",
@@ -722,7 +722,7 @@
       "year": 2024,
       "title": "Mind the Gap: Attainable Data Movement and Operational Intensity Bounds for Tensor Algorithms.",
       "authors": [
-        "Qijing Huang 0001",
+        "Qijing Huang",
         "Po-An Tsai",
         "Joel S. Emer",
         "Angshuman Parashar"
@@ -750,9 +750,9 @@
         "Jianyu Wei",
         "Shijie Cao",
         "Changho Hwang",
-        "Xiaohu Tang 0003",
-        "Ting Cao 0003",
-        "Mao Yang 0004"
+        "Xiaohu Tang",
+        "Ting Cao",
+        "Mao Yang"
       ],
       "pages": "1018-1031",
       "type": "Conference and Workshop Papers",
@@ -800,9 +800,9 @@
         "Yuwei Jin",
         "Zirui Li",
         "Fei Hua",
-        "Tianyi Hao 0003",
+        "Tianyi Hao",
         "Huiyang Zhou",
-        "Yipeng Huang 0001",
+        "Yipeng Huang",
         "Eddy Z. Zhang"
       ],
       "pages": "277-292",
@@ -826,15 +826,15 @@
       "authors": [
         "Dai Cheol Jung",
         "Max Ruttenberg",
-        "Paul Gao 0001",
-        "Scott Davidson 0004",
+        "Paul Gao",
+        "Scott Davidson",
         "Daniel Petrisko",
         "Kangli Li",
         "Aditya K. Kamath",
         "Lin Cheng",
         "Shaolin Xie",
         "Peitian Pan",
-        "Zhongyuan Zhao 0004",
+        "Zhongyuan Zhao",
         "Zichao Yue",
         "Bandhav Veluri",
         "Sripathi Muralitharan",
@@ -866,7 +866,7 @@
       "title": "(MC)2: Lazy MemCopy at the Memory Controller.",
       "authors": [
         "Aditya K. Kamath",
-        "Simon Peter 0001"
+        "Simon Peter"
       ],
       "pages": "1112-1128",
       "type": "Conference and Workshop Papers",
@@ -890,7 +890,7 @@
         "Nikos Karystinos",
         "Odysseas Chatzopoulos",
         "George-Marios Fragkoulis",
-        "George Papadimitriou 0001",
+        "George Papadimitriou",
         "Dimitris Gizopoulos",
         "Sudhanva Gurumurthi"
       ],
@@ -918,7 +918,7 @@
         "Junyoung Park",
         "Byeongwook Bae",
         "Hyunmin Jeong",
-        "Sang Min Lee 0014",
+        "Sang Min Lee",
         "Jeseung Yeon",
         "Minho Kim",
         "Changjae Park",
@@ -987,7 +987,7 @@
         "Jinwoo Hwang",
         "Wonung Kim",
         "Seongryong Oh",
-        "Yubin Lee 0002",
+        "Yubin Lee",
         "Hardik Sharma",
         "Amir Yazdanbakhsh",
         "Jongse Park"
@@ -1013,9 +1013,9 @@
       "authors": [
         "Tae Hoon Kim",
         "David Rudo",
-        "Kaiyang Zhao 0002",
+        "Kaiyang Zhao",
         "Zirui Neil Zhao",
-        "Dimitrios Skarlatos 0002"
+        "Dimitrios Skarlatos"
       ],
       "pages": "739-755",
       "type": "Conference and Workshop Papers",
@@ -1039,7 +1039,7 @@
         "Apostolos Kokolis",
         "Antonis Psistakis",
         "Benjamin Reidys",
-        "Jian Huang 0006",
+        "Jian Huang",
         "Josep Torrellas"
       ],
       "pages": "785-800",
@@ -1062,21 +1062,21 @@
       "title": "Cambricon-D: Full-Network Differential Acceleration for Diffusion Models.",
       "authors": [
         "Weihao Kong",
-        "Yifan Hao 0001",
-        "Qi Guo 0001",
-        "Yongwei Zhao 0001",
+        "Yifan Hao",
+        "Qi Guo",
+        "Yongwei Zhao",
         "Xinkai Song",
         "Xiaqing Li",
         "Mo Zou",
         "Zidong Du",
-        "Rui Zhang 0040",
-        "Chang Liu 0021",
-        "Yuanbo Wen 0001",
+        "Rui Zhang",
+        "Chang Liu",
+        "Yuanbo Wen",
         "Pengwei Jin",
-        "Xing Hu 0001",
-        "Wei Li 0008",
-        "Zhiwei Xu 0002",
-        "Tianshi Chen 0002"
+        "Xing Hu",
+        "Wei Li",
+        "Zhiwei Xu",
+        "Tianshi Chen"
       ],
       "pages": "903-914",
       "type": "Conference and Workshop Papers",
@@ -1168,8 +1168,8 @@
       "year": 2024,
       "title": "QuTracer: Mitigating Quantum Gate and Measurement Errors by Tracing Subsets of Qubits.",
       "authors": [
-        "Peiyi Li 0002",
-        "Ji Liu 0007",
+        "Peiyi Li",
+        "Ji Liu",
         "Alvin Gonzales",
         "Zain H. Saleem",
         "Huiyang Zhou",
@@ -1224,11 +1224,11 @@
       "year": 2024,
       "title": "AVM-BTB: Adaptive and Virtualized Multi-level Branch Target Buffer.",
       "authors": [
-        "Yunzhe Liu 0005",
-        "Xinyu Li 0010",
+        "Yunzhe Liu",
+        "Xinyu Li",
         "Tingting Zhang",
         "Tianyi Liu",
-        "Qi Guo 0001",
+        "Qi Guo",
         "Fuxin Zhang",
         "Jian Wang"
       ],
@@ -1251,14 +1251,14 @@
       "year": 2024,
       "title": "Enabling Efficient Large Recommendation Model Training with Near CXL Memory Processing.",
       "authors": [
-        "Haifeng Liu 0003",
-        "Long Zheng 0003",
-        "Yu Huang 0013",
+        "Haifeng Liu",
+        "Long Zheng",
+        "Yu Huang",
         "Jingyi Zhou",
         "Chaoqiang Liu",
         "Runze Wang",
         "Xiaofei Liao",
-        "Hai Jin 0001",
+        "Hai Jin",
         "Jingling Xue"
       ],
       "pages": "382-395",
@@ -1319,7 +1319,7 @@
         "Joël Lindegger",
         "Meryem Banu Cavlak",
         "Mohammed Alser",
-        "Jisung Park 0001",
+        "Jisung Park",
         "Onur Mutlu"
       ],
       "pages": "660-677",
@@ -1372,7 +1372,7 @@
         "Seungmin Baek",
         "Minbok Wi",
         "Michael Jaemin Kim",
-        "Jaehyun Park 0006",
+        "Jaehyun Park",
         "Chihun Song",
         "Nam Sung Kim",
         "Jung Ho Ahn"
@@ -1401,9 +1401,9 @@
         "Chaemin Lim",
         "Seongyeon Park",
         "Jeehyun Kim",
-        "Hanjun Kim 0001",
+        "Hanjun Kim",
         "Youngsok Kim",
-        "Jinho Lee 0001"
+        "Jinho Lee"
       ],
       "pages": "245-260",
       "type": "Conference and Workshop Papers",
@@ -1452,11 +1452,11 @@
         "Xiurui Pan",
         "Yuda An",
         "Shengwen Liang",
-        "Bo Mao 0003",
-        "Mingzhe Zhang 0005",
-        "Qiao Li 0001",
+        "Bo Mao",
+        "Mingzhe Zhang",
+        "Qiao Li",
         "Myoungsoo Jung",
-        "Jie Zhang 0048"
+        "Jie Zhang"
       ],
       "pages": "915-930",
       "type": "Conference and Workshop Papers",
@@ -1480,7 +1480,7 @@
         "Gagandeep Panwar",
         "Muhammad Laghari",
         "Esha Choukse",
-        "Xun Jian 0002"
+        "Xun Jian"
       ],
       "pages": "1129-1143",
       "type": "Conference and Workshop Papers",
@@ -1566,12 +1566,12 @@
       "title": "MECLA: Memory-Compute-Efficient LLM Accelerator with Scaling Sub-matrix Partition.",
       "authors": [
         "Yubin Qin",
-        "Yang Wang 0089",
+        "Yang Wang",
         "Zhiren Zhao",
         "Xiaolong Yang",
         "Yang Zhou",
         "Shaojun Wei",
-        "Yang Hu 0001",
+        "Yang Hu",
         "Shouyi Yin"
       ],
       "pages": "1032-1047",
@@ -1697,7 +1697,7 @@
         "Gilbert Jonatan",
         "José L. Abellán",
         "Ajay Joshi",
-        "John Kim 0001",
+        "John Kim",
         "David R. Kaeli"
       ],
       "pages": "946-960",
@@ -1722,7 +1722,7 @@
         "Mojtaba Abaie Shoushtary",
         "José-María Arnau",
         "Jordi Tubella Murgadas",
-        "Antonio González 0001"
+        "Antonio González"
       ],
       "pages": "978-990",
       "type": "Conference and Workshop Papers",
@@ -1746,7 +1746,7 @@
         "Sawan Singh",
         "Arthur Perais",
         "Alexandra Jimborean",
-        "Alberto Ros 0001"
+        "Alberto Ros"
       ],
       "pages": "1230-1245",
       "type": "Conference and Workshop Papers",
@@ -1767,7 +1767,7 @@
       "year": 2024,
       "title": "Realizing the AMD Exascale Heterogeneous Processor Vision : Industry Product.",
       "authors": [
-        "Alan Smith 0003",
+        "Alan Smith",
         "Gabriel H. Loh",
         "Michael J. Schulte",
         "Mike Ignatowski",
@@ -1801,9 +1801,9 @@
       "authors": [
         "Ruibing Song",
         "Chunshu Wu",
-        "Chuan Liu 0001",
-        "Ang Li 0006",
-        "Michael C. Huang 0001",
+        "Chuan Liu",
+        "Ang Li",
+        "Michael C. Huang",
         "Tong Geng"
       ],
       "pages": "45-57",
@@ -1909,10 +1909,10 @@
       "title": "NDPBridge: Enabling Cross-Bank Coordination in Near-DRAM-Bank Processing Architectures.",
       "authors": [
         "Boyu Tian",
-        "Yiwei Li 0004",
-        "Li Jiang 0002",
+        "Yiwei Li",
+        "Li Jiang",
         "Shuangyu Cai",
-        "Mingyu Gao 0001"
+        "Mingyu Gao"
       ],
       "pages": "628-643",
       "type": "Conference and Workshop Papers",
@@ -1992,9 +1992,9 @@
       "authors": [
         "Xin Wang",
         "Jagadish Kotra",
-        "Alex Jones 0002",
-        "Wenjie Xiong 0001",
-        "Xun Jian 0002"
+        "Alex Jones",
+        "Wenjie Xiong",
+        "Xun Jian"
       ],
       "pages": "724-738",
       "type": "Conference and Workshop Papers",
@@ -2015,15 +2015,15 @@
       "year": 2024,
       "title": "Atomique: A Quantum Compiler for Reconfigurable Neutral Atom Arrays.",
       "authors": [
-        "Hanrui Wang 0002",
+        "Hanrui Wang",
         "Pengyu Liu",
         "Daniel Bochen Tan",
         "Yilian Liu",
-        "Jiaqi Gu 0002",
+        "Jiaqi Gu",
         "David Z. Pan",
         "Jason Cong",
         "Umut A. Acar",
-        "Song Han 0003"
+        "Song Han"
       ],
       "pages": "293-309",
       "type": "Conference and Workshop Papers",
@@ -2045,13 +2045,13 @@
       "title": "NDSEARCH: Accelerating Graph-Traversal-Based Approximate Nearest Neighbor Search through Near Data Processing.",
       "authors": [
         "Yitu Wang",
-        "Shiyu Li 0001",
+        "Shiyu Li",
         "Qilin Zheng",
         "Linghao Song",
         "Zongwang Li",
         "Andrew Chang",
-        "Hai Li 0001",
-        "Yiran Chen 0001"
+        "Hai Li",
+        "Yiran Chen"
       ],
       "pages": "368-381",
       "type": "Conference and Workshop Papers",
@@ -2074,8 +2074,8 @@
       "authors": [
         "Fuyu Wang",
         "Minghua Shen",
-        "Yufei Ding 0001",
-        "Nong Xiao 0001"
+        "Yufei Ding",
+        "Nong Xiao"
       ],
       "pages": "991-1004",
       "type": "Conference and Workshop Papers",
@@ -2101,7 +2101,7 @@
         "Chengyi Lux Zhang",
         "Kevin Anderson",
         "Abraham Gonzalez",
-        "Raghav Gupta 0001",
+        "Raghav Gupta",
         "Nivedha Krishnakumar",
         "Sagar Karandikar",
         "Borivoje Nikolic",
@@ -2129,7 +2129,7 @@
       "authors": [
         "Yifan Yang",
         "Joel S. Emer",
-        "Daniel Sánchez 0003"
+        "Daniel Sánchez"
       ],
       "pages": "931-945",
       "type": "Conference and Workshop Papers",
@@ -2151,13 +2151,13 @@
       "title": "Intel Accelerators Ecosystem: An SoC-Oriented Perspective : Industry Product.",
       "authors": [
         "Yifan Yuan",
-        "Ren Wang 0001",
+        "Ren Wang",
         "Narayan Ranganathan",
         "Nikhil Rao",
         "Sanjay Kumar",
         "Philip Lantz",
         "Vivekananthan Sanjeepan",
-        "Jorge Cabrera 0003",
+        "Jorge Cabrera",
         "Atul Kwatra",
         "Rajesh Sankaran",
         "Ipoom Jeong",
@@ -2191,11 +2191,11 @@
         "Ruiqi Guo",
         "Yuxuan Li",
         "Yubin Qin",
-        "Yang Wang 0089",
-        "Chao Li 0009",
+        "Yang Wang",
+        "Chao Li",
         "Huiming Han",
         "Shaojun Wei",
-        "Yang Hu 0001",
+        "Yang Hu",
         "Shouyi Yin"
       ],
       "pages": "396-409",
@@ -2217,7 +2217,7 @@
       "year": 2024,
       "title": "Compiler-Directed Whole-System Persistence.",
       "authors": [
-        "Jianping Zeng 0001",
+        "Jianping Zeng",
         "Tong Zhang",
         "Changhee Jung"
       ],
@@ -2291,19 +2291,19 @@
       "year": 2024,
       "title": "UM-PIM: DRAM-based PIM with Uniform & Shared Memory Space.",
       "authors": [
-        "Yilong Zhao 0004",
-        "Mingyu Gao 0001",
+        "Yilong Zhao",
+        "Mingyu Gao",
         "Fangxin Liu",
         "Yiwei Hu",
         "Zongwu Wang",
         "Han Lin",
-        "Jin Li 0002",
+        "Jin Li",
         "He Xian",
         "Hanlin Dong",
-        "Tao Yang 0031",
+        "Tao Yang",
         "Naifeng Jing",
         "Xiaoyao Liang",
-        "Li Jiang 0002"
+        "Li Jiang"
       ],
       "pages": "644-659",
       "type": "Conference and Workshop Papers",
@@ -2324,9 +2324,9 @@
       "year": 2024,
       "title": "ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching.",
       "authors": [
-        "Youpeng Zhao 0002",
-        "Di Wu 0016",
-        "Jun Wang 0001"
+        "Youpeng Zhao",
+        "Di Wu",
+        "Jun Wang"
       ],
       "pages": "1005-1017",
       "type": "Conference and Workshop Papers",
@@ -2347,8 +2347,8 @@
       "year": 2024,
       "title": "Bosehedral: Compiler Optimization for Bosonic Quantum Computing.",
       "authors": [
-        "Junyu Zhou 0005",
-        "Yuhao Liu 0017",
+        "Junyu Zhou",
+        "Yuhao Liu",
         "Yunong Shi",
         "Ali Javadi-Abhari",
         "Gushu Li"

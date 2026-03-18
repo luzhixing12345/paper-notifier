@@ -12,7 +12,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
 from bs4 import BeautifulSoup
+from prettytable import PrettyTable
 from tqdm import tqdm
+import e2me
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -21,8 +23,11 @@ ASSETS_DIR = BASE_DIR / "assets"
 STATIC_DATA_PATH = ASSETS_DIR / "papers-data.json"
 CONFERENCE_CONFIG_PATH = BASE_DIR / "CONFERENCE.txt"
 JOURNAL_CONFIG_PATH = BASE_DIR / "JOURNAL.txt"
+EMAIL_CONFIG_PATH = BASE_DIR / "EMAIL.txt"
 USER_AGENT = "paper-abstract-cache-builder/1.0"
 REQUEST_TIMEOUT = 20
+REQUEST_RETRIES = 4
+RETRY_BACKOFF_SECONDS = 1.5
 MAX_OPENALEX_CANDIDATES = 10
 ABSTRACT_WORKERS = 8
 DBLP_ENTRY_WORKERS = 4
@@ -31,6 +36,27 @@ BUILD_WORKERS = 4
 TRANSLATE_CHAR_LIMIT = 5000
 
 DEFAULT_LOOKBACK_YEARS = 5
+
+
+def send_email(subject: str = "New Paper Alert", body: str = "Check out the latest papers in your field!") -> None:
+    if not EMAIL_CONFIG_PATH.exists():
+        return
+
+    recipients: list[str] = []
+    for raw_line in EMAIL_CONFIG_PATH.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        recipients.append(line)
+
+    if not recipients:
+        return
+    
+    print("Sending cache fill notification email to: " + ", ".join(recipients))
+
+    for recipient in recipients:
+        e2me.send_email(subject, body, to=recipient)
+    print(f"Cache fill notification email sent to {len(recipients)} recipient(s).")
 
 
 def format_conference_label(key: str) -> str:
@@ -113,6 +139,10 @@ def compact_spaces(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
+def clean_author_name(value: str) -> str:
+    return compact_spaces(re.sub(r"\s+\d{4}$", "", value))
+
+
 def is_metadata_entry(title: str, conference_label: str, year: int) -> bool:
     normalized = normalize_text(title)
     conference_token = conference_label.lower()
@@ -183,12 +213,55 @@ def normalize_source_url(url: str) -> str:
     return url
 
 
+def format_cache_fill_email_subject(updates: dict[str, list[dict[str, Any]]]) -> str:
+    entries = [entry for items in updates.values() for entry in items]
+    if len(entries) == 1:
+        entry = entries[0]
+        paper_label = "Paper" if entry["paper_count"] == 1 else "Papers"
+        return f"Paper Notifier: {entry['conference_label']} [{entry['year']}] {entry['paper_count']} {paper_label}"
+
+    total_venue_years = len(entries)
+    return f"Paper Notifier: {total_venue_years} new venue-year cache{'s' if total_venue_years != 1 else ''}"
+
+
+def format_cache_fill_email_body(updates: dict[str, list[dict[str, Any]]]) -> str:
+    total_venue_years = sum(len(items) for items in updates.values())
+    entries = [entry for items in updates.values() for entry in items]
+    if len(entries) == 1:
+        entry = entries[0]
+        return "\n".join(
+            [
+                "Detected a newly cached venue-year entry during build-cache.",
+                "",
+                f"Conference: {entry['conference_label']} ({entry['conference']})",
+                f"Year: {entry['year']}",
+                f"Papers: {entry['paper_count']}",
+            ]
+        )
+
+    lines = [
+        "Detected newly cached venue-year entries during build-cache.",
+        "",
+        f"Total new venue-years: {total_venue_years}",
+        "",
+    ]
+    for conference in sorted(updates):
+        entries = sorted(updates[conference], key=lambda item: -int(item["year"]))
+        label = entries[0]["conference_label"] if entries else conference.upper()
+        lines.append(f"{label} ({conference}): {len(entries)} new cache(s)")
+        for entry in entries:
+            lines.append(f"- [{entry['year']}] {entry['paper_count']} paper(s)")
+        lines.append("")
+    return "\n".join(lines).strip()
+
+
 class PaperRepository:
     def __init__(self, cache_dir: Path) -> None:
         self.cache_dir = cache_dir
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.lock = threading.Lock()
         self._thread_local = threading.local()
+        self._new_cache_keys: set[str] = set()
         self.cache = self._load_cache()
 
     def _build_session(self, trust_env: bool) -> requests.Session:
@@ -217,6 +290,17 @@ class PaperRepository:
 
     def _paper_info_path(self, conference: str, year: int) -> Path:
         return self.cache_dir / str(year) / conference / "info.json"
+
+    def _infer_cached_paper_years(self, conference: str, lookback_years: int) -> list[int]:
+        years = [
+            int(year_dir.name)
+            for year_dir in self.cache_dir.iterdir()
+            if year_dir.is_dir()
+            and year_dir.name.isdigit()
+            and self._paper_info_path(conference, int(year_dir.name)).exists()
+        ]
+        years.sort(reverse=True)
+        return years[:lookback_years]
 
     def _load_cache(self) -> dict[str, Any]:
         cache = self._empty_cache()
@@ -296,15 +380,32 @@ class PaperRepository:
             info_path.parent.mkdir(parents=True, exist_ok=True)
             info_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
+    def _request(self, url: str, *, expect_json: bool) -> Any:
+        last_error: requests.RequestException | None = None
+        for attempt in range(REQUEST_RETRIES + 1):
+            try:
+                response = self._session_for().get(url, timeout=REQUEST_TIMEOUT)
+                response.raise_for_status()
+                return response.json() if expect_json else response.text
+            except requests.RequestException as exc:
+                last_error = exc
+                if attempt >= REQUEST_RETRIES:
+                    break
+                time.sleep(RETRY_BACKOFF_SECONDS * (2**attempt))
+        assert last_error is not None
+        raise last_error
+
     def _get_json(self, url: str) -> dict[str, Any]:
-        response = self._session_for().get(url, timeout=REQUEST_TIMEOUT)
-        response.raise_for_status()
-        return response.json()
+        payload = self._request(url, expect_json=True)
+        if not isinstance(payload, dict):
+            raise ValueError(f"Unexpected JSON payload type for {url}: {type(payload).__name__}")
+        return payload
 
     def _get_text(self, url: str) -> str:
-        response = self._session_for().get(url, timeout=REQUEST_TIMEOUT)
-        response.raise_for_status()
-        return response.text
+        payload = self._request(url, expect_json=False)
+        if not isinstance(payload, str):
+            raise ValueError(f"Unexpected text payload type for {url}: {type(payload).__name__}")
+        return payload
 
     def get_latest_years(self, conference: str, lookback_years: int | None = None) -> list[int]:
         venue = VENUES[conference]
@@ -322,11 +423,20 @@ class PaperRepository:
         ):
             return cached["years"][:lookback_years]
 
-        html_text = self._get_text(f"https://dblp.org/db/{venue_kind}/{slug}/index.html")
+        fallback_years = self._infer_cached_paper_years(conference, lookback_years)
+        try:
+            html_text = self._get_text(f"https://dblp.org/db/{venue_kind}/{slug}/index.html")
+        except requests.RequestException:
+            if fallback_years:
+                return fallback_years
+            raise
+
         year_entries = self._extract_year_entries(html_text, slug, venue_kind)
         found_years = sorted(year_entries.keys(), reverse=True)
         min_year = current_year() - lookback_years + 1
         years = [year for year in found_years if year >= min_year][:lookback_years]
+        if not years and fallback_years:
+            return fallback_years
         with self.lock:
             self.cache["conference_years"][conference] = {
                 "years": years,
@@ -340,12 +450,26 @@ class PaperRepository:
             return self._extract_journal_year_entries(html_text, slug)
 
         entries: dict[int, set[str]] = {}
-        pattern = re.compile(rf"/db/conf/{re.escape(slug)}/([^\"/]*?(\d{{4}})[^\"/]*)\.html")
-        for match in pattern.finditer(html_text):
+
+        toc_pattern = re.compile(rf"/db/conf/{re.escape(slug)}/([^\"/]*?(\d{{4}})[^\"/]*)\.html")
+        for match in toc_pattern.finditer(html_text):
             entry_name = match.group(1)
             if not entry_name.startswith(slug):
                 continue
             year = int(match.group(2))
+            if year > current_year():
+                continue
+            entries.setdefault(year, set()).add(entry_name)
+
+        # Some venues such as DAC / HPCA expose year pages via dblp keys like `conf/dac/2025`
+        # instead of legacy `/db/conf/dac/dac2025.html` links.
+        dblp_key_pattern = re.compile(rf"\bconf/{re.escape(slug)}/([^<\s/]+)\b")
+        for match in dblp_key_pattern.finditer(html_text):
+            entry_name = match.group(1)
+            year_match = re.search(r"(19|20)\d{2}", entry_name)
+            if not year_match:
+                continue
+            year = int(year_match.group(0))
             if year > current_year():
                 continue
             entries.setdefault(year, set()).add(entry_name)
@@ -447,6 +571,8 @@ class PaperRepository:
     ) -> dict[str, int]:
         conferences = conferences or list(VENUES.keys())
         summary: dict[str, int] = {}
+        failures: dict[str, str] = {}
+        self._new_cache_keys = set()
         progress = tqdm(total=len(conferences), desc="conferences", unit="conf") if show_progress else None
         max_workers = min(BUILD_WORKERS, max(1, len(conferences)))
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
@@ -461,7 +587,14 @@ class PaperRepository:
             }
             for future in as_completed(future_map):
                 conference = future_map[future]
-                summary[conference] = len(future.result())
+                try:
+                    summary[conference] = len(future.result())
+                except (requests.RequestException, ValueError) as exc:
+                    failures[conference] = str(exc)
+                    summary[conference] = 0
+                except Exception as exc:
+                    failures[conference] = repr(exc)
+                    summary[conference] = 0
                 if progress:
                     progress.update(1)
         if progress:
@@ -469,6 +602,11 @@ class PaperRepository:
         self.cache["metadata"] = {"mode": "prefetched"}
         self._save_cache()
         self.export_static_data()
+        self._send_cache_fill_notification()
+        if failures:
+            print("\nFailed conferences:")
+            for conference in sorted(failures):
+                print(f"- {conference}: {failures[conference]}")
         return summary
 
     def export_static_data(self, output_path: Path = STATIC_DATA_PATH) -> Path:
@@ -499,6 +637,31 @@ class PaperRepository:
         output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         return output_path
 
+    def _send_cache_fill_notification(self) -> None:
+        if not self._new_cache_keys:
+            print("No new cache entries added.")
+            return
+
+        print("New cache entries added for: " + ", ".join(sorted(self._new_cache_keys)))
+        updates: dict[str, list[dict[str, Any]]] = {}
+        for cache_key in sorted(self._new_cache_keys):
+            conference, year_text = cache_key.split(":", 1)
+            payload = self.cache["papers"].get(cache_key, {})
+            items = payload.get("items", [])
+            updates.setdefault(conference, []).append(
+                {
+                    "conference": conference,
+                    "conference_label": VENUES[conference]["label"],
+                    "year": int(year_text),
+                    "paper_count": len(items),
+                }
+            )
+
+        send_email(
+            format_cache_fill_email_subject(updates),
+            format_cache_fill_email_body(updates),
+        )
+
     def _get_papers_for_year(
         self,
         conference: str,
@@ -519,6 +682,8 @@ class PaperRepository:
             self.cache["papers"][cache_key] = {
                 "items": items,
             }
+            if not force_refresh:
+                self._new_cache_keys.add(cache_key)
             self._save_cache()
         return items
 
@@ -566,7 +731,7 @@ class PaperRepository:
                 "conference_label": VENUES[conference]["label"],
                 "year": int(info.get("year") or year),
                 "title": title,
-                "authors": [compact_spaces(author.get("text", "")) for author in authors if author.get("text")],
+                "authors": [clean_author_name(author.get("text", "")) for author in authors if author.get("text")],
                 "pages": info.get("pages", ""),
                 "type": info.get("type", ""),
                 "access": info.get("access", ""),
@@ -843,8 +1008,13 @@ REPOSITORY = PaperRepository(CACHE_DIR)
 
 
 def print_summary(summary: dict[str, int]) -> None:
-    for conference, count in summary.items():
-        print(f"{conference}: {count} papers cached")
+    table = PrettyTable()
+    table.field_names = ["Conference", "Papers Cached"]
+    table.align["Conference"] = "l"
+    table.align["Papers Cached"] = "r"
+    for conference in sorted(summary):
+        table.add_row([conference, summary[conference]])
+    print(table)
 
 
 def main() -> None:
@@ -854,7 +1024,10 @@ def main() -> None:
         nargs="?",
         default="build-cache",
         choices=["build-cache", "build-static"],
-        help="build-cache: build missing cache and export static data; build-static: export static JSON from existing cache",
+        help=(
+            "build-cache: build missing cache and export static data; "
+            "build-static: export static JSON from existing cache"
+        ),
     )
     args = parser.parse_args()
 

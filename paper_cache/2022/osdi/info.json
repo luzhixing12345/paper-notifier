@@ -6,8 +6,8 @@
       "year": 2022,
       "title": "Efficient and Scalable Graph Pattern Mining on GPUs.",
       "authors": [
-        "Xuhao Chen 0001",
-        "Arvind 0001"
+        "Xuhao Chen",
+        "Arvind"
       ],
       "pages": "857-877",
       "type": "Conference and Workshop Papers",
@@ -28,7 +28,7 @@
       "year": 2022,
       "title": "Debugging the OmniTable Way.",
       "authors": [
-        "Andrew Quinn 0001",
+        "Andrew Quinn",
         "Jason Flinn",
         "Michael J. Cafarella",
         "Baris Kasikci"
@@ -52,9 +52,9 @@
       "year": 2022,
       "title": "Carbink: Fault-Tolerant Far Memory.",
       "authors": [
-        "Yang Zhou 0008",
+        "Yang Zhou",
         "Hassan M. G. Wassel",
-        "Sihang Liu 0001",
+        "Sihang Liu",
         "Jiaqi Gao",
         "James Mickens",
         "Minlan Yu",
@@ -83,13 +83,13 @@
       "year": 2022,
       "title": "Automatic Reliability Testing For Cluster Management Controllers.",
       "authors": [
-        "Xudong Sun 0013",
+        "Xudong Sun",
         "Wenqing Luo",
         "Jiawei Tyler Gu",
         "Aishwarya Ganesan",
         "Ramnatthan Alagappan",
         "Michael Gasch",
-        "Lalith Suresh 0001",
+        "Lalith Suresh",
         "Tianyin Xu"
       ],
       "pages": "143-159",
@@ -185,11 +185,11 @@
       "title": "UPGRADVISOR: Early Adopting Dependency Updates Using Hybrid Program Analysis and Hardware Tracing.",
       "authors": [
         "Yaniv David",
-        "Xudong Sun 0019",
+        "Xudong Sun",
         "Raphael J. Sofaer",
         "Aditya Senthilnathan",
         "Junfeng Yang",
-        "Zhiqiang Zuo 0002",
+        "Zhiqiang Zuo",
         "Guoqing Harry Xu",
         "Jason Nieh",
         "Ronghui Gu"
@@ -215,11 +215,11 @@
       "authors": [
         "Guanyu Feng",
         "Huanqi Cao",
-        "Xiaowei Zhu 0001",
-        "Bowen Yu 0003",
+        "Xiaowei Zhu",
+        "Bowen Yu",
         "Yuanwei Wang",
         "Zixuan Ma",
-        "Shengqi Chen 0001",
+        "Shengqi Chen",
         "Wenguang Chen"
       ],
       "pages": "395-411",
@@ -294,11 +294,11 @@
       "title": "Trinity: High-Performance Mobile Emulation through Graphics Projection.",
       "authors": [
         "Di Gao",
-        "Hao Lin 0005",
-        "Zhenhua Li 0001",
+        "Hao Lin",
+        "Zhenhua Li",
         "Chengen Huang",
-        "Yunhao Liu 0001",
-        "Feng Qian 0001",
+        "Yunhao Liu",
+        "Feng Qian",
         "Liangyi Gong",
         "Tianyin Xu"
       ],
@@ -347,8 +347,8 @@
       "authors": [
         "Mingcong Han",
         "Hanze Zhang",
-        "Rong Chen 0001",
-        "Haibo Chen 0001"
+        "Rong Chen",
+        "Haibo Chen"
       ],
       "pages": "539-558",
       "type": "Conference and Workshop Papers",
@@ -447,7 +447,7 @@
       "title": "Operating System Support for Safe and Efficient Auxiliary Execution.",
       "authors": [
         "Yuzhuo Jing",
-        "Peng Huang 0005"
+        "Peng Huang"
       ],
       "pages": "633-648",
       "type": "Conference and Workshop Papers",
@@ -499,7 +499,7 @@
         "Jan Bielak",
         "Dimitris Karnikis",
         "Thurston H. Y. Dang",
-        "Michael Greenberg 0002",
+        "Michael Greenberg",
         "Nikos Vasilakis"
       ],
       "pages": "769-785",
@@ -577,7 +577,7 @@
       "authors": [
         "Chang Lou",
         "Cong Chen",
-        "Peng Huang 0005",
+        "Peng Huang",
         "Yingnong Dang",
         "Si Qin",
         "Xinsheng Yang",
@@ -606,7 +606,7 @@
       "authors": [
         "Chang Lou",
         "Yuzhuo Jing",
-        "Peng Huang 0005"
+        "Peng Huang"
       ],
       "pages": "91-107",
       "type": "Conference and Workshop Papers",
@@ -627,14 +627,14 @@
       "year": 2022,
       "title": "Hubble: Performance Debugging with In-Production, Just-In-Time Method Tracing on Android.",
       "authors": [
-        "Yu Luo 0006",
+        "Yu Luo",
         "Kirk Rodrigues",
         "Cuiqin Li",
         "Feng Zhang",
         "Lijin Jiang",
         "Bing Xia",
         "David Lion",
-        "Ding Yuan 0004"
+        "Ding Yuan"
       ],
       "pages": "787-803",
       "type": "Conference and Workshop Papers",
@@ -671,9 +671,9 @@
         "Bin Zou",
         "Peng Lan",
         "Guohuan Xu",
-        "Fei Wu 0001",
-        "Shaojie Tang 0001",
-        "Fan Wu 0006",
+        "Fei Wu",
+        "Shaojie Tang",
+        "Fan Wu",
         "Guihai Chen"
       ],
       "pages": "249-265",
@@ -775,7 +775,7 @@
         "Jinghan Sun",
         "Anirudh Badam",
         "Shadi A. Noghabi",
-        "Jian Huang 0006"
+        "Jian Huang"
       ],
       "pages": "17-33",
       "type": "Conference and Workshop Papers",
@@ -796,7 +796,7 @@
       "year": 2022,
       "title": "From Dynamic Loading to Extensible Transformation: An Infrastructure for Dynamic Library Transformation.",
       "authors": [
-        "Yuxin Ren 0001",
+        "Yuxin Ren",
         "Kang Zhou",
         "Jianhai Luan",
         "Yunfeng Ye",
@@ -852,7 +852,7 @@
       "authors": [
         "Utsav Sethi",
         "Haochen Pan",
-        "Shan Lu 0001",
+        "Shan Lu",
         "Madanlal Musuvathi",
         "Suman Nath"
       ],
@@ -876,7 +876,7 @@
       "title": "Occualizer: Optimistic Concurrent Search Trees From Sequential Code.",
       "authors": [
         "Tomer Shanny",
-        "Adam Morrison 0001"
+        "Adam Morrison"
       ],
       "pages": "321-337",
       "type": "Conference and Workshop Papers",
@@ -898,7 +898,7 @@
       "title": "Ekko: A Large-Scale Deep Learning Recommender System with Low-Latency Model Update.",
       "authors": [
         "Chijun Sima",
-        "Yao Fu 0013",
+        "Yao Fu",
         "Man-Kit Sit",
         "Liyi Guo",
         "Xuri Gong",
@@ -932,7 +932,7 @@
         "Deukyeon Hwang",
         "Amanda Raybuck",
         "Wei Zhang",
-        "Simon Peter 0001"
+        "Simon Peter"
       ],
       "pages": "431-445",
       "type": "Conference and Workshop Papers",
@@ -955,7 +955,7 @@
       "authors": [
         "Colin Unger",
         "Zhihao Jia",
-        "Wei Wu 0016",
+        "Wei Wu",
         "Sina Lin",
         "Mandeep Baines",
         "Carlos Efrain Quintero Narvaez",
@@ -991,7 +991,7 @@
         "Midhul Vuppalapati",
         "Kushal Babel",
         "Anurag Khandelwal",
-        "Rachit Agarwal 0001"
+        "Rachit Agarwal"
       ],
       "pages": "719-734",
       "type": "Conference and Workshop Papers",
@@ -1012,13 +1012,13 @@
       "year": 2022,
       "title": "MemLiner: Lining up Tracing and Application for a Far-Memory-Friendly Runtime.",
       "authors": [
-        "Chenxi Wang 0005",
+        "Chenxi Wang",
         "Haoran Ma",
         "Shi Liu",
-        "Yifan Qiao 0002",
+        "Yifan Qiao",
         "Jonathan Eyolfson",
         "Christian Navasca",
-        "Shan Lu 0001",
+        "Shan Lu",
         "Guoqing Harry Xu"
       ],
       "pages": "35-53",
@@ -1041,7 +1041,7 @@
       "title": "DuoAI: Fast, Automated Inference of Inductive Invariants for Verifying Distributed Protocols.",
       "authors": [
         "Jianan Yao",
-        "Runzhou Tao 0001",
+        "Runzhou Tao",
         "Ronghui Gu",
         "Jason Nieh"
       ],
@@ -1118,8 +1118,8 @@
         "Yaodong Han",
         "Yuhang Jiang",
         "Ding Tang",
-        "Zilong Wang 0007",
-        "Kai Chen 0005",
+        "Zilong Wang",
+        "Kai Chen",
         "Chuanxiong Guo"
       ],
       "pages": "841-856",
@@ -1171,10 +1171,10 @@
         "Bin Lin",
         "Quanlu Zhang",
         "Lingxiao Ma",
-        "Yuqing Yang 0001",
-        "Fan Yang 0024",
-        "Yang Wang 0053",
-        "Mao Yang 0004",
+        "Yuqing Yang",
+        "Fan Yang",
+        "Yang Wang",
+        "Mao Yang",
         "Lidong Zhou"
       ],
       "pages": "213-232",
@@ -1197,12 +1197,12 @@
       "title": "Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning.",
       "authors": [
         "Lianmin Zheng",
-        "Zhuohan Li 0001",
-        "Hao Zhang 0025",
-        "Yonghao Zhuang 0001",
+        "Zhuohan Li",
+        "Hao Zhang",
+        "Yonghao Zhuang",
         "Zhifeng Chen",
         "Yanping Huang",
-        "Yida Wang 0003",
+        "Yida Wang",
         "Yuanzhong Xu",
         "Danyang Zhuo",
         "Eric P. Xing",
@@ -1261,7 +1261,7 @@
       "authors": [
         "Diyu Zhou",
         "Yuchen Qian",
-        "Vishal Gupta 0006",
+        "Vishal Gupta",
         "Zhifei Yang",
         "Changwoo Min",
         "Sanidhya Kashyap"
@@ -1285,18 +1285,18 @@
       "year": 2022,
       "title": "ROLLER: Fast and Efficient Tensor Compilation for Deep Learning.",
       "authors": [
-        "Hongyu Zhu 0003",
+        "Hongyu Zhu",
         "Ruofan Wu",
         "Yijia Diao",
         "Shanbin Ke",
         "Haoyu Li",
-        "Chen Zhang 0001",
+        "Chen Zhang",
         "Jilong Xue",
         "Lingxiao Ma",
         "Yuqing Xia",
         "Wei Cui",
-        "Fan Yang 0024",
-        "Mao Yang 0004",
+        "Fan Yang",
+        "Mao Yang",
         "Lidong Zhou",
         "Asaf Cidon",
         "Gennady Pekhimenko"

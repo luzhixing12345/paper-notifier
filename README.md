@@ -1,52 +1,26 @@
 # paper-notifier
 
-系统A会论文更新速览过滤，用于抓取配置文件中定义的会议录稿论文，并尽量补齐摘要。
+快速筛选是否感兴趣的系统会议期刊录用论文，当有新会议/期刊更新时自动发送邮件通知。
 
-## 使用方式
+## 在线预览
+
+https://luzhixing12345.github.io/paper-notifier/
+
+- 目前支持的会议：
+- 目前支持的期刊：
+- 可以任意扩展，会议列表和抓取年限（默认近5年） [CONFERENCE.txt](CONFERENCE.txt) 和 [JOURNAL.txt](JOURNAL.txt) 里维护。
+
+## 快速开始
 
 ```bash
-python3 build-cache.py build-cache
+pip install -r requirements.txt
 ```
 
-默认行为也是构建缓存并导出静态数据：
-
-```bash
+```python
 python3 build-cache.py
 ```
 
-会议列表和抓取年限都在 [CONFERENCE.txt](/home/lzx/paper_abstract/CONFERENCE.txt) 和 [JOURNAL.txt](/home/lzx/paper_abstract/JOURNAL.txt) 里维护。
-
-配置格式：
-
-```txt
-lookback_years=5
-osdi
-sigmod
-```
-
-- `lookback_years` 表示抓取近几年
-- 每个会议或期刊一行，只写小写 key
-- `CONFERENCE.txt` 走 `DBLP /db/conf/...`
-- `JOURNAL.txt` 走 `DBLP /db/journals/...`
-- 代码会自动把 key 转成展示名称和 `dblp_slug`
-
-## 静态页面模式
-
-前端默认直接读取 `assets/papers-data.json`，不依赖后端查询接口。
-
-基于缓存导出静态数据：
-
-```bash
-python3 build-cache.py build-static
-```
-
-如果缓存还没生成，也可以直接：
-
-```bash
-python3 build-cache.py build-cache
-```
-
-这会同时更新 `paper_cache/` 和 `assets/papers-data.json`。生成后可以把 `assets/` 目录直接部署到任意静态托管。
+最终所有数据按年份保存在 paper_cache 下，并汇总到 assets/papers-data.json，打开 index.html 即可浏览。
 
 ## 数据来源
 
@@ -58,6 +32,5 @@ python3 build-cache.py build-cache
 
 - 服务会把拉取结果缓存在 `paper_cache/`
 - 目录结构为 `paper_cache/<year>/<conference>/info.json`
-- 不再内置网页服务，`build-cache.py` 只负责抓取、缓存和导出静态 JSON
-- 支持的会议和期刊，以及抓取年限，分别由 `CONFERENCE.txt` 和 `JOURNAL.txt` 控制
-- `python3 build-cache.py build-cache` 默认只补新增会议和缺失年份，不会全量重建已有年份
+- 默认只补新增会议和缺失年份，不会全量重建已有年份
+- 在补到新的 `conference/year` 缓存时会发邮件通知

@@ -6,7 +6,7 @@
       "year": 2023,
       "title": "Mixed Methods Machine Learning.",
       "authors": [
-        "Vanessa Murdock 0001"
+        "Vanessa Murdock"
       ],
       "pages": "3-4",
       "type": "Conference and Workshop Papers",
@@ -48,7 +48,7 @@
       "year": 2023,
       "title": "Seventh Workshop on Data Management for End-to-End Machine Learning (DEEM).",
       "authors": [
-        "Matthias Boehm 0001",
+        "Matthias Boehm",
         "Madelon Hulsebos",
         "Shreya Shankar",
         "Paroma Varma"
@@ -72,7 +72,7 @@
       "year": 2023,
       "title": "Optimizing Tensor Computations: From Applications to Compilation and Runtime Techniques.",
       "authors": [
-        "Matthias Boehm 0001",
+        "Matthias Boehm",
         "Matteo Interlandi",
         "Chris Jermaine"
       ],
@@ -95,11 +95,11 @@
       "year": 2023,
       "title": "SMILE: A Cost-Effective System for Serving Massive Pretrained Language Models in The Cloud.",
       "authors": [
-        "Jue Wang 0019",
-        "Ke Chen 0005",
+        "Jue Wang",
+        "Ke Chen",
         "Lidan Shou",
         "Dawei Jiang",
-        "Gang Chen 0001"
+        "Gang Chen"
       ],
       "pages": "135-138",
       "type": "Conference and Workshop Papers",
@@ -120,7 +120,7 @@
       "year": 2023,
       "title": "An Overview of Reachability Indexes on Graphs.",
       "authors": [
-        "Chao Zhang 0045",
+        "Chao Zhang",
         "Angela Bonifati",
         "M. Tamer Özsu"
       ],
@@ -143,10 +143,10 @@
       "year": 2023,
       "title": "Fast Natural Language Based Data Exploration with Samples.",
       "authors": [
-        "Shubham Agarwal 0007",
+        "Shubham Agarwal",
         "Gromit Yeuk-Yin Chan",
         "Shaddy Garg",
-        "Tong Yu 0001",
+        "Tong Yu",
         "Subrata Mitra"
       ],
       "pages": "155-158",
@@ -169,7 +169,7 @@
       "title": "DataEd'23 - 2nd International Workshop on Data Systems Education: Bridging Education Practice with Education Research.",
       "authors": [
         "Efthimia Aivaloglou",
-        "George Fletcher 0001",
+        "George Fletcher",
         "Daphne Miedema"
       ],
       "pages": "313-314",
@@ -194,9 +194,9 @@
         "Gustavo Alonso",
         "Natassa Ailamaki",
         "Sailesh Krishnamurthy",
-        "Sam Madden 0001",
+        "Sam Madden",
         "Swami Sivasubramanian",
-        "Raghu Ramakrishnan 0001"
+        "Raghu Ramakrishnan"
       ],
       "pages": "261-262",
       "type": "Conference and Workshop Papers",
@@ -288,7 +288,7 @@
       "title": "Demystifying Artificial Intelligence for Data Preparation.",
       "authors": [
         "Chengliang Chai",
-        "Nan Tang 0001",
+        "Nan Tang",
         "Ju Fan",
         "Yuyu Luo"
       ],
@@ -390,7 +390,7 @@
         "Mohammad Raza",
         "Sherry Shi",
         "Danny Simmons",
-        "Ashish Tiwari 0001"
+        "Ashish Tiwari"
       ],
       "pages": "147-150",
       "type": "Conference and Workshop Papers",
@@ -415,7 +415,7 @@
         "Umesh Deshpande",
         "Veera Deenadhayalan",
         "Sangeetha Seshadri",
-        "Ling Liu 0001"
+        "Ling Liu"
       ],
       "pages": "127-130",
       "type": "Conference and Workshop Papers",
@@ -459,8 +459,8 @@
       "title": "SparkSQL+: Next-generation Query Planning over Spark.",
       "authors": [
         "Binyang Dai",
-        "Qichen Wang 0001",
-        "Ke Yi 0001"
+        "Qichen Wang",
+        "Ke Yi"
       ],
       "pages": "115-118",
       "type": "Conference and Workshop Papers",
@@ -505,7 +505,7 @@
       "title": "Personal Data for Personal Use: Vision or Reality?",
       "authors": [
         "Xin Luna Dong",
-        "Bo Li 0026",
+        "Bo Li",
         "Julia Stoyanovich",
         "Anthony Kum Hoe Tung",
         "Gerhard Weikum",
@@ -532,8 +532,8 @@
       "title": "Table Discovery in Data Lakes: State-of-the-art and Future Directions.",
       "authors": [
         "Grace Fan",
-        "Jin Wang 0007",
-        "Yuliang Li 0001",
+        "Jin Wang",
+        "Yuliang Li",
         "Renée J. Miller"
       ],
       "pages": "69-75",
@@ -650,8 +650,8 @@
       "title": "Models and Practice of Neural Table Representations.",
       "authors": [
         "Madelon Hulsebos",
-        "Xiang Deng 0001",
-        "Huan Sun 0001",
+        "Xiang Deng",
+        "Huan Sun",
         "Paolo Papotti"
       ],
       "pages": "83-89",
@@ -675,9 +675,9 @@
       "authors": [
         "Ihab F. Ilyas",
         "J. P. Lacerda",
-        "Yunyao Li 0001",
+        "Yunyao Li",
         "Umar Farooq Minhas",
-        "Ali Mousavi 0003",
+        "Ali Mousavi",
         "Jeffrey Pound",
         "Theodoros Rekatsinas",
         "Chiraag Sumanth"
@@ -701,7 +701,7 @@
       "year": 2023,
       "title": "Data Processing with FPGAs on Modern Architectures.",
       "authors": [
-        "Wenqi Jiang 0001",
+        "Wenqi Jiang",
         "Dario Korolija",
         "Gustavo Alonso"
       ],
@@ -776,9 +776,9 @@
       "title": "Aggregation and Exploration of High-Dimensional Data Using the Sudokube Data Cube Engine.",
       "authors": [
         "Sachin Basil John",
-        "Peter Lindner 0001",
+        "Peter Lindner",
         "Zhekai Jiang",
-        "Christoph Koch 0001"
+        "Christoph Koch"
       ],
       "pages": "175-178",
       "type": "Conference and Workshop Papers",
@@ -890,7 +890,7 @@
       "title": "Sampling over Union of Joins.",
       "authors": [
         "Yurong Liu",
-        "Yunlong Xu 0001"
+        "Yunlong Xu"
       ],
       "pages": "273-275",
       "type": "Conference and Workshop Papers",
@@ -983,8 +983,8 @@
         "Hanze Meng",
         "Zhengjie Miao",
         "Amir Gilad",
-        "Sudeepa Roy 0001",
-        "Jun Yang 0001"
+        "Sudeepa Roy",
+        "Jun Yang"
       ],
       "pages": "143-146",
       "type": "Conference and Workshop Papers",
@@ -1008,7 +1008,7 @@
         "Haneen Mohammed",
         "Charlie Summers",
         "Sughosh V. Kaushik",
-        "Eugene Wu 0002"
+        "Eugene Wu"
       ],
       "pages": "183-186",
       "type": "Conference and Workshop Papers",
@@ -1031,7 +1031,7 @@
       "authors": [
         "Dominik Moritz",
         "Behrooz Omidvar-Tehrani",
-        "Sudeepa Roy 0001"
+        "Sudeepa Roy"
       ],
       "pages": "311-312",
       "type": "Conference and Workshop Papers",
@@ -1053,7 +1053,7 @@
       "title": "Dexer: Detecting and Explaining Biased Representation in Ranking.",
       "authors": [
         "Yuval Moskovitch",
-        "Jinyang Li 0008",
+        "Jinyang Li",
         "H. V. Jagadish"
       ],
       "pages": "159-162",
@@ -1087,11 +1087,11 @@
         "Yongjoo Park",
         "Russell Razo Carranzo",
         "Nicholas Richardson",
-        "Abhishek Roy 0008",
+        "Abhishek Roy",
         "Aayushi Srivastava",
         "Isha Tarte",
         "Brian Westphal",
-        "Chi Zhang 0068"
+        "Chi Zhang"
       ],
       "pages": "239-251",
       "type": "Conference and Workshop Papers",
@@ -1135,7 +1135,7 @@
       "title": "Workshop on Simplicity in Management of Data (SiMoD).",
       "authors": [
         "Danica Porobic",
-        "Tianzheng Wang 0001"
+        "Tianzheng Wang"
       ],
       "pages": "301-302",
       "type": "Conference and Workshop Papers",
@@ -1165,7 +1165,7 @@
         "Subru Krishnan",
         "Pavle Subotic",
         "Markus Weimer",
-        "Yinghui Wu 0001",
+        "Yinghui Wu",
         "Yiwen Zhu"
       ],
       "pages": "123-126",
@@ -1244,7 +1244,7 @@
         "Stefan Grafberger",
         "Shubha Guha",
         "Bojan Karlas",
-        "Ce Zhang 0001"
+        "Ce Zhang"
       ],
       "pages": "91-94",
       "type": "Conference and Workshop Papers",
@@ -1267,7 +1267,7 @@
       "authors": [
         "Hesam Shahrokhi",
         "Callum Groeger",
-        "Yizhuo Yang 0003",
+        "Yizhuo Yang",
         "Amir Shaikhha"
       ],
       "pages": "199-202",
@@ -1333,7 +1333,7 @@
       "authors": [
         "Julia Stoyanovich",
         "Meike Zehlike",
-        "Ke Yang 0003"
+        "Ke Yang"
       ],
       "pages": "7-12",
       "type": "Conference and Workshop Papers",
@@ -1375,8 +1375,8 @@
       "year": 2023,
       "title": "Disaggregated Database Systems.",
       "authors": [
-        "Jianguo Wang 0001",
-        "Qizhen Zhang 0001"
+        "Jianguo Wang",
+        "Qizhen Zhang"
       ],
       "pages": "37-44",
       "type": "Conference and Workshop Papers",
@@ -1398,7 +1398,7 @@
       "title": "ARENA: Alternative Relational Query Plan Exploration for Database Education.",
       "authors": [
         "Hu Wang",
-        "Hui Li 0005",
+        "Hui Li",
         "Sourav S. Bhowmick",
         "Baochao Xu"
       ],
@@ -1448,7 +1448,7 @@
       "year": 2023,
       "title": "Dangoron: Network Construction on Large-scale Time Series Data across Sliding Windows.",
       "authors": [
-        "Yunlong Xu 0001",
+        "Yunlong Xu",
         "Peizhen Yang",
         "Zhengbin Tao"
       ],
@@ -1473,11 +1473,11 @@
       "authors": [
         "Chenyu Yang",
         "Ruixue Fan",
-        "Nan Tang 0001",
-        "Meihui Zhang 0001",
+        "Nan Tang",
+        "Meihui Zhang",
         "Xiaoman Zhao",
         "Ju Fan",
-        "Xiaoyong Du 0001"
+        "Xiaoyong Du"
       ],
       "pages": "111-114",
       "type": "Conference and Workshop Papers",
@@ -1522,7 +1522,7 @@
       "year": 2023,
       "title": "SynopsisDB: Distributed Synopsis-based Data Processing System.",
       "authors": [
-        "Xin Zhang 0119"
+        "Xin Zhang"
       ],
       "pages": "289-291",
       "type": "Conference and Workshop Papers",
@@ -1546,8 +1546,8 @@
         "Huidong Zhang",
         "Luyi Qu",
         "Qingshuai Wang",
-        "Rong Zhang 0002",
-        "Peng Cai 0001",
+        "Rong Zhang",
+        "Peng Cai",
         "Quanqing Xu",
         "Zhifeng Yang",
         "Chuanhui Yang"
@@ -1571,7 +1571,7 @@
       "year": 2023,
       "title": "Link Local Differential Privacy in GNNs via Bayesian Estimation.",
       "authors": [
-        "Xiaochen Zhu 0003"
+        "Xiaochen Zhu"
       ],
       "pages": "265-267",
       "type": "Conference and Workshop Papers",
@@ -1616,7 +1616,7 @@
       "title": "Towards Building Autonomous Data Services on Azure.",
       "authors": [
         "Yiwen Zhu",
-        "Yuanyuan Tian 0001",
+        "Yuanyuan Tian",
         "Joyce Cahoon",
         "Subru Krishnan",
         "Ankita Agarwal",
@@ -1637,7 +1637,7 @@
         "Jyoti Leeka",
         "Sergiy Matusevych",
         "Minni Mittal",
-        "Andreas Müller 0024",
+        "Andreas Müller",
         "Kartheek Muthyala",
         "Harsha Nagulapalli",
         "Yoonjae Park",
@@ -1652,7 +1652,7 @@
         "Kunal Waghray",
         "Demin Wang",
         "Carlo Curino",
-        "Raghu Ramakrishnan 0001"
+        "Raghu Ramakrishnan"
       ],
       "pages": "217-224",
       "type": "Conference and Workshop Papers",

@@ -1,3 +1,5 @@
 beautifulsoup4
 requests
 tqdm
+e2me
+prettytable

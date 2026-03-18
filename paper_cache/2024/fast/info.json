@@ -6,9 +6,9 @@
       "year": 2024,
       "title": "COLE: A Column-based Learned Storage for Blockchain Systems.",
       "authors": [
-        "Ce Zhang 0007",
-        "Cheng Xu 0004",
-        "Haibo Hu 0001",
+        "Ce Zhang",
+        "Cheng Xu",
+        "Haibo Hu",
         "Jianliang Xu"
       ],
       "pages": "329-345",
@@ -83,7 +83,7 @@
       "title": "Symbiosis: The Art of Application and Kernel Cache Cooperation.",
       "authors": [
         "Yifan Dai",
-        "Jing Liu 0074",
+        "Jing Liu",
         "Andrea C. Arpaci-Dusseau",
         "Remzi H. Arpaci-Dusseau"
       ],
@@ -107,7 +107,7 @@
       "title": "The Design and Implementation of a Capacity-Variant Storage System.",
       "authors": [
         "Ziyang Jiao",
-        "Xiangqun Zhang 0002",
+        "Xiangqun Zhang",
         "Hojin Shin",
         "Jongmoo Choi",
         "Bryan S. Kim"
@@ -133,7 +133,7 @@
       "authors": [
         "Kanchan Joshi",
         "Anuj Gupta",
-        "Javier González 0006",
+        "Javier González",
         "Ankit Kumar",
         "Krishna Kanth Reddy",
         "Arun George",
@@ -209,9 +209,9 @@
       "title": "MinFlow: High-performance and Cost-efficient Data Passing for I/O-intensive Stateful Serverless Analytics.",
       "authors": [
         "Tao Li",
-        "Yongkun Li 0001",
+        "Yongkun Li",
         "Wenzhe Zhu",
-        "Yinlong Xu 0001",
+        "Yinlong Xu",
         "John C. S. Lui"
       ],
       "pages": "311-327",
@@ -234,13 +234,13 @@
       "title": "Optimizing File Systems on Heterogeneous Memory by Integrating DRAM Cache with Virtual Memory Management.",
       "authors": [
         "Yubo Liu",
-        "Yuxin Ren 0001",
+        "Yuxin Ren",
         "Mingrui Liu",
-        "Hongbo Li 0007",
+        "Hongbo Li",
         "Hanjun Guo",
         "Xie Miao",
         "Xinwei Hu",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "71-87",
       "type": "Conference and Workshop Papers",
@@ -293,7 +293,7 @@
         "Jeeyun Kim",
         "Soyoung Han",
         "Jaeho Kim",
-        "Sungjin Lee 0001",
+        "Sungjin Lee",
         "Sam H. Noh"
       ],
       "pages": "259-275",
@@ -346,9 +346,9 @@
       "authors": [
         "Yanjing Ren",
         "Yuanming Ren",
-        "Xiaolu Li 0002",
+        "Xiaolu Li",
         "Yuchong Hu",
-        "Jingwei Li 0001",
+        "Jingwei Li",
         "Patrick P. C. Lee"
       ],
       "pages": "293-310",
@@ -425,9 +425,9 @@
       "authors": [
         "Yi Xu",
         "Henry Zhu",
-        "Prashant Pandey 0001",
-        "Alex Conway 0001",
-        "Rob Johnson 0001",
+        "Prashant Pandey",
+        "Alex Conway",
+        "Rob Johnson",
         "Aishwarya Ganesan",
         "Ramnatthan Alagappan"
       ],
@@ -450,8 +450,8 @@
       "year": 2024,
       "title": "TeRM: Extending RDMA-Attached Memory with SSD.",
       "authors": [
-        "Zhe Yang 0012",
-        "Qing Wang 0031",
+        "Zhe Yang",
+        "Qing Wang",
         "Xiaojian Liao",
         "Youyou Lu",
         "Keji Huang",
@@ -525,7 +525,7 @@
       "year": 2024,
       "title": "What's the Story in EBS Glory: Evolutions and Lessons in Building Cloud Block Store.",
       "authors": [
-        "Weidong Zhang 0011",
+        "Weidong Zhang",
         "Erci Xu",
         "Qiuping Wang",
         "Xiaolu Zhang",

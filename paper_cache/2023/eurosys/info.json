@@ -6,8 +6,8 @@
       "year": 2023,
       "title": "Making Dynamic Page Coalescing Effective on Virtualized Clouds.",
       "authors": [
-        "Weiwei Jia 0001",
-        "Jiyuan Zhang 0003",
+        "Weiwei Jia",
+        "Jiyuan Zhang",
         "Jianchen Shan",
         "Xiaoning Ding"
       ],
@@ -30,7 +30,7 @@
       "year": 2023,
       "title": "Morty: Scaling Concurrency Control with Re-Execution.",
       "authors": [
-        "Matthew Burke 0001",
+        "Matthew Burke",
         "Florian Suri-Payer",
         "Jeffrey Helt",
         "Lorenzo Alvisi",
@@ -55,11 +55,11 @@
       "year": 2023,
       "title": "OLPart: Online Learning based Resource Partitioning for Colocating Multiple Latency-Critical Jobs on Commodity Computers.",
       "authors": [
-        "Ruobing Chen 0002",
-        "Haosen Shi 0001",
+        "Ruobing Chen",
+        "Haosen Shi",
         "Yusen Li",
-        "Xiaoguang Liu 0001",
-        "Gang Wang 0001"
+        "Xiaoguang Liu",
+        "Gang Wang"
       ],
       "pages": "347-364",
       "type": "Conference and Workshop Papers",
@@ -80,14 +80,14 @@
       "year": 2023,
       "title": "CFS: Scaling Metadata Service for Distributed File System via Pruned Scope of Critical Sections.",
       "authors": [
-        "Yiduo Wang 0002",
-        "Yufei Wu 0011",
-        "Cheng Li 0001",
+        "Yiduo Wang",
+        "Yufei Wu",
+        "Cheng Li",
         "Pengfei Zheng",
         "Biao Cao",
         "Yan Sun",
         "Fei Zhou",
-        "Yinlong Xu 0001",
+        "Yinlong Xu",
         "Yao Wang",
         "Guangjun Xie"
       ],
@@ -110,7 +110,7 @@
       "year": 2023,
       "title": "Unikernel Linux (UKL).",
       "authors": [
-        "Ali Raza 0003",
+        "Ali Raza",
         "Thomas Unger",
         "Matthew Boyd",
         "Eric B. Munson",
@@ -119,7 +119,7 @@
         "Richard Jones",
         "Daniel Bristot de Oliveira",
         "Larry Woodman",
-        "Renato Mancuso 0001",
+        "Renato Mancuso",
         "Jonathan Appavoo",
         "Orran Krieger"
       ],
@@ -142,10 +142,10 @@
       "year": 2023,
       "title": "With Great Freedom Comes Great Opportunity: Rethinking Resource Allocation for Serverless Functions.",
       "authors": [
-        "Muhammad Bilal 0007",
+        "Muhammad Bilal",
         "Marco Canini",
         "Rodrigo Fonseca",
-        "Rodrigo Rodrigues 0001"
+        "Rodrigo Rodrigues"
       ],
       "pages": "381-397",
       "type": "Conference and Workshop Papers",
@@ -222,7 +222,7 @@
         "Mohamed Alzayat",
         "Jonathan Mace",
         "Peter Druschel",
-        "Deepak Garg 0001"
+        "Deepak Garg"
       ],
       "pages": "398-415",
       "type": "Conference and Workshop Papers",
@@ -244,7 +244,7 @@
       "title": "R2C: AOCR-Resilient Diversity with Reactive and Reflective Camouflage.",
       "authors": [
         "Felix Berlakovich",
-        "Stefan Brunthaler 0001"
+        "Stefan Brunthaler"
       ],
       "pages": "488-504",
       "type": "Conference and Workshop Papers",
@@ -290,7 +290,7 @@
       "authors": [
         "Ho-Ren Chuang",
         "Karim Manaouil",
-        "Tong Xing 0002",
+        "Tong Xing",
         "Antonio Barbalace",
         "Pierre Olivier",
         "Balvansh Heerekar",
@@ -317,7 +317,7 @@
       "authors": [
         "João Gonçalves",
         "Miguel Matos",
-        "Rodrigo Rodrigues 0001"
+        "Rodrigo Rodrigues"
       ],
       "pages": "734-750",
       "type": "Conference and Workshop Papers",
@@ -363,7 +363,7 @@
       "year": 2023,
       "title": "Dissecting BFT Consensus: In Trusted Components we Trust!",
       "authors": [
-        "Suyash Gupta 0001",
+        "Suyash Gupta",
         "Sajjad Rahnama",
         "Shubham Pandey",
         "Natacha Crooks",
@@ -390,14 +390,14 @@
       "authors": [
         "Chengying Huan",
         "Shuaiwen Leon Song",
-        "Santosh Pandey 0001",
-        "Hang Liu 0001",
-        "Yongchao Liu 0004",
+        "Santosh Pandey",
+        "Hang Liu",
+        "Yongchao Liu",
         "Baptiste Lepers",
         "Changhua He",
         "Kang Chen",
         "Jinlei Jiang",
-        "Yongwei Wu 0001"
+        "Yongwei Wu"
       ],
       "pages": "182-198",
       "type": "Conference and Workshop Papers",
@@ -419,7 +419,7 @@
       "title": "Accelerating Graph Mining Systems with Subgraph Morphing.",
       "authors": [
         "Kasra Jamshidi",
-        "Harry Xu 0001",
+        "Harry Xu",
         "Keval Vora"
       ],
       "pages": "162-181",
@@ -521,7 +521,7 @@
         "Jung-Soo Park",
         "Eunji Lee",
         "Bryan S. Kim",
-        "Sungjin Lee 0001"
+        "Sungjin Lee"
       ],
       "pages": "784-799",
       "type": "Conference and Workshop Papers",
@@ -572,10 +572,10 @@
         "Jaewoo Maeng",
         "Jinsol Park",
         "Jangho Seo",
-        "Haeyoon Cho 0001",
+        "Haeyoon Cho",
         "Youngseok Yang",
         "Taegeon Um",
-        "Jongsung Lee 0001",
+        "Jongsung Lee",
         "Jae W. Lee",
         "Byung-Gon Chun"
       ],
@@ -622,11 +622,11 @@
       "year": 2023,
       "title": "ICE: Collaborating Memory and Process Management for User Experience on Resource-limited Mobile Devices.",
       "authors": [
-        "Changlong Li 0006",
-        "Yu Liang 0004",
+        "Changlong Li",
+        "Yu Liang",
         "Rachata Ausavarungnirun",
         "Zongwei Zhu",
-        "Liang Shi 0001",
+        "Liang Shi",
         "Chun Jason Xue"
       ],
       "pages": "79-93",
@@ -649,12 +649,12 @@
       "title": "A2TP: Aggregator-aware In-network Aggregation for Multi-tenant Learning.",
       "authors": [
         "Zhaoyi Li",
-        "Jiawei Huang 0001",
-        "Yijun Li 0002",
+        "Jiawei Huang",
+        "Yijun Li",
         "Aikun Xu",
         "Shengwen Zhou",
         "Jingling Liu",
-        "Jianxin Wang 0001"
+        "Jianxin Wang"
       ],
       "pages": "639-653",
       "type": "Conference and Workshop Papers",
@@ -675,12 +675,12 @@
       "year": 2023,
       "title": "Lyra: Elastic Scheduling for Deep Learning Clusters.",
       "authors": [
-        "Jiamin Li 0002",
-        "Hong Xu 0001",
-        "Yibo Zhu 0001",
+        "Jiamin Li",
+        "Hong Xu",
+        "Yibo Zhu",
         "Zherui Liu",
         "Chuanxiong Guo",
-        "Cong Wang 0001"
+        "Cong Wang"
       ],
       "pages": "835-850",
       "type": "Conference and Workshop Papers",
@@ -702,7 +702,7 @@
       "title": "RIO: Order-Preserving and CPU-Efficient Remote Storage Access.",
       "authors": [
         "Xiaojian Liao",
-        "Zhe Yang 0012",
+        "Zhe Yang",
         "Jiwu Shu"
       ],
       "pages": "703-717",
@@ -725,10 +725,10 @@
       "title": "FlexPass: A Case for Flexible Credit-based Transport for Datacenter Networks.",
       "authors": [
         "Hwijoon Lim",
-        "Jaehong Kim 0002",
+        "Jaehong Kim",
         "Inho Cho",
         "Keon Jang",
-        "Wei Bai 0001",
+        "Wei Bai",
         "Dongsu Han"
       ],
       "pages": "606-622",
@@ -754,9 +754,9 @@
         "Huanle Xu",
         "Kejiang Ye",
         "Guoyao Xu",
-        "Liping Zhang 0013",
+        "Liping Zhang",
         "Guodong Yang",
-        "Chengzhong Xu 0001"
+        "Chengzhong Xu"
       ],
       "pages": "416-432",
       "type": "Conference and Workshop Papers",
@@ -899,11 +899,11 @@
         "Ziyue Qiu",
         "Juncheng Yang",
         "Juncheng Zhang",
-        "Cheng Li 0001",
+        "Cheng Li",
         "Xiaosong Ma",
-        "Qi Chen 0009",
-        "Mao Yang 0004",
-        "Yinlong Xu 0001"
+        "Qi Chen",
+        "Mao Yang",
+        "Yinlong Xu"
       ],
       "pages": "557-573",
       "type": "Conference and Workshop Papers",
@@ -926,7 +926,7 @@
       "authors": [
         "Yasas Seneviratne",
         "Korakit Seemakhupt",
-        "Sihang Liu 0001",
+        "Sihang Liu",
         "Samira Manabi Khan"
       ],
       "pages": "751-767",
@@ -949,10 +949,10 @@
       "title": "vTMM: Tiered Memory Management for Virtual Machines.",
       "authors": [
         "Sai Sha",
-        "Chuandong Li 0004",
+        "Chuandong Li",
         "Yingwei Luo",
-        "Xiaolin Wang 0001",
-        "Zhenlin Wang 0003"
+        "Xiaolin Wang",
+        "Zhenlin Wang"
       ],
       "pages": "283-297",
       "type": "Conference and Workshop Papers",
@@ -974,7 +974,7 @@
       "title": "WAFFLE: Exposing Memory Ordering Bugs Efficiently with Active Delay Injection.",
       "authors": [
         "Bogdan Alexandru Stoica",
-        "Shan Lu 0001",
+        "Shan Lu",
         "Madanlal Musuvathi",
         "Suman Nath"
       ],
@@ -999,7 +999,7 @@
       "authors": [
         "Lilia Tang",
         "Chaitanya Bhandari",
-        "Yongle Zhang 0007",
+        "Yongle Zhang",
         "Anna Karanika",
         "Shuyang Ji",
         "Indranil Gupta",
@@ -1072,9 +1072,9 @@
       "title": "Tabi: An Efficient Multi-Level Inference System for Large Language Models.",
       "authors": [
         "Yiding Wang",
-        "Kai Chen 0005",
+        "Kai Chen",
         "Haisheng Tan",
-        "Kun Guo 0003"
+        "Kun Guo"
       ],
       "pages": "233-248",
       "type": "Conference and Workshop Papers",
@@ -1095,12 +1095,12 @@
       "year": 2023,
       "title": "Model Checking Guided Testing for Distributed Systems.",
       "authors": [
-        "Dong Wang 0048",
+        "Dong Wang",
         "Wensheng Dou",
-        "Yu Gao 0002",
+        "Yu Gao",
         "Chenao Wu",
-        "Jun Wei 0001",
-        "Tao Huang 0001"
+        "Jun Wei",
+        "Tao Huang"
       ],
       "pages": "127-143",
       "type": "Conference and Workshop Papers",
@@ -1123,7 +1123,7 @@
       "authors": [
         "Zhuang Wang",
         "Haibin Lin",
-        "Yibo Zhu 0001",
+        "Yibo Zhu",
         "T. S. Eugene Ng"
       ],
       "pages": "867-882",
@@ -1147,8 +1147,8 @@
       "authors": [
         "Yiding Wang",
         "Decang Sun",
-        "Kai Chen 0005",
-        "Fan Lai 0001",
+        "Kai Chen",
+        "Fan Lai",
         "Mosharaf Chowdhury"
       ],
       "pages": "851-866",
@@ -1172,8 +1172,8 @@
       "authors": [
         "Junyu Wei",
         "Guangyan Zhang",
-        "Junchao Chen 0005",
-        "Yang Wang 0009",
+        "Junchao Chen",
+        "Yang Wang",
         "Weimin Zheng",
         "Tingtao Sun",
         "Jiesheng Wu",
@@ -1200,7 +1200,7 @@
       "authors": [
         "Lingmei Weng",
         "Yigong Hu",
-        "Peng Huang 0005",
+        "Peng Huang",
         "Jason Nieh",
         "Junfeng Yang"
       ],
@@ -1226,13 +1226,13 @@
         "Zhiying Xu",
         "Jiafan Xu",
         "Hongding Peng",
-        "Wei Wang 0002",
-        "Xiaoliang Wang 0001",
+        "Wei Wang",
+        "Xiaoliang Wang",
         "Haoran Wan",
-        "Haipeng Dai 0001",
+        "Haipeng Dai",
         "Yixu Xu",
-        "Hao Cheng 0004",
-        "Kun Wang 0005",
+        "Hao Cheng",
+        "Kun Wang",
         "Guihai Chen"
       ],
       "pages": "199-214",
@@ -1329,10 +1329,10 @@
       "year": 2023,
       "title": "Viper: A Fast Snapshot Isolation Checker.",
       "authors": [
-        "Jian Zhang 0102",
-        "Ye Ji 0003",
-        "Shuai Mu 0001",
-        "Cheng Tan 0005"
+        "Jian Zhang",
+        "Ye Ji",
+        "Shuai Mu",
+        "Cheng Tan"
       ],
       "pages": "654-671",
       "type": "Conference and Workshop Papers",
@@ -1355,13 +1355,13 @@
       "authors": [
         "Hanyu Zhao",
         "Zhenhua Han",
-        "Zhi Yang 0001",
+        "Zhi Yang",
         "Quanlu Zhang",
         "Mingxia Li",
-        "Fan Yang 0024",
+        "Fan Yang",
         "Qianxi Zhang",
         "Binyang Li",
-        "Yuqing Yang 0001",
+        "Yuqing Yang",
         "Lili Qiu",
         "Lintao Zhang",
         "Lidong Zhou"

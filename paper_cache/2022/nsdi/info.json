@@ -6,8 +6,8 @@
       "year": 2022,
       "title": "NetHint: White-Box Networking for Multi-Tenant Data Centers.",
       "authors": [
-        "Jingrong Chen 0002",
-        "Hong Zhang 0025",
+        "Jingrong Chen",
+        "Hong Zhang",
         "Wei Zhang",
         "Liang Luo",
         "Jeffrey S. Chase",
@@ -33,7 +33,7 @@
       "year": 2022,
       "title": "Evolvable Network Telemetry at Facebook.",
       "authors": [
-        "Yang Zhou 0008",
+        "Yang Zhou",
         "Ying Zhang",
         "Minlan Yu",
         "Guangyu Wang",
@@ -60,12 +60,12 @@
       "year": 2022,
       "title": "Differential Network Analysis.",
       "authors": [
-        "Peng Zhang 0011",
+        "Peng Zhang",
         "Aaron Gember-Jacobson",
         "Yueshang Zuo",
         "Yuhao Huang",
-        "Xu Liu 0013",
-        "Hao Li 0011"
+        "Xu Liu",
+        "Hao Li"
       ],
       "pages": "601-615",
       "type": "Conference and Workshop Papers",
@@ -88,7 +88,7 @@
       "authors": [
         "Vamsi Addanki",
         "Oliver Michel",
-        "Stefan Schmid 0001"
+        "Stefan Schmid"
       ],
       "pages": "51-70",
       "type": "Conference and Workshop Papers",
@@ -224,7 +224,7 @@
         "William Sentosa",
         "Muhammad Tirmazi",
         "Anthony Aguirre",
-        "Balakrishnan Chandrasekaran 0002",
+        "Balakrishnan Chandrasekaran",
         "Philip Brighten Godfrey",
         "Gregory Laughlin",
         "Bruce M. Maggs",
@@ -381,7 +381,7 @@
       "year": 2022,
       "title": "Yeti: Stateless and Generalized Multicast Forwarding.",
       "authors": [
-        "Khaled Diab 0001",
+        "Khaled Diab",
         "Mohamed Hefeeda"
       ],
       "pages": "1093-1114",
@@ -403,7 +403,7 @@
       "year": 2022,
       "title": "Orca: Server-assisted Multicast for Datacenter Networks.",
       "authors": [
-        "Khaled Diab 0001",
+        "Khaled Diab",
         "Parham Yassini",
         "Mohamed Hefeeda"
       ],
@@ -456,13 +456,13 @@
       "authors": [
         "Yong Feng",
         "Zhikang Chen",
-        "Haoyu Song 0001",
+        "Haoyu Song",
         "Wenquan Xu",
         "Jiahao Li",
         "Zijian Zhang",
         "Tong Yun",
         "Ying Wan",
-        "Bin Liu 0001"
+        "Bin Liu"
       ],
       "pages": "635-649",
       "type": "Conference and Workshop Papers",
@@ -485,7 +485,7 @@
       "authors": [
         "Peixuan Gao",
         "Anthony Dalleggio",
-        "Yang Xu 0010",
+        "Yang Xu",
         "H. Jonathan Chao"
       ],
       "pages": "551-565",
@@ -508,13 +508,13 @@
       "title": "Buffer-based End-to-end Request Event Monitoring in the Cloud.",
       "authors": [
         "Kaihui Gao",
-        "Chen Sun 0005",
-        "Shuai Wang 0028",
-        "Dan Li 0001",
-        "Yu Zhou 0008",
+        "Chen Sun",
+        "Shuai Wang",
+        "Dan Li",
+        "Yu Zhou",
         "Hongqiang Harry Liu",
         "Lingjun Zhu",
-        "Ming Zhang 0005"
+        "Ming Zhang"
       ],
       "pages": "829-843",
       "type": "Conference and Workshop Papers",
@@ -685,11 +685,11 @@
       "authors": [
         "Xiuzhen Guo",
         "Longfei Shangguan",
-        "Yuan He 0004",
+        "Yuan He",
         "Nan Jing",
         "Jiacheng Zhang",
         "Haotian Jiang",
-        "Yunhao Liu 0001"
+        "Yunhao Liu"
       ],
       "pages": "437-451",
       "type": "Conference and Workshop Papers",
@@ -712,7 +712,7 @@
       "authors": [
         "Roni Haecki",
         "Radhika Niranjan Mysore",
-        "Lalith Suresh 0001",
+        "Lalith Suresh",
         "Gerd Zellweger",
         "Bo Gan",
         "Timothy Merrifield",
@@ -742,7 +742,7 @@
         "Shir Landau Feibish",
         "Mina Tahmasbi Arashloo",
         "Jennifer Rexford",
-        "David Walker 0001"
+        "David Walker"
       ],
       "pages": "193-207",
       "type": "Conference and Workshop Papers",
@@ -765,7 +765,7 @@
       "authors": [
         "Jiyao Hu",
         "Zhenyu Zhou",
-        "Xiaowei Yang 0001"
+        "Xiaowei Yang"
       ],
       "pages": "845-859",
       "type": "Conference and Workshop Papers",
@@ -811,7 +811,7 @@
       "authors": [
         "Akshay Jajoo",
         "Y. Charlie Hu",
-        "Xiaojun Lin 0001",
+        "Xiaojun Lin",
         "Nan Deng"
       ],
       "pages": "19-33",
@@ -885,7 +885,7 @@
       "title": "Collie: Finding Performance Anomalies in RDMA Subsystems.",
       "authors": [
         "Xinhao Kong",
-        "Yibo Zhu 0001",
+        "Yibo Zhu",
         "Huaping Zhou",
         "Zhuo Jiang",
         "Jianxi Ye",
@@ -987,7 +987,7 @@
         "Chenning Li",
         "Xiuzhen Guo",
         "Longfei Shangguan",
-        "Zhichao Cao 0001",
+        "Zhichao Cao",
         "Kyle Jamieson"
       ],
       "pages": "879-895",
@@ -1012,7 +1012,7 @@
         "Yifan Li",
         "Jiaqi Gao",
         "Ennan Zhai",
-        "Mengqi Liu 0001",
+        "Mengqi Liu",
         "Kun Liu",
         "Hongqiang Harry Liu"
       ],
@@ -1036,10 +1036,10 @@
       "title": "IMap: Fast and Scalable In-Network Scanning with Programmable Switches.",
       "authors": [
         "Guanyu Li",
-        "Menghao Zhang 0001",
-        "Cheng Guo 0007",
-        "Han Bao 0011",
-        "Mingwei Xu 0001",
+        "Menghao Zhang",
+        "Cheng Guo",
+        "Han Bao",
+        "Mingwei Xu",
         "Hongxin Hu",
         "Fenghua Li"
       ],
@@ -1068,8 +1068,8 @@
         "Yihang Song",
         "Shen Yang",
         "Minghua Chen",
-        "Li Lu 0001",
-        "Mo Li 0001"
+        "Li Lu",
+        "Mo Li"
       ],
       "pages": "913-928",
       "type": "Conference and Workshop Papers",
@@ -1123,8 +1123,8 @@
         "Jie Chen",
         "Zekun He",
         "Xulong Luo",
-        "Jilong Wang 0001",
-        "Heng Yu 0005"
+        "Jilong Wang",
+        "Heng Yu"
       ],
       "pages": "339-353",
       "type": "Conference and Workshop Papers",
@@ -1366,7 +1366,7 @@
         "Waleed Reda",
         "Marco Canini",
         "Dejan Kostic",
-        "Simon Peter 0001"
+        "Simon Peter"
       ],
       "pages": "71-85",
       "type": "Conference and Workshop Papers",
@@ -1444,7 +1444,7 @@
         "Alex Shamis",
         "Peter R. Pietzuch",
         "Burcu Canakci",
-        "Miguel Castro 0001",
+        "Miguel Castro",
         "Cédric Fournet",
         "Edward Ashton",
         "Amaury Chamayou",
@@ -1507,7 +1507,7 @@
         "Rajath Shashidhara",
         "Tim Stamler",
         "Antoine Kaufmann",
-        "Simon Peter 0001"
+        "Simon Peter"
       ],
       "pages": "87-102",
       "type": "Conference and Workshop Papers",
@@ -1557,10 +1557,10 @@
       "title": "RDC: Energy-Efficient Data Center Network Congestion Relief with Topological Reconfigurability at the Edge.",
       "authors": [
         "Weitao Wang",
-        "Dingming Wu 0002",
+        "Dingming Wu",
         "Sushovan Das",
         "Afsaneh Rahbar",
-        "Ang Chen 0001",
+        "Ang Chen",
         "T. S. Eugene Ng"
       ],
       "pages": "1267-1288",
@@ -1583,7 +1583,7 @@
       "title": "Elixir: A High-performance and Low-cost Approach to Managing Hardware/Software Hybrid Flow Tables Considering Flow Burstiness.",
       "authors": [
         "Yanshu Wang",
-        "Dan Li 0001",
+        "Dan Li",
         "Yuanwei Lu",
         "Jianping Wu",
         "Hua Shao",
@@ -1611,7 +1611,7 @@
         "Weitao Wang",
         "Xinyu Crystal Wu",
         "Praveen Tammana",
-        "Ang Chen 0001",
+        "Ang Chen",
         "T. S. Eugene Ng"
       ],
       "pages": "267-285",
@@ -1633,8 +1633,8 @@
       "year": 2022,
       "title": "Isolation Mechanisms for High-Speed Packet-Processing Pipelines.",
       "authors": [
-        "Tao Wang 0088",
-        "Xiangrui Yang 0002",
+        "Tao Wang",
+        "Xiangrui Yang",
         "Gianni Antichi",
         "Anirudh Sivaraman",
         "Aurojit Panda"
@@ -1658,15 +1658,15 @@
       "year": 2022,
       "title": "MLaaS in the Wild: Workload Analysis and Scheduling in Large-Scale Heterogeneous GPU Clusters.",
       "authors": [
-        "Qizhen Weng 0001",
+        "Qizhen Weng",
         "Wencong Xiao",
         "Yinghao Yu",
-        "Wei Wang 0030",
+        "Wei Wang",
         "Cheng Wang",
-        "Jian He 0004",
-        "Yong Li 0045",
-        "Liping Zhang 0013",
-        "Wei Lin 0016",
+        "Jian He",
+        "Yong Li",
+        "Liping Zhang",
+        "Wei Lin",
         "Yu Ding"
       ],
       "pages": "945-960",
@@ -1694,7 +1694,7 @@
         "Alan Lo",
         "Yonatan Piasetzky",
         "Arvind Krishnamurthy",
-        "Ang Chen 0001"
+        "Ang Chen"
       ],
       "pages": "651-665",
       "type": "Conference and Workshop Papers",
@@ -1717,11 +1717,11 @@
       "authors": [
         "Jingao Xu",
         "Hao Cao",
-        "Zheng Yang 0002",
+        "Zheng Yang",
         "Longfei Shangguan",
         "Jialin Zhang",
         "Xiaowu He",
-        "Yunhao Liu 0001"
+        "Yunhao Liu"
       ],
       "pages": "977-993",
       "type": "Conference and Workshop Papers",
@@ -1765,7 +1765,7 @@
       "year": 2022,
       "title": "DispersedLedger: High-Throughput Byzantine Consensus on Variable Bandwidth Networks.",
       "authors": [
-        "Lei Yang 0031",
+        "Lei Yang",
         "Seo Jin Park",
         "Mohammad Alizadeh",
         "Sreeram Kannan",
@@ -1817,7 +1817,7 @@
       "authors": [
         "Liangcheng Yu",
         "John Sonchack",
-        "Vincent Liu 0001"
+        "Vincent Liu"
       ],
       "pages": "1195-1212",
       "type": "Conference and Workshop Papers",
@@ -1841,7 +1841,7 @@
         "Yifan Yuan",
         "Omar Alama",
         "Jiawei Fei",
-        "Jacob Nelson 0001",
+        "Jacob Nelson",
         "Dan R. K. Ports",
         "Amedeo Sapio",
         "Marco Canini",
@@ -1869,7 +1869,7 @@
         "Chaoliang Zeng",
         "Layong Luo",
         "Teng Zhang",
-        "Zilong Wang 0007",
+        "Zilong Wang",
         "Luyang Li",
         "Wenchen Han",
         "Nan Chen",
@@ -1879,7 +1879,7 @@
         "Xiongfei Geng",
         "Tao Feng",
         "Feng Ning",
-        "Kai Chen 0005",
+        "Kai Chen",
         "Chuanxiong Guo"
       ],
       "pages": "1345-1358",
@@ -1903,7 +1903,7 @@
       "authors": [
         "Lior Zeno",
         "Dan R. K. Ports",
-        "Jacob Nelson 0001",
+        "Jacob Nelson",
         "Daehyeok Kim",
         "Shir Landau Feibish",
         "Idit Keidar",
@@ -1931,7 +1931,7 @@
       "year": 2022,
       "title": "PLatter: On the Feasibility of Building-scale Power Line Backscatter.",
       "authors": [
-        "Junbo Zhang 0001",
+        "Junbo Zhang",
         "Elahe Soltanaghai",
         "Artur Balanuta",
         "Reese Grimsley",
@@ -1957,7 +1957,7 @@
       "year": 2022,
       "title": "Justitia: Software Multi-Tenancy in Hardware Kernel-Bypass Networks.",
       "authors": [
-        "Yiwen Zhang 0008",
+        "Yiwen Zhang",
         "Yue Tan",
         "Brent E. Stephens",
         "Mosharaf Chowdhury"
@@ -1983,8 +1983,8 @@
       "authors": [
         "Anlan Zhang",
         "Chendong Wang",
-        "Bo Han 0001",
-        "Feng Qian 0001"
+        "Bo Han",
+        "Feng Qian"
       ],
       "pages": "137-154",
       "type": "Conference and Workshop Papers",
@@ -2005,9 +2005,9 @@
       "year": 2022,
       "title": "Zeta: A Scalable and Robust East-West Communication Framework in Large-Scale Clouds.",
       "authors": [
-        "Qianyu Zhang 0001",
+        "Qianyu Zhang",
         "Gongming Zhao",
-        "Hongli Xu 0001",
+        "Hongli Xu",
         "Zhuolong Yu",
         "Liguang Xie",
         "Yangming Zhao",
@@ -2035,11 +2035,11 @@
       "title": "NetVRM: Virtual Register Memory for Programmable Networks.",
       "authors": [
         "Hang Zhu",
-        "Tao Wang 0088",
+        "Tao Wang",
         "Yi Hong",
         "Dan R. K. Ports",
         "Anirudh Sivaraman",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "155-170",
       "type": "Conference and Workshop Papers",

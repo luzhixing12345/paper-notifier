@@ -6,9 +6,9 @@
       "year": 2025,
       "title": "Reproducibility Report for ACM SIGMOD 2025 Paper: 'Tribase: A Vector Data Query Engine for Reliable and Lossless Pruning Compression using Triangle Inequalities'.",
       "authors": [
-        "Thomas Bodner 0001",
+        "Thomas Bodner",
         "Donghyun Sohn",
-        "Qian Xu 0021"
+        "Qian Xu"
       ],
       "pages": "59-64",
       "type": "Conference and Workshop Papers",
@@ -29,7 +29,7 @@
       "year": 2025,
       "title": "Reproducibility Report for ACM SIGMOD 2025 Paper: 'Memento Filter: A Fast, Dynamic, and Robust Range Filter'.",
       "authors": [
-        "Mo Sha 0002",
+        "Mo Sha",
         "Steven Purtzel"
       ],
       "pages": "119-124",
@@ -51,10 +51,10 @@
       "year": 2025,
       "title": "Reproducibility Report for ACM SIGMOD 2025 Paper: 'LpBound: Pessimistic Cardinality Estimation Using ?p-Norms of Degree Sequences'.",
       "authors": [
-        "Rico Bergmann 0002",
+        "Rico Bergmann",
         "Suyang Zhong",
-        "Haozhe Zhang 0001",
-        "Christoph Mayer 0010"
+        "Haozhe Zhang",
+        "Christoph Mayer"
       ],
       "pages": "75-81",
       "type": "Conference and Workshop Papers",
@@ -97,8 +97,8 @@
       "title": "Reproducibility Report for ACM SIGMOD 2025 Paper: 'H-Rocks: CPU-GPU accelerated Heterogeneous RocksDB on Persistent Memory'.",
       "authors": [
         "Ouael Ben Amara",
-        "Sheng Yao 0006",
-        "Shweta Pandey 0001"
+        "Sheng Yao",
+        "Shweta Pandey"
       ],
       "pages": "49-51",
       "type": "Conference and Workshop Papers",
@@ -184,9 +184,9 @@
       "title": "Reproducibility Report for ACM SIGMOD 2025 Paper: 'PLM4NDV: Minimizing Data Access for Number of Distinct Values Estimation with Pre-trained Language Models'.",
       "authors": [
         "Qihao Cheng",
-        "Feng Yu 0034",
-        "Xianghong Xu 0001",
-        "Xiao He 0008",
+        "Feng Yu",
+        "Xianghong Xu",
+        "Xiao He",
         "Tieying Zhang"
       ],
       "pages": "1-2",
@@ -209,7 +209,7 @@
       "title": "Reproducibility Report for ACM SIGMOD 2025 Paper: 'Constant Optimization Driven Database System Testing'.",
       "authors": [
         "Yuvaraj Chesetti",
-        "Chi Zhang 0073"
+        "Chi Zhang"
       ],
       "pages": "57-58",
       "type": "Conference and Workshop Papers",
@@ -344,7 +344,7 @@
       "title": "Reproducibility Report for ACM SIGMOD 2025 Paper: 'BCviz: A Linear-Space Index for Mining and Visualizing Cohesive Bipartite Subgraphs'.",
       "authors": [
         "Moe Kayali",
-        "Jianxiong Ye 0003"
+        "Jianxiong Ye"
       ],
       "pages": "53-56",
       "type": "Conference and Workshop Papers",
@@ -366,7 +366,7 @@
       "title": "Reproducibility Report for ACM SIGMOD 2025 Paper: 'T3: Accurate and Fast Performance Prediction for Relational Database Systems With Compiled Decision Trees'.",
       "authors": [
         "Kyoseung Koo",
-        "Shuhao Liu 0001",
+        "Shuhao Liu",
         "Maximilian Rieger"
       ],
       "pages": "109-113",
@@ -459,7 +459,7 @@
       "authors": [
         "Niccolò Meneghetti",
         "Kyle Deeds",
-        "Rico Bergmann 0002"
+        "Rico Bergmann"
       ],
       "pages": "87-95",
       "type": "Conference and Workshop Papers",
@@ -504,8 +504,8 @@
       "title": "Reproducibility Report for ACM SIGMOD 2025 Paper: 'PilotDB: Database-Agnostic Online Approximate Query Processing with A Priori Error Guarantees'.",
       "authors": [
         "Yiming Qiao",
-        "Chi Zhang 0073",
-        "Yuxuan Zhu 0003"
+        "Chi Zhang",
+        "Yuxuan Zhu"
       ],
       "pages": "47-48",
       "type": "Conference and Workshop Papers",
@@ -616,8 +616,8 @@
       "title": "Reproducibility Report for ACM SIGMOD 2025 Paper: 'Deep Overlapping Community Search via Subspace Embedding'.",
       "authors": [
         "Xilin Tang",
-        "Yichuan Wang 0002",
-        "Qing Sima 0001"
+        "Yichuan Wang",
+        "Qing Sima"
       ],
       "pages": "151-152",
       "type": "Conference and Workshop Papers",
@@ -660,7 +660,7 @@
       "title": "Reproducibility Report for ACM SIGMOD 2025 Paper: 'Self-Enhancing Video Data Management System for Compositional Events with Large Language Models'.",
       "authors": [
         "Giorgio Vinciguerra",
-        "Enhao Zhang 0001"
+        "Enhao Zhang"
       ],
       "pages": "107-108",
       "type": "Conference and Workshop Papers",
@@ -727,8 +727,8 @@
       "year": 2025,
       "title": "Reproducibility Report for ACM SIGMOD 2025 Paper: 'InTime: Towards Performance Predictability In Byzantine Fault Tolerant Proof-of-Stake Consensus'.",
       "authors": [
-        "William Zhang 0001",
-        "Qing Chen 0002"
+        "William Zhang",
+        "Qing Chen"
       ],
       "pages": "149-150",
       "type": "Conference and Workshop Papers",
@@ -812,13 +812,13 @@
       "year": 2025,
       "title": "Authenticating Multi-Chain Queries: Verifiable Virtual Filesystem Is All You Need.",
       "authors": [
-        "Haixin Wang 0001",
-        "Cheng Xu 0004",
-        "Ce Zhang 0007",
-        "Haibo Hu 0001",
+        "Haixin Wang",
+        "Cheng Xu",
+        "Ce Zhang",
+        "Haibo Hu",
         "Shikun Tian",
         "Shenglong Chen",
-        "Ying Yan 0002",
+        "Ying Yan",
         "Jianliang Xu"
       ],
       "pages": "251-254",
@@ -840,7 +840,7 @@
       "year": 2025,
       "title": "Where Does Academic Database Research Go From Here?",
       "authors": [
-        "Eugene Wu 0002",
+        "Eugene Wu",
         "Raul Castro Fernandez"
       ],
       "pages": "772-774",
@@ -862,7 +862,7 @@
       "year": 2025,
       "title": "Reproducible Prototyping of Query Optimizer Components.",
       "authors": [
-        "Rico Bergmann 0002",
+        "Rico Bergmann",
         "Dirk Habich"
       ],
       "pages": "797-804",
@@ -884,8 +884,8 @@
       "year": 2025,
       "title": "Learned Indexes From the One-dimensional to the Multi-dimensional Spaces: Challenges, Techniques, and Opportunities.",
       "authors": [
-        "Abdullah Al-Mamun 0003",
-        "Jianguo Wang 0001",
+        "Abdullah Al-Mamun",
+        "Jianguo Wang",
         "Walid G. Aref"
       ],
       "pages": "788-796",
@@ -907,8 +907,8 @@
       "year": 2025,
       "title": "LpBound in Action: Cardinality Estimation with One-Sided Guarantees.",
       "authors": [
-        "Christoph Mayer 0010",
-        "Haozhe Zhang 0001",
+        "Christoph Mayer",
+        "Haozhe Zhang",
         "Mahmoud Abo Khamis",
         "Dan Olteanu",
         "Dan Suciu"
@@ -932,12 +932,12 @@
       "year": 2025,
       "title": "TEQ: An Open and Developer-friendly Testbed for Edge-based Query Processing Algorithms.",
       "authors": [
-        "Yu Lei 0010",
+        "Yu Lei",
         "Xinle Jiang",
-        "Hua Lu 0001",
+        "Hua Lu",
         "Christian S. Jensen",
-        "Bo Tang 0016",
-        "Huan Li 0003"
+        "Bo Tang",
+        "Huan Li"
       ],
       "pages": "155-158",
       "type": "Conference and Workshop Papers",
@@ -958,17 +958,17 @@
       "year": 2025,
       "title": "Flux: Unifying Heterogeneous Infrastructure for Alibaba AnalyticDB.",
       "authors": [
-        "Wei Li 0226",
-        "Jiachi Zhang 0002",
+        "Wei Li",
+        "Jiachi Zhang",
         "Ye Yin",
-        "Yan Li 0130",
+        "Yan Li",
         "Zhanyang Zhu",
         "Yuhao Li",
         "Zhencan Peng",
         "Lan Lu",
         "Wenchao Zhou",
         "Liang Lin",
-        "Feifei Li 0001"
+        "Feifei Li"
       ],
       "pages": "539-552",
       "type": "Conference and Workshop Papers",
@@ -1015,7 +1015,7 @@
         "Sainyam Galhotra",
         "Shagufta Mehnaz",
         "Zeyu Song",
-        "Eugene Wu 0002"
+        "Eugene Wu"
       ],
       "pages": "775-787",
       "type": "Conference and Workshop Papers",
@@ -1095,7 +1095,7 @@
         "Allison Rogers",
         "Cristina Sirangelo",
         "Domagoj Vrgoc",
-        "David Zhao 0001",
+        "David Zhao",
         "Abdul Zreika"
       ],
       "pages": "283-296",
@@ -1117,7 +1117,7 @@
       "year": 2025,
       "title": "Eighth Joint Workshop on Graph Data Management Experiences & Systems (GRADES) and Network Data Analytics (NDA).",
       "authors": [
-        "Akhil Arora 0001",
+        "Akhil Arora",
         "Stefania Dumbrava"
       ],
       "pages": "864-865",
@@ -1208,10 +1208,10 @@
       "authors": [
         "Wenchao Bai",
         "Wenfei Fan",
-        "Jiahui Jin 0001",
+        "Jiahui Jin",
         "Daji Li",
         "Jian Li",
-        "Shuhao Liu 0001",
+        "Shuhao Liu",
         "Mingliang Ouyang",
         "Qiang Yuan"
       ],
@@ -1265,12 +1265,12 @@
         "Mingxi Liu",
         "Volker Markl",
         "Juri Petersen",
-        "Fábio Porto 0001",
+        "Fábio Porto",
         "Víctor Ribeiro",
         "Mads Sejer Pedersen",
         "Lucas Giusti Tavares",
         "Michalis Vargiamis",
-        "Chen Xu 0001"
+        "Chen Xu"
       ],
       "pages": "35-38",
       "type": "Conference and Workshop Papers",
@@ -1485,7 +1485,7 @@
         "Vijayan Prabhakaran",
         "Martin Grund",
         "Stefania Leone",
-        "Amit Shukla 0001",
+        "Amit Shukla",
         "Michael Armbrust",
         "Reynold Xin",
         "Matei Zaharia",
@@ -1542,10 +1542,10 @@
       "authors": [
         "Faiza Allah Bukhsh",
         "Paolo Ceravolo",
-        "Xu Chu 0002",
+        "Xu Chu",
         "Samira Maghool",
-        "Eugene Wu 0002",
-        "Cong Yu 0001"
+        "Eugene Wu",
+        "Cong Yu"
       ],
       "pages": "872-873",
       "type": "Conference and Workshop Papers",
@@ -1591,9 +1591,9 @@
         "Jeffery Cao",
         "Lampros Flokas",
         "Yujian Xu",
-        "Eugene Wu 0002",
-        "Xu Chu 0002",
-        "Cong Yu 0001"
+        "Eugene Wu",
+        "Xu Chu",
+        "Cong Yu"
       ],
       "pages": "59-62",
       "type": "Conference and Workshop Papers",
@@ -1616,11 +1616,11 @@
       "authors": [
         "Tsz Nam Chan",
         "Bojian Zhu",
-        "Dingming Wu 0001",
-        "Yun Peng 0002",
+        "Dingming Wu",
+        "Yun Peng",
         "Leong Hou U",
-        "Wei Tu 0001",
-        "Ruisheng Wang 0001"
+        "Wei Tu",
+        "Ruisheng Wang"
       ],
       "pages": "63-66",
       "type": "Conference and Workshop Papers",
@@ -1642,12 +1642,12 @@
       "title": "Unity Catalog: Open and Universal Governance for the Lakehouse and Beyond.",
       "authors": [
         "Ramesh Chandra",
-        "Haogang Chen 0003",
+        "Haogang Chen",
         "Ray Matharu",
         "Sarah Cai",
         "Jeff Chen",
         "Priyam Dutta",
-        "Bogdan Ghita 0004",
+        "Bogdan Ghita",
         "Todd Greenstein",
         "Gopal Holla",
         "Peng Huang",
@@ -1660,7 +1660,7 @@
         "David Lewis",
         "Andrew Li",
         "Nong Li",
-        "Cheng Lian 0001",
+        "Cheng Lian",
         "Stephen Link",
         "Qing Lu",
         "Yesheng Ma",
@@ -1700,7 +1700,7 @@
       "title": "Ninth Workshop on Human-In-the-Loop Data Analytics (HILDA).",
       "authors": [
         "Remco Chang",
-        "Kexin Rong 0001",
+        "Kexin Rong",
         "Roee Shraga"
       ],
       "pages": "874-875",
@@ -1748,7 +1748,7 @@
         "Kaiwen Chen",
         "Yueting Chen",
         "Nick Koudas",
-        "Xiaohui Yu 0001"
+        "Xiaohui Yu"
       ],
       "pages": "71-74",
       "type": "Conference and Workshop Papers",
@@ -1772,11 +1772,11 @@
         "Zihao Chen",
         "Jiazhi Jiang",
         "Jiangang Liu",
-        "Chao Zhang 0014",
+        "Chao Zhang",
         "Yuqi Diao",
-        "Yang Li 0106",
+        "Yang Li",
         "Hanmei Luo",
-        "Peng Chen 0021"
+        "Peng Chen"
       ],
       "pages": "323-335",
       "type": "Conference and Workshop Papers",
@@ -1799,13 +1799,13 @@
       "authors": [
         "Zongzhi Chen",
         "Xinjun Yang",
-        "Mo Sha 0002",
-        "Feifei Li 0001",
+        "Mo Sha",
+        "Feifei Li",
         "Kang Wang",
         "Zheyu Miao",
         "Jie Xu",
         "Jianfeng Wang",
-        "Sheng Wang 0011"
+        "Sheng Wang"
       ],
       "pages": "336-349",
       "type": "Conference and Workshop Papers",
@@ -1856,8 +1856,8 @@
       "authors": [
         "Zihao Chen",
         "Chenyang Zhang",
-        "Chen Xu 0001",
-        "Zhao Zhang 0009",
+        "Chen Xu",
+        "Zhao Zhang",
         "Jiaqiang Wang",
         "Weining Qian",
         "Aoying Zhou"
@@ -1883,7 +1883,7 @@
       "authors": [
         "Yangshen Deng",
         "Zhengxin You",
-        "Long Xiang 0001",
+        "Long Xiang",
         "Qilong Li",
         "Peiqi Yuan",
         "Zhaoyang Hong",
@@ -1893,10 +1893,10 @@
         "Haotian Liu",
         "Kyriakos Mouratidis",
         "Man Lung Yiu",
-        "Huan Li 0003",
+        "Huan Li",
         "Qiaomu Shen",
-        "Rui Mao 0001",
-        "Bo Tang 0016"
+        "Rui Mao",
+        "Bo Tang"
       ],
       "pages": "364-377",
       "type": "Conference and Workshop Papers",
@@ -1976,7 +1976,7 @@
         "Qi Yang",
         "Zeyu Wang",
         "Zhenkun Yang",
-        "Fanyu Kong 0004",
+        "Fanyu Kong",
         "Quanqing Xu",
         "Hui Cao",
         "Fusheng Han",
@@ -2002,8 +2002,8 @@
       "title": "Demonstrating CatDB: LLM-based Generation of Data-centric ML Pipelines.",
       "authors": [
         "Saeed Fathollahzadeh",
-        "Essam Mansour 0001",
-        "Matthias Boehm 0001"
+        "Essam Mansour",
+        "Matthias Boehm"
       ],
       "pages": "87-90",
       "type": "Conference and Workshop Papers",
@@ -2072,16 +2072,16 @@
       "authors": [
         "Sen Gao",
         "Jianwen Zhao",
-        "Hao Zhang 0098",
+        "Hao Zhang",
         "Shixuan Sun",
         "Chen Liang",
         "Gongye Chen",
         "Wenliang Zhang",
         "Bo Ren",
-        "Chao Liu 0037",
-        "Chenyi Zhang 0002",
-        "Quan Chen 0002",
-        "Chao Li 0009",
+        "Chao Liu",
+        "Chenyi Zhang",
+        "Quan Chen",
+        "Chao Li",
         "Jingwen Leng",
         "Minyi Guo"
       ],
@@ -2177,7 +2177,7 @@
         "Anja Gruenheid",
         "Jesús Camacho-Rodríguez",
         "Carlo Curino",
-        "Raghu Ramakrishnan 0001",
+        "Raghu Ramakrishnan",
         "Stanislav Pak",
         "Sumedh Sakdeo",
         "Lenisha Gandhi",
@@ -2215,7 +2215,7 @@
         "Polo-Francois Poli",
         "Lionel Montrieux",
         "Othon Crelier",
-        "Xiao Li 0087",
+        "Xiao Li",
         "Reynold Xin",
         "Matei Zaharia",
         "Michalis Petropoulos",
@@ -2464,9 +2464,9 @@
         "Xuhua Huang",
         "Zirui Hu",
         "Siyang Weng",
-        "Rong Zhang 0002",
+        "Rong Zhang",
         "Chengcheng Yang",
-        "Xuan Zhou 0001",
+        "Xuan Zhou",
         "Weining Qian",
         "Chuanhui Yang",
         "Quanqing Xu"
@@ -2550,9 +2550,9 @@
       "authors": [
         "Yansha Jia",
         "Zhengxin You",
-        "Yujie Wang 0004",
+        "Yujie Wang",
         "Qiaomu Shen",
-        "Bo Tang 0016"
+        "Bo Tang"
       ],
       "pages": "267-270",
       "type": "Conference and Workshop Papers",
@@ -2603,8 +2603,8 @@
         "Jian Liu",
         "Guangliang Zhao",
         "Tieying Zhang",
-        "Jianjun Chen 0001",
-        "Lei Zhang 0213"
+        "Jianjun Chen",
+        "Lei Zhang"
       ],
       "pages": "471-484",
       "type": "Conference and Workshop Papers",
@@ -2651,11 +2651,11 @@
         "Kihong Kim",
         "Hyunwook Kim",
         "Jinsu Lee",
-        "Taehyung Lee 0002",
-        "Alexander Böhm 0002",
+        "Taehyung Lee",
+        "Alexander Böhm",
         "Norman May",
         "Guido Moerkotte",
-        "Daniel Ritter 0001",
+        "Daniel Ritter",
         "Ralf Dentzer",
         "Heiko Gerwens",
         "Irena Kofman",
@@ -2761,7 +2761,7 @@
         "Changwei Luo",
         "Yunkai Lou",
         "Mingchen Ju",
-        "Zhengyi Yang 0001"
+        "Zhengyi Yang"
       ],
       "pages": "147-150",
       "type": "Conference and Workshop Papers",
@@ -2783,7 +2783,7 @@
       "title": "Transactional Cloud Applications: Status Quo, Challenges, and Opportunities.",
       "authors": [
         "Rodrigo Laigner",
-        "George Christodoulou 0005",
+        "George Christodoulou",
         "Kyriakos Psarakis",
         "Asterios Katsifodimos",
         "Yongluan Zhou"
@@ -2808,7 +2808,7 @@
       "title": "Experimental Evaluation of Optimizing Memory Consumption in SAP HANA using PEOopt.",
       "authors": [
         "Lukas Landgraf",
-        "Florian Wolf 0002",
+        "Florian Wolf",
         "Wolfgang Lehner"
       ],
       "pages": "499-511",
@@ -2855,7 +2855,7 @@
         "Nativ Levy",
         "Michael J. Cafarella",
         "Amir Gilad",
-        "Sudeepa Roy 0001",
+        "Sudeepa Roy",
         "Brit Youngmann"
       ],
       "pages": "159-162",
@@ -2878,12 +2878,12 @@
       "title": "Eigen+: Memory Over-Subscription for Alibaba Cloud Databases.",
       "authors": [
         "Ji You Li",
-        "Jiachi Zhang 0002",
+        "Jiachi Zhang",
         "Yuhang Liu",
         "Wenchao Zhou",
         "Xin Zhou",
         "Fangyuan Zhou",
-        "Feifei Li 0001"
+        "Feifei Li"
       ],
       "pages": "525-538",
       "type": "Conference and Workshop Papers",
@@ -2905,8 +2905,8 @@
       "title": "Demonstrating MAST: An Efficient System for Point Cloud Data Analytics.",
       "authors": [
         "Jiangneng Li",
-        "Haitao Yuan 0002",
-        "Jie Wang 0086",
+        "Haitao Yuan",
+        "Jie Wang",
         "Ziting Wang",
         "Han Mao Kiah",
         "Gao Cong"
@@ -2958,13 +2958,13 @@
         "Chaoyi Chen",
         "Hao Yuan",
         "Zhenbo Fu",
-        "Hang Shen 0008",
+        "Hang Shen",
         "Xinbo Yang",
         "Qiange Wang",
-        "Xin Ai 0006",
-        "Yanfeng Zhang 0001",
+        "Xin Ai",
+        "Yanfeng Zhang",
         "Yingyou Wen",
-        "Ge Yu 0001"
+        "Ge Yu"
       ],
       "pages": "163-166",
       "type": "Conference and Workshop Papers",
@@ -2986,14 +2986,14 @@
       "title": "Adaptive and Efficient Log Parsing as a Cloud Service.",
       "authors": [
         "Zeyan Li",
-        "Jie Song 0013",
+        "Jie Song",
         "Tieying Zhang",
         "Tao Yang",
         "Xiongjun Ou",
         "Yingjie Ye",
-        "Pengfei Duan 0004",
+        "Pengfei Duan",
         "Muchen Lin",
-        "Jianjun Chen 0001"
+        "Jianjun Chen"
       ],
       "pages": "512-524",
       "type": "Conference and Workshop Papers",
@@ -3014,10 +3014,10 @@
       "year": 2025,
       "title": "Data+AI: LLM4Data and Data4LLM.",
       "authors": [
-        "Guoliang Li 0001",
-        "Jiayi Wang 0002",
-        "Chenyang Zhang 0005",
-        "Jiannan Wang 0001"
+        "Guoliang Li",
+        "Jiayi Wang",
+        "Chenyang Zhang",
+        "Jiannan Wang"
       ],
       "pages": "837-843",
       "type": "Conference and Workshop Papers",
@@ -3041,12 +3041,12 @@
         "Zhiyu Liang",
         "Dongrui Cai",
         "Chenyuan Zhang",
-        "Zheng Liang 0002",
-        "Chen Liang 0002",
-        "Bo Zheng 0012",
-        "Shi Qiu 0006",
-        "Jin Wang 0038",
-        "Hongzhi Wang 0001"
+        "Zheng Liang",
+        "Chen Liang",
+        "Bo Zheng",
+        "Shi Qiu",
+        "Jin Wang",
+        "Hongzhi Wang"
       ],
       "pages": "175-178",
       "type": "Conference and Workshop Papers",
@@ -3092,7 +3092,7 @@
       "title": "Qymera: Simulating Quantum Circuits using RDBMS.",
       "authors": [
         "Tim Littau",
-        "Rihan Hai 0001"
+        "Rihan Hai"
       ],
       "pages": "179-182",
       "type": "Conference and Workshop Papers",
@@ -3147,7 +3147,7 @@
         "Songting Chen",
         "Yu Xu",
         "Mingxi Wu",
-        "Jianguo Wang 0001"
+        "Jianguo Wang"
       ],
       "pages": "553-565",
       "type": "Conference and Workshop Papers",
@@ -3197,8 +3197,8 @@
         "Yufan Yang",
         "Yunkai Lou",
         "Wenyuan Yu",
-        "Ying Zhang 0001",
-        "Jingren Zhou 0001"
+        "Ying Zhang",
+        "Jingren Zhou"
       ],
       "pages": "566-579",
       "type": "Conference and Workshop Papers",
@@ -3220,8 +3220,8 @@
       "title": "SAP HANA Cloud: Data Management for Modern Enterprise Applications.",
       "authors": [
         "Norman May",
-        "Alexander Böhm 0002",
-        "Daniel Ritter 0001",
+        "Alexander Böhm",
+        "Daniel Ritter",
         "Frank Renkes",
         "Mihnea Andrei",
         "Wolfgang Lehner"
@@ -3248,7 +3248,7 @@
         "Amin Meghrazi",
         "Pranav Maneriker",
         "Swati Padhee",
-        "Srinivasan Parthasarathy 0001"
+        "Srinivasan Parthasarathy"
       ],
       "pages": "191-194",
       "type": "Conference and Workshop Papers",
@@ -3332,7 +3332,7 @@
       "authors": [
         "Amedeo Pachera",
         "Angela Bonifati",
-        "Andrea Mauri 0001"
+        "Andrea Mauri"
       ],
       "pages": "199-202",
       "type": "Conference and Workshop Papers",
@@ -3522,7 +3522,7 @@
       "title": "TD-Join: Leveraging Temporal Dependencies in Time Series Joins.",
       "authors": [
         "Gianluca Rossi",
-        "Riccardo Tommasini 0001",
+        "Riccardo Tommasini",
         "Angela Bonifati"
       ],
       "pages": "223-226",
@@ -3680,7 +3680,7 @@
         "Anirudh Santhiar",
         "Attila-Péter Tóth",
         "Botong Huang",
-        "Boyuan Zhang 0004",
+        "Boyuan Zhang",
         "Igor Belianski",
         "Ling Geng",
         "Matt Uhlar",
@@ -3753,7 +3753,7 @@
       "authors": [
         "Wenbo Sun",
         "Ziyu Li",
-        "Rihan Hai 0001"
+        "Rihan Hai"
       ],
       "pages": "231-234",
       "type": "Conference and Workshop Papers",
@@ -3777,8 +3777,8 @@
         "Zhaoyan Sun",
         "Xuanhe Zhou",
         "Jianming Wu",
-        "Wei Zhou 0053",
-        "Guoliang Li 0001"
+        "Wei Zhou",
+        "Guoliang Li"
       ],
       "pages": "235-238",
       "type": "Conference and Workshop Papers",
@@ -3834,8 +3834,8 @@
       "authors": [
         "Gerardo Vitagliano",
         "Chunwei Liu",
-        "Lei Cao 0004",
-        "Huan Sun 0001",
+        "Lei Cao",
+        "Huan Sun",
         "Paolo Papotti"
       ],
       "pages": "886-887",
@@ -3891,9 +3891,9 @@
         "Pengyi Wang",
         "Sibei Chen",
         "Ju Fan",
-        "Bin Wu 0003",
-        "Nan Tang 0001",
-        "Jian Tan 0001"
+        "Bin Wu",
+        "Nan Tang",
+        "Jian Tan"
       ],
       "pages": "243-246",
       "type": "Conference and Workshop Papers",
@@ -3915,7 +3915,7 @@
       "title": "TXSQL: Lock Optimizations Towards High Contented Workloads.",
       "authors": [
         "Donghui Wang",
-        "Yuxing Chen 0003",
+        "Yuxing Chen",
         "Chengyao Jiang",
         "Anqun Pan",
         "Wei Jiang",
@@ -3923,10 +3923,10 @@
         "Hailin Lei",
         "Chong Zhu",
         "Lixiong Zheng",
-        "Wei Lu 0015",
+        "Wei Lu",
         "Yunpeng Chai",
-        "Feng Zhang 0007",
-        "Xiaoyong Du 0001"
+        "Feng Zhang",
+        "Xiaoyong Du"
       ],
       "pages": "675-688",
       "type": "Conference and Workshop Papers",
@@ -3949,7 +3949,7 @@
       "authors": [
         "Patrick Wang",
         "Wan Shen Lim",
-        "William Zhang 0001",
+        "William Zhang",
         "Samuel Arch",
         "Andrew Pavlo"
       ],
@@ -3973,9 +3973,9 @@
       "title": "SemExplorer: A User Interface for Semantic Approach to Customized Dataset Search.",
       "authors": [
         "Zixin Wei",
-        "Jun Han 0010",
-        "Xiaolin Han 0002",
-        "Chenhao Ma 0001"
+        "Jun Han",
+        "Xiaolin Han",
+        "Chenhao Ma"
       ],
       "pages": "255-258",
       "type": "Conference and Workshop Papers",
@@ -3999,9 +3999,9 @@
         "Jingzhe Xu",
         "Yuhao Deng",
         "Chengliang Chai",
-        "Zequn Li 0007",
-        "Yuping Wang 0001",
-        "Lei Cao 0004"
+        "Zequn Li",
+        "Yuping Wang",
+        "Lei Cao"
       ],
       "pages": "259-262",
       "type": "Conference and Workshop Papers",
@@ -4051,11 +4051,11 @@
       "authors": [
         "Xinjun Yang",
         "Yingqiang Zhang",
-        "Hao Chen 0080",
-        "Feifei Li 0001",
+        "Hao Chen",
+        "Feifei Li",
         "Gerry Fan",
         "Yang Kong",
-        "Bo Wang 0114",
+        "Bo Wang",
         "Jing Fang",
         "Yuhui Wang",
         "Tao Huang",
@@ -4085,12 +4085,12 @@
         "Geoffrey X. Yu",
         "Ziniu Wu",
         "Ferdi Kossmann",
-        "Tianyu Li 0001",
+        "Tianyu Li",
         "Markos Markakis",
         "Amadou Ngom",
         "Sophie Zhang",
         "Tim Kraska",
-        "Samuel Madden 0001"
+        "Samuel Madden"
       ],
       "pages": "271-274",
       "type": "Conference and Workshop Papers",
@@ -4143,9 +4143,9 @@
         "Yuhao Deng",
         "Chengliang Chai",
         "Ruixin Gu",
-        "Ye Yuan 0001",
+        "Ye Yuan",
         "Guoren Wang",
-        "Lei Cao 0004"
+        "Lei Cao"
       ],
       "pages": "275-278",
       "type": "Conference and Workshop Papers",
@@ -4166,12 +4166,12 @@
       "year": 2025,
       "title": "RedTAO: A Trillion-edge High-throughput Graph Store.",
       "authors": [
-        "Shihao Zhou 0002",
+        "Shihao Zhou",
         "Qi Mao",
         "Yi Cheng",
         "Hongcheng Qi",
-        "Yilun Huang 0005",
-        "Peng Cai 0001",
+        "Yilun Huang",
+        "Peng Cai",
         "Jun-Peng Zhu"
       ],
       "pages": "716-728",
@@ -4194,14 +4194,14 @@
       "title": "OpenMLDB: A Real-Time Relational Data Feature Computation System for Online ML.",
       "authors": [
         "Xuanhe Zhou",
-        "Wei Zhou 0053",
+        "Wei Zhou",
         "Liguo Qi",
-        "Hao Zhang 0098",
+        "Hao Zhang",
         "Dihao Chen",
         "Bingsheng He",
         "Mian Lu",
-        "Guoliang Li 0001",
-        "Fan Wu 0006",
+        "Guoliang Li",
+        "Fan Wu",
         "Yuqiang Chen"
       ],
       "pages": "729-742",
@@ -4224,8 +4224,8 @@
       "title": "UNITQA: A Unified Automated Tabular Question Answering System with Multi-Agent Large Language Models.",
       "authors": [
         "Jun-Peng Zhu",
-        "Peng Cai 0001",
-        "Kai Xu 0003",
+        "Peng Cai",
+        "Kai Xu",
         "Li Li",
         "Yishen Sun",
         "Shuai Zhou",
@@ -4261,7 +4261,7 @@
         "Rahul Challapalli",
         "Weihan Tang",
         "Xin He",
-        "Mo Liu 0003",
+        "Mo Liu",
         "Estera Kot",
         "Sule Kahraman",
         "Arshdeep Sekhon",

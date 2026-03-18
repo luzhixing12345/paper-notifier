@@ -6,13 +6,13 @@
       "year": 2023,
       "title": "ParaRC: Embracing Sub-Packetization for Repair Parallelization in MSR-Coded Storage.",
       "authors": [
-        "Xiaolu Li 0002",
+        "Xiaolu Li",
         "Keyun Cheng",
         "Kaicheng Tang",
         "Patrick P. C. Lee",
         "Yuchong Hu",
-        "Dan Feng 0001",
-        "Jie Li 0019",
+        "Dan Feng",
+        "Jie Li",
         "Ting-Yi Wu"
       ],
       "pages": "17-32",
@@ -61,7 +61,7 @@
         "Jian Gao",
         "Youyou Lu",
         "Minhui Xie",
-        "Qing Wang 0031",
+        "Qing Wang",
         "Jiwu Shu"
       ],
       "pages": "297-314",
@@ -84,14 +84,14 @@
       "title": "HadaFS: A File System Bridging the Local and Shared Burst Buffer for Exascale Supercomputers.",
       "authors": [
         "Xiaobin He",
-        "Bin Yang 0043",
+        "Bin Yang",
         "Jie Gao",
         "Wei Xiao",
         "Qi Chen",
         "Shupeng Shi",
         "Dexun Chen",
         "Weiguo Liu",
-        "Wei Xue 0003",
+        "Wei Xue",
         "Zuoning Chen"
       ],
       "pages": "215-230",
@@ -141,9 +141,9 @@
         "Ahmad Hossein Yazdani",
         "Yuqi Fu",
         "Arnab K. Paul",
-        "Bo Ji 0001",
-        "Xun Jian 0002",
-        "Yue Cheng 0001",
+        "Bo Ji",
+        "Xun Jian",
+        "Yue Cheng",
         "Ali Raza Butt"
       ],
       "pages": "135-152",
@@ -169,8 +169,8 @@
         "Inhyuk Choi",
         "Juhyung Park",
         "Jaeheon Lee",
-        "Sungjin Lee 0001",
-        "Jihong Kim 0001"
+        "Sungjin Lee",
+        "Jihong Kim"
       ],
       "pages": "441-456",
       "type": "Conference and Workshop Papers",
@@ -244,7 +244,7 @@
       "title": "ROLEX: A Scalable RDMA-oriented Learned Key-Value Store for Disaggregated Memory Systems.",
       "authors": [
         "Pengfei Li",
-        "Yu Hua 0001",
+        "Yu Hua",
         "Pengfei Zuo",
         "Zhangyu Chen",
         "Jiajie Sheng"
@@ -268,9 +268,9 @@
       "year": 2023,
       "title": "Fisc: A Large-scale Cloud-native-oriented File System.",
       "authors": [
-        "Qiang Li 0045",
+        "Qiang Li",
         "Lulu Chen",
-        "Xiaoliang Wang 0001",
+        "Xiaoliang Wang",
         "Shuo Huang",
         "Qiao Xiang",
         "Yuanyuan Dong",
@@ -292,10 +292,10 @@
         "Yuchao Shao",
         "Gexiao Tian",
         "Zhongjie Wu",
-        "Zheng Cao 0003",
+        "Zheng Cao",
         "Jinbo Wu",
         "Jiwu Shu",
-        "Jie Wu 0003",
+        "Jie Wu",
         "Jiesheng Wu"
       ],
       "pages": "231-246",
@@ -317,9 +317,9 @@
       "year": 2023,
       "title": "More Than Capacity: Performance-oriented Evolution of Pangu in Alibaba.",
       "authors": [
-        "Qiang Li 0045",
+        "Qiang Li",
         "Qiao Xiang",
-        "Yuxin Wang 0003",
+        "Yuxin Wang",
         "Haohao Song",
         "Ridi Wen",
         "Wenhui Yao",
@@ -340,7 +340,7 @@
         "Zicheng Luo",
         "Yuchao Shao",
         "Junping Wu",
-        "Zheng Cao 0003",
+        "Zheng Cao",
         "Zhongjie Wu",
         "Jiaji Zhu",
         "Jinbo Wu",
@@ -366,7 +366,7 @@
       "year": 2023,
       "title": "Intelligent Resource Scheduling for Co-located Latency-critical Services: A Multi-Model Collaborative Learning Approach.",
       "authors": [
-        "Lei Liu 0037",
+        "Lei Liu",
         "Xinglei Dou",
         "Yuetao Chen"
       ],
@@ -391,14 +391,14 @@
       "authors": [
         "Ruiming Lu",
         "Erci Xu",
-        "Yiming Zhang 0003",
+        "Yiming Zhang",
         "Fengyi Zhu",
         "Zhaosheng Zhu",
         "Mengtian Wang",
         "Zongpeng Zhu",
         "Guangtao Xue",
         "Jiwu Shu",
-        "Minglu Li 0001",
+        "Minglu Li",
         "Jiesheng Wu"
       ],
       "pages": "49-64",
@@ -498,7 +498,7 @@
       "title": "Fast Application Launch on Personal Computing/Communication Devices.",
       "authors": [
         "Junhee Ryu",
-        "Dongeun Lee 0001",
+        "Dongeun Lee",
         "Kang G. Shin",
         "Kyungtae Kang"
       ],
@@ -525,8 +525,8 @@
         "Pengfei Zuo",
         "Xuchuan Luo",
         "Tianyi Yang",
-        "Yuxin Su 0001",
-        "Yangfan Zhou 0002",
+        "Yuxin Su",
+        "Yangfan Zhou",
         "Michael R. Lyu"
       ],
       "pages": "81-98",
@@ -551,11 +551,11 @@
         "Jingbo Su",
         "Jiahao Li",
         "Luofan Chen",
-        "Cheng Li 0001",
+        "Cheng Li",
         "Kai Zhang",
         "Liang Yang",
         "Sam H. Noh",
-        "Yinlong Xu 0001"
+        "Yinlong Xu"
       ],
       "pages": "363-378",
       "type": "Conference and Workshop Papers",
@@ -624,7 +624,7 @@
       "authors": [
         "Bin Yan",
         "Youyou Lu",
-        "Qing Wang 0031",
+        "Qing Wang",
         "Minhui Xie",
         "Jiwu Shu"
       ],
@@ -647,7 +647,7 @@
       "year": 2023,
       "title": "λ-IO: A Unified IO Stack for Computational Storage.",
       "authors": [
-        "Zhe Yang 0012",
+        "Zhe Yang",
         "Youyou Lu",
         "Xiaojian Liao",
         "Youmin Chen",

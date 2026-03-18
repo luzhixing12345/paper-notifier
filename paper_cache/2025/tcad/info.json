@@ -11,7 +11,7 @@
         "Farzaneh Arzaghi",
         "Sara Zamani",
         "Mohammad Salehi",
-        "Muhammad Shafique 0001"
+        "Muhammad Shafique"
       ],
       "pages": "4155-4166",
       "type": "Journal Articles",
@@ -125,9 +125,9 @@
       "title": "SpikeSpec: An On-Chip Learning Neuromorphic Accelerator for Spectrum Sensing With Triplet-Boosting and Hardware Friendly Loss Function.",
       "authors": [
         "Muhammad Farhan Azmine",
-        "Ruizhe Li 0006",
+        "Ruizhe Li",
         "Gauri Sharma",
-        "Yang Yi 0002"
+        "Yang Yi"
       ],
       "pages": "3423-3436",
       "type": "Journal Articles",
@@ -199,10 +199,10 @@
         "Chen Bai",
         "Xuechao Wei",
         "Youwei Zhuo",
-        "Yi Cai 0003",
+        "Yi Cai",
         "Hongzhong Zheng",
-        "Bei Yu 0001",
-        "Yuan Xie 0001"
+        "Bei Yu",
+        "Yuan Xie"
       ],
       "pages": "1045-1058",
       "type": "Journal Articles",
@@ -372,9 +372,9 @@
         "Jiahao Cai",
         "Hamza Errahmouni Barkam",
         "Mohsen Imani",
-        "Kai Ni 0004",
+        "Kai Ni",
         "Grace Li Zhang",
-        "Bing Li 0005",
+        "Bing Li",
         "Ulf Schlichtmann",
         "Cheng Zhuo",
         "Xunzhao Yin"
@@ -445,10 +445,10 @@
       "year": 2025,
       "title": "Reliability-Aware Personalized Deployment of Approximate Computation IoT Applications in Serverless Mobile Edge Computing.",
       "authors": [
-        "Kun Cao 0001",
-        "Mingsong Chen 0001",
+        "Kun Cao",
+        "Mingsong Chen",
         "Stamatis Karnouskos",
-        "Shiyan Hu 0001"
+        "Shiyan Hu"
       ],
       "pages": "430-443",
       "type": "Journal Articles",
@@ -469,12 +469,12 @@
       "year": 2025,
       "title": "RoSE-Opt: Robust and Efficient Analog Circuit Parameter Optimization With Knowledge-Infused Reinforcement Learning.",
       "authors": [
-        "Weidong Cao 0001",
+        "Weidong Cao",
         "Jian Gao",
         "Tianrui Ma",
         "Rui Ma",
         "Mouhacine Benosman",
-        "Xuan Zhang 0001"
+        "Xuan Zhang"
       ],
       "pages": "627-640",
       "type": "Journal Articles",
@@ -495,13 +495,13 @@
       "year": 2025,
       "title": "An Optimization-Aware Prerouting Timing Prediction Framework Based on Multimodal Learning.",
       "authors": [
-        "Peng Cao 0002",
+        "Peng Cao",
         "Yusen Qin",
         "Guoqing He",
         "Wenjie Ding",
         "Xu Cheng",
         "Zhanhua Zhang",
-        "Yuyang Ye 0001"
+        "Yuyang Ye"
       ],
       "pages": "3896-3909",
       "type": "Journal Articles",
@@ -525,7 +525,7 @@
         "Shan Cao",
         "Meiling Yang",
         "Yintao Liu",
-        "Yu Li 0051",
+        "Yu Li",
         "Beining Zhao",
         "Xinyu Chen",
         "Zhiyuan Jiang"
@@ -549,7 +549,7 @@
       "year": 2025,
       "title": "HotReRAM: A Performance-Power-Thermal Simulation Framework for ReRAM-Based Caches.",
       "authors": [
-        "Shounak Chakraborty 0001",
+        "Shounak Chakraborty",
         "Thanasin Bunnam",
         "Jedsada Arunruerk",
         "Sukarn Agarwal",
@@ -622,7 +622,7 @@
       "year": 2025,
       "title": "CKTSO: High-Performance Parallel Sparse Linear Solver for General Circuit Simulations.",
       "authors": [
-        "Xiaoming Chen 0003"
+        "Xiaoming Chen"
       ],
       "pages": "1887-1900",
       "type": "Journal Articles",
@@ -645,7 +645,7 @@
       "authors": [
         "Xinyu Chen",
         "Zilu Chen",
-        "Pengcheng Zhu 0002",
+        "Pengcheng Zhu",
         "Xueyun Cheng",
         "Zhijin Guan"
       ],
@@ -670,7 +670,7 @@
       "authors": [
         "Qianxi Chen",
         "Yujiao Deng",
-        "Qiang Wu 0014",
+        "Qiang Wu",
         "Zhixiong Di"
       ],
       "pages": "3938-3947",
@@ -693,13 +693,13 @@
       "title": "GNN4HT: A Two-Stage GNN-Based Approach for Hardware Trojan Multifunctional Classification.",
       "authors": [
         "Lihan Chen",
-        "Chen Dong 0002",
+        "Chen Dong",
         "Qiaowen Wu",
         "Ximeng Liu",
         "Xiaodong Guo",
         "Zhenyi Chen",
-        "Hao Zhang 0078",
-        "Yang Yang 0026"
+        "Hao Zhang",
+        "Yang Yang"
       ],
       "pages": "172-185",
       "type": "Journal Articles",
@@ -726,16 +726,16 @@
         "Xuanle Ren",
         "Ruiguang Zhong",
         "Wen-Jie Lu",
-        "Jiansong Zhang 0001",
+        "Jiansong Zhang",
         "Yichi Zhang",
         "Hanghang Wu",
         "Xiaofu Zheng",
         "Heng Liu",
         "Tingqiang Chu",
-        "Cheng Hong 0001",
+        "Cheng Hong",
         "Changzheng Wei",
         "Dimin Niu",
-        "Yuan Xie 0001"
+        "Yuan Xie"
       ],
       "pages": "1662-1675",
       "type": "Journal Articles",
@@ -785,10 +785,10 @@
       "title": "Bridge-NDP: Efficient Communication-Computation Overlap in Near Data Processing System.",
       "authors": [
         "Liyan Chen",
-        "Pengyu Liu 0004",
+        "Pengyu Liu",
         "Dongxu Lyu",
-        "Jianfei Jiang 0001",
-        "Qin Wang 0009",
+        "Jianfei Jiang",
+        "Qin Wang",
         "Zhigang Mao",
         "Naifeng Jing"
       ],
@@ -815,7 +815,7 @@
         "Zhenyu Li",
         "Dongxu Lyu",
         "Yansong Xu",
-        "Guanghui He 0002"
+        "Guanghui He"
       ],
       "pages": "2725-2737",
       "type": "Journal Articles",
@@ -865,7 +865,7 @@
       "title": "A Q-Learning-Based Display Energy Optimization Scheme for Android Systems.",
       "authors": [
         "Zizhan Chen",
-        "Tianyu Wang 0009",
+        "Tianyu Wang",
         "Kai Zhang",
         "Yang Guo",
         "Zili Shao"
@@ -916,7 +916,7 @@
       "year": 2025,
       "title": "PISOV: Physics-Informed Separation of Variables Solvers for Full-Chip Thermal Analysis.",
       "authors": [
-        "Liang Chen 0025",
+        "Liang Chen",
         "Wenxing Zhu",
         "Min Tang",
         "Sheldon X.-D. Tan",
@@ -944,7 +944,7 @@
       "authors": [
         "Wei-Che Cheng",
         "Shih-Hsu Huang",
-        "Jin-Fu Li 0001"
+        "Jin-Fu Li"
       ],
       "pages": "3260-3273",
       "type": "Journal Articles",
@@ -967,10 +967,10 @@
       "authors": [
         "Yifan Cheng",
         "Zehong Yu",
-        "Zhuo Su 0005",
-        "Ting Chen 0002",
-        "Xiaosong Zhang 0001",
-        "Yu Jiang 0001"
+        "Zhuo Su",
+        "Ting Chen",
+        "Xiaosong Zhang",
+        "Yu Jiang"
       ],
       "pages": "3289-3302",
       "type": "Journal Articles",
@@ -992,7 +992,7 @@
       "title": "Corrections to \"A Bidirectional Deep Learning Approach for Designing MEMS Sensors\".",
       "authors": [
         "Xiong Cheng",
-        "Pengfei Zhang 0018",
+        "Pengfei Zhang",
         "Yiqi Zhou",
         "Daying Sun",
         "Wenhua Gu",
@@ -1019,7 +1019,7 @@
       "title": "Bridging the Gap From Vague Design Requirements to Feasible Structure: Deep Learning Model for Parameterized MEMS Sensor Design.",
       "authors": [
         "Xiong Cheng",
-        "Pengfei Zhang 0018",
+        "Pengfei Zhang",
         "Yiqi Zhou",
         "Rui Wang",
         "Zhixiang Zhai",
@@ -1216,7 +1216,7 @@
       "title": "Memristor-Based Attention Network for Online Real-Time Object Tracking.",
       "authors": [
         "Zekun Deng",
-        "Chunhua Wang 0001",
+        "Chunhua Wang",
         "Hairong Lin",
         "Quanli Deng",
         "Yichuang Sun"
@@ -1241,9 +1241,9 @@
       "title": "Memristor-Based Brain Emotional Learning Neural Network With Attention Mechanism and Its Application.",
       "authors": [
         "Quanli Deng",
-        "Chunhua Wang 0001",
+        "Chunhua Wang",
         "Yichuang Sun",
-        "Cong Xu 0003",
+        "Cong Xu",
         "Hairong Lin",
         "Zekun Deng"
       ],
@@ -1270,8 +1270,8 @@
         "Guoqi Xie",
         "Chenglai Xiong",
         "Sirong Zhao",
-        "Wei Ren 0002",
-        "Kenli Li 0001"
+        "Wei Ren",
+        "Kenli Li"
       ],
       "pages": "2925-2938",
       "type": "Journal Articles",
@@ -1389,7 +1389,7 @@
       "year": 2025,
       "title": "Revisiting Assumptions Ordering in CAR-Based Model Checking.",
       "authors": [
-        "Yibo Dong 0001",
+        "Yibo Dong",
         "Yu Chen",
         "Jianwen Li",
         "Geguang Pu",
@@ -1416,10 +1416,10 @@
       "authors": [
         "Xiao Dong",
         "Songyu Sun",
-        "Yangfan Jiang 0002",
+        "Yangfan Jiang",
         "Jingtong Hu",
         "Dawei Gao",
-        "Zhiguo Shi 0001",
+        "Zhiguo Shi",
         "Cheng Zhuo"
       ],
       "pages": "3140-3153",
@@ -1448,7 +1448,7 @@
         "Zhaori Bi",
         "Sheng-Guo Wang",
         "Dian Zhou",
-        "Xuan Zeng 0001"
+        "Xuan Zeng"
       ],
       "pages": "1489-1502",
       "type": "Journal Articles",
@@ -1501,8 +1501,8 @@
         "Alexander N. Chin",
         "Dhritiman Bhattacharya",
         "Mustafa M. Shihab",
-        "Peng Zhou 0025",
-        "Xuan Hu 0002",
+        "Peng Zhou",
+        "Xuan Hu",
         "Jayasimha Atulasimha",
         "Yiorgos Makris",
         "Joseph S. Friedman"
@@ -1554,7 +1554,7 @@
         "Qichu Sun",
         "Jingya Wu",
         "Wenyan Lu",
-        "Xiaowei Li 0001",
+        "Xiaowei Li",
         "Guihai Yan"
       ],
       "pages": "3816-3829",
@@ -1580,7 +1580,7 @@
         "Qichu Sun",
         "Jingya Wu",
         "Wenyan Lu",
-        "Xiaowei Li 0001",
+        "Xiaowei Li",
         "Guihai Yan"
       ],
       "pages": "3451-3464",
@@ -1603,8 +1603,8 @@
       "title": "Transferable Presynthesis PPA Estimation for RTL Designs With Data Augmentation Techniques.",
       "authors": [
         "Wenji Fang",
-        "Yao Lu 0031",
-        "Shang Liu 0006",
+        "Yao Lu",
+        "Shang Liu",
         "Qijun Zhang",
         "Ceyu Xu",
         "Lisa Wu Wills",
@@ -1659,7 +1659,7 @@
       "authors": [
         "Hua Feng",
         "Debao Wei",
-        "Qi Wang 0041",
+        "Qi Wang",
         "Yongchao Wang",
         "Liyan Qiao",
         "Zongliang Huo"
@@ -1707,11 +1707,11 @@
       "title": "Buffer and Splitter Insertion for Adiabatic Quantum-Flux-Parametron Circuits.",
       "authors": [
         "Rongliang Fu",
-        "Mengmeng Wang 0006",
+        "Mengmeng Wang",
         "Yirong Kan",
         "Olivia Chen",
         "Nobuyuki Yoshikawa",
-        "Bei Yu 0001",
+        "Bei Yu",
         "Tsung-Yi Ho"
       ],
       "pages": "975-988",
@@ -1735,7 +1735,7 @@
       "authors": [
         "Rongliang Fu",
         "Chao Wang",
-        "Bei Yu 0001",
+        "Bei Yu",
         "Tsung-Yi Ho"
       ],
       "pages": "3034-3045",
@@ -1781,13 +1781,13 @@
       "year": 2025,
       "title": "Effective and Efficient Parallel Qubit Mapper.",
       "authors": [
-        "Hao Fu 0018",
+        "Hao Fu",
         "Mingzheng Zhu",
         "Fangzheng Chen",
-        "Chi Zhang 0043",
+        "Chi Zhang",
         "Jun Wu",
-        "Wei Xie 0028",
-        "Xiang-Yang Li 0001"
+        "Wei Xie",
+        "Xiang-Yang Li"
       ],
       "pages": "1774-1787",
       "type": "Journal Articles",
@@ -1810,11 +1810,11 @@
       "authors": [
         "Yingxue Gao",
         "Teng Wang",
-        "Yang Yang 0080",
-        "Lei Gong 0003",
+        "Yang Yang",
+        "Lei Gong",
         "Xianglan Chen",
-        "Chao Wang 0003",
-        "Xi Li 0003",
+        "Chao Wang",
+        "Xi Li",
         "Xuehai Zhou"
       ],
       "pages": "3465-3478",
@@ -1840,7 +1840,7 @@
         "Zhi Zhou",
         "Xingze Huang",
         "Juan Wang",
-        "Yizhuo Wang 0001",
+        "Yizhuo Wang",
         "Weixing Ji"
       ],
       "pages": "3804-3815",
@@ -1865,7 +1865,7 @@
         "Egor Glukhov",
         "Tianmu Li",
         "Vaibhav Gupta",
-        "Puneet Gupta 0001"
+        "Puneet Gupta"
       ],
       "pages": "858-866",
       "type": "Journal Articles",
@@ -1890,7 +1890,7 @@
         "Jian Gu",
         "Keyu Peng",
         "Jianli Chen",
-        "Jun Yang 0006",
+        "Jun Yang",
         "Ziran Zhu"
       ],
       "pages": "4381-4394",
@@ -1914,7 +1914,7 @@
       "authors": [
         "Fang-Yi Gu",
         "Ing-Chao Lin",
-        "Bing Li 0005",
+        "Bing Li",
         "Ulf Schlichtmann",
         "Grace Li Zhang"
       ],
@@ -1943,7 +1943,7 @@
         "Keyu Peng",
         "Ziran Zhu",
         "Jianli Chen",
-        "Jun Yang 0006"
+        "Jun Yang"
       ],
       "pages": "2378-2391",
       "type": "Journal Articles",
@@ -1991,15 +1991,15 @@
       "year": 2025,
       "title": "MCHEAS: Optimizing Large-Parameter NTT Over Multicluster In-Situ FHE Accelerating System.",
       "authors": [
-        "Zhenyu Guan 0002",
+        "Zhenyu Guan",
         "Yongqing Zhu",
         "Luchang Lei",
         "Hongyang Jia",
         "Yi Chen",
         "Bo Zhang",
         "Changrui Ren",
-        "Jin Dong 0004",
-        "Song Bian 0001"
+        "Jin Dong",
+        "Song Bian"
       ],
       "pages": "3683-3696",
       "type": "Journal Articles",
@@ -2049,7 +2049,7 @@
         "Xu Meng",
         "Zhenmin Li",
         "Xiaoqing Wen",
-        "Patrick Girard 0001",
+        "Patrick Girard",
         "Bin Liang",
         "Aibin Yan"
       ],
@@ -2127,7 +2127,7 @@
       "authors": [
         "Qingqiang He",
         "Nan Guan",
-        "Shuai Zhao 0004",
+        "Shuai Zhao",
         "Mingsong Lv"
       ],
       "pages": "1676-1689",
@@ -2179,10 +2179,10 @@
       "year": 2025,
       "title": "Hybrid Neural Network Model for Raw Bit Error Rate Prediction of 3-D TLC NAND Flash Memory.",
       "authors": [
-        "Jing He 0020",
+        "Jing He",
         "Qianqi Zhao",
         "Xuhong Qiang",
-        "Qi Wang 0041",
+        "Qi Wang",
         "Qianhui Li",
         "Zongliang Huo"
       ],
@@ -2257,7 +2257,7 @@
       "title": "Make It Easy! Timing Leakage Analysis on Cryptographic Chips Based on Horizontal Leakage.",
       "authors": [
         "Guangze Hong",
-        "An Wang 0001",
+        "An Wang",
         "Congming Wei",
         "Yaoling Ding",
         "Shaofei Sun",
@@ -2285,7 +2285,7 @@
       "authors": [
         "Tianshu Hou",
         "Farid N. Najm",
-        "Ngai Wong 0001",
+        "Ngai Wong",
         "Hai-Bao Chen"
       ],
       "pages": "4714-4727",
@@ -2309,11 +2309,11 @@
       "authors": [
         "Xiangpeng Hou",
         "Junlong Zhou",
-        "Liying Li 0002",
+        "Liying Li",
         "Mingzhou Zhao",
         "Peijin Cong",
-        "Zebin Wu 0001",
-        "Shiyan Hu 0001"
+        "Zebin Wu",
+        "Shiyan Hu"
       ],
       "pages": "2392-2397",
       "type": "Journal Articles",
@@ -2385,7 +2385,7 @@
         "Yapeng Li",
         "Jindong Tu",
         "Tinghuan Chen",
-        "Qi Sun 0002",
+        "Qi Sun",
         "Cheng Zhuo"
       ],
       "pages": "4433-4437",
@@ -2485,14 +2485,14 @@
       "title": "An Efficient Independent Read Scheme for Contemporary QLC SSDs.",
       "authors": [
         "Dong Huang",
-        "Dan Feng 0001",
+        "Dan Feng",
         "Qiankun Liu",
-        "Bo Ding 0002",
-        "Wei Zhao 0034",
+        "Bo Ding",
+        "Wei Zhao",
         "Xueliang Wei",
-        "Wei Tong 0001",
+        "Wei Tong",
         "Shu Li",
-        "Feng Zhu 0024",
+        "Feng Zhu",
         "Maojun Yuan",
         "Jie Yang"
       ],
@@ -2515,7 +2515,7 @@
       "year": 2025,
       "title": "MCSSA: A Stream-Based Multiconcurrency Systolic Sorting Array Combining Merge Tree.",
       "authors": [
-        "Lan Huang 0002",
+        "Lan Huang",
         "Teng Gao",
         "Yang Feng",
         "Kangping Wang"
@@ -2563,12 +2563,12 @@
       "year": 2025,
       "title": "SpMMPlu-Pro: An Enhanced Compiler Plug-In for Efficient SpMM and Sparsity Propagation Algorithm.",
       "authors": [
-        "Shiyuan Huang 0004",
+        "Shiyuan Huang",
         "Fangxin Liu",
-        "Tao Yang 0031",
+        "Tao Yang",
         "Zongwu Wang",
         "Ning Yang",
-        "Li Jiang 0002"
+        "Li Jiang"
       ],
       "pages": "669-683",
       "type": "Journal Articles",
@@ -2591,7 +2591,7 @@
       "authors": [
         "Keyu Huang",
         "Chunbiao Li",
-        "Xin Zhang 0068",
+        "Xin Zhang",
         "Irene M. Moroz",
         "Zuohua Liu"
       ],
@@ -2616,7 +2616,7 @@
       "authors": [
         "Hao Nan Huang",
         "Hong Zhao",
-        "Jing Liu 0006"
+        "Jing Liu"
       ],
       "pages": "4444-4457",
       "type": "Journal Articles",
@@ -2663,7 +2663,7 @@
         "Seunghyun Hwang",
         "Michael Joseph Smith",
         "Vinicius C. Do Nascimento",
-        "Qiang Qiu 0001",
+        "Qiang Qiu",
         "Cheng-Kok Koh",
         "Ganesh Subbarayan",
         "Dan Jiao"
@@ -2689,7 +2689,7 @@
       "authors": [
         "Sosei Ikeda",
         "Hiromitsu Awano",
-        "Takashi Sato 0001"
+        "Takashi Sato"
       ],
       "pages": "3323-3335",
       "type": "Journal Articles",
@@ -2710,7 +2710,7 @@
       "year": 2025,
       "title": "Harnessing Unipolar Threshold Switches for Enhanced Rectification.",
       "authors": [
-        "Md. Mazharul Islam 0006",
+        "Md. Mazharul Islam",
         "Shamiul Alam",
         "Garrett S. Rose",
         "Aly E. Fathy",
@@ -2738,7 +2738,7 @@
       "authors": [
         "Mariam Issa",
         "Hanning Chen",
-        "Junyao Wang 0001",
+        "Junyao Wang",
         "Mohsen Imani"
       ],
       "pages": "241-250",
@@ -2787,7 +2787,7 @@
         "Seokjun Jang",
         "Youngki Moon",
         "Duyeon Won",
-        "Sungho Kang 0001"
+        "Sungho Kang"
       ],
       "pages": "52-64",
       "type": "Journal Articles",
@@ -2810,11 +2810,11 @@
       "authors": [
         "Shuya Ji",
         "Weidong Yang",
-        "Jianfei Jiang 0001",
+        "Jianfei Jiang",
         "Naifeng Jing",
         "Honglan Jiang",
         "Zhigang Mao",
-        "Qin Wang 0009"
+        "Qin Wang"
       ],
       "pages": "2992-3005",
       "type": "Journal Articles",
@@ -2866,8 +2866,8 @@
         "Yuxian Jiang",
         "Zhan Li",
         "Zhihan Zhang",
-        "Hao Wang 0046",
-        "Sheng Chang 0003"
+        "Hao Wang",
+        "Sheng Chang"
       ],
       "pages": "1326-1339",
       "type": "Journal Articles",
@@ -2889,7 +2889,7 @@
       "title": "CSA-CiM: Enhancing Multifunctional Computing-in-Memory With Configurable Sense Amplifiers.",
       "authors": [
         "Yuxiao Jiang",
-        "Kai Ni 0004",
+        "Kai Ni",
         "Thomas Kämpfe",
         "Cheng Zhuo",
         "Zheyu Yan",
@@ -2914,7 +2914,7 @@
       "year": 2025,
       "title": "A Robust FPGA Router With Optimization of High-Fanout Nets and Intra-CLB Connections.",
       "authors": [
-        "Xun Jiang 0002",
+        "Xun Jiang",
         "Jiarui Wang",
         "Jing Mai",
         "Zhixiong Di",
@@ -2941,20 +2941,20 @@
       "authors": [
         "Pengwei Jin",
         "Zhe Fan",
-        "Yongwei Zhao 0001",
+        "Yongwei Zhao",
         "Zidong Du",
         "Hongrui Guo",
         "Ziyuan Nan",
-        "Yifan Hao 0001",
+        "Yifan Hao",
         "Chongxiao Li",
         "Tianyun Ma",
         "Zhenxing Zhang",
         "Xiaqing Li",
-        "Wei Li 0008",
-        "Xing Hu 0001",
-        "Qi Guo 0001",
-        "Zhiwei Xu 0002",
-        "Tianshi Chen 0002"
+        "Wei Li",
+        "Xing Hu",
+        "Qi Guo",
+        "Zhiwei Xu",
+        "Tianshi Chen"
       ],
       "pages": "3962-3975",
       "type": "Journal Articles",
@@ -2977,7 +2977,7 @@
       "authors": [
         "Hanchen Jin",
         "Zichao Yue",
-        "Zhongyuan Zhao 0004",
+        "Zhongyuan Zhao",
         "Yixiao Du",
         "Chenhui Deng",
         "Nitish Srivastava",
@@ -3048,7 +3048,7 @@
       "title": "Efficient Sample Preparation With Fully Programmable Valve Arrays.",
       "authors": [
         "Abhik Kumar Khan",
-        "Sudip Roy 0001",
+        "Sudip Roy",
         "Bhargab B. Bhattacharya",
         "Sukanta Bhattacharjee"
       ],
@@ -3072,7 +3072,7 @@
       "title": "Design and Utilization of Multiskewed Multibit Flip-Flop Cells for Timing Optimization: Design and Technology Co-Optimization Approach.",
       "authors": [
         "Suwan Kim",
-        "Taewhan Kim 0001"
+        "Taewhan Kim"
       ],
       "pages": "1084-1097",
       "type": "Journal Articles",
@@ -3097,7 +3097,7 @@
         "Junseo Lee",
         "Seokhun Kim",
         "Jihwan Park",
-        "Sangheon Lee 0005",
+        "Sangheon Lee",
         "Hanwool Jeong"
       ],
       "pages": "3099-3111",
@@ -3168,7 +3168,7 @@
         "Heetae Kim",
         "Hyojoon Yun",
         "Doohyun Yoon",
-        "Sungho Kang 0001"
+        "Sungho Kang"
       ],
       "pages": "3606-3616",
       "type": "Journal Articles",
@@ -3402,7 +3402,7 @@
         "Hoai Luan Pham",
         "Thi Hong Tran",
         "Van Duy Tran",
-        "Tuan Hai Vu 0001",
+        "Tuan Hai Vu",
         "Yasuhiko Nakashima"
       ],
       "pages": "1793-1806",
@@ -3476,7 +3476,7 @@
       "authors": [
         "Hayoung Lee",
         "Juyong Lee",
-        "Sungho Kang 0001"
+        "Sungho Kang"
       ],
       "pages": "1581-1594",
       "type": "Journal Articles",
@@ -3500,7 +3500,7 @@
         "Sooryeong Lee",
         "Hayoung Lee",
         "Juyong Lee",
-        "Sungho Kang 0001"
+        "Sungho Kang"
       ],
       "pages": "765-776",
       "type": "Journal Articles",
@@ -3524,7 +3524,7 @@
         "Youngkwang Lee",
         "Hyojun Yun",
         "Younwoo Yoo",
-        "Sungho Kang 0001"
+        "Sungho Kang"
       ],
       "pages": "345-356",
       "type": "Journal Articles",
@@ -3545,11 +3545,11 @@
       "year": 2025,
       "title": "A Highly Reliable Dual-Mode RRAM PUF With Key Concealment Scheme.",
       "authors": [
-        "Jiang Li 0012",
+        "Jiang Li",
         "Yijun Cui",
         "Chongyan Gu",
         "Chenghua Wang",
-        "Weiqiang Liu 0001",
+        "Weiqiang Liu",
         "Shahar Kvatinsky"
       ],
       "pages": "2870-2882",
@@ -3572,7 +3572,7 @@
       "title": "SPLIM: Bridging the Gap Between Unstructured SpGEMM and Structured In-Situ Computing.",
       "authors": [
         "Huize Li",
-        "Dan Chen 0006",
+        "Dan Chen",
         "Tulika Mitra"
       ],
       "pages": "2412-2423",
@@ -3617,7 +3617,7 @@
       "title": "Approximate DCT and Quantization Techniques for Energy-Constrained Image Sensors.",
       "authors": [
         "Ming-Che Li",
-        "Archisman Ghosh 0002",
+        "Archisman Ghosh",
         "Shreyas Sen"
       ],
       "pages": "11-24",
@@ -3640,10 +3640,10 @@
       "title": "iCTS: Iterative and Hierarchical Clock Tree Synthesis With Skew-Latency-Load Tree.",
       "authors": [
         "Weiguo Li",
-        "Zhipeng Huang 0009",
-        "Bei Yu 0001",
+        "Zhipeng Huang",
+        "Bei Yu",
         "Wenxing Zhu",
-        "Jian Chen 0011",
+        "Jian Chen",
         "Zhixue He",
         "Xingquan Li"
       ],
@@ -3666,13 +3666,13 @@
       "year": 2025,
       "title": "SimDiff: Point Cloud Acceleration by Utilizing Spatial Similarity and Differential Execution.",
       "authors": [
-        "Yangfan Li 0001",
+        "Yangfan Li",
         "Mengquan Li",
-        "Cen Chen 0002",
+        "Cen Chen",
         "Xiaofeng Zou",
         "Hongen Shao",
         "Fengxiao Tang",
-        "Kenli Li 0001"
+        "Kenli Li"
       ],
       "pages": "568-581",
       "type": "Journal Articles",
@@ -3698,7 +3698,7 @@
         "Zhipeng Wu",
         "Peiguang Jing",
         "Sio Hang Pun",
-        "Yu Liu 0004"
+        "Yu Liu"
       ],
       "pages": "2827-2831",
       "type": "Journal Articles",
@@ -3719,10 +3719,10 @@
       "year": 2025,
       "title": "RefSCAT: Formal Verification of Logic-Optimized Multipliers via Automated Reference Multiplier Generation and SCA-SAT Synergy.",
       "authors": [
-        "Rui Li 0095",
-        "Lin Li 0079",
-        "Heng Yu 0001",
-        "Masahiro Fujita 0004",
+        "Rui Li",
+        "Lin Li",
+        "Heng Yu",
+        "Masahiro Fujita",
         "Weixiong Jiang",
         "Yajun Ha"
       ],
@@ -3745,10 +3745,10 @@
       "year": 2025,
       "title": "RefSCAT-2.0: Formal Verification of Large-Scale Optimized Multipliers via Quantum-Inspired Ant Colony Optimization-Based Reference Generation.",
       "authors": [
-        "Rui Li 0095",
-        "Lin Li 0079",
-        "Heng Yu 0001",
-        "Masahiro Fujita 0004",
+        "Rui Li",
+        "Lin Li",
+        "Heng Yu",
+        "Masahiro Fujita",
         "Weixiong Jiang",
         "Yajun Ha"
       ],
@@ -3771,9 +3771,9 @@
       "year": 2025,
       "title": "QuST: Optimizing Quantum Neural Network Against Spatial and Temporal Noise Biases.",
       "authors": [
-        "Tingting Li 0004",
+        "Tingting Li",
         "Liqiang Lu",
-        "Ziming Zhao 0008",
+        "Ziming Zhao",
         "Ziqi Tan",
         "Siwei Tan",
         "Jianwei Yin"
@@ -3798,8 +3798,8 @@
       "title": "iCache: An Intelligent Cache Allocation Strategy for Multitenant in High-Performance Solid-State Disks.",
       "authors": [
         "Donghua Li",
-        "Hui Sun 0002",
-        "Xiao Qin 0001"
+        "Hui Sun",
+        "Xiao Qin"
       ],
       "pages": "1690-1703",
       "type": "Journal Articles",
@@ -3820,13 +3820,13 @@
       "year": 2025,
       "title": "Robust Quantum Feature Selection With Sparse Optimization Circuit.",
       "authors": [
-        "Jiaye Li 0001",
+        "Jiaye Li",
         "Jiagang Song",
         "Jinjing Shi",
         "Hang Xu",
         "Hao Yu",
-        "Gang Chen 0001",
-        "Shichao Zhang 0001"
+        "Gang Chen",
+        "Shichao Zhang"
       ],
       "pages": "2613-2626",
       "type": "Journal Articles",
@@ -3848,7 +3848,7 @@
       "title": "Hardware Computation Graph for DNN Accelerator Design Automation Without Inter-PU Templates.",
       "authors": [
         "Jun Li",
-        "Wei Wang 0002",
+        "Wei Wang",
         "Wu-Jun Li"
       ],
       "pages": "4276-4289",
@@ -3874,7 +3874,7 @@
         "Wang Wang",
         "Manni Li",
         "Jiayu Yang",
-        "Zijian Huang 0017",
+        "Zijian Huang",
         "Xin Zhong",
         "Yinyin Lin",
         "Chengchen Wang",
@@ -3903,8 +3903,8 @@
         "Mei Wen",
         "Junzhong Shen",
         "Zhaoyun Chen",
-        "Yang Shi 0008",
-        "Tianyu Wang 0009",
+        "Yang Shi",
+        "Tianyu Wang",
         "Zili Shao"
       ],
       "pages": "4752-4764",
@@ -3952,10 +3952,10 @@
       "year": 2025,
       "title": "Oxpecker: Leaking Secrets via Fetch Target Queue.",
       "authors": [
-        "Shan Li 0008",
+        "Shan Li",
         "Zheliang Xu",
         "Haihua Shen",
-        "Huawei Li 0001"
+        "Huawei Li"
       ],
       "pages": "2461-2474",
       "type": "Journal Articles",
@@ -4002,9 +4002,9 @@
       "title": "PauliForest: Connectivity-Aware Synthesis and Pauli-Oriented Qubit Mapping for Near-Term Quantum Simulation.",
       "authors": [
         "Yongshang Li",
-        "Yu Zhang 0086",
+        "Yu Zhang",
         "Haoning Deng",
-        "Mingyu Chen 0009",
+        "Mingyu Chen",
         "Zhenyu Li"
       ],
       "pages": "2119-2129",
@@ -4026,13 +4026,13 @@
       "year": 2025,
       "title": "Magnifier: A Chiplet Feature-Aware Test Case Generation Method for Deep Learning Accelerators.",
       "authors": [
-        "Boyu Li 0006",
+        "Boyu Li",
         "Zongwei Zhu",
         "Weihong Liu",
         "Qianyue Cao",
-        "Changlong Li 0006",
-        "Cheng Ji 0002",
-        "Xi Li 0003",
+        "Changlong Li",
+        "Cheng Ji",
+        "Xi Li",
         "Xuehai Zhou"
       ],
       "pages": "2803-2816",
@@ -4060,8 +4060,8 @@
         "Jing Cao",
         "Zongwei Zhu",
         "Zhi Yang",
-        "Cheng Ji 0002",
-        "Changlong Li 0006",
+        "Cheng Ji",
+        "Changlong Li",
         "Xuehai Zhou"
       ],
       "pages": "3518-3531",
@@ -4083,7 +4083,7 @@
       "year": 2025,
       "title": "Manufacturing Cycle Time Optimization for Inkjet-Printed Electronics.",
       "authors": [
-        "Meng Lian 0001",
+        "Meng Lian",
         "Hu Peng",
         "Mengchu Li",
         "Yushen Zhang",
@@ -4113,9 +4113,9 @@
         "Yaoxiu Lian",
         "Xinhao Yang",
         "Ke Hong",
-        "Yu Wang 0002",
+        "Yu Wang",
         "Ningyi Xu",
-        "Guohao Dai 0001"
+        "Guohao Dai"
       ],
       "pages": "751-764",
       "type": "Journal Articles",
@@ -4136,7 +4136,7 @@
       "year": 2025,
       "title": "Combinatorial-Coding-Based High-Performance Microfluidic Control Multiplexer: Design, Synthesis, and Adaptation.",
       "authors": [
-        "Siyuan Liang 0002",
+        "Siyuan Liang",
         "Mengchu Li",
         "Tsun-Ming Tseng",
         "Ulf Schlichtmann",
@@ -4188,7 +4188,7 @@
         "Yu-Cheng Chen",
         "Yu-Hsuan Chu",
         "Chia-Heng Tu",
-        "Yuan-Hao Chang 0001"
+        "Yuan-Hao Chang"
       ],
       "pages": "2093-2104",
       "type": "Journal Articles",
@@ -4266,7 +4266,7 @@
       "authors": [
         "Hairong Lin",
         "Xiaoheng Deng",
-        "Fei Yu 0009",
+        "Fei Yu",
         "Yichuang Sun"
       ],
       "pages": "304-316",
@@ -4290,10 +4290,10 @@
       "authors": [
         "Zhenkun Lin",
         "Genggeng Liu",
-        "Xing Huang 0001",
+        "Xing Huang",
         "Yibo Lin",
         "Jixin Zhang",
-        "Wen-Hao Liu 0001",
+        "Wen-Hao Liu",
         "Ting-Chi Wang"
       ],
       "pages": "2711-2724",
@@ -4343,11 +4343,11 @@
       "title": "An Efficient Bit-Sparse DNN Accelerator Exploiting Adaptive Bit-Serial Computations.",
       "authors": [
         "Jiayao Ling",
-        "Gang Li 0015",
+        "Gang Li",
         "Xiaolong Lin",
         "Cheng Gu",
-        "Xing Li 0031",
-        "Jian Cheng 0001",
+        "Xing Li",
+        "Jian Cheng",
         "Xiaoyao Liang"
       ],
       "pages": "4249-4262",
@@ -4369,10 +4369,10 @@
       "year": 2025,
       "title": "RTLCoder: Fully Open-Source and Efficient LLM-Assisted RTL Code Generation Technique.",
       "authors": [
-        "Shang Liu 0006",
+        "Shang Liu",
         "Wenji Fang",
-        "Yao Lu 0031",
-        "Jing Wang 0171",
+        "Yao Lu",
+        "Jing Wang",
         "Qijun Zhang",
         "Hongce Zhang",
         "Zhiyao Xie"
@@ -4396,18 +4396,18 @@
       "year": 2025,
       "title": "TSLA: A Task-Specific Learning Adaptation for Semantic Segmentation on Autonomous Vehicles Platform.",
       "authors": [
-        "Jun Liu 0075",
+        "Jun Liu",
         "Zhenglun Kong",
-        "Pu Zhao 0001",
+        "Pu Zhao",
         "Weihao Zeng",
-        "Hao Tang 0005",
+        "Hao Tang",
         "Xuan Shen",
         "Changdi Yang",
-        "Wenbin Zhang 0002",
+        "Wenbin Zhang",
         "Geng Yuan",
-        "Wei Niu 0002",
-        "Xue Lin 0001",
-        "Yanzhi Wang 0001"
+        "Wei Niu",
+        "Xue Lin",
+        "Yanzhi Wang"
       ],
       "pages": "1406-1419",
       "type": "Journal Articles",
@@ -4435,7 +4435,7 @@
         "Xijun Li",
         "Mingxuan Yuan",
         "Tsung-Yi Ho",
-        "Bei Yu 0001"
+        "Bei Yu"
       ],
       "pages": "1112-1125",
       "type": "Journal Articles",
@@ -4458,11 +4458,11 @@
       "authors": [
         "Junfeng Liu",
         "Liwei Ni",
-        "Lei Chen 0031",
-        "Xing Li 0023",
+        "Lei Chen",
+        "Xing Li",
         "Qinghua Zhao",
         "Xingquan Li",
-        "Shuai Ma 0001"
+        "Shuai Ma"
       ],
       "pages": "2585-2598",
       "type": "Journal Articles",
@@ -4485,8 +4485,8 @@
       "authors": [
         "Tianji Liu",
         "Yang Sun",
-        "Lei Chen 0031",
-        "Xing Li 0023",
+        "Lei Chen",
+        "Xing Li",
         "Mingxuan Yuan",
         "Evangeline F. Y. Young"
       ],
@@ -4509,16 +4509,16 @@
       "year": 2025,
       "title": "A ReRAM-Based Processing-In-Memory Architecture for Hyperdimensional Computing.",
       "authors": [
-        "Cong Liu 0028",
+        "Cong Liu",
         "Kaibo Wu",
         "Haikun Liu",
-        "Hai Jin 0001",
+        "Hai Jin",
         "Xiaofei Liao",
         "Zhuohui Duan",
         "Jiahong Xu",
         "Huize Li",
-        "Yu Zhang 0027",
-        "Jing Yang 0051"
+        "Yu Zhang",
+        "Jing Yang"
       ],
       "pages": "512-524",
       "type": "Journal Articles",
@@ -4539,11 +4539,11 @@
       "year": 2025,
       "title": "Sign-Off Timing Considerations via Concurrent Routing Topology Optimization.",
       "authors": [
-        "Siting Liu 0002",
-        "Ziyi Wang 0010",
+        "Siting Liu",
+        "Ziyi Wang",
         "Fangzhou Liu",
         "Yibo Lin",
-        "Bei Yu 0001",
+        "Bei Yu",
         "Martin D. F. Wong"
       ],
       "pages": "1942-1953",
@@ -4594,7 +4594,7 @@
         "Xiyuan Tang",
         "Yibo Lin",
         "Runsheng Wang",
-        "Ru Huang 0001"
+        "Ru Huang"
       ],
       "pages": "3126-3139",
       "type": "Journal Articles",
@@ -4616,11 +4616,11 @@
       "title": "An Efficient Placement Speedup Technique Based on Graph Signal Processing.",
       "authors": [
         "Yiting Liu",
-        "Hai Zhou 0001",
-        "Jia Wang 0003",
-        "Fan Yang 0001",
-        "Xuan Zeng 0001",
-        "Li Shang 0002"
+        "Hai Zhou",
+        "Jia Wang",
+        "Fan Yang",
+        "Xuan Zeng",
+        "Li Shang"
       ],
       "pages": "3924-3937",
       "type": "Journal Articles",
@@ -4642,13 +4642,13 @@
       "title": "Myosotis: An Efficiently Pipelined and Parameterized Multiscalar Multiplication Architecture via Data Sharing.",
       "authors": [
         "Changxu Liu",
-        "Hao Zhou 0015",
+        "Hao Zhou",
         "Lan Yang",
         "Zheng Wu",
         "Patrick Dai",
         "Yinlong Li",
         "Shiyong Wu",
-        "Fan Yang 0001"
+        "Fan Yang"
       ],
       "pages": "2738-2750",
       "type": "Journal Articles",
@@ -4670,17 +4670,17 @@
       "title": "VariPar: Variation-Aware Workload Partitioning in Chiplet-Based DNN Accelerators.",
       "authors": [
         "Ximing Liu",
-        "Yongwei Zhao 0001",
+        "Yongwei Zhao",
         "Mo Zou",
         "Yang Liu",
-        "Yifan Hao 0001",
+        "Yifan Hao",
         "Xiaqing Li",
-        "Rui Zhang 0040",
-        "Yuanbo Wen 0001",
-        "Xing Hu 0001",
+        "Rui Zhang",
+        "Yuanbo Wen",
+        "Xing Hu",
         "Zidong Du",
-        "Qi Guo 0001",
-        "Tianshi Chen 0002"
+        "Qi Guo",
+        "Tianshi Chen"
       ],
       "pages": "4643-4656",
       "type": "Journal Articles",
@@ -4702,9 +4702,9 @@
       "title": "Re-Meltrix: A Reconfigurable Processing-in-Memory Architecture Based on RRAM and Function Synthesis.",
       "authors": [
         "Boyu Long",
-        "Yinhe Han 0001",
+        "Yinhe Han",
         "Xian-He Sun",
-        "Xiaoming Chen 0003"
+        "Xiaoming Chen"
       ],
       "pages": "3409-3422",
       "type": "Journal Articles",
@@ -4726,9 +4726,9 @@
       "title": "Accelerate SEU Simulation-Based Fault Injection With Spatio-Temporal Graph Convolutional Networks.",
       "authors": [
         "Li Lu",
-        "Junchao Chen 0001",
+        "Junchao Chen",
         "Aneesh Balakrishnan",
-        "Markus Ulbricht 0002",
+        "Markus Ulbricht",
         "Milos Krstic"
       ],
       "pages": "2599-2612",
@@ -4829,7 +4829,7 @@
       "title": "Hierarchical Formal Verification of Hardware.",
       "authors": [
         "Huaixi Lu",
-        "Yue Xing 0001",
+        "Yue Xing",
         "Aarti Gupta",
         "Sharad Malik"
       ],
@@ -4882,8 +4882,8 @@
       "title": "Improving DNN Accuracy on MLC PIM via Non-Ideal PIM Device Fine-Tuning.",
       "authors": [
         "Hao Lv",
-        "Lei Zhang 0008",
-        "Ying Wang 0001"
+        "Lei Zhang",
+        "Ying Wang"
       ],
       "pages": "2277-2286",
       "type": "Journal Articles",
@@ -4905,9 +4905,9 @@
       "title": "NoCFuzzer: Automating NoC Verification in UVM.",
       "authors": [
         "Ruiyang Ma",
-        "Jiayi Huang 0001",
+        "Jiayi Huang",
         "Shijian Zhang",
-        "Yuan Xie 0001",
+        "Yuan Xie",
         "Guojie Luo"
       ],
       "pages": "371-384",
@@ -4930,7 +4930,7 @@
       "title": "Harmonia: A Unified Architecture for Efficient Deep Symbolic Regression.",
       "authors": [
         "Tianyun Ma",
-        "Yuanbo Wen 0001",
+        "Yuanbo Wen",
         "Xinkai Song",
         "Pengwei Jin",
         "Di Huang",
@@ -4938,11 +4938,11 @@
         "Ziyuan Nan",
         "Zhongkai Yu",
         "Shaohui Peng",
-        "Yongwei Zhao 0001",
-        "Huaping Chen 0001",
+        "Yongwei Zhao",
+        "Huaping Chen",
         "Zidong Du",
-        "Xing Hu 0001",
-        "Qi Guo 0001"
+        "Xing Hu",
+        "Qi Guo"
       ],
       "pages": "737-750",
       "type": "Journal Articles",
@@ -4965,8 +4965,8 @@
       "authors": [
         "Yihang Ma",
         "Shijie Wang",
-        "Chao Yu 0002",
-        "Jialin Cai 0001"
+        "Chao Yu",
+        "Jialin Cai"
       ],
       "pages": "1503-1515",
       "type": "Journal Articles",
@@ -4991,7 +4991,7 @@
         "Mohamed Salah Azzaz",
         "Said Sadoudi",
         "Redouane Kaibou",
-        "Bruno da Silva 0001"
+        "Bruno da Silva"
       ],
       "pages": "2168-2180",
       "type": "Journal Articles",
@@ -5013,7 +5013,7 @@
       "title": "Personalized Federated Learning With State-Adaptive IoT Device Scheduling in Mobile-Edge Computing.",
       "authors": [
         "Jun Mai",
-        "Kun Cao 0001",
+        "Kun Cao",
         "Tongquan Wei"
       ],
       "pages": "4086-4099",
@@ -5210,7 +5210,7 @@
         "Jinhong Mo",
         "Xiongfei Zhai",
         "Min Yu",
-        "Yi Fang 0005",
+        "Yi Fang",
         "Guojun Han"
       ],
       "pages": "4167-4180",
@@ -5233,7 +5233,7 @@
       "title": "Scaling Attacks on Large Logic-Locked Designs.",
       "authors": [
         "Abdul Khader Thalakkattu Moosa",
-        "Benjamin Tan 0001",
+        "Benjamin Tan",
         "Ramesh Karri"
       ],
       "pages": "2067-2079",
@@ -5337,7 +5337,7 @@
         "Xiaoyan Yang",
         "Biwei Xie",
         "Xingquan Li",
-        "Huawei Li 0001"
+        "Huawei Li"
       ],
       "pages": "3830-3843",
       "type": "Journal Articles",
@@ -5360,11 +5360,11 @@
       "authors": [
         "Zhongpeng Ni",
         "Jing Xia",
-        "Xinyu Zhou 0001",
+        "Xinyu Zhou",
         "Wa Kong",
         "Heng Zhang",
-        "Chao Yu 0002",
-        "Xiao-Wei Zhu 0002"
+        "Chao Yu",
+        "Xiao-Wei Zhu"
       ],
       "pages": "2641-2654",
       "type": "Journal Articles",
@@ -5390,7 +5390,7 @@
         "Yukihide Kohira",
         "Rina Azuma",
         "Tomomi Matsui",
-        "Atsushi Takahashi 0001",
+        "Atsushi Takahashi",
         "Chikaaki Kodama"
       ],
       "pages": "4355-4366",
@@ -5415,9 +5415,9 @@
         "Changhai Ou",
         "Zhenfang Qiu",
         "Xingshuo Han",
-        "Fan Zhang 0010",
+        "Fan Zhang",
         "Shihui Zheng",
-        "Fei Yan 0008"
+        "Fei Yan"
       ],
       "pages": "3247-3259",
       "type": "Journal Articles",
@@ -5466,8 +5466,8 @@
         "Yuhui Deng",
         "Zhaorui Wu",
         "Genxiong Zhang",
-        "Jie Li 0067",
-        "Xiao Qin 0001"
+        "Jie Li",
+        "Xiao Qin"
       ],
       "pages": "416-429",
       "type": "Journal Articles",
@@ -5518,7 +5518,7 @@
         "Hyemin Kim",
         "Jaeyoung Joung",
         "Jaehyun Kim",
-        "Sungho Kang 0001"
+        "Sungho Kang"
       ],
       "pages": "1169-1179",
       "type": "Journal Articles",
@@ -5607,7 +5607,7 @@
       "title": "AdaptHM: A Fully Adaptive Data Migration Strategy for Hybrid Memory Systems.",
       "authors": [
         "Zhouxuan Peng",
-        "Dan Feng 0001",
+        "Dan Feng",
         "Jianxi Chen",
         "Jing Hu",
         "Yachun Liu",
@@ -5635,12 +5635,12 @@
       "year": 2025,
       "title": "FlexHMB: A Flexible HMB Design Toward Bufferless Mobile Flash.",
       "authors": [
-        "Yong Peng 0006",
+        "Yong Peng",
         "Li Peng",
         "Shaocong Sun",
         "Lujia Yin",
-        "Qiao Li 0001",
-        "Jie Zhang 0048"
+        "Qiao Li",
+        "Jie Zhang"
       ],
       "pages": "4486-4499",
       "type": "Journal Articles",
@@ -5816,14 +5816,14 @@
       "year": 2025,
       "title": "IncreMacro: Incremental Macro Placement Refinement.",
       "authors": [
-        "Yuan Pu 0001",
+        "Yuan Pu",
         "Tinghuan Chen",
         "Zhuolun He",
         "Jiajun Qin",
         "Chen Bai",
         "Haisheng Zheng",
         "Yibo Lin",
-        "Bei Yu 0001"
+        "Bei Yu"
       ],
       "pages": "3222-3235",
       "type": "Journal Articles",
@@ -5844,14 +5844,14 @@
       "year": 2025,
       "title": "Customized Retrieval Augmented Generation and Benchmarking for EDA Tool Documentation QA.",
       "authors": [
-        "Yuan Pu 0001",
+        "Yuan Pu",
         "Zhuolun He",
         "Yuqi Jiang",
         "Tairu Qiu",
         "Haoyuan Wu",
-        "Qi Sun 0002",
+        "Qi Sun",
         "Cheng Zhuo",
-        "Bei Yu 0001"
+        "Bei Yu"
       ],
       "pages": "4615-4628",
       "type": "Journal Articles",
@@ -5899,7 +5899,7 @@
         "Aoxiang Qin",
         "Rongjie Yang",
         "Minghua Shen",
-        "Nong Xiao 0001"
+        "Nong Xiao"
       ],
       "pages": "3006-3019",
       "type": "Journal Articles",
@@ -6065,7 +6065,7 @@
         "Pantha Protim Sarker",
         "Upoma Das",
         "Mohammad Bin Monjil",
-        "Jingbo Zhou 0002",
+        "Jingbo Zhou",
         "Farimah Farahmandi",
         "Mark Tehranipoor"
       ],
@@ -6115,7 +6115,7 @@
         "Michael Sekyere",
         "Isaac Bruce",
         "Ruohan Yang",
-        "Degang Chen 0001",
+        "Degang Chen",
         "Colin C. McAndrew",
         "Xiankun Jin",
         "Chen He",
@@ -6215,8 +6215,8 @@
       "title": "Nested Speculative Execution Attacks via Runahead.",
       "authors": [
         "Chaoqun Shen",
-        "Gang Qu 0001",
-        "Jiliang Zhang 0002"
+        "Gang Qu",
+        "Jiliang Zhang"
       ],
       "pages": "2475-2487",
       "type": "Journal Articles",
@@ -6238,12 +6238,12 @@
       "title": "ATOM: An Automatic Topology Synthesis Framework for Operational Amplifiers.",
       "authors": [
         "Jinyi Shen",
-        "Fan Yang 0001",
-        "Li Shang 0002",
+        "Fan Yang",
+        "Li Shang",
         "Changhao Yan",
         "Zhaori Bi",
         "Dian Zhou",
-        "Xuan Zeng 0001"
+        "Xuan Zeng"
       ],
       "pages": "1193-1198",
       "type": "Journal Articles",
@@ -6268,7 +6268,7 @@
         "Minho Cheong",
         "Hayoung Lee",
         "Byungsoo Kim",
-        "Sungho Kang 0001"
+        "Sungho Kang"
       ],
       "pages": "2789-2802",
       "type": "Journal Articles",
@@ -6290,7 +6290,7 @@
       "title": "DBB-ECC: Random Double Bit and Burst Error Correction Code for HBM3.",
       "authors": [
         "Chaehyeon Shin",
-        "Jongsun Park 0001"
+        "Jongsun Park"
       ],
       "pages": "3236-3240",
       "type": "Journal Articles",
@@ -6337,8 +6337,8 @@
       "authors": [
         "Jianfeng Song",
         "Rongjian Liang",
-        "Bo Yuan 0001",
-        "Jiang Hu 0001"
+        "Bo Yuan",
+        "Jiang Hu"
       ],
       "pages": "251-265",
       "type": "Journal Articles",
@@ -6360,9 +6360,9 @@
       "title": "Toward Precise and Explainable Hardware Trojan Localization at LUT Level.",
       "authors": [
         "Hao Su",
-        "Wei Hu 0008",
+        "Wei Hu",
         "Xuelin Zhang",
-        "Dan Zhu 0001",
+        "Dan Zhu",
         "Lingjuan Wu"
       ],
       "pages": "2817-2821",
@@ -6387,9 +6387,9 @@
         "Songyu Sun",
         "Xiao Dong",
         "Yanliang Sha",
-        "Qi Sun 0002",
-        "Quan Chen 0007",
-        "Zhou Jin 0001",
+        "Qi Sun",
+        "Quan Chen",
+        "Zhou Jin",
         "Cheng Zhuo"
       ],
       "pages": "4629-4642",
@@ -6413,9 +6413,9 @@
       "authors": [
         "Songyu Sun",
         "Xiao Dong",
-        "Qi Sun 0002",
+        "Qi Sun",
         "Xunzhao Yin",
-        "Quan Chen 0007",
+        "Quan Chen",
         "Cheng Zhuo"
       ],
       "pages": "1204-1208",
@@ -6440,10 +6440,10 @@
         "Haoyang Sun",
         "Cong Jiang",
         "Xun Ye",
-        "Dan Feng 0001",
-        "Benjamin Tan 0001",
+        "Dan Feng",
+        "Benjamin Tan",
         "Yuzhe Ma",
-        "Kang Liu 0017"
+        "Kang Liu"
       ],
       "pages": "1031-1044",
       "type": "Journal Articles",
@@ -6469,7 +6469,7 @@
         "Qinyu Chen",
         "Chenyang Dai",
         "Yuxiang Fu",
-        "Li Li 0003"
+        "Li Li"
       ],
       "pages": "395-400",
       "type": "Journal Articles",
@@ -6490,11 +6490,11 @@
       "year": 2025,
       "title": "PIMCOMP: An End-to-End DNN Compiler for Processing-In-Memory Accelerators.",
       "authors": [
-        "Xiaotian Sun 0004",
-        "Xinyu Wang 0040",
+        "Xiaotian Sun",
+        "Xinyu Wang",
         "Wanqian Li",
-        "Yinhe Han 0001",
-        "Xiaoming Chen 0003"
+        "Yinhe Han",
+        "Xiaoming Chen"
       ],
       "pages": "1745-1759",
       "type": "Journal Articles",
@@ -6516,10 +6516,10 @@
       "title": "Adaptive ILT via Multi-Level Lithography Simulation.",
       "authors": [
         "Shuyuan Sun",
-        "Fan Yang 0001",
-        "Bei Yu 0001",
-        "Li Shang 0002",
-        "Xuan Zeng 0001"
+        "Fan Yang",
+        "Bei Yu",
+        "Li Shang",
+        "Xuan Zeng"
       ],
       "pages": "4341-4354",
       "type": "Journal Articles",
@@ -6544,7 +6544,7 @@
         "Yijian Zhang",
         "Yuzhuo Liu",
         "Fangxin Liu",
-        "Li Jiang 0002",
+        "Li Jiang",
         "Rui Yang"
       ],
       "pages": "4510-4523",
@@ -6662,8 +6662,8 @@
       "title": "Broadband Symmetric Doherty Power Amplifier With Enhanced Back-Off Range Using Multiparameters Optimization Method.",
       "authors": [
         "Yixi Tang",
-        "Wenjie Feng 0002",
-        "Xinyu Zhou 0001",
+        "Wenjie Feng",
+        "Xinyu Zhou",
         "Weiwei Wang",
         "Quan Xue",
         "Wenquan Che"
@@ -6687,10 +6687,10 @@
       "year": 2025,
       "title": "MTrain: Enable Efficient CNN Training on Heterogeneous FPGA-Based Edge Servers.",
       "authors": [
-        "Yue Tang 0002",
+        "Yue Tang",
         "Alex K. Jones",
         "Jinjun Xiong",
-        "Peipei Zhou 0001",
+        "Peipei Zhou",
         "Jingtong Hu"
       ],
       "pages": "3395-3408",
@@ -6738,7 +6738,7 @@
       "title": "A Predictive Readout Fidelity Model Considering Nonidealities for Readout Circuit Design in Superconducting Quantum Computers.",
       "authors": [
         "Yao Tong",
-        "Quan Chen 0007"
+        "Quan Chen"
       ],
       "pages": "1614-1618",
       "type": "Journal Articles",
@@ -6761,7 +6761,7 @@
       "authors": [
         "Elias Trommer",
         "Bernd Waschneck",
-        "Akash Kumar 0001"
+        "Akash Kumar"
       ],
       "pages": "1224-1237",
       "type": "Journal Articles",
@@ -6785,11 +6785,11 @@
         "Jindong Tu",
         "Yapeng Li",
         "Pengjia Li",
-        "Peng Xu 0052",
+        "Peng Xu",
         "Qianru Zhang",
         "Sanping Wan",
         "Yongsheng Sun",
-        "Bei Yu 0001",
+        "Bei Yu",
         "Tinghuan Chen"
       ],
       "pages": "4018-4031",
@@ -6812,9 +6812,9 @@
       "title": "RaPC: Raw Bit Error Rate Aware Polar Coding for 3-D nand Flash Memory.",
       "authors": [
         "Ruifeng Tu",
-        "Meng Zhang 0014",
-        "Changsheng Xie 0001",
-        "Fei Wu 0005"
+        "Meng Zhang",
+        "Changsheng Xie",
+        "Fei Wu"
       ],
       "pages": "3546-3559",
       "type": "Journal Articles",
@@ -6865,14 +6865,14 @@
       "year": 2025,
       "title": "FGNN2: A Powerful Pretraining Framework for Learning the Logic Functionality of Circuits.",
       "authors": [
-        "Ziyi Wang 0010",
+        "Ziyi Wang",
         "Chen Bai",
         "Zhuolun He",
         "Guangliang Zhang",
-        "Qiang Xu 0001",
+        "Qiang Xu",
         "Tsung-Yi Ho",
-        "Yu Huang 0005",
-        "Bei Yu 0001"
+        "Yu Huang",
+        "Bei Yu"
       ],
       "pages": "227-240",
       "type": "Journal Articles",
@@ -6893,7 +6893,7 @@
       "year": 2025,
       "title": "Formal Synthesis of Neural Barrier Certificates for Dynamical Systems via DC Programming.",
       "authors": [
-        "Yang Wang 0156",
+        "Yang Wang",
         "Hanlong Chen",
         "Wang Lin",
         "Zuohua Ding"
@@ -6917,12 +6917,12 @@
       "year": 2025,
       "title": "Single-Pass: An Operation Unit-Based In-Memory Computing Architecture for Sparse Neural Networks.",
       "authors": [
-        "Shang Wang 0006",
+        "Shang Wang",
         "Qi Cao",
         "Yongqiang Wang",
         "Hang Chen",
         "Zhenjiao Chen",
-        "Feng Liang 0001"
+        "Feng Liang"
       ],
       "pages": "2952-2965",
       "type": "Journal Articles",
@@ -6946,7 +6946,7 @@
         "Xingbo Wang",
         "Chenxi Feng",
         "Xinyu Kang",
-        "Qi Wang 0051",
+        "Qi Wang",
         "Yucong Huang",
         "Terry Tao Ye"
       ],
@@ -6970,8 +6970,8 @@
       "title": "PreSIT: Predict Cryptography Computations in SGX-Style Integrity Trees.",
       "authors": [
         "Xinrui Wang",
-        "Lang Feng 0001",
-        "Zhongfeng Wang 0001"
+        "Lang Feng",
+        "Zhongfeng Wang"
       ],
       "pages": "882-896",
       "type": "Journal Articles",
@@ -6994,9 +6994,9 @@
       "authors": [
         "Xuhang Wang",
         "Qiyue Huang",
-        "Xing Li 0031",
+        "Xing Li",
         "Haozhe Jiang",
-        "Qiang Xu 0001",
+        "Qiang Xu",
         "Xiaoyao Liang",
         "Zhuoran Song"
       ],
@@ -7019,12 +7019,12 @@
       "year": 2025,
       "title": "Fast Acceleration Strategies for XOR-Based Erasure Codes.",
       "authors": [
-        "Wei Wang 0502",
+        "Wei Wang",
         "Min Lyu",
         "Tianyang Niu",
         "Qiliang Li",
         "Liangliang Xu",
-        "Yinlong Xu 0001"
+        "Yinlong Xu"
       ],
       "pages": "331-344",
       "type": "Journal Articles",
@@ -7045,12 +7045,12 @@
       "year": 2025,
       "title": "PRO-TIME: Prerouting Optimization-Aware Timing Prediction via Multimodal Learning.",
       "authors": [
-        "Ziyi Wang 0010",
-        "Siting Liu 0002",
-        "Yuan Pu 0001",
-        "Song Chen 0001",
+        "Ziyi Wang",
+        "Siting Liu",
+        "Yuan Pu",
+        "Song Chen",
         "Tsung-Yi Ho",
-        "Bei Yu 0001"
+        "Bei Yu"
       ],
       "pages": "4779-4792",
       "type": "Journal Articles",
@@ -7071,17 +7071,17 @@
       "year": 2025,
       "title": "HISIM: Analytical Performance Modeling and Design Space Exploration of 2.5D/3D Integration for AI Computing.",
       "authors": [
-        "Zhenyu Wang 0016",
+        "Zhenyu Wang",
         "Pragnya Sudershan Nalla",
         "Jingbo Sun",
         "A. Alper Goksoy",
         "Sumit K. Mandal",
         "Jae-Sun Seo",
         "Vidya A. Chhabria",
-        "Jeff Zhang 0001",
+        "Jeff Zhang",
         "Chaitali Chakrabarti",
         "Ümit Y. Ogras",
-        "Yu Cao 0001"
+        "Yu Cao"
       ],
       "pages": "3208-3221",
       "type": "Journal Articles",
@@ -7126,8 +7126,8 @@
       "title": "COSA Plus: Enhanced Co-Operative Systolic Arrays for Attention Mechanism in Transformers.",
       "authors": [
         "Zhican Wang",
-        "Gang Wang 0063",
-        "Guanghui He 0002"
+        "Gang Wang",
+        "Guanghui He"
       ],
       "pages": "723-736",
       "type": "Journal Articles",
@@ -7150,7 +7150,7 @@
       "authors": [
         "Hongfei Wang",
         "Caixue Wan",
-        "Hai Jin 0001"
+        "Hai Jin"
       ],
       "pages": "2883-2896",
       "type": "Journal Articles",
@@ -7171,11 +7171,11 @@
       "year": 2025,
       "title": "On Optimizing Inter- and Intra-Chiplet Interconnection Topologies for Robust Multi-Chiplet Systems.",
       "authors": [
-        "Xiaohang Wang 0001",
+        "Xiaohang Wang",
         "Miao Xu",
-        "Amit Kumar Singh 0002",
+        "Amit Kumar Singh",
         "Yingtao Jiang",
-        "Mei Yang 0001"
+        "Mei Yang"
       ],
       "pages": "3976-3989",
       "type": "Journal Articles",
@@ -7198,7 +7198,7 @@
       "authors": [
         "Kai Wang",
         "Dejun Xu",
-        "Jing Tian 0004"
+        "Jing Tian"
       ],
       "pages": "3643-3647",
       "type": "Journal Articles",
@@ -7221,7 +7221,7 @@
       "authors": [
         "Zhelong Wang",
         "Wei W. Xing",
-        "Ning Xu 0006",
+        "Ning Xu",
         "Yuanqing Cheng"
       ],
       "pages": "4538-4549",
@@ -7243,7 +7243,7 @@
       "year": 2025,
       "title": "AccALS 2.0: Accelerating Approximate Logic Synthesis by Simultaneous Selection of Multiple Local Approximate Changes.",
       "authors": [
-        "Xuan Wang 0027",
+        "Xuan Wang",
         "Xiaomi Zhou",
         "Shanshan Han",
         "Ruicheng Dai",
@@ -7273,11 +7273,11 @@
       "title": "Multiobjective Coverage Optimization for 3-D Heterogeneous Wireless Sensor Networks.",
       "authors": [
         "Kun Wang",
-        "Jing Zhang 0022",
+        "Jing Zhang",
         "Jie Liu",
         "Feiya Yan",
         "Changsheng Chen",
-        "Jing Yang 0042"
+        "Jing Yang"
       ],
       "pages": "4458-4471",
       "type": "Journal Articles",
@@ -7298,14 +7298,14 @@
       "year": 2025,
       "title": "ParSGCN: Bridging the Gap Between Emulation Partitioning and Scheduling.",
       "authors": [
-        "Ziyi Wang 0010",
-        "Wenqian Zhao 0002",
-        "Yuan Pu 0001",
-        "Lei Chen 0031",
+        "Ziyi Wang",
+        "Wenqian Zhao",
+        "Yuan Pu",
+        "Lei Chen",
         "Wilson W. K. Thong",
         "Weihua Sheng",
         "Tsung-Yi Ho",
-        "Bei Yu 0001"
+        "Bei Yu"
       ],
       "pages": "1180-1192",
       "type": "Journal Articles",
@@ -7326,7 +7326,7 @@
       "year": 2025,
       "title": "Fast-OverlaPIM: A Fast Overlap-Driven Mapping Framework for Processing In-Memory Neural Network Acceleration.",
       "authors": [
-        "Xuan Wang 0040",
+        "Xuan Wang",
         "Minxuan Zhou",
         "Tajana Rosing"
       ],
@@ -7349,13 +7349,13 @@
       "year": 2025,
       "title": "DiffPattern-Flex: Efficient Layout Pattern Generation via Discrete Diffusion.",
       "authors": [
-        "Zixiao Wang 0001",
-        "Wenqian Zhao 0002",
+        "Zixiao Wang",
+        "Wenqian Zhao",
         "Yunheng Shen",
         "Yang Bai",
         "Guojin Chen",
         "Farzan Farnia",
-        "Bei Yu 0001"
+        "Bei Yu"
       ],
       "pages": "4679-4690",
       "type": "Journal Articles",
@@ -7376,7 +7376,7 @@
       "year": 2025,
       "title": "Finite Element Approach Based Numerical Framework for Device Simulator.",
       "authors": [
-        "Dawei Wang 0003",
+        "Dawei Wang",
         "Qing Zhang",
         "Hang Wan",
         "Wen-Sheng Zhao"
@@ -7400,7 +7400,7 @@
       "year": 2025,
       "title": "Intermittent OTA Code Update Framework for Tiny Energy Harvesting Devices.",
       "authors": [
-        "Wei Wei 0060",
+        "Wei Wei",
         "Chen Pan",
         "Sahidul Islam",
         "Jishnu Banerjee",
@@ -7426,7 +7426,7 @@
       "year": 2025,
       "title": "FPGA Technology Mapping With Adaptive Gate Decomposition.",
       "authors": [
-        "Chang Wu 0005"
+        "Chang Wu"
       ],
       "pages": "2218-2225",
       "type": "Journal Articles",
@@ -7451,7 +7451,7 @@
         "Li Cai",
         "Zhigang Cai",
         "Fengxiang Zhang",
-        "Jianwei Liao 0001"
+        "Jianwei Liao"
       ],
       "pages": "3710-3723",
       "type": "Journal Articles",
@@ -7474,9 +7474,9 @@
       "authors": [
         "Jingrou Wu",
         "Chuang Hu",
-        "Jin Zhang 0001",
-        "Dan Wang 0002",
-        "Jing Jiang 0002"
+        "Jin Zhang",
+        "Dan Wang",
+        "Jing Jiang"
       ],
       "pages": "4313-4326",
       "type": "Journal Articles",
@@ -7499,8 +7499,8 @@
       "authors": [
         "Hongxi Wu",
         "Xingquan Li",
-        "Liang Chen 0025",
-        "Bei Yu 0001",
+        "Liang Chen",
+        "Bei Yu",
         "Wenxing Zhu"
       ],
       "pages": "1928-1941",
@@ -7525,9 +7525,9 @@
         "Kun Wu",
         "Yuncheng Liu",
         "Hui Gao",
-        "Jun Tao 0001",
+        "Jun Tao",
         "Wei Xiong",
-        "Xin Li 0001"
+        "Xin Li"
       ],
       "pages": "1199-1203",
       "type": "Journal Articles",
@@ -7548,13 +7548,13 @@
       "year": 2025,
       "title": "FADESIM: Enable Fast and Accurate Design Exploration for Memristive Accelerators Considering Nonidealities.",
       "authors": [
-        "Bing Wu 0001",
+        "Bing Wu",
         "Yibo Liu",
         "Jinpeng Liu",
         "Huan Cheng",
         "Xueliang Wei",
-        "Wei Tong 0001",
-        "Dan Feng 0001"
+        "Wei Tong",
+        "Dan Feng"
       ],
       "pages": "1529-1543",
       "type": "Journal Articles",
@@ -7578,9 +7578,9 @@
         "Wentian Wu",
         "Qianhui Li",
         "Tong Qu",
-        "Qi Wang 0041",
+        "Qi Wang",
         "Zongliang Huo",
-        "Tian-Chun Ye 0001"
+        "Tian-Chun Ye"
       ],
       "pages": "3724-3737",
       "type": "Journal Articles",
@@ -7605,8 +7605,8 @@
         "Jinyi Shen",
         "Xiaoling Yi",
         "Li Shang",
-        "Fan Yang 0001",
-        "Xuan Zeng 0001"
+        "Fan Yang",
+        "Xuan Zeng"
       ],
       "pages": "1141-1154",
       "type": "Journal Articles",
@@ -7629,14 +7629,14 @@
       "authors": [
         "Yongkun Wu",
         "Xiaomeng Wang",
-        "Jia Chen 0032",
+        "Jia Chen",
         "Zhenhua Zhu",
         "Jingyu He",
         "Pingcheng Dong",
         "Yonghao Tan",
-        "Xin Zhao 0044",
-        "Liang Chang 0002",
-        "Yu Wang 0002",
+        "Xin Zhao",
+        "Liang Chang",
+        "Yu Wang",
         "Fengbin Tu",
         "Chi-Ying Tsui",
         "Kwang-Ting Cheng"
@@ -7685,7 +7685,7 @@
       "authors": [
         "Xhesila Xhafa",
         "Eric Faehn",
-        "Patrick Girard 0001",
+        "Patrick Girard",
         "Arnaud Virazel"
       ],
       "pages": "2000-2013",
@@ -7707,11 +7707,11 @@
       "year": 2025,
       "title": "HTs-GCN: Identifying Hardware Trojan Nodes in Integrated Circuits Using a Graph Convolutional Network.",
       "authors": [
-        "Jie Xiao 0003",
+        "Jie Xiao",
         "Shuiliang Chai",
         "Yanjiao Gao",
         "Yuhao Huang",
-        "Fan Zhang 0010",
+        "Fan Zhang",
         "Tieming Chen"
       ],
       "pages": "2353-2366",
@@ -7735,11 +7735,11 @@
       "authors": [
         "Wenjing Xiao",
         "Jianyu Wang",
-        "Dan Chen 0006",
+        "Dan Chen",
         "Chenglong Shi",
         "Xin Ling",
-        "Min Chen 0003",
-        "Thomas Wu 0001"
+        "Min Chen",
+        "Thomas Wu"
       ],
       "pages": "2516-2529",
       "type": "Journal Articles",
@@ -7761,8 +7761,8 @@
       "title": "Less Traces Are All It Takes: Efficient Side-Channel Analysis on AES.",
       "authors": [
         "Zhiyuan Xiao",
-        "Chen Wang 0015",
-        "Jian Shen 0001",
+        "Chen Wang",
+        "Jian Shen",
         "Q. M. Jonathan Wu",
         "Debiao He"
       ],
@@ -7875,7 +7875,7 @@
         "Guilin Zhao",
         "Peiyu Zou",
         "Xiaochen Li",
-        "He Jiang 0001"
+        "He Jiang"
       ],
       "pages": "4405-4418",
       "type": "Journal Articles",
@@ -7898,7 +7898,7 @@
       "authors": [
         "Guanglei Xu",
         "Yuchong Hu",
-        "Dan Feng 0001",
+        "Dan Feng",
         "Wenpeng He",
         "Junyuan Huang"
       ],
@@ -7922,12 +7922,12 @@
       "title": "Enabling Efficient Sparse Multiplications on GPUs With Heuristic Adaptability.",
       "authors": [
         "Jiaming Xu",
-        "Shan Huang 0010",
-        "Jinhao Li 0006",
+        "Shan Huang",
+        "Jinhao Li",
         "Guyue Huang",
-        "Yuan Xie 0001",
-        "Yu Wang 0002",
-        "Guohao Dai 0001"
+        "Yuan Xie",
+        "Yu Wang",
+        "Guohao Dai"
       ],
       "pages": "2226-2239",
       "type": "Journal Articles",
@@ -7949,12 +7949,12 @@
       "title": "Hierarchical Partitioning-Based Interchip Redistribution Layer Routing for Fan-Out Wafer-Level Packaging.",
       "authors": [
         "Haoyang Xu",
-        "Xing Huang 0001",
+        "Xing Huang",
         "Zhen Zhuang",
-        "Zhiwen Yu 0001",
-        "Bin Guo 0001",
+        "Zhiwen Yu",
+        "Bin Guo",
         "Kai-Yuan Chao",
-        "Bei Yu 0001",
+        "Bei Yu",
         "Tsung-Yi Ho",
         "Martin D. F. Wong"
       ],
@@ -7980,11 +7980,11 @@
         "He Xu",
         "Xiaokang Shi",
         "Hansheng Liu",
-        "Yanwen Wang 0001",
+        "Yanwen Wang",
         "Jiwu Lu",
-        "Haibo Zeng 0001",
+        "Haibo Zeng",
         "Renfa Li",
-        "Di Wu 0002"
+        "Di Wu"
       ],
       "pages": "3274-3288",
       "type": "Journal Articles",
@@ -8005,13 +8005,13 @@
       "year": 2025,
       "title": "PARoute2: Enhanced Analog Routing via Performance-Drive Guidance Generation.",
       "authors": [
-        "Peng Xu 0052",
+        "Peng Xu",
         "Jindong Tu",
         "Guojin Chen",
-        "Keren Zhu 0001",
+        "Keren Zhu",
         "Tinghuan Chen",
         "Tsung-Yi Ho",
-        "Bei Yu 0001"
+        "Bei Yu"
       ],
       "pages": "3654-3667",
       "type": "Journal Articles",
@@ -8034,12 +8034,12 @@
       "authors": [
         "Kuiwen Xu",
         "Jianguo Wang",
-        "Jialin Cai 0001",
+        "Jialin Cai",
         "Xuetiao Ma",
         "Qinyi Lv",
         "Shichang Chen",
         "Jie Liu",
-        "Jun Liu 0027"
+        "Jun Liu"
       ],
       "pages": "806-817",
       "type": "Journal Articles",
@@ -8061,9 +8061,9 @@
       "title": "A Deep Investigation on Stealthy DVFS Fault Injection Attacks at DNN Hardware Accelerators.",
       "authors": [
         "Junge Xu",
-        "Fan Zhang 0010",
+        "Fan Zhang",
         "Wenguang Jin",
-        "Kun Yang 0012",
+        "Kun Yang",
         "Zeke Wang",
         "Weixiong Jiang",
         "Yajun Ha"
@@ -8087,12 +8087,12 @@
       "year": 2025,
       "title": "MemMIMO: A Simulation Framework for Memristor-Based Massive MIMO Acceleration.",
       "authors": [
-        "Jiawei Xu 0002",
+        "Jiawei Xu",
         "Yi Zheng",
-        "Dimitrios Stathis 0001",
+        "Dimitrios Stathis",
         "Ruijia Wang",
         "Ruisi Shen",
-        "Lirong Zheng 0001",
+        "Lirong Zheng",
         "Zhuo Zou",
         "Ahmed Hemani"
       ],
@@ -8146,10 +8146,10 @@
         "Yuting He",
         "Zhengfeng Huang",
         "Wenjie Yan",
-        "Jie Cui 0004",
+        "Jie Cui",
         "Xiaolei Wang",
         "Tianming Ni",
-        "Patrick Girard 0001",
+        "Patrick Girard",
         "Xiaoqing Wen"
       ],
       "pages": "390-394",
@@ -8173,7 +8173,7 @@
       "authors": [
         "Guangyao Yan",
         "Xinzhe Liu",
-        "Hui Wang 0036",
+        "Hui Wang",
         "Yajun Ha"
       ],
       "pages": "3437-3450",
@@ -8198,9 +8198,9 @@
         "Liang Yan",
         "Xiaoyang Lu",
         "Sheng Xu",
-        "Xiaoming Chen 0003",
+        "Xiaoming Chen",
         "Xingqi Zou",
-        "Yinhe Han 0001",
+        "Yinhe Han",
         "Xian-He Sun"
       ],
       "pages": "4577-4590",
@@ -8226,7 +8226,7 @@
         "Deyun Lyu",
         "Zhenya Zhang",
         "Paolo Arcaini",
-        "Jianjun Zhao 0001"
+        "Jianjun Zhao"
       ],
       "pages": "4004-4017",
       "type": "Journal Articles",
@@ -8275,7 +8275,7 @@
       "title": "DynMap: A Heuristic Dynamic Mapper for CGRA Multitask Dynamic Resource Allocation.",
       "authors": [
         "Yufei Yang",
-        "Chenhao Xie 0001",
+        "Chenhao Xie",
         "Liansheng Liu",
         "Xiyuan Peng"
       ],
@@ -8299,14 +8299,14 @@
       "title": "Retention Accelerated Testing for 3-D QLC nand Flash Memory: Characterization, Analysis, and Modeling.",
       "authors": [
         "Shaoqi Yang",
-        "Meng Zhang 0014",
+        "Meng Zhang",
         "Xuepeng Zhan",
         "Peng Guo",
         "Xiaohuan Zhao",
         "Guangkuo Yang",
         "Xinyi Guo",
         "Jixuan Wu",
-        "Fei Wu 0005",
+        "Fei Wu",
         "Jiezhi Chen"
       ],
       "pages": "2779-2788",
@@ -8350,13 +8350,13 @@
       "title": "Efficient Automatic Design of IGBT Structural Parameters Using Differential Evolution and Machine Learning Model.",
       "authors": [
         "Qing Yao",
-        "Jing Chen 0032",
+        "Jing Chen",
         "Kemeng Yang",
         "Jiafei Yao",
-        "Jun Zhang 0057",
+        "Jun Zhang",
         "Yuxuan Dai",
         "Weihua Tang",
-        "Bo Zhang 0027",
+        "Bo Zhang",
         "Yufeng Guo"
       ],
       "pages": "1059-1069",
@@ -8402,12 +8402,12 @@
       "year": 2025,
       "title": "Learning-Driven Physically Aware Large-Scale Circuit Gate Sizing.",
       "authors": [
-        "Yuyang Ye 0001",
-        "Peng Xu 0052",
+        "Yuyang Ye",
+        "Peng Xu",
         "Lizheng Ren",
         "Tinghuan Chen",
-        "Hao Yan 0002",
-        "Bei Yu 0001",
+        "Hao Yan",
+        "Bei Yu",
         "Longxing Shi"
       ],
       "pages": "1901-1914",
@@ -8432,17 +8432,17 @@
         "Xunzhao Yin",
         "Qingrong Huang",
         "Hamza Errahmouni Barkam",
-        "Franz Müller 0001",
+        "Franz Müller",
         "Shan Deng",
         "Alptekin Vardar",
-        "Sourav De 0002",
+        "Sourav De",
         "Zhouhang Jiang",
         "Mohsen Imani",
         "Ulf Schlichtmann",
         "Xiaobo Sharon Hu",
         "Cheng Zhuo",
         "Thomas Kämpfe",
-        "Kai Ni 0004"
+        "Kai Ni"
       ],
       "pages": "1856-1868",
       "type": "Journal Articles",
@@ -8467,7 +8467,7 @@
         "Hayoung Lee",
         "Youngki Moon",
         "Seung Ho Shin",
-        "Sungho Kang 0001"
+        "Sungho Kang"
       ],
       "pages": "2014-2025",
       "type": "Journal Articles",
@@ -8494,7 +8494,7 @@
         "Cheng Qu",
         "Li Luo",
         "Hongwei Guo",
-        "Qi Wei 0001",
+        "Qi Wei",
         "Xinjun Liu",
         "Fei Qiao"
       ],
@@ -8540,11 +8540,11 @@
       "year": 2025,
       "title": "Bursting Firings in Memristive Hopfield Neural Network With Image Encryption and Hardware Implementation.",
       "authors": [
-        "Fei Yu 0009",
+        "Fei Yu",
         "Shaoqi He",
-        "Wei Yao 0014",
+        "Wei Yao",
         "Shuo Cai",
-        "Quan Xu 0001"
+        "Quan Xu"
       ],
       "pages": "4564-4576",
       "type": "Journal Articles",
@@ -8592,9 +8592,9 @@
       "title": "LIDS: A Lightweight Intrusion Detection System for Controller Area Network.",
       "authors": [
         "Zhangwei Yu",
-        "Yan Liu 0032",
+        "Yan Liu",
         "Renfa Li",
-        "Wanli Chang 0001"
+        "Wanli Chang"
       ],
       "pages": "3303-3312",
       "type": "Journal Articles",
@@ -8616,10 +8616,10 @@
       "title": "LAHDC: Logic-Aggregation-Based Query for Embedded Hyperdimensional Computing Accelerator.",
       "authors": [
         "Tianyang Yu",
-        "Bi Wu 0002",
-        "Ke Chen 0018",
-        "Gong Zhang 0002",
-        "Weiqiang Liu 0001"
+        "Bi Wu",
+        "Ke Chen",
+        "Gong Zhang",
+        "Weiqiang Liu"
       ],
       "pages": "119-129",
       "type": "Journal Articles",
@@ -8643,14 +8643,14 @@
         "Fuxun Yu",
         "Zirui Xu",
         "Longfei Shangguan",
-        "Di Wang 0003",
+        "Di Wang",
         "Dimitrios Stamoulis",
         "Rishi Madhok",
         "Nikolaos Karianakis",
-        "Ang Li 0005",
+        "Ang Li",
         "Chenchen Liu",
-        "Yiran Chen 0001",
-        "Xiang Chen 0010"
+        "Yiran Chen",
+        "Xiang Chen"
       ],
       "pages": "266-279",
       "type": "Journal Articles",
@@ -8673,10 +8673,10 @@
       "authors": [
         "Zehong Yu",
         "Yixiao Yang",
-        "Zhuo Su 0005",
-        "Rui Wang 0024",
+        "Zhuo Su",
+        "Rui Wang",
         "Yang Tao",
-        "Yu Jiang 0001"
+        "Yu Jiang"
       ],
       "pages": "444-457",
       "type": "Journal Articles",
@@ -8722,14 +8722,14 @@
       "year": 2025,
       "title": "RuleLearner: OPC Rule Extraction From Inverse Lithography Technique Engine.",
       "authors": [
-        "Ziyang Yu 0001",
+        "Ziyang Yu",
         "Su Zheng",
-        "Wenqian Zhao 0002",
+        "Wenqian Zhao",
         "Shuo Yin",
         "Xiaoxiao Liang",
         "Guojin Chen",
         "Yuzhe Ma",
-        "Bei Yu 0001",
+        "Bei Yu",
         "Martin D. F. Wong"
       ],
       "pages": "1915-1927",
@@ -8751,14 +8751,14 @@
       "year": 2025,
       "title": "HyCTor: A Hybrid CNN-Transformer Network Accelerator With Flexible Weight/Output Stationary Dataflow and Multicore Extension.",
       "authors": [
-        "Shuai Yuan 0016",
+        "Shuai Yuan",
         "Weifeng He",
         "Zhenhua Zhu",
         "Fangxin Liu",
         "Zhuoran Song",
-        "Guohao Dai 0001",
-        "Guanghui He 0002",
-        "Yanan Sun 0003"
+        "Guohao Dai",
+        "Guanghui He",
+        "Yanan Sun"
       ],
       "pages": "1819-1832",
       "type": "Journal Articles",
@@ -8782,7 +8782,7 @@
         "Hyojoon Yun",
         "Hyeonchan Lim",
         "Hayoung Lee",
-        "Sungho Kang 0001"
+        "Sungho Kang"
       ],
       "pages": "3648-3652",
       "type": "Journal Articles",
@@ -8831,19 +8831,19 @@
       "year": 2025,
       "title": "Fine-Grained Structured Sparse Computing for FPGA-Based AI Inference.",
       "authors": [
-        "Chen Zhang 0001",
+        "Chen Zhang",
         "Shijie Cao",
-        "Guohao Dai 0001",
+        "Guohao Dai",
         "Chenbo Geng",
         "Zhuliang Yao",
         "Wencong Xiao",
-        "Yunxin Liu 0001",
-        "Ming Wu 0007",
+        "Yunxin Liu",
+        "Ming Wu",
         "Lintao Zhang",
-        "Guangyu Sun 0003",
+        "Guangyu Sun",
         "Zhigang Ji",
         "Runsheng Wang",
-        "Ru Huang 0001"
+        "Ru Huang"
       ],
       "pages": "2544-2557",
       "type": "Journal Articles",
@@ -8867,7 +8867,7 @@
         "Han Zhang",
         "Zhenyu Fan",
         "Yinhao Zhou",
-        "Ying Li 0056"
+        "Ying Li"
       ],
       "pages": "2240-2252",
       "type": "Journal Articles",
@@ -8916,7 +8916,7 @@
       "year": 2025,
       "title": "Coexisting Hyperchaos in a Memristive Neuromorphic Oscillator.",
       "authors": [
-        "Xin Zhang 0068",
+        "Xin Zhang",
         "Chunbiao Li",
         "Tengfei Lei",
         "Herbert Ho-Ching Iu",
@@ -8971,8 +8971,8 @@
         "Huseyin Ekin Sumbul",
         "Yonggan Fu",
         "Haoran You",
-        "Cheng Wan 0005",
-        "Yingyan Lin 0001"
+        "Cheng Wan",
+        "Yingyan Lin"
       ],
       "pages": "3020-3033",
       "type": "Journal Articles",
@@ -9016,9 +9016,9 @@
       "year": 2025,
       "title": "Partitioned Scheduling With Shared Resources on Imprecise Mixed-Criticality Multiprocessor Systems.",
       "authors": [
-        "Yiwen Zhang 0002",
+        "Yiwen Zhang",
         "Jin-Peng Ma",
-        "Zonghua Gu 0001"
+        "Zonghua Gu"
       ],
       "pages": "65-76",
       "type": "Journal Articles",
@@ -9089,8 +9089,8 @@
       "year": 2025,
       "title": "ESM: A Plug-in Power Side Channel Shuffling Protection for Scalar Processors.",
       "authors": [
-        "Yao Zhang 0015",
-        "Ming Tang 0002"
+        "Yao Zhang",
+        "Ming Tang"
       ],
       "pages": "1634-1647",
       "type": "Journal Articles",
@@ -9111,7 +9111,7 @@
       "year": 2025,
       "title": "DA PUF for IoT Security with 0.02% BER at 0.96 to 1.44 V and -40 °C to 125 °C.",
       "authors": [
-        "Jiliang Zhang 0002",
+        "Jiliang Zhang",
         "Zhenyu Wang",
         "Lin Ding"
       ],
@@ -9163,13 +9163,13 @@
       "year": 2025,
       "title": "pFed-Litho: Lithography Modeling With a Personalized Federated Learning-Based Framework.",
       "authors": [
-        "Qing Zhang 0008",
-        "Yuhang Zhang 0008",
+        "Qing Zhang",
+        "Yuhang Zhang",
         "Rui Chen",
         "Wei Lu",
         "Huajie Huang",
         "Zhiqiang Li",
-        "Yongfu Li 0002"
+        "Yongfu Li"
       ],
       "pages": "2264-2276",
       "type": "Journal Articles",
@@ -9190,14 +9190,14 @@
       "year": 2025,
       "title": "Prerouting Timing Prediction Across Different Technology Nodes.",
       "authors": [
-        "Xinyun Zhang 0001",
+        "Xinyun Zhang",
         "Binwu Zhu",
         "Fangzhou Liu",
         "Jiaxi Jiang",
-        "Ziyi Wang 0010",
-        "Peng Xu 0052",
-        "Hong Xu 0001",
-        "Bei Yu 0001"
+        "Ziyi Wang",
+        "Peng Xu",
+        "Hong Xu",
+        "Bei Yu"
       ],
       "pages": "2697-2710",
       "type": "Journal Articles",
@@ -9220,10 +9220,10 @@
       "authors": [
         "Yuxiang Zhao",
         "Zhuomin Chai",
-        "Xun Jiang 0002",
+        "Xun Jiang",
         "Yibo Lin",
         "Runsheng Wang",
-        "Ru Huang 0001"
+        "Ru Huang"
       ],
       "pages": "2253-2263",
       "type": "Journal Articles",
@@ -9244,7 +9244,7 @@
       "year": 2025,
       "title": "Light-CIM: A Lightweight ADC/DAC-Fewer RRAM CIM DNN Accelerator With Fully Analog Tiles and Nonideality-Aware Algorithm for Consumer Electronics.",
       "authors": [
-        "Chenyang Zhao 0008",
+        "Chenyang Zhao",
         "Jinbei Fang",
         "Jingwen Jiang",
         "Xiaoyong Xue",
@@ -9269,11 +9269,11 @@
       "year": 2025,
       "title": "CMD: A Cache-Assisted GPU Memory Deduplication Architecture.",
       "authors": [
-        "Wei Zhao 0034",
-        "Dan Feng 0001",
-        "Wei Tong 0001",
+        "Wei Zhao",
+        "Dan Feng",
+        "Wei Tong",
         "Xueliang Wei",
-        "Bing Wu 0001"
+        "Bing Wu"
       ],
       "pages": "3752-3763",
       "type": "Journal Articles",
@@ -9299,10 +9299,10 @@
         "Zheng Wu",
         "Zhaori Bi",
         "Changhao Yan",
-        "Fan Yang 0001",
+        "Fan Yang",
         "Sheng-Guo Wang",
         "Dian Zhou",
-        "Xuan Zeng 0001"
+        "Xuan Zeng"
       ],
       "pages": "2765-2778",
       "type": "Journal Articles",
@@ -9324,13 +9324,13 @@
       "title": "NV-APP: Invalid Programming Performance Improved No-Verify and Adaptive Pulse Programming Scheme for 3-D QLC nand Flash.",
       "authors": [
         "Qianqi Zhao",
-        "Jing He 0020",
+        "Jing He",
         "Tong Qu",
         "Wentian Wu",
         "Qianhui Li",
-        "Qi Wang 0041",
+        "Qi Wang",
         "Zongliang Huo",
-        "Tian-Chun Ye 0001"
+        "Tian-Chun Ye"
       ],
       "pages": "3592-3605",
       "type": "Journal Articles",
@@ -9351,12 +9351,12 @@
       "year": 2025,
       "title": "Analytical Heterogeneous Die-to-Die 3-D Placement With Macros.",
       "authors": [
-        "Yuxuan Zhao 0001",
+        "Yuxuan Zhao",
         "Peiyu Liao",
-        "Siting Liu 0002",
+        "Siting Liu",
         "Jiaxi Jiang",
         "Yibo Lin",
-        "Bei Yu 0001"
+        "Bei Yu"
       ],
       "pages": "402-415",
       "type": "Journal Articles",
@@ -9381,11 +9381,11 @@
         "Ruiyu Lyu",
         "Xuyang Zhao",
         "Zhaori Bi",
-        "Fan Yang 0001",
+        "Fan Yang",
         "Changhao Yan",
         "Dian Zhou",
         "Yangfeng Su",
-        "Xuan Zeng 0001"
+        "Xuan Zeng"
       ],
       "pages": "818-831",
       "type": "Journal Articles",
@@ -9407,7 +9407,7 @@
       "title": "Automated Topology Synthesis of Analog Integrated Circuits With Frequency Compensation.",
       "authors": [
         "Zhenxin Zhao",
-        "Jun Liu 0027",
+        "Jun Liu",
         "Wen-Sheng Zhao",
         "Lihong Zhang"
       ],
@@ -9434,7 +9434,7 @@
         "Sheng Ma",
         "Yuhua Tang",
         "Hengzhu Liu",
-        "Dongsheng Li 0001"
+        "Dongsheng Li"
       ],
       "pages": "2530-2543",
       "type": "Journal Articles",
@@ -9484,8 +9484,8 @@
         "Sirong Zhao",
         "Guoqi Xie",
         "Wenhong Ma",
-        "Wei Ren 0002",
-        "Kenli Li 0001"
+        "Wei Ren",
+        "Kenli Li"
       ],
       "pages": "897-910",
       "type": "Journal Articles",
@@ -9532,11 +9532,11 @@
       "year": 2025,
       "title": "BAQE: Backend-Adaptive DNN Deployment via Synchronous Bayesian Quantization and Hardware Configuration Exploration.",
       "authors": [
-        "Wenqian Zhao 0002",
+        "Wenqian Zhao",
         "Shuo Yin",
         "Chen Bai",
-        "Zixiao Wang 0001",
-        "Bei Yu 0001"
+        "Zixiao Wang",
+        "Bei Yu"
       ],
       "pages": "1394-1405",
       "type": "Journal Articles",
@@ -9558,10 +9558,10 @@
       "title": "Streamlining Computational Lithography With Efficient Pattern Database.",
       "authors": [
         "Su Zheng",
-        "Wenqian Zhao 0002",
+        "Wenqian Zhao",
         "Shuyuan Sun",
-        "Fan Yang 0001",
-        "Bei Yu 0001",
+        "Fan Yang",
+        "Bei Yu",
         "Martin D. F. Wong"
       ],
       "pages": "4263-4275",
@@ -9584,9 +9584,9 @@
       "title": "A Reduced State-Space Generation Method for Concurrent Systems Based on CPN-PR Model.",
       "authors": [
         "Wenjie Zhong",
-        "Tao Sun 0002",
-        "Jiantao Zhou 0002",
-        "Zhuowei Wang 0001",
+        "Tao Sun",
+        "Jiantao Zhou",
+        "Zhuowei Wang",
         "Xiaoyu Song"
       ],
       "pages": "2328-2342",
@@ -9659,15 +9659,15 @@
       "year": 2025,
       "title": "Multiobjective Optimization in Logic Synthesis Based on TB-RM Dual Logic.",
       "authors": [
-        "Yuhao Zhou 0002",
-        "Zhen Wang 0042",
+        "Yuhao Zhou",
+        "Zhen Wang",
         "Xiangxue Kong",
         "Hongyang Pan",
         "Zhenxue He",
-        "Ying Zhang 0040",
+        "Ying Zhang",
         "Jianhui Jiang",
         "Limin Xiao",
-        "Xiang Wang 0006"
+        "Xiang Wang"
       ],
       "pages": "1380-1393",
       "type": "Journal Articles",
@@ -9716,7 +9716,7 @@
         "Yuhan Zhu",
         "Genggeng Liu",
         "Wenzhong Guo",
-        "Xing Huang 0001"
+        "Xing Huang"
       ],
       "pages": "2669-2682",
       "type": "Journal Articles",
@@ -9741,18 +9741,18 @@
         "Chenhao Xue",
         "Yiqi Chen",
         "Zhao Wang",
-        "Chen Zhang 0001",
-        "Yu Shen 0003",
+        "Chen Zhang",
+        "Yu Shen",
         "Yifan Chen",
         "Zekang Cheng",
         "Yu Jiang",
         "Tianqi Wang",
         "Yibo Lin",
-        "Wei Hu 0003",
-        "Bin Cui 0001",
+        "Wei Hu",
+        "Bin Cui",
         "Runsheng Wang",
-        "Yun Liang 0001",
-        "Guangyu Sun 0003"
+        "Yun Liang",
+        "Guangyu Sun"
       ],
       "pages": "4793-4806",
       "type": "Journal Articles",
@@ -9775,7 +9775,7 @@
       "authors": [
         "Wei Zi",
         "Junhong Nie",
-        "Xiaoming Sun 0001"
+        "Xiaoming Sun"
       ],
       "pages": "3060-3072",
       "type": "Journal Articles",
@@ -9798,12 +9798,12 @@
       "authors": [
         "Zihan Zou",
         "Xinming Yan",
-        "Chen Zhang 0025",
+        "Chen Zhang",
         "Shikuang Chen",
-        "Guang Yang 0036",
+        "Guang Yang",
         "Han Yan",
-        "Hao Cai 0001",
-        "Bo Liu 0019"
+        "Hao Cai",
+        "Bo Liu"
       ],
       "pages": "4127-4140",
       "type": "Journal Articles",
@@ -9826,9 +9826,9 @@
       "authors": [
         "Lancheng Zou",
         "Su Zheng",
-        "Peng Xu 0052",
-        "Siting Liu 0002",
-        "Bei Yu 0001",
+        "Peng Xu",
+        "Siting Liu",
+        "Bei Yu",
         "Martin D. F. Wong"
       ],
       "pages": "2627-2640",

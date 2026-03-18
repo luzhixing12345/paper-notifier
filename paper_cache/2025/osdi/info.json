@@ -6,7 +6,7 @@
       "year": 2025,
       "title": "Tigon: A Distributed Database for a CXL Pod.",
       "authors": [
-        "Yibo Huang 0006",
+        "Yibo Huang",
         "Haowei Chen",
         "Newton Ni",
         "Yan Sun",
@@ -33,12 +33,12 @@
       "year": 2025,
       "title": "Tintin: A Unified Hardware Performance Profiling Infrastructure to Uncover and Manage Uncertainty.",
       "authors": [
-        "Ao Li 0006",
+        "Ao Li",
         "Marion Sudvarg",
         "Zihan Li",
         "Sanjoy K. Baruah",
-        "Chris Gill 0001",
-        "Ning Zhang 0017"
+        "Chris Gill",
+        "Ning Zhang"
       ],
       "pages": "575-593",
       "type": "Conference and Workshop Papers",
@@ -59,18 +59,18 @@
       "year": 2025,
       "title": "WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training.",
       "authors": [
-        "Zheng Wang 0075",
+        "Zheng Wang",
         "Anna Cai",
         "Xinfeng Xie",
         "Zaifeng Pan",
-        "Yue Guan 0003",
+        "Yue Guan",
         "Weiwei Chu",
-        "Jie Wang 0022",
+        "Jie Wang",
         "Shikai Li",
         "Jianyu Huang",
         "Chris Cai",
         "Yuchen Hao",
-        "Yufei Ding 0001"
+        "Yufei Ding"
       ],
       "pages": "785-801",
       "type": "Conference and Workshop Papers",
@@ -174,14 +174,14 @@
       "year": 2025,
       "title": "EMT: An OS Framework for New Memory Translation Architectures.",
       "authors": [
-        "Siyuan Chai 0001",
-        "Jiyuan Zhang 0003",
-        "Jongyul Kim 0001",
+        "Siyuan Chai",
+        "Jiyuan Zhang",
+        "Jongyul Kim",
         "Alan Wang",
         "Fan Chung",
         "Jovan Stojkovic",
-        "Weiwei Jia 0001",
-        "Dimitrios Skarlatos 0002",
+        "Weiwei Jia",
+        "Dimitrios Skarlatos",
         "Josep Torrellas",
         "Tianyin Xu"
       ],
@@ -217,10 +217,10 @@
         "Le Gao",
         "Feng Yu",
         "Zhengyu He",
-        "Dong Du 0003",
+        "Dong Du",
         "Yubin Xia",
         "Kang Chen",
-        "Yu Chen 0004"
+        "Yu Chen"
       ],
       "pages": "199-218",
       "type": "Conference and Workshop Papers",
@@ -242,17 +242,17 @@
       "title": "PipeThreader: Software-Defined Pipelining for Efficient DNN Execution.",
       "authors": [
         "Yu Cheng",
-        "Lei Wang 0222",
-        "Yining Shi 0001",
+        "Lei Wang",
+        "Yining Shi",
         "Yuqing Xia",
         "Lingxiao Ma",
         "Jilong Xue",
-        "Yang Wang 0053",
+        "Yang Wang",
         "Zhiwen Mo",
         "Feiyang Chen",
-        "Fan Yang 0024",
-        "Mao Yang 0004",
-        "Zhi Yang 0001"
+        "Fan Yang",
+        "Mao Yang",
+        "Zhi Yang"
       ],
       "pages": "767-783",
       "type": "Conference and Workshop Papers",
@@ -299,7 +299,7 @@
       "authors": [
         "David Domingo",
         "Hugo Barbalho",
-        "Marco Molinaro 0004",
+        "Marco Molinaro",
         "Kuan Liu",
         "Abhisek Pan",
         "David Dion",
@@ -333,11 +333,11 @@
         "Jianxing Xu",
         "Ruibai Xu",
         "Xinkai Song",
-        "Yifan Hao 0001",
-        "Ling Li 0001",
+        "Yifan Hao",
+        "Ling Li",
         "Xuehai Zhou",
-        "Tianshi Chen 0002",
-        "Qi Guo 0001",
+        "Tianshi Chen",
+        "Qi Guo",
         "Yunji Chen"
       ],
       "pages": "239-255",
@@ -365,7 +365,7 @@
         "Junseo Yoo",
         "Ethan Xu",
         "Natacha Crooks",
-        "Suyash Gupta 0001",
+        "Suyash Gupta",
         "Manos Kapritsos"
       ],
       "pages": "39-56",
@@ -390,7 +390,7 @@
         "Jian Gao",
         "Jiwu Shu",
         "Bin Yan",
-        "Yuhao Zhang 0006",
+        "Yuhao Zhang",
         "Keji Huang"
       ],
       "pages": "821-838",
@@ -436,13 +436,13 @@
       "year": 2025,
       "title": "KPerfIR: Towards a Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads.",
       "authors": [
-        "Yue Guan 0003",
+        "Yue Guan",
         "Yuanwei Fang",
-        "Keren Zhou 0001",
+        "Keren Zhou",
         "Corbin Robeck",
         "Manman Ren",
         "Zhongkai Yu",
-        "Yufei Ding 0001",
+        "Yufei Ding",
         "Adnan Aziz"
       ],
       "pages": "205-220",
@@ -488,11 +488,11 @@
       "authors": [
         "Congjie He",
         "Yeqi Huang",
-        "Pei Mu 0003",
+        "Pei Mu",
         "Ziming Miao",
         "Jilong Xue",
         "Lingxiao Ma",
-        "Fan Yang 0024",
+        "Fan Yang",
         "Luo Mai"
       ],
       "pages": "257-273",
@@ -537,7 +537,7 @@
       "title": "Bayesian Code Diffusion for Efficient Automatic Deep Learning Program Optimization.",
       "authors": [
         "Isu Jeong",
-        "Seulki Lee 0002"
+        "Seulki Lee"
       ],
       "pages": "295-311",
       "type": "Conference and Workshop Papers",
@@ -558,12 +558,12 @@
       "year": 2025,
       "title": "Training with Confidence: Catching Silent Errors in Deep Learning Training with Automated Proactive Checks.",
       "authors": [
-        "Yuxuan Jiang 0016",
+        "Yuxuan Jiang",
         "Ziming Zhou",
-        "Boyu Xu 0005",
+        "Boyu Xu",
         "Beijie Liu",
         "Runhui Xu",
-        "Peng Huang 0005"
+        "Peng Huang"
       ],
       "pages": "313-329",
       "type": "Conference and Workshop Papers",
@@ -624,9 +624,9 @@
         "Zherui Liu",
         "Shuguang Wang",
         "Haibin Lin",
-        "Xin Liu 0086",
+        "Xin Liu",
         "Aurojit Panda",
-        "Jinyang Li 0001"
+        "Jinyang Li"
       ],
       "pages": "483-498",
       "type": "Conference and Workshop Papers",
@@ -678,9 +678,9 @@
         "Senapati Diwangkara",
         "Yuzhuo Jing",
         "Achmad Imam Kistijantoro",
-        "Ding Yuan 0004",
+        "Ding Yuan",
         "Suman Nath",
-        "Peng Huang 0005"
+        "Peng Huang"
       ],
       "pages": "19-38",
       "type": "Conference and Workshop Papers",
@@ -790,7 +790,7 @@
         "Yifeng Zhang",
         "Xiangyu Zou",
         "Hao Huang",
-        "Zhenhua Li 0001",
+        "Zhenhua Li",
         "Chentao Wu"
       ],
       "pages": "859-878",
@@ -861,7 +861,7 @@
       "title": "Disentangling the Dual Role of NIC Receive Rings.",
       "authors": [
         "Boris Pismenny",
-        "Adam Morrison 0001",
+        "Adam Morrison",
         "Dan Tsafrir"
       ],
       "pages": "651-669",
@@ -885,20 +885,20 @@
       "authors": [
         "Zhenghang Ren",
         "Yuxuan Li",
-        "Zilong Wang 0007",
+        "Zilong Wang",
         "Xinyang Huang",
-        "Wenxue Li 0004",
+        "Wenxue Li",
         "Kaiqiang Xu",
         "Xudong Liao",
         "Yijun Sun",
-        "Bowen Liu 0002",
+        "Bowen Liu",
         "Han Tian",
-        "Junxue Zhang 0001",
+        "Junxue Zhang",
         "Mingfei Wang",
         "Zhizhen Zhong",
         "Guyue Liu",
-        "Ying Zhang 0022",
-        "Kai Chen 0005"
+        "Ying Zhang",
+        "Kai Chen"
       ],
       "pages": "91-108",
       "type": "Conference and Workshop Papers",
@@ -924,7 +924,7 @@
         "Tyler Potyondy",
         "Pat Pannuto",
         "Mae Milano",
-        "Amit Levy 0001"
+        "Amit Levy"
       ],
       "pages": "595-613",
       "type": "Conference and Workshop Papers",
@@ -947,9 +947,9 @@
       "authors": [
         "Weihai Shen",
         "Yang Cui",
-        "Siddhartha Sen 0001",
+        "Siddhartha Sen",
         "Sebastian Angel",
-        "Shuai Mu 0001"
+        "Shuai Mu"
       ],
       "pages": "129-152",
       "type": "Conference and Workshop Papers",
@@ -973,8 +973,8 @@
         "Weihang Shen",
         "Mingcong Han",
         "Jialong Liu",
-        "Rong Chen 0001",
-        "Haibo Chen 0001"
+        "Rong Chen",
+        "Haibo Chen"
       ],
       "pages": "671-692",
       "type": "Conference and Workshop Papers",
@@ -1023,7 +1023,7 @@
         "Yingdi Shan",
         "Kang Chen",
         "Jinlei Jiang",
-        "Yongwei Wu 0001"
+        "Yongwei Wu"
       ],
       "pages": "449-464",
       "type": "Conference and Workshop Papers",
@@ -1044,7 +1044,7 @@
       "year": 2025,
       "title": "Quantum Virtual Machines.",
       "authors": [
-        "Runzhou Tao 0001",
+        "Runzhou Tao",
         "Hongzheng Zhu",
         "Jason Nieh",
         "Jianan Yao",
@@ -1070,11 +1070,11 @@
       "title": "FineMem: Breaking the Allocation Overhead vs. Memory Waste Dilemma in Fine-Grained Disaggregated Memory Management.",
       "authors": [
         "Xiaoyang Wang",
-        "Yongkun Li 0001",
+        "Yongkun Li",
         "Kan Wu",
         "Wenzhe Zhu",
         "Yuqi Li",
-        "Yinlong Xu 0001"
+        "Yinlong Xu"
       ],
       "pages": "57-74",
       "type": "Conference and Workshop Papers",
@@ -1095,7 +1095,7 @@
       "year": 2025,
       "title": "To PRI or Not To PRI, That's the question.",
       "authors": [
-        "Yun Wang 0039",
+        "Yun Wang",
         "Liang Chen",
         "Jie Ji",
         "Xianting Tian",
@@ -1215,7 +1215,7 @@
         "Yang Yu",
         "Ming Fu",
         "Binyu Zang",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "693-710",
       "type": "Conference and Workshop Papers",
@@ -1284,7 +1284,7 @@
       "authors": [
         "Tianren Zhang",
         "Sishuai Gong",
-        "Pedro Fonseca 0001"
+        "Pedro Fonseca"
       ],
       "pages": "615-632",
       "type": "Conference and Workshop Papers",
@@ -1335,8 +1335,8 @@
         "Yang Liu",
         "Xingda Wei",
         "Yizhou Shan",
-        "Rong Chen 0001",
-        "Haibo Chen 0001"
+        "Rong Chen",
+        "Haibo Chen"
       ],
       "pages": "275-293",
       "type": "Conference and Workshop Papers",
@@ -1347,9 +1347,9 @@
       "abstract": "Model autoscaling is the key mechanism to achieve serverless model-as-a-service, but it faces a fundamental trade-off between scaling speed and storage/memory usage to cache parameters, and cannot meet frequent scaling requirements across multiple hosts. The key problem is that data plane performance is slow, and scaled instances remain stopped while parameters are loading. In this paper, we first show that the data plane can be made fast with no or O(1) caching by loading parameters through the compute network between GPUs because: (1) its speed is comparable to host cache and is underutilized, and (2) scaling multiple instances requires no or O(1) caching with network-optimized multicast. Second, autoscaling can be made live by breaking the scaling abstraction for inference from a coarse-grained instance-level to a fine-grained layer-level. This allows us to offload the layer computation from the overloaded serving instances to the scaled ones without waiting for the parameters to be fully loaded. Under real-world workloads, our system BLITZSCALE achieves up to 94 % lower tail latency reductions compared to state-of-the-art autoscaling system (ServerlessLLM), and it reduces the GPU time used for serving by 49 % when compared with serving systems that do not support autoscaling like DistServe and vLLM with the same service-level-agreement.",
       "abstract_zh": "模型自动伸缩是实现无服务器模型即服务的关键机制，但它面临着伸缩速度和缓存参数的存储/内存使用之间的基本权衡，并且无法满足跨多个主机的频繁伸缩需求。关键问题是数据平面性能缓慢，并且在加载参数时缩放实例保持停止状态。在本文中，我们首先证明，通过通过 GPU 之间的计算网络加载参数，可以在没有缓存或 O(1) 缓存的情况下加快数据平面的速度，因为：(1) 其速度与主机缓存相当，并且未得到充分利用，(2) 扩展多个实例不需要使用网络优化的多播或 O(1) 缓存。其次，可以通过打破从粗粒度实例级别到细粒度层级别的推理的缩放抽象来实现自动缩放。这允许我们将层计算从超载的服务实例卸载到缩放的服务实例，而无需等待参数完全加载。在实际工作负载下，与最先进的自动扩展系统 (ServerlessLLM) 相比，我们的系统 BLITZSCALE 的尾部延迟降低了 94%，并且与具有相同服务级别协议的 DistServe 和 vLLM 等不支持自动扩展的服务系统相比，用于服务的 GPU 时间减少了 49%。",
       "abstract_source": "Source Page",
-      "openalex_id": "https://openalex.org/W4405767552",
-      "doi": "10.48550/arxiv.2412.17246",
-      "doi_url": "https://doi.org/10.48550/arxiv.2412.17246"
+      "openalex_id": "",
+      "doi": "",
+      "doi_url": ""
     },
     {
       "conference": "osdi",
@@ -1359,10 +1359,10 @@
       "authors": [
         "Yusheng Zheng",
         "Tong Yu",
-        "Yiwei Yang 0002",
+        "Yiwei Yang",
         "Yanpeng Hu",
         "Xiaozheng Lai",
-        "Dan Williams 0001",
+        "Dan Williams",
         "Andi Quinn"
       ],
       "pages": "557-574",
@@ -1386,12 +1386,12 @@
       "authors": [
         "Kan Zhu",
         "Yufei Gao",
-        "Yilong Zhao 0002",
+        "Yilong Zhao",
         "Liangyu Zhao",
         "Gefei Zuo",
         "Yile Gu",
         "Dedong Xie",
-        "Zihao Ye 0001",
+        "Zihao Ye",
         "Keisuke Kamahori",
         "Chien-Yu Lin",
         "Ziren Wang",

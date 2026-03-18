@@ -6,11 +6,11 @@
       "year": 2025,
       "title": "Enabling Silent Telemetry Data Transmission with InvisiFlow.",
       "authors": [
-        "Yinda Zhang 0002",
+        "Yinda Zhang",
         "Liangcheng Yu",
         "Gianni Antichi",
         "Ran Ben Basat",
-        "Vincent Liu 0001"
+        "Vincent Liu"
       ],
       "pages": "71-86",
       "type": "Conference and Workshop Papers",
@@ -31,10 +31,10 @@
       "year": 2025,
       "title": "Achieving Wire-Latency Storage Systems by Exploiting Hardware ACKs.",
       "authors": [
-        "Qing Wang 0031",
+        "Qing Wang",
         "Jiwu Shu",
-        "Jing Wang 0158",
-        "Yuhao Zhang 0006"
+        "Jing Wang",
+        "Yuhao Zhang"
       ],
       "pages": "1085-1100",
       "type": "Conference and Workshop Papers",
@@ -55,13 +55,13 @@
       "year": 2025,
       "title": "Mitigating Scalability Walls of RDMA-based Container Networks.",
       "authors": [
-        "Wei Liu 0148",
-        "Kun Qian 0004",
-        "Zhenhua Li 0001",
-        "Feng Qian 0001",
+        "Wei Liu",
+        "Kun Qian",
+        "Zhenhua Li",
+        "Feng Qian",
         "Tianyin Xu",
-        "Yunhao Liu 0001",
-        "Yu Guan 0005",
+        "Yunhao Liu",
+        "Yu Guan",
         "Shuhong Zhu",
         "Hongfei Xu",
         "Lanlan Xi",
@@ -88,7 +88,7 @@
       "title": "Mowgli: Passively Learned Rate Control for Real-Time Video.",
       "authors": [
         "Neil Agarwal",
-        "Rui Pan 0003",
+        "Rui Pan",
         "Francis Y. Yan",
         "Ravi Netravali"
       ],
@@ -142,7 +142,7 @@
         "Shibo Wang",
         "Jingyang Kang",
         "Anfu Zhou",
-        "Liang Liu 0001",
+        "Liang Liu",
         "Huadong Ma",
         "Zili Meng",
         "Delei Ma",
@@ -174,7 +174,7 @@
         "Justin Furuness",
         "Hemi Leibowitz",
         "Amir Herzberg",
-        "Bing Wang 0001",
+        "Bing Wang",
         "Yossi Gilad"
       ],
       "pages": "1349-1366",
@@ -197,9 +197,9 @@
       "title": "Shoal++: High Throughput DAG BFT Can Be Fast and Robust!",
       "authors": [
         "Balaji Arun",
-        "Zekun Li 0009",
+        "Zekun Li",
         "Florian Suri-Payer",
-        "Sourav Das 0001",
+        "Sourav Das",
         "Alexander Spiegelman"
       ],
       "pages": "813-826",
@@ -359,10 +359,10 @@
       "title": "ClubHeap: A High-Speed and Scalable Priority Queue for Programmable Packet Scheduling.",
       "authors": [
         "Zhikang Chen",
-        "Haoyu Song 0001",
-        "Zhiyu Zhang 0012",
-        "Yang Xu 0010",
-        "Bin Liu 0001"
+        "Haoyu Song",
+        "Zhiyu Zhang",
+        "Yang Xu",
+        "Bin Liu"
       ],
       "pages": "1421-1436",
       "type": "Conference and Workshop Papers",
@@ -384,12 +384,12 @@
       "title": "eTran: Extensible Kernel Transport with eBPF.",
       "authors": [
         "Zhongjie Chen",
-        "Qingkai Meng 0001",
+        "Qingkai Meng",
         "ChonLam Lao",
         "Yifan Liu",
         "Fengyuan Ren",
         "Minlan Yu",
-        "Yang Zhou 0008"
+        "Yang Zhou"
       ],
       "pages": "407-425",
       "type": "Conference and Workshop Papers",
@@ -413,9 +413,9 @@
         "Yangtao Deng",
         "Xiang Shi",
         "Zhuo Jiang",
-        "Xingjian Zhang 0009",
+        "Xingjian Zhang",
         "Lei Zhang",
-        "Zhang Zhang 0003",
+        "Zhang Zhang",
         "Bo Li",
         "Zuquan Song",
         "Hang Zhu",
@@ -447,7 +447,7 @@
       "authors": [
         "Ding Ding",
         "Zhanghan Wang",
-        "Jinyang Li 0001",
+        "Jinyang Li",
         "Aurojit Panda"
       ],
       "pages": "1305-1326",
@@ -470,35 +470,35 @@
       "title": "Evolution of Aegis: Fault Diagnosis for AI Model Training Service in Production.",
       "authors": [
         "Jianbo Dong",
-        "Kun Qian 0004",
+        "Kun Qian",
         "Pengcheng Zhang",
         "Zhilong Zheng",
-        "Liang Chen 0001",
+        "Liang Chen",
         "Fei Feng",
         "Yichi Xu",
         "Yikai Zhu",
         "Gang Lu",
-        "Xue Li 0024",
+        "Xue Li",
         "Zhihui Ren",
         "Zhicheng Wang",
         "Bin Luo",
         "Peng Zhang",
-        "Yang Liu 0245",
+        "Yang Liu",
         "Yanqing Chen",
-        "Yu Guan 0005",
+        "Yu Guan",
         "Weicheng Wang",
         "Chaojie Yang",
-        "Yang Zhang 0102",
+        "Yang Zhang",
         "Man Yuan",
         "Hanyu Zhao",
-        "Yong Li 0008",
+        "Yong Li",
         "Zihan Zhao",
         "Shan Li",
         "Xianlong Zeng",
         "Zhiping Yao",
         "Binzhang Fu",
         "Ennan Zhai",
-        "Wei Lin 0016",
+        "Wei Lin",
         "Chao Wang",
         "Dennis Cai"
       ],
@@ -522,14 +522,14 @@
       "title": "PRED: Performance-oriented Random Early Detection for Consistently Stable Performance in Datacenters.",
       "authors": [
         "Xinle Du",
-        "Tong Li 0014",
+        "Tong Li",
         "Guangmeng Zhou",
         "Zhuotao Liu",
         "Hanlin Huang",
         "Xiangyu Gao",
         "Mowei Wang",
-        "Kun Tan 0002",
-        "Ke Xu 0002"
+        "Kun Tan",
+        "Ke Xu"
       ],
       "pages": "1-20",
       "type": "Conference and Workshop Papers",
@@ -626,7 +626,7 @@
       "authors": [
         "Haoyu Gu",
         "Ali José Mashtizadeh",
-        "Bernard Wong 0001"
+        "Bernard Wong"
       ],
       "pages": "899-914",
       "type": "Conference and Workshop Papers",
@@ -649,9 +649,9 @@
       "authors": [
         "Fei Gui",
         "Kaihui Gao",
-        "Li Chen 0008",
-        "Dan Li 0001",
-        "Vincent Liu 0001",
+        "Li Chen",
+        "Dan Li",
+        "Vincent Liu",
         "Ran Zhang",
         "Hongbing Yang",
         "Dian Xiong"
@@ -753,10 +753,10 @@
       "authors": [
         "Dengcheng Hu",
         "Jianrong Wang",
-        "Xiulong Liu 0001",
-        "Hao Xu 0025",
+        "Xiulong Liu",
+        "Hao Xu",
         "Xujing Wu",
-        "Muhammad Shahzad 0001",
+        "Muhammad Shahzad",
         "Guyue Liu",
         "Keqiu Li"
       ],
@@ -805,7 +805,7 @@
       "title": "Building an Elastic Block Storage over EBOFs Using Shadow Views.",
       "authors": [
         "Sheng Jiang",
-        "Ming Liu 0027"
+        "Ming Liu"
       ],
       "pages": "1137-1153",
       "type": "Conference and Workshop Papers",
@@ -853,7 +853,7 @@
       "title": "Understanding and Profiling NVMe-over-TCP Using ntprof.",
       "authors": [
         "Yuyuan Kang",
-        "Ming Liu 0027"
+        "Ming Liu"
       ],
       "pages": "1117-1136",
       "type": "Conference and Workshop Papers",
@@ -923,15 +923,15 @@
       "authors": [
         "Quanxi Li",
         "Hong Huang",
-        "Ying Liu 0055",
+        "Ying Liu",
         "Yanwen Xia",
-        "Jie Zhang 0048",
+        "Jie Zhang",
         "Mosong Zhou",
-        "Xiaobing Feng 0002",
+        "Xiaobing Feng",
         "Huimin Cui",
         "Quan Chen",
         "Yizhou Shan",
-        "Chenxi Wang 0005"
+        "Chenxi Wang"
       ],
       "pages": "167-187",
       "type": "Conference and Workshop Papers",
@@ -952,14 +952,14 @@
       "year": 2025,
       "title": "Dissecting and Streamlining the Interactive Loop of Mobile Cloud Gaming.",
       "authors": [
-        "Yang Li 0092",
+        "Yang Li",
         "Jiaxing Qiu",
-        "Hongyi Wang 0009",
-        "Zhenhua Li 0001",
-        "Feng Qian 0001",
-        "Jing Yang 0052",
-        "Hao Lin 0005",
-        "Yunhao Liu 0001",
+        "Hongyi Wang",
+        "Zhenhua Li",
+        "Feng Qian",
+        "Jing Yang",
+        "Hao Lin",
+        "Yunhao Liu",
         "Bo Xiao",
         "Xiaokang Qin",
         "Tianyin Xu"
@@ -984,7 +984,7 @@
       "title": "NDD: A Decision Diagram for Network Verification.",
       "authors": [
         "Zechun Li",
-        "Peng Zhang 0011",
+        "Peng Zhang",
         "Yichi Zhang",
         "Hongkun Yang"
       ],
@@ -1012,7 +1012,7 @@
         "Yunming Xiao",
         "Yanqi Gu",
         "Aleksandar Kuzmanovic",
-        "Xiaowei Yang 0001"
+        "Xiaowei Yang"
       ],
       "pages": "1399-1419",
       "type": "Conference and Workshop Papers",
@@ -1037,7 +1037,7 @@
         "Zhiyuan Guo",
         "Mihir Shah",
         "Tao Ji",
-        "Yiying Zhang 0005",
+        "Yiying Zhang",
         "Daehyeok Kim",
         "Aditya Akella"
       ],
@@ -1090,8 +1090,8 @@
       "title": "CEGS: Configuration Example Generalizing Synthesizer.",
       "authors": [
         "Jianmin Liu",
-        "Li Chen 0008",
-        "Dan Li 0001",
+        "Li Chen",
+        "Dan Li",
         "Yukai Miao"
       ],
       "pages": "1327-1347",
@@ -1118,11 +1118,11 @@
         "Xuan Zhang",
         "Weizhen Dang",
         "Huihui Liu",
-        "Xiang Li 0223",
+        "Xiang Li",
         "Zekun He",
-        "Jilong Wang 0001",
+        "Jilong Wang",
         "Aleksandar Kuzmanovic",
-        "Ang Chen 0001",
+        "Ang Chen",
         "Congcong Miao"
       ],
       "pages": "87-106",
@@ -1146,14 +1146,14 @@
       "authors": [
         "Kexin Liu",
         "Zhaochen Zhang",
-        "Chang Liu 0001",
+        "Chang Liu",
         "Yizhi Wang",
         "Vamsi Addanki",
-        "Stefan Schmid 0001",
+        "Stefan Schmid",
         "Qingyue Wang",
         "Wei Chen",
-        "Xiaoliang Wang 0001",
-        "Jiaqi Zheng 0001",
+        "Xiaoliang Wang",
+        "Jiaqi Zheng",
         "Wenhao Sun",
         "Tao Wu",
         "Ke Meng",
@@ -1162,7 +1162,7 @@
         "Bingyang Liu",
         "Wanchun Dou",
         "Guihai Chen",
-        "Chen Tian 0001"
+        "Chen Tian"
       ],
       "pages": "379-405",
       "type": "Conference and Workshop Papers",
@@ -1185,9 +1185,9 @@
       "authors": [
         "Ruiming Lu",
         "Yunchi Lu",
-        "Yuxuan Jiang 0016",
+        "Yuxuan Jiang",
         "Guangtao Xue",
-        "Peng Huang 0005"
+        "Peng Huang"
       ],
       "pages": "359-378",
       "type": "Conference and Workshop Papers",
@@ -1290,7 +1290,7 @@
         "Zedong Ni",
         "Yinbo Xu",
         "Hui Zou",
-        "Yanbiao Li 0001",
+        "Yanbiao Li",
         "Guang Cheng",
         "Gaogang Xie"
       ],
@@ -1461,7 +1461,7 @@
       "title": "CellReplay: Towards accurate record-and-replay for cellular networks.",
       "authors": [
         "William Sentosa",
-        "Balakrishnan Chandrasekaran 0002",
+        "Balakrishnan Chandrasekaran",
         "Philip Brighten Godfrey",
         "Haitham Hassanieh"
       ],
@@ -1487,7 +1487,7 @@
         "Erfan Sharafzadeh",
         "Raymond Matson",
         "Jean Tourrilhes",
-        "Puneet Sharma 0001",
+        "Puneet Sharma",
         "Soudeh Ghorbani"
       ],
       "pages": "1437-1465",
@@ -1552,7 +1552,7 @@
         "Junda Zhang",
         "Zuquan Song",
         "Xin Liu",
-        "Chuan Wu 0001"
+        "Chuan Wu"
       ],
       "pages": "559-578",
       "type": "Conference and Workshop Papers",
@@ -1599,11 +1599,11 @@
       "title": "Resolving Packets from Counters: Enabling Multi-scale Network Traffic Super Resolution via Composable Large Traffic Model.",
       "authors": [
         "Xizheng Wang",
-        "Libin Liu 0001",
-        "Li Chen 0008",
-        "Dan Li 0001",
+        "Libin Liu",
+        "Li Chen",
+        "Dan Li",
         "Yukai Miao",
-        "Yu Bai 0021"
+        "Yu Bai"
       ],
       "pages": "1541-1561",
       "type": "Conference and Workshop Papers",
@@ -1628,15 +1628,15 @@
         "Qingxu Li",
         "Yichi Xu",
         "Gang Lu",
-        "Dan Li 0001",
-        "Li Chen 0008",
+        "Dan Li",
+        "Li Chen",
         "Heyang Zhou",
         "Linkang Zheng",
         "Sen Zhang",
         "Yikai Zhu",
-        "Yang Liu 0245",
+        "Yang Liu",
         "Pengcheng Zhang",
-        "Kun Qian 0004",
+        "Kun Qian",
         "Kunling He",
         "Jiaqi Gao",
         "Ennan Zhai",
@@ -1662,13 +1662,13 @@
       "year": 2025,
       "title": "Region-based Content Enhancement for Efficient Video Analytics at the Edge.",
       "authors": [
-        "Weijun Wang 0001",
+        "Weijun Wang",
         "Liang Mi",
         "Shaowei Cen",
-        "Haipeng Dai 0001",
-        "Yuanchun Li 0003",
-        "Xiaoming Fu 0001",
-        "Yunxin Liu 0001"
+        "Haipeng Dai",
+        "Yuanchun Li",
+        "Xiaoming Fu",
+        "Yunxin Liu"
       ],
       "pages": "613-633",
       "type": "Conference and Workshop Papers",
@@ -1691,10 +1691,10 @@
       "authors": [
         "Zixuan Wang",
         "Xingda Wei",
-        "Jinyu Gu 0001",
+        "Jinyu Gu",
         "Hongrui Xie",
-        "Rong Chen 0001",
-        "Haibo Chen 0001"
+        "Rong Chen",
+        "Haibo Chen"
       ],
       "pages": "1101-1115",
       "type": "Conference and Workshop Papers",
@@ -1721,8 +1721,8 @@
         "Shay Vargaftik",
         "Yonatan Piasetzky",
         "Matty Kadosh",
-        "Lalith Suresh 0001",
-        "Muhammad Shahbaz 0001"
+        "Lalith Suresh",
+        "Muhammad Shahbaz"
       ],
       "pages": "685-703",
       "type": "Conference and Workshop Papers",
@@ -1800,7 +1800,7 @@
         "Xincheng Xie",
         "Wentao Hou",
         "Zerui Guo",
-        "Ming Liu 0027"
+        "Ming Liu"
       ],
       "pages": "1221-1242",
       "type": "Conference and Workshop Papers",
@@ -1879,7 +1879,7 @@
         "Qiongwen Xu",
         "Sebastiano Miano",
         "Xiangyu Gao",
-        "Tao Wang 0088",
+        "Tao Wang",
         "Adithya Murugadass",
         "Songyuan Zhang",
         "Anirudh Sivaraman",
@@ -1908,8 +1908,8 @@
         "Kaiqiang Xu",
         "Decang Sun",
         "Han Tian",
-        "Junxue Zhang 0001",
-        "Kai Chen 0005"
+        "Junxue Zhang",
+        "Kai Chen"
       ],
       "pages": "999-1014",
       "type": "Conference and Workshop Papers",
@@ -1932,9 +1932,9 @@
       "authors": [
         "Tianjing Xu",
         "Yongqi Zhong",
-        "Yiming Zhang 0003",
+        "Yiming Zhang",
         "Ruofan Xiong",
-        "Jingjing Zhang 0002",
+        "Jingjing Zhang",
         "Guangtao Xue",
         "Shengyun Liu"
       ],
@@ -1960,10 +1960,10 @@
         "Lingyun Yang",
         "Yongchen Wang",
         "Yinghao Yu",
-        "Qizhen Weng 0001",
+        "Qizhen Weng",
         "Jianbo Dong",
         "Kan Liu",
-        "Chi Zhang 0005",
+        "Chi Zhang",
         "Yanyi Zi",
         "Hao Li",
         "Zechao Zhang",
@@ -1976,9 +1976,9 @@
         "Guodong Yang",
         "Binzhang Fu",
         "Tao Lan",
-        "Liping Zhang 0013",
+        "Liping Zhang",
         "Lin Qu",
-        "Wei Wang 0030"
+        "Wei Wang"
       ],
       "pages": "847-863",
       "type": "Conference and Workshop Papers",
@@ -2004,11 +2004,11 @@
         "Congcong Miao",
         "Xuya Jia",
         "Zuning Liang",
-        "Yuedong Xu 0001",
+        "Yuedong Xu",
         "Chunzhi He",
         "Hao Lu",
         "Mingzhuo Chen",
-        "Xiang Li 0010",
+        "Xiang Li",
         "Zekun He",
         "Yachen Wang",
         "Xianneng Zou",
@@ -2061,12 +2061,12 @@
       "year": 2025,
       "title": "Learning Production-Optimized Congestion Control Selection for Alibaba Cloud CDN.",
       "authors": [
-        "Xuan Zeng 0002",
+        "Xuan Zeng",
         "Haoran Xu",
         "Chen Chen",
         "Xumiao Zhang",
-        "Xiaoxi Zhang 0001",
-        "Xu Chen 0004",
+        "Xiaoxi Zhang",
+        "Xu Chen",
         "Guihai Chen",
         "Yubing Qiu",
         "Yiping Zhang",
@@ -2094,7 +2094,7 @@
       "authors": [
         "Delong Zhang",
         "Chong Ye",
-        "Fei He 0001"
+        "Fei He"
       ],
       "pages": "219-235",
       "type": "Conference and Workshop Papers",
@@ -2117,7 +2117,7 @@
       "authors": [
         "Chenxingyu Zhao",
         "Jaehong Min",
-        "Ming Liu 0027",
+        "Ming Liu",
         "Arvind Krishnamurthy"
       ],
       "pages": "427-449",
@@ -2170,7 +2170,7 @@
         "Naiqian Zheng",
         "Tianshuo Qiao",
         "Xuanzhe Liu",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "301-316",
       "type": "Conference and Workshop Papers",
@@ -2194,8 +2194,8 @@
         "Hao Zheng",
         "Xin Yan",
         "Wenbo Li",
-        "Jiaqi Zheng 0001",
-        "Xiaoliang Wang 0001",
+        "Jiaqi Zheng",
+        "Xiaoliang Wang",
         "Qingqing Zhao",
         "Luyou He",
         "Xiaofei Lai",
@@ -2203,7 +2203,7 @@
         "Fuguang Huang",
         "Wanchun Dou",
         "Guihai Chen",
-        "Chen Tian 0001"
+        "Chen Tian"
       ],
       "pages": "1487-1505",
       "type": "Conference and Workshop Papers",
@@ -2233,8 +2233,8 @@
         "Hanpeng Hu",
         "Lei Xia",
         "Ranchen Ming",
-        "Yibo Zhu 0001",
-        "Xin Jin 0008"
+        "Yibo Zhu",
+        "Xin Jin"
       ],
       "pages": "489-503",
       "type": "Conference and Workshop Papers",
@@ -2260,7 +2260,7 @@
         "Banruo Liu",
         "Yongtong Wu",
         "Nikola Bojanic",
-        "Jingrong Chen 0002",
+        "Jingrong Chen",
         "Gilbert Louis Bernstein",
         "Arvind Krishnamurthy",
         "Sam Kumar",

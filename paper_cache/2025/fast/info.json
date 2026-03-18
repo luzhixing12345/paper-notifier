@@ -6,8 +6,8 @@
       "year": 2025,
       "title": "ScaleLFS: A Log-Structured File System with Scalable Garbage Collection for Commodity SSDs.",
       "authors": [
-        "Jinyong Ha 0001",
-        "Sangjin Lee 0003",
+        "Jinyong Ha",
+        "Sangjin Lee",
         "Hyeonsang Eom",
         "Yongseok Son"
       ],
@@ -30,10 +30,10 @@
       "year": 2025,
       "title": "LeapGNN: Accelerating Distributed GNN Training Leveraging Feature-Centric Model Migration.",
       "authors": [
-        "Weijian Chen 0002",
+        "Weijian Chen",
         "Shuibing He",
         "Haoyang Qu",
-        "Xuechen Zhang 0001"
+        "Xuechen Zhang"
       ],
       "pages": "255-270",
       "type": "Conference and Workshop Papers",
@@ -54,7 +54,7 @@
       "year": 2025,
       "title": "IMPRESS: An Importance-Informed Multi-Tier Prefix KV Storage System for Large Language Model Inference.",
       "authors": [
-        "Weijian Chen 0002",
+        "Weijian Chen",
         "Shuibing He",
         "Haoyang Qu",
         "Ruidong Zhang",
@@ -62,7 +62,7 @@
         "Ping Chen",
         "Yi Zheng",
         "Baoxing Huai",
-        "Gang Chen 0001"
+        "Gang Chen"
       ],
       "pages": "187-201",
       "type": "Conference and Workshop Papers",
@@ -83,7 +83,7 @@
       "year": 2025,
       "title": "On Scalable Integrity Checking for Secure Cloud Disks.",
       "authors": [
-        "Quinn Burke 0002",
+        "Quinn Burke",
         "Ryan Sheatsley",
         "Rachel King",
         "Owen Hines",
@@ -109,14 +109,14 @@
       "year": 2025,
       "title": "MedFS: Pursuing Low Update Overhead via Metadata-Enabled Delta Compression for Log-structured File System on Mobile Device.",
       "authors": [
-        "Chao Wu 0006",
-        "Cheng Ji 0002",
+        "Chao Wu",
+        "Cheng Ji",
         "Li-Pin Chang",
         "Zongwei Zhu",
         "Congming Gao",
         "Weichao Guo",
         "Chao Yu",
-        "Yanzhi Wang 0001"
+        "Yanzhi Wang"
       ],
       "pages": "461-478",
       "type": "Conference and Workshop Papers",
@@ -161,7 +161,7 @@
       "title": "GPHash: An Efficient Hash Index for GPU with Byte-Granularity Persistent Memory.",
       "authors": [
         "Menglei Chen",
-        "Yu Hua 0001",
+        "Yu Hua",
         "Zhangyu Chen",
         "Ming Zhang",
         "Gen Dong"
@@ -188,8 +188,8 @@
         "Lixiao Cui",
         "Kedi Yang",
         "Yusen Li",
-        "Gang Wang 0001",
-        "Xiaoguang Liu 0001"
+        "Gang Wang",
+        "Xiaoguang Liu"
       ],
       "pages": "287-303",
       "type": "Conference and Workshop Papers",
@@ -214,7 +214,7 @@
         "Hao Feng",
         "Haikun Liu",
         "Xiaofei Liao",
-        "Hai Jin 0001",
+        "Hai Jin",
         "Bangyu Li"
       ],
       "pages": "321-335",
@@ -236,12 +236,12 @@
       "year": 2025,
       "title": "Revisiting Network Coding for Warm Blob Storage.",
       "authors": [
-        "Chuang Gan 0002",
+        "Chuang Gan",
         "Yuchong Hu",
         "Leyan Zhao",
         "Xin Zhao",
         "Pengyu Gong",
-        "Dan Feng 0001"
+        "Dan Feng"
       ],
       "pages": "139-154",
       "type": "Conference and Workshop Papers",
@@ -263,7 +263,7 @@
       "title": "ShiftLock: Mitigate One-sided RDMA Lock Contention via Handover.",
       "authors": [
         "Jian Gao",
-        "Qing Wang 0031",
+        "Qing Wang",
         "Jiwu Shu"
       ],
       "pages": "355-372",
@@ -286,15 +286,15 @@
       "title": "Maat: Analyzing and Optimizing Overcharge on Blockchain Storage.",
       "authors": [
         "Zheyuan He",
-        "Zihao Li 0001",
+        "Zihao Li",
         "Ao Qiao",
-        "Jingwei Li 0001",
+        "Jingwei Li",
         "Feng Luo",
         "Sen Yang",
         "Gelei Deng",
         "Shuwei Song",
-        "Xiaosong Zhang 0001",
-        "Ting Chen 0002",
+        "Xiaosong Zhang",
+        "Ting Chen",
         "Xiapu Luo"
       ],
       "pages": "123-137",
@@ -319,8 +319,8 @@
         "Kecheng Huang",
         "Zhaoyan Shen",
         "Zili Shao",
-        "Feng Chen 0005",
-        "Tong Zhang 0002"
+        "Feng Chen",
+        "Tong Zhang"
       ],
       "pages": "305-320",
       "type": "Conference and Workshop Papers",
@@ -438,9 +438,9 @@
       "year": 2025,
       "title": "Archer: Adaptive Memory Compression with Page-Association-Rule Awareness for High-Speed Response of Mobile Devices.",
       "authors": [
-        "Changlong Li 0006",
+        "Changlong Li",
         "Zongwei Zhu",
-        "Chao Wang 0003",
+        "Chao Wang",
         "Fangming Liu",
         "Fei Xu",
         "Edwin H.-M. Sha",
@@ -465,7 +465,7 @@
       "year": 2025,
       "title": "Fast, Transparent Filesystem Microkernel Recovery with Ananke.",
       "authors": [
-        "Jing Liu 0074",
+        "Jing Liu",
         "Yifan Dai",
         "Andrea C. Arpaci-Dusseau",
         "Remzi H. Arpaci-Dusseau"
@@ -490,14 +490,14 @@
       "title": "FlacIO: Flat and Collective I/O for Container Image Service.",
       "authors": [
         "Yubo Liu",
-        "Hongbo Li 0007",
+        "Hongbo Li",
         "Mingrui Liu",
         "Rui Jing",
         "Jian Guo",
         "Bo Zhang",
         "Hanjun Guo",
-        "Yuxin Ren 0001",
-        "Ning Jia 0004"
+        "Yuxin Ren",
+        "Ning Jia"
       ],
       "pages": "87-101",
       "type": "Conference and Workshop Papers",
@@ -573,7 +573,7 @@
         "Jialei Cui",
         "Feng Ren",
         "Mingxing Zhang",
-        "Yongwei Wu 0001",
+        "Yongwei Wu",
         "Weimin Zheng",
         "Xinran Xu"
       ],
@@ -596,15 +596,15 @@
       "year": 2025,
       "title": "GeminiFS: A Companion File System for GPUs.",
       "authors": [
-        "Shi Qiu 0012",
+        "Shi Qiu",
         "Weinan Liu",
         "Yifan Hu",
         "Jianqin Yan",
         "Zhirong Shen",
         "Xin Yao",
         "Renhai Chen",
-        "Gong Zhang 0001",
-        "Yiming Zhang 0003"
+        "Gong Zhang",
+        "Yiming Zhang"
       ],
       "pages": "221-236",
       "type": "Conference and Workshop Papers",
@@ -687,10 +687,10 @@
         "Shihai Xiao",
         "Zhuohui Duan",
         "Xiaofei Liao",
-        "Hai Jin 0001",
+        "Hai Jin",
         "Xuecang Zhang",
         "Junhua Zhu",
-        "Yu Zhang 0027"
+        "Yu Zhang"
       ],
       "pages": "171-185",
       "type": "Conference and Workshop Papers",
@@ -717,10 +717,10 @@
         "Qingsong Chen",
         "Zhihao Zhang",
         "Shiyu Wang",
-        "Weijie Liu 0004",
+        "Weijie Liu",
         "Erci Xu",
         "Shoumeng Yan",
-        "Yiming Zhang 0003"
+        "Yiming Zhang"
       ],
       "pages": "449-459",
       "type": "Conference and Workshop Papers",
@@ -846,11 +846,11 @@
       "authors": [
         "Yekang Zhan",
         "Haichuan Hu",
-        "Xiangrui Yang 0001",
-        "Qiang Cao 0001",
-        "Hong Jiang 0001",
+        "Xiangrui Yang",
+        "Qiang Cao",
+        "Hong Jiang",
         "Shaohua Wang",
-        "Jie Yao 0001"
+        "Jie Yao"
       ],
       "pages": "69-86",
       "type": "Conference and Workshop Papers",
@@ -872,12 +872,12 @@
       "title": "Liquid-State Drive: A Case for DNA Block Device for Enormous Data.",
       "authors": [
         "Jiahao Zhou",
-        "Mingkai Dong 0002",
-        "Fei Wang 0130",
+        "Mingkai Dong",
+        "Fei Wang",
         "Jingyao Zeng",
-        "Lei Zhao 0011",
+        "Lei Zhao",
         "Chunhai Fan",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "557-571",
       "type": "Conference and Workshop Papers",

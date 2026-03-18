@@ -135,6 +135,11 @@ select {
   gap: 14px;
 }
 
+.filters-body {
+  display: grid;
+  gap: 14px;
+}
+
 .field {
   display: flex;
   flex-direction: column;
@@ -422,13 +427,15 @@ select:focus {
 }
 
 .links a {
-  color: var(--foreground);
-  text-decoration: none;
+  color: #4da3ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
   font-size: 14px;
 }
 
 .links a:hover {
-  text-decoration: underline;
+  color: #1d7fe6;
 }
 
 .empty {

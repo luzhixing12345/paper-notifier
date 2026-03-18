@@ -6,14 +6,14 @@
       "year": 2023,
       "title": "Welder: Scheduling Deep Learning Memory Access via Tile-graph.",
       "authors": [
-        "Yining Shi 0001",
-        "Zhi Yang 0001",
+        "Yining Shi",
+        "Zhi Yang",
         "Jilong Xue",
         "Lingxiao Ma",
         "Yuqing Xia",
         "Ziming Miao",
-        "Yuxiao Guo 0001",
-        "Fan Yang 0024",
+        "Yuxiao Guo",
+        "Fan Yang",
         "Lidong Zhou"
       ],
       "pages": "701-718",
@@ -35,11 +35,11 @@
       "year": 2023,
       "title": "Userspace Bypass: Accelerating Syscall-intensive Applications.",
       "authors": [
-        "Zhe Zhou 0001",
+        "Zhe Zhou",
         "Yanxiang Bi",
         "Junpeng Wan",
         "Yangfan Zhou",
-        "Zhou Li 0001"
+        "Zhou Li"
       ],
       "pages": "33-49",
       "type": "Conference and Workshop Papers",
@@ -60,9 +60,9 @@
       "year": 2023,
       "title": "Replicating Persistent Memory Key-Value Stores with Efficient RDMA Abstraction.",
       "authors": [
-        "Qing Wang 0031",
+        "Qing Wang",
         "Youyou Lu",
-        "Jing Wang 0158",
+        "Jing Wang",
         "Jiwu Shu"
       ],
       "pages": "441-459",
@@ -87,7 +87,7 @@
         "Adil Ahmad",
         "Alex Schultz",
         "Byoungyoung Lee",
-        "Pedro Fonseca 0001"
+        "Pedro Fonseca"
       ],
       "pages": "173-191",
       "type": "Conference and Workshop Papers",
@@ -192,7 +192,7 @@
         "Asim Biswal",
         "Wenshuo Guo",
         "Benjamin Hindman",
-        "Joseph Gonzalez 0001",
+        "Joseph Gonzalez",
         "Michael I. Jordan",
         "Ion Stoica"
       ],
@@ -216,7 +216,7 @@
       "title": "Verifying vMVCC, a high-performance transaction library using multi-version concurrency control.",
       "authors": [
         "Yun-Sheng Chang",
-        "Ralf Jung 0002",
+        "Ralf Jung",
         "Upamanyu Sharma",
         "Joseph Tassarotti",
         "M. Frans Kaashoek",
@@ -244,10 +244,10 @@
         "Jiahao Chen",
         "Dingji Li",
         "Zeyu Mi",
-        "Yuxuan Liu 0019",
+        "Yuxuan Liu",
         "Binyu Zang",
         "Haibing Guan",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "209-226",
       "type": "Conference and Workshop Papers",
@@ -299,15 +299,15 @@
         "Weihao Cui",
         "Zhenhua Han",
         "Lingji Ouyang",
-        "Yichuan Wang 0002",
+        "Yichuan Wang",
         "Ningxin Zheng",
         "Lingxiao Ma",
-        "Yuqing Yang 0001",
-        "Fan Yang 0024",
+        "Yuqing Yang",
+        "Fan Yang",
         "Jilong Xue",
         "Lili Qiu",
         "Lidong Zhou",
-        "Quan Chen 0002",
+        "Quan Chen",
         "Haisheng Tan",
         "Minyi Guo"
       ],
@@ -357,8 +357,8 @@
         "Haoran Ding",
         "Zhaoguo Wang",
         "Zhuohao Shen",
-        "Rong Chen 0001",
-        "Haibo Chen 0001"
+        "Rong Chen",
+        "Haibo Chen"
       ],
       "pages": "887-910",
       "type": "Conference and Workshop Papers",
@@ -494,7 +494,7 @@
       "year": 2023,
       "title": "Ship your Critical Section, Not Your Data: Enabling Transparent Delegation with TCLOCKS.",
       "authors": [
-        "Vishal Gupta 0006",
+        "Vishal Gupta",
         "Kumar Kartikeya Dwivedi",
         "Yugesh Kothari",
         "Yueyang Pan",
@@ -521,10 +521,10 @@
       "title": "Sharding the State Machine: Automated Modular Reasoning for Complex Concurrent Systems.",
       "authors": [
         "Travis Hance",
-        "Yi Zhou 0025",
-        "Andrea Lattuada 0001",
+        "Yi Zhou",
+        "Andrea Lattuada",
         "Reto Achermann",
-        "Alex Conway 0001",
+        "Alex Conway",
         "Ryan Stutsman",
         "Gerd Zellweger",
         "Chris Hawblitzel",
@@ -550,13 +550,13 @@
       "year": 2023,
       "title": "Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters.",
       "authors": [
-        "Qinghao Hu 0004",
-        "Zhisheng Ye 0002",
-        "Meng Zhang 0045",
+        "Qinghao Hu",
+        "Zhisheng Ye",
+        "Meng Zhang",
         "Qiaoling Chen",
-        "Peng Sun 0006",
-        "Yonggang Wen 0001",
-        "Tianwei Zhang 0004"
+        "Peng Sun",
+        "Yonggang Wen",
+        "Tianwei Zhang"
       ],
       "pages": "757-777",
       "type": "Conference and Workshop Papers",
@@ -580,7 +580,7 @@
         "Zu-Ming Jiang",
         "Si Liu",
         "Manuel Rigger",
-        "Zhendong Su 0001"
+        "Zhendong Su"
       ],
       "pages": "397-417",
       "type": "Conference and Workshop Papers",
@@ -601,12 +601,12 @@
       "year": 2023,
       "title": "AdaEmbed: Adaptive Embedding for Large-Scale Recommendation Models.",
       "authors": [
-        "Fan Lai 0001",
-        "Wei Zhang 0044",
+        "Fan Lai",
+        "Wei Zhang",
         "Rui Liu",
         "William Tsai",
         "Xiaohan Wei",
-        "Yuxi Hu 0001",
+        "Yuxi Hu",
         "Sabin Devkota",
         "Jianyu Huang",
         "Jongsoo Park",
@@ -661,9 +661,9 @@
       "authors": [
         "Chenxing Li",
         "Sidi Mohamed Beillahi",
-        "Guang Yang 0020",
-        "Ming Wu 0007",
-        "Wei Xu 0005",
+        "Guang Yang",
+        "Ming Wu",
+        "Wei Xu",
         "Fan Long"
       ],
       "pages": "135-153",
@@ -685,29 +685,29 @@
       "year": 2023,
       "title": "Flor: An Open High Performance RDMA Framework Over Heterogeneous RNICs.",
       "authors": [
-        "Qiang Li 0045",
+        "Qiang Li",
         "Yixiao Gao",
-        "Xiaoliang Wang 0001",
+        "Xiaoliang Wang",
         "Haonan Qiu",
         "Yanfang Le",
         "Derui Liu",
         "Qiao Xiang",
         "Fei Feng",
         "Peng Zhang",
-        "Bo Li 0061",
+        "Bo Li",
         "Jianbo Dong",
         "Lingbo Tang",
         "Hongqiang Harry Liu",
         "Shaozong Liu",
         "Weijie Li",
-        "Rui Miao 0001",
+        "Rui Miao",
         "Yaohui Wu",
         "Zhiwu Wu",
         "Chao Han",
         "Lei Yan",
-        "Zheng Cao 0003",
+        "Zheng Cao",
         "Zhongjie Wu",
-        "Chen Tian 0001",
+        "Chen Tian",
         "Guihai Chen",
         "Dennis Cai",
         "Jinbo Wu",
@@ -762,13 +762,13 @@
         "Mingyu Li",
         "Xuyang Zhao",
         "Le Chen",
-        "Cheng Tan 0005",
+        "Cheng Tan",
         "Huorong Li",
-        "Sheng Wang 0011",
+        "Sheng Wang",
         "Zeyu Mi",
         "Yubin Xia",
-        "Feifei Li 0001",
-        "Haibo Chen 0001"
+        "Feifei Li",
+        "Haibo Chen"
       ],
       "pages": "117-133",
       "type": "Conference and Workshop Papers",
@@ -789,15 +789,15 @@
       "year": 2023,
       "title": "AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving.",
       "authors": [
-        "Zhuohan Li 0001",
+        "Zhuohan Li",
         "Lianmin Zheng",
         "Yinmin Zhong",
-        "Vincent Liu 0001",
-        "Ying Sheng 0007",
-        "Xin Jin 0008",
+        "Vincent Liu",
+        "Ying Sheng",
+        "Xin Jin",
         "Yanping Huang",
         "Zhifeng Chen",
-        "Hao Zhang 0025",
+        "Hao Zhang",
         "Joseph E. Gonzalez",
         "Ion Stoica"
       ],
@@ -828,7 +828,7 @@
         "Ching-Shen Lin",
         "Ching-Chun (Jim) Huang",
         "Kam-Yiu Lam",
-        "Yuan-Hao Chang 0001"
+        "Yuan-Hao Chang"
       ],
       "pages": "17-31",
       "type": "Conference and Workshop Papers",
@@ -850,8 +850,8 @@
       "title": "NCC: Natural Concurrency Control for Strictly Serializable Datastores by Avoiding the Timestamp-Inversion Pitfall.",
       "authors": [
         "Haonan Lu",
-        "Shuai Mu 0001",
-        "Siddhartha Sen 0001",
+        "Shuai Mu",
+        "Siddhartha Sen",
         "Wyatt Lloyd"
       ],
       "pages": "305-323",
@@ -877,9 +877,9 @@
         "Pengfei Zuo",
         "Jiacheng Shen",
         "Jiazhen Gu",
-        "Xin Wang 0002",
+        "Xin Wang",
         "Michael R. Lyu",
-        "Yangfan Zhou 0002"
+        "Yangfan Zhou"
       ],
       "pages": "553-571",
       "type": "Conference and Workshop Papers",
@@ -941,10 +941,10 @@
         "Hongren Zheng",
         "Yiyang Zhao",
         "Zibin Liu",
-        "Mingyu Gao 0001",
+        "Mingyu Gao",
         "Cong Wang",
         "Huimin Cui",
-        "Xiaobing Feng 0002",
+        "Xiaobing Feng",
         "Christos Kozyrakis"
       ],
       "pages": "155-172",
@@ -968,7 +968,7 @@
       "authors": [
         "Syed Akbar Mehdi",
         "Deukyeon Hwang",
-        "Simon Peter 0001",
+        "Simon Peter",
         "Lorenzo Alvisi"
       ],
       "pages": "361-376",
@@ -1030,7 +1030,7 @@
       "authors": [
         "Jaehong Min",
         "Chenxingyu Zhao",
-        "Ming Liu 0027",
+        "Ming Liu",
         "Arvind Krishnamurthy"
       ],
       "pages": "461-477",
@@ -1053,7 +1053,7 @@
       "title": "ShRing: Networking with Shared Receive Rings.",
       "authors": [
         "Boris Pismenny",
-        "Adam Morrison 0001",
+        "Adam Morrison",
         "Dan Tsafrir"
       ],
       "pages": "949-968",
@@ -1081,7 +1081,7 @@
         "David Lion",
         "Adrian Chiu",
         "Tianyin Xu",
-        "Ding Yuan 0004"
+        "Ding Yuan"
       ],
       "pages": "65-80",
       "type": "Conference and Workshop Papers",
@@ -1167,7 +1167,7 @@
         "Max Kontorovich",
         "Josh Kirstein",
         "Margot Leibold",
-        "Dimitrios Skarlatos 0002",
+        "Dimitrios Skarlatos",
         "Hitesh Khandelwal",
         "Chunqiang Tang"
       ],
@@ -1218,7 +1218,7 @@
       "authors": [
         "Midhul Vuppalapati",
         "Giannis Fikioris",
-        "Rachit Agarwal 0001",
+        "Rachit Agarwal",
         "Asaf Cidon",
         "Anurag Khandelwal",
         "Éva Tardos"
@@ -1244,11 +1244,11 @@
       "authors": [
         "Yuke Wang",
         "Boyuan Feng",
-        "Zheng Wang 0075",
+        "Zheng Wang",
         "Tong Geng",
         "Kevin J. Barker",
-        "Ang Li 0006",
-        "Yufei Ding 0001"
+        "Ang Li",
+        "Yufei Ding"
       ],
       "pages": "779-795",
       "type": "Conference and Workshop Papers",
@@ -1303,7 +1303,7 @@
         "Jitang Lei",
         "Viktor Vafeiadis",
         "Hermann Härtig",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "833-850",
       "type": "Conference and Workshop Papers",
@@ -1325,10 +1325,10 @@
       "title": "Characterizing Off-path SmartNIC for Accelerating Distributed Systems.",
       "authors": [
         "Xingda Wei",
-        "Rongxin Cheng 0001",
+        "Rongxin Cheng",
         "Yuhan Yang",
-        "Rong Chen 0001",
-        "Haibo Chen 0001"
+        "Rong Chen",
+        "Haibo Chen"
       ],
       "pages": "987-1004",
       "type": "Conference and Workshop Papers",
@@ -1352,10 +1352,10 @@
         "Xingda Wei",
         "Fangming Lu",
         "Tianxia Wang",
-        "Jinyu Gu 0001",
+        "Jinyu Gu",
         "Yuhan Yang",
-        "Rong Chen 0001",
-        "Haibo Chen 0001"
+        "Rong Chen",
+        "Haibo Chen"
       ],
       "pages": "497-517",
       "type": "Conference and Workshop Papers",
@@ -1376,15 +1376,15 @@
       "year": 2023,
       "title": "Cocktailer: Analyzing and Optimizing Dynamic Control Flow in Deep Learning.",
       "authors": [
-        "Chen Zhang 0001",
+        "Chen Zhang",
         "Lingxiao Ma",
         "Jilong Xue",
-        "Yining Shi 0001",
+        "Yining Shi",
         "Ziming Miao",
-        "Fan Yang 0024",
+        "Fan Yang",
         "Jidong Zhai",
-        "Zhi Yang 0001",
-        "Mao Yang 0004"
+        "Zhi Yang",
+        "Mao Yang"
       ],
       "pages": "681-699",
       "type": "Conference and Workshop Papers",
@@ -1407,15 +1407,15 @@
       "authors": [
         "Qianxi Zhang",
         "Shuotao Xu",
-        "Qi Chen 0009",
+        "Qi Chen",
         "Guoxin Sui",
-        "Jiadong Xie 0002",
+        "Jiadong Xie",
         "Zhizhen Cai",
         "Yaoqi Chen",
         "Yinxuan He",
-        "Yuqing Yang 0001",
-        "Fan Yang 0024",
-        "Mao Yang 0004",
+        "Yuqing Yang",
+        "Fan Yang",
+        "Mao Yang",
         "Lidong Zhou"
       ],
       "pages": "377-395",
@@ -1437,7 +1437,7 @@
       "year": 2023,
       "title": "Effectively Scheduling Computational Graphs of Deep Neural Networks toward Their Domain-Specific Accelerators.",
       "authors": [
-        "Jie Zhao 0002",
+        "Jie Zhao",
         "Siyuan Feng",
         "Xiaoqiang Dan",
         "Fei Liu",
@@ -1465,8 +1465,8 @@
       "year": 2023,
       "title": "EINNET: Optimizing Tensor Programs with Derivation-Based Transformations.",
       "authors": [
-        "Liyan Zheng 0001",
-        "Haojie Wang 0004",
+        "Liyan Zheng",
+        "Haojie Wang",
         "Jidong Zhai",
         "Muyan Hu",
         "Zixuan Ma",

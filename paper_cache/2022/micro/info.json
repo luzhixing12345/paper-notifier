@@ -6,8 +6,8 @@
       "year": 2022,
       "title": "Pushing Point Cloud Compression to the Edge.",
       "authors": [
-        "Ziyu Ying 0001",
-        "Shulin Zhao 0001",
+        "Ziyu Ying",
+        "Shulin Zhao",
         "Sandeepa Bhuyan",
         "Cyan Subhra Mishra",
         "Mahmut T. Kandemir",
@@ -32,7 +32,7 @@
       "year": 2022,
       "title": "Flash-Cosmos: In-Flash Bulk Bitwise Operations Using Inherent Computation Capability of NAND Flash Memory.",
       "authors": [
-        "Jisung Park 0001",
+        "Jisung Park",
         "Roknoddin Azizi",
         "Geraldo F. Oliveira",
         "Mohammad Sadrosadati",
@@ -61,10 +61,10 @@
       "year": 2022,
       "title": "Realizing Emotional Interactions to Learn User Experience and Guide Energy Optimization for Mobile Architectures.",
       "authors": [
-        "Xueliang Li 0002",
+        "Xueliang Li",
         "Zhuobin Shi",
-        "Junyang Chen 0001",
-        "Yepang Liu 0001"
+        "Junyang Chen",
+        "Yepang Liu"
       ],
       "pages": "868-884",
       "type": "Conference and Workshop Papers",
@@ -85,14 +85,14 @@
       "year": 2022,
       "title": "ANT: Exploiting Adaptive Numerical Data Type for Low-bit Deep Neural Network Quantization.",
       "authors": [
-        "Cong Guo 0003",
-        "Chen Zhang 0001",
+        "Cong Guo",
+        "Chen Zhang",
         "Jingwen Leng",
-        "Zihan Liu 0002",
-        "Fan Yang 0024",
-        "Yunxin Liu 0001",
+        "Zihan Liu",
+        "Fan Yang",
+        "Yunxin Liu",
         "Minyi Guo",
-        "Yuhao Zhu 0001"
+        "Yuhao Zhu"
       ],
       "pages": "1414-1433",
       "type": "Conference and Workshop Papers",
@@ -113,7 +113,7 @@
       "year": 2022,
       "title": "FracDRAM: Fractional Values in Off-the-Shelf DRAM.",
       "authors": [
-        "Fei Gao 0016",
+        "Fei Gao",
         "Georgios Tziantzioulis",
         "David Wentzlaff"
       ],
@@ -167,8 +167,8 @@
         "Jongmin Shin",
         "Neel Patel",
         "Yifan Yuan",
-        "Daehoon Kim 0001",
-        "Ren Wang 0001",
+        "Daehoon Kim",
+        "Ren Wang",
         "Nam Sung Kim"
       ],
       "pages": "480-493",
@@ -219,7 +219,7 @@
         "Beatrice Bussolino",
         "Antonio Cipolletta",
         "Lukas Cavigelli",
-        "Zhe Wang 0023"
+        "Zhe Wang"
       ],
       "pages": "582-598",
       "type": "Conference and Workshop Papers",
@@ -241,7 +241,7 @@
       "title": "AgilePkgC: An Agile System Idle State Architecture for Energy Proportional Datacenter Servers.",
       "authors": [
         "Georgia Antoniou",
-        "Haris Volos 0001",
+        "Haris Volos",
         "Davide B. Bartolini",
         "Tom Rollet",
         "Yiannakis Sazeides",
@@ -317,10 +317,10 @@
       "title": "DeepBurning-SEG: Generating DNN Accelerators of Segment-Grained Pipeline Architecture.",
       "authors": [
         "Xuyi Cai",
-        "Ying Wang 0001",
+        "Ying Wang",
         "Xiaohan Ma",
-        "Yinhe Han 0001",
-        "Lei Zhang 0008"
+        "Yinhe Han",
+        "Lei Zhang"
       ],
       "pages": "1396-1413",
       "type": "Conference and Workshop Papers",
@@ -341,8 +341,8 @@
       "year": 2022,
       "title": "ReGraph: Scaling Graph Processing on HBM-enabled FPGAs with Heterogeneous Pipelines.",
       "authors": [
-        "Xinyu Chen 0001",
-        "Yao Chen 0008",
+        "Xinyu Chen",
+        "Yao Chen",
         "Feng Cheng",
         "Hongshi Tan",
         "Bingsheng He",
@@ -371,8 +371,8 @@
         "Mohammad Sadrosadati",
         "Negar Akbarzadeh",
         "Joël Lindegger",
-        "Mohammad Hosseini 0001",
-        "Jisung Park 0001",
+        "Mohammad Hosseini",
+        "Jisung Park",
         "Juan Gómez-Luna",
         "Onur Mutlu",
         "Hamid Sarbazi-Azad"
@@ -397,7 +397,7 @@
       "title": "Adaptable Butterfly Accelerator for Attention-based NNs via Hardware and Algorithm Co-design.",
       "authors": [
         "Hongxiang Fan",
-        "Thomas Chau 0001",
+        "Thomas Chau",
         "Stylianos I. Venieris",
         "Royson Lee",
         "Alexandros Kouris",
@@ -425,10 +425,10 @@
       "title": "pLUTo: Enabling Massively Parallel Computation in DRAM via Lookup Tables.",
       "authors": [
         "João Dinis Ferreira",
-        "Gabriel Falcão 0001",
+        "Gabriel Falcão",
         "Juan Gómez-Luna",
         "Mohammed Alser",
-        "Lois Orosa 0001",
+        "Lois Orosa",
         "Mohammad Sadrosadati",
         "Jeremie S. Kim",
         "Geraldo F. Oliveira",
@@ -515,10 +515,10 @@
         "Tianyang Duan",
         "Yuexuan Wang",
         "Chenshu Wu",
-        "Yong Cui 0001",
-        "Libo Zhang 0001",
+        "Yong Cui",
+        "Libo Zhang",
         "Yanjun Wu",
-        "Rui Wang 0007",
+        "Rui Wang",
         "Heming Cui"
       ],
       "pages": "336-353",
@@ -540,10 +540,10 @@
       "year": 2022,
       "title": "Leaky Way: A Conflict-Based Cache Covert Channel Bypassing Set Associativity.",
       "authors": [
-        "Yanan Guo 0002",
-        "Xin Xin 0008",
+        "Yanan Guo",
+        "Xin Xin",
         "Youtao Zhang",
-        "Jun Yang 0002"
+        "Jun Yang"
       ],
       "pages": "646-661",
       "type": "Conference and Workshop Papers",
@@ -565,11 +565,11 @@
       "title": "AgileWatts: An Energy-Efficient CPU Core Idle-State Architecture for Latency-Sensitive Server Applications.",
       "authors": [
         "Jawad Haj-Yahya",
-        "Haris Volos 0001",
+        "Haris Volos",
         "Davide B. Bartolini",
         "Georgia Antoniou",
         "Jeremie S. Kim",
-        "Zhe Wang 0023",
+        "Zhe Wang",
         "Kleovoulos Kalaitzidis",
         "Tom Rollet",
         "Zhirui Chen",
@@ -597,7 +597,7 @@
       "title": "Horus: Persistent Security for Extended Persistence-Domain Memory Systems.",
       "authors": [
         "Xijing Han",
-        "James Tuck 0001",
+        "James Tuck",
         "Amro Awad"
       ],
       "pages": "1255-1269",
@@ -619,16 +619,16 @@
       "year": 2022,
       "title": "Cambricon-P: A Bitflow Architecture for Arbitrary Precision Computing.",
       "authors": [
-        "Yifan Hao 0001",
-        "Yongwei Zhao 0001",
+        "Yifan Hao",
+        "Yongwei Zhao",
         "Chenxiao Liu",
         "Zidong Du",
         "Shuyao Cheng",
         "Xiaqing Li",
-        "Xing Hu 0001",
-        "Qi Guo 0001",
-        "Zhiwei Xu 0002",
-        "Tianshi Chen 0002"
+        "Xing Hu",
+        "Qi Guo",
+        "Zhiwei Xu",
+        "Tianshi Chen"
       ],
       "pages": "57-72",
       "type": "Conference and Workshop Papers",
@@ -651,11 +651,11 @@
       "authors": [
         "Seongmin Hong",
         "Seungjae Moon",
-        "Junsoo Kim 0002",
-        "Sungjae Lee 0002",
+        "Junsoo Kim",
+        "Sungjae Lee",
         "Minsub Kim",
         "Dongsoo Lee",
-        "Joo-Young Kim 0001"
+        "Joo-Young Kim"
       ],
       "pages": "616-630",
       "type": "Conference and Workshop Papers",
@@ -677,8 +677,8 @@
       "title": "ICE: An Intelligent Cognition Engine with 3D NAND-based In-Memory Computing for Vector Similarity Search Acceleration.",
       "authors": [
         "Han-Wen Hu",
-        "Wei-Chen Wang 0002",
-        "Yuan-Hao Chang 0001",
+        "Wei-Chen Wang",
+        "Yuan-Hao Chang",
         "Yung-Chun Lee",
         "Bo-Rong Lin",
         "Huai-Mu Wang",
@@ -720,7 +720,7 @@
         "Wenqin Huangfu",
         "Krishna T. Malladi",
         "Andrew Chang",
-        "Yuan Xie 0001"
+        "Yuan Xie"
       ],
       "pages": "727-743",
       "type": "Conference and Workshop Papers",
@@ -766,13 +766,13 @@
       "title": "CRONUS: Fault-isolated, Secure and High-performance Heterogeneous Computing for Trusted Execution Environment.",
       "authors": [
         "Jianyu Jiang",
-        "Ji Qi 0002",
+        "Ji Qi",
         "Tianxiang Shen",
         "Xusheng Chen",
         "Shixiong Zhao",
-        "Sen Wang 0004",
-        "Li Chen 0008",
-        "Gong Zhang 0001",
+        "Sen Wang",
+        "Li Chen",
+        "Gong Zhang",
         "Xiapu Luo",
         "Heming Cui"
       ],
@@ -821,7 +821,7 @@
         "Diya Joseph",
         "Juan L. Aragón",
         "Joan-Manuel Parcerisa",
-        "Antonio González 0001"
+        "Antonio González"
       ],
       "pages": "213-227",
       "type": "Conference and Workshop Papers",
@@ -895,8 +895,8 @@
       "authors": [
         "Jiho Kim",
         "Seokwon Kang",
-        "Yongjun Park 0001",
-        "John Kim 0001"
+        "Yongjun Park",
+        "John Kim"
       ],
       "pages": "388-403",
       "type": "Conference and Workshop Papers",
@@ -917,12 +917,12 @@
       "year": 2022,
       "title": "ARK: Fully Homomorphic Encryption Accelerator with Runtime Data Generation and Inter-Operation Key Reuse.",
       "authors": [
-        "Jongmin Kim 0007",
+        "Jongmin Kim",
         "Gwangho Lee",
         "Sangpyo Kim",
         "Gina Sohn",
         "Minsoo Rhu",
-        "John Kim 0001",
+        "John Kim",
         "Jung Ho Ahn"
       ],
       "pages": "1237-1254",
@@ -951,7 +951,7 @@
         "Aleksandra Faust",
         "Sabrina M. Neuman",
         "Gu-Yeon Wei",
-        "David Brooks 0001",
+        "David Brooks",
         "Vijay Janapa Reddi"
       ],
       "pages": "300-317",
@@ -974,7 +974,7 @@
       "title": "Datamime: Generating Representative Benchmarks by Automatically Synthesizing Datasets.",
       "authors": [
         "Hyun Ryong Lee",
-        "Daniel Sánchez 0003"
+        "Daniel Sánchez"
       ],
       "pages": "1144-1159",
       "type": "Conference and Workshop Papers",
@@ -998,10 +998,10 @@
         "Hunjun Lee",
         "Minseop Kim",
         "Dongmoon Min",
-        "Joonsung Kim 0001",
+        "Joonsung Kim",
         "Jongwon Back",
         "Honam Yoo",
-        "Jong-Ho Lee 0002",
+        "Jong-Ho Lee",
         "Jangwoo Kim"
       ],
       "pages": "1359-1376",
@@ -1023,11 +1023,11 @@
       "year": 2022,
       "title": "Ristretto: An Atomized Processing Architecture for Sparsity-Condensed Stream Flow in CNN.",
       "authors": [
-        "Gang Li 0015",
+        "Gang Li",
         "Weixiang Xu",
         "Zhuoran Song",
         "Naifeng Jing",
-        "Jian Cheng 0001",
+        "Jian Cheng",
         "Xiaoyao Liang"
       ],
       "pages": "1434-1450",
@@ -1078,7 +1078,7 @@
       "title": "OverGen: Improving FPGA Usability through Domain-specific Overlay Generation.",
       "authors": [
         "Sihao Liu",
-        "Jian Weng 0002",
+        "Jian Weng",
         "Dylan Kupsh",
         "Atefeh Sohrabizadeh",
         "Zhengrong Wang",
@@ -1270,9 +1270,9 @@
         "Agustín Navarro-Torres",
         "Biswabandan Panda",
         "Jesús Alastruey-Benedé",
-        "Pablo Ibáñez 0001",
+        "Pablo Ibáñez",
         "Víctor Viñals Yúfera",
-        "Alberto Ros 0001"
+        "Alberto Ros"
       ],
       "pages": "975-991",
       "type": "Conference and Workshop Papers",
@@ -1293,12 +1293,12 @@
       "year": 2022,
       "title": "GCD2: A Globally Optimizing Compiler for Mapping DNNs to Mobile DSPs.",
       "authors": [
-        "Wei Niu 0002",
+        "Wei Niu",
         "Jiexiong Guan",
         "Xipeng Shen",
-        "Yanzhi Wang 0001",
+        "Yanzhi Wang",
         "Gagan Agrawal",
-        "Bin Ren 0002"
+        "Bin Ren"
       ],
       "pages": "512-529",
       "type": "Conference and Workshop Papers",
@@ -1353,7 +1353,7 @@
         "Esha Choukse",
         "Kirk W. Cameron",
         "Ali Raza Butt",
-        "Xun Jian 0002"
+        "Xun Jian"
       ],
       "pages": "992-1011",
       "type": "Conference and Workshop Papers",
@@ -1548,7 +1548,7 @@
         "Alex Gerber",
         "Ron Gabor",
         "Arkady Bramnik",
-        "George Papadimitriou 0001",
+        "George Papadimitriou",
         "Dimitris Gizopoulos",
         "Chrysostomos Nicopoulos",
         "Giorgos Dimitrakopoulos",
@@ -1599,7 +1599,7 @@
         "Sawan Singh",
         "Arthur Perais",
         "Alexandra Jimborean",
-        "Alberto Ros 0001"
+        "Alberto Ros"
       ],
       "pages": "199-212",
       "type": "Conference and Workshop Papers",
@@ -1751,7 +1751,7 @@
         "Nishil Talati",
         "Haojie Ye",
         "Sanketh Vedula",
-        "Kuan-Yu Chen 0001",
+        "Kuan-Yu Chen",
         "Yuhan Chen",
         "Daniel Liu",
         "Yichao Yuan",
@@ -1780,10 +1780,10 @@
       "title": "HARMONY: Heterogeneity-Aware Hierarchical Management for Federated Learning System.",
       "authors": [
         "Chunlin Tian",
-        "Li Li 0064",
+        "Li Li",
         "Zhan Shi",
-        "Jun Wang 0001",
-        "Cheng-Zhong Xu 0001"
+        "Jun Wang",
+        "Cheng-Zhong Xu"
       ],
       "pages": "631-645",
       "type": "Conference and Workshop Papers",
@@ -1854,13 +1854,13 @@
       "title": "A Data-Centric Accelerator for High-Performance Hypergraph Processing.",
       "authors": [
         "Qinggang Wang",
-        "Long Zheng 0003",
+        "Long Zheng",
         "Ao Hu",
-        "Yu Huang 0013",
+        "Yu Huang",
         "Pengcheng Yao",
         "Chuangyi Gui",
         "Xiaofei Liao",
-        "Hai Jin 0001",
+        "Hai Jin",
         "Jingling Xue"
       ],
       "pages": "1326-1341",
@@ -1882,11 +1882,11 @@
       "year": 2022,
       "title": "XPGraph: XPline-Friendly Persistent Memory Graph Stores for Large-Scale Evolving Graphs.",
       "authors": [
-        "Rui Wang 0076",
+        "Rui Wang",
         "Shuibing He",
         "Weixu Zong",
-        "Yongkun Li 0001",
-        "Yinlong Xu 0001"
+        "Yongkun Li",
+        "Yinlong Xu"
       ],
       "pages": "1308-1325",
       "type": "Conference and Workshop Papers",
@@ -1909,7 +1909,7 @@
       "authors": [
         "Xin Wang",
         "Jagadish B. Kotra",
-        "Xun Jian 0002"
+        "Xun Jian"
       ],
       "pages": "693-709",
       "type": "Conference and Workshop Papers",
@@ -1933,7 +1933,7 @@
         "Xin Wang",
         "Daulet Talapkaliyev",
         "Matthew Hicks",
-        "Xun Jian 0002"
+        "Xun Jian"
       ],
       "pages": "678-692",
       "type": "Conference and Workshop Papers",
@@ -1983,8 +1983,8 @@
         "Hezi Zhang",
         "Gushu Li",
         "Alireza Shabani",
-        "Yuan Xie 0001",
-        "Yufei Ding 0001"
+        "Yuan Xie",
+        "Yufei Ding"
       ],
       "pages": "1027-1041",
       "type": "Conference and Workshop Papers",
@@ -2005,9 +2005,9 @@
       "year": 2022,
       "title": "Towards Developing High Performance RISC-V Processors Using Agile Methodology.",
       "authors": [
-        "Yinan Xu 0001",
+        "Yinan Xu",
         "Zihao Yu",
-        "Dan Tang 0002",
+        "Dan Tang",
         "Guokai Chen",
         "Lu Chen",
         "Lingrui Gou",
@@ -2025,12 +2025,12 @@
         "Chuanqi Zhang",
         "Fawang Zhang",
         "Linjuan Zhang",
-        "Zifei Zhang 0001",
+        "Zifei Zhang",
         "Yangyang Zhao",
         "Yaoyang Zhou",
         "Yike Zhou",
         "Jiangrui Zou",
-        "Ye Cai 0001",
+        "Ye Cai",
         "Dandan Huan",
         "Zusong Li",
         "Jiye Zhao",
@@ -2067,7 +2067,7 @@
         "Minesh Patel",
         "Haocong Luo",
         "Hasan Hassan",
-        "Lois Orosa 0001",
+        "Lois Orosa",
         "Oguz Ergin",
         "Onur Mutlu"
       ],
@@ -2162,9 +2162,9 @@
       "year": 2022,
       "title": "ALTOCUMULUS: Scalable Scheduling for Nanosecond-Scale Remote Procedure Calls.",
       "authors": [
-        "Jiechen Zhao 0002",
+        "Jiechen Zhao",
         "Iris Uwizeyimana",
-        "Karthik Ganesan 0002",
+        "Karthik Ganesan",
         "Mark C. Jeffrey",
         "Natalie Enright Jerger"
       ],
@@ -2187,7 +2187,7 @@
       "year": 2022,
       "title": "ASSASIN: Architecture Support for Stream Computing to Accelerate Computational Storage.",
       "authors": [
-        "Chen Zou 0001",
+        "Chen Zou",
         "Andrew A. Chien"
       ],
       "pages": "354-368",

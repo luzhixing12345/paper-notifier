@@ -6,10 +6,10 @@
       "year": 2022,
       "title": "DeepSketch: A New Machine Learning-Based Reference Search Technique for Post-Deduplication Delta Compression.",
       "authors": [
-        "Jisung Park 0001",
+        "Jisung Park",
         "Jeonggyun Kim",
         "Yeseong Kim",
-        "Sungjin Lee 0001",
+        "Sungjin Lee",
         "Onur Mutlu"
       ],
       "pages": "247-264",
@@ -31,13 +31,13 @@
       "year": 2022,
       "title": "CacheSifter: Sifting Cache Files for Boosted Mobile Performance and Lifetime.",
       "authors": [
-        "Yu Liang 0004",
+        "Yu Liang",
         "Riwei Pan",
         "Tianyu Ren",
         "Yufei Cui",
         "Rachata Ausavarungnirun",
         "Xianzhang Chen",
-        "Changlong Li 0006",
+        "Changlong Li",
         "Tei-Wei Kuo",
         "Chun Jason Xue"
       ],
@@ -62,8 +62,8 @@
       "authors": [
         "Yanzhe An",
         "Yue Su",
-        "Yuqing Zhu 0001",
-        "Jianmin Wang 0001"
+        "Yuqing Zhu",
+        "Jianmin Wang"
       ],
       "pages": "83-100",
       "type": "Conference and Workshop Papers",
@@ -158,7 +158,7 @@
         "Myungsuk Kim",
         "Geonhee Cho",
         "Dusol Lee",
-        "Jihong Kim 0001"
+        "Jihong Kim"
       ],
       "pages": "133-146",
       "type": "Conference and Workshop Papers",
@@ -183,7 +183,7 @@
         "Zhaoyan Shen",
         "Zhiping Jia",
         "Zili Shao",
-        "Feng Chen 0005"
+        "Feng Chen"
       ],
       "pages": "101-116",
       "type": "Conference and Workshop Papers",
@@ -327,7 +327,7 @@
       "authors": [
         "Miryeong Kwon",
         "Donghyun Gouk",
-        "Sangwon Lee 0014",
+        "Sangwon Lee",
         "Myoungsoo Jung"
       ],
       "pages": "147-164",
@@ -375,11 +375,11 @@
       "title": "ctFS: Replacing File Indexing with Hardware Memory Translation through Contiguous File Allocation for Persistent Memory.",
       "authors": [
         "Ruibin Li",
-        "Xiang Ren 0003",
-        "Xu Zhao 0004",
+        "Xiang Ren",
+        "Xu Zhao",
         "Siwei He",
         "Michael Stumm",
-        "Ding Yuan 0004"
+        "Ding Yuan"
       ],
       "pages": "35-50",
       "type": "Conference and Workshop Papers",
@@ -429,8 +429,8 @@
         "Yusuke Tanimura",
         "Jason Haga",
         "Vijay Chidambaram",
-        "José Pereira 0001",
-        "João Paulo 0001"
+        "José Pereira",
+        "João Paulo"
       ],
       "pages": "413-428",
       "type": "Conference and Workshop Papers",
@@ -499,12 +499,12 @@
       "year": 2022,
       "title": "Closing the B+-tree vs. LSM-tree Write Amplification Gap on Modern Storage Hardware with Built-in Transparent Compression.",
       "authors": [
-        "Yifan Qiao 0003",
+        "Yifan Qiao",
         "Xubin Chen",
         "Ning Zheng",
         "Jiangpeng Li",
-        "Yang Liu 0256",
-        "Tong Zhang 0002"
+        "Yang Liu",
+        "Tong Zhang"
       ],
       "pages": "69-82",
       "type": "Conference and Workshop Papers",
@@ -555,7 +555,7 @@
         "Kaiwei Tu",
         "Yuvraj Patel",
         "Rathijit Sen",
-        "Kwanghyun Park 0001",
+        "Kwanghyun Park",
         "Andrea C. Arpaci-Dusseau",
         "Remzi H. Arpaci-Dusseau"
       ],
@@ -602,9 +602,9 @@
       "title": "HTMFS: Strong Consistency Comes for Free with Hardware Transactional Memory in Persistent Memory File Systems.",
       "authors": [
         "Jifei Yi",
-        "Mingkai Dong 0002",
+        "Mingkai Dong",
         "Fangnuo Wu",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "17-34",
       "type": "Conference and Workshop Papers",
@@ -627,9 +627,9 @@
       "authors": [
         "Jifei Yi",
         "Benchao Dong",
-        "Mingkai Dong 0002",
+        "Mingkai Dong",
         "Ruizhe Tong",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "199-216",
       "type": "Conference and Workshop Papers",
@@ -651,7 +651,7 @@
       "title": "FORD: Fast One-sided RDMA-based Distributed Transactions for Disaggregated Persistent Memory.",
       "authors": [
         "Ming Zhang",
-        "Yu Hua 0001",
+        "Yu Hua",
         "Pengfei Zuo",
         "Lurong Liu"
       ],
@@ -675,10 +675,10 @@
       "title": "DEPART: Replica Decoupling for Distributed Key-Value Storage.",
       "authors": [
         "Qiang Zhang",
-        "Yongkun Li 0001",
+        "Yongkun Li",
         "Patrick P. C. Lee",
-        "Yinlong Xu 0001",
-        "Si Wu 0003"
+        "Yinlong Xu",
+        "Si Wu"
       ],
       "pages": "397-412",
       "type": "Conference and Workshop Papers",

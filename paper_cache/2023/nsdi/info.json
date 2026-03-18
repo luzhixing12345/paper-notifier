@@ -6,12 +6,12 @@
       "year": 2023,
       "title": "FLASH: Towards a High-performance Hardware Acceleration Architecture for Cross-silo Federated Learning.",
       "authors": [
-        "Junxue Zhang 0001",
+        "Junxue Zhang",
         "Xiaodian Cheng",
         "Wei Wang",
-        "Liu Yang 0008",
-        "Jinbin Hu 0001",
-        "Kai Chen 0005"
+        "Liu Yang",
+        "Jinbin Hu",
+        "Kai Chen"
       ],
       "pages": "1057-1079",
       "type": "Conference and Workshop Papers",
@@ -32,7 +32,7 @@
       "year": 2023,
       "title": "Skyplane: Optimizing Transfer Cost and Throughput Using Cloud-Aware Overlays.",
       "authors": [
-        "Paras Jain 0001",
+        "Paras Jain",
         "Sam Kumar",
         "Sarah Wooders",
         "Shishir G. Patil",
@@ -58,15 +58,15 @@
       "year": 2023,
       "title": "Boomerang: Metadata-Private Messaging under Hardware Trust.",
       "authors": [
-        "Peipei Jiang 0002",
-        "Qian Wang 0002",
+        "Peipei Jiang",
+        "Qian Wang",
         "Jianhao Cheng",
-        "Cong Wang 0001",
-        "Lei Xu 0019",
-        "Xinyu Wang 0007",
+        "Cong Wang",
+        "Lei Xu",
+        "Xinyu Wang",
         "Yihao Wu",
-        "Xiaoyuan Li 0001",
-        "Kui Ren 0001"
+        "Xiaoyuan Li",
+        "Kui Ren"
       ],
       "pages": "877-899",
       "type": "Conference and Workshop Papers",
@@ -87,14 +87,14 @@
       "year": 2023,
       "title": "Remote Procedure Call as a Managed System Service.",
       "authors": [
-        "Jingrong Chen 0002",
+        "Jingrong Chen",
         "Yongji Wu",
         "Shihan Lin",
         "Yechen Xu",
         "Xinhao Kong",
-        "Tom Anderson 0003",
+        "Tom Anderson",
         "Matthew Lentz",
-        "Xiaowei Yang 0001",
+        "Xiaowei Yang",
         "Danyang Zhuo"
       ],
       "pages": "141-159",
@@ -116,9 +116,9 @@
       "year": 2023,
       "title": "SLNet: A Spectrogram Learning Neural Network for Deep Wireless Sensing.",
       "authors": [
-        "Zheng Yang 0002",
-        "Yi Zhang 0017",
-        "Kun Qian 0004",
+        "Zheng Yang",
+        "Yi Zhang",
+        "Kun Qian",
         "Chenshu Wu"
       ],
       "pages": "1221-1236",
@@ -140,14 +140,14 @@
       "year": 2023,
       "title": "Hostping: Diagnosing Intra-host Network Bottlenecks in RDMA Servers.",
       "authors": [
-        "Kefei Liu 0004",
+        "Kefei Liu",
         "Zhuo Jiang",
-        "Jiao Zhang 0002",
+        "Jiao Zhang",
         "Haoran Wei",
         "Xiaolong Zhong",
         "Lizhuang Tan",
-        "Tian Pan 0001",
-        "Tao Huang 0005"
+        "Tian Pan",
+        "Tao Huang"
       ],
       "pages": "15-29",
       "type": "Conference and Workshop Papers",
@@ -168,7 +168,7 @@
       "year": 2023,
       "title": "Electrode: Accelerating Distributed Protocols with eBPF.",
       "authors": [
-        "Yang Zhou 0008",
+        "Yang Zhou",
         "Zezhou Wang",
         "Sowmya Dharanipragada",
         "Minlan Yu"
@@ -192,12 +192,12 @@
       "year": 2023,
       "title": "LemonNFV: Consolidating Heterogeneous Network Functions at Line Speed.",
       "authors": [
-        "Hao Li 0011",
+        "Hao Li",
         "Yihan Dang",
         "Guangda Sun",
         "Guyue Liu",
         "Danfeng Shan",
-        "Peng Zhang 0011"
+        "Peng Zhang"
       ],
       "pages": "1451-1468",
       "type": "Conference and Workshop Papers",
@@ -218,7 +218,7 @@
       "year": 2023,
       "title": "SHEPHERD: Serving DNNs in the Wild.",
       "authors": [
-        "Hong Zhang 0025",
+        "Hong Zhang",
         "Yupeng Tang",
         "Anurag Khandelwal",
         "Ion Stoica"
@@ -294,7 +294,7 @@
         "Shenghsun Cho",
         "Michael Ferdman",
         "Peter A. Milder",
-        "Shuai Mu 0001"
+        "Shuai Mu"
       ],
       "pages": "357-374",
       "type": "Conference and Workshop Papers",
@@ -343,7 +343,7 @@
       "authors": [
         "Mina Tahmasbi Arashloo",
         "Ryan Beckett",
-        "Rachit Agarwal 0001"
+        "Rachit Agarwal"
       ],
       "pages": "645-661",
       "type": "Conference and Workshop Papers",
@@ -366,7 +366,7 @@
       "authors": [
         "Serhat Arslan",
         "Yuliang Li",
-        "Gautam Kumar 0001",
+        "Gautam Kumar",
         "Nandita Dukkipati"
       ],
       "pages": "219-236",
@@ -388,9 +388,9 @@
       "year": 2023,
       "title": "Empowering Azure Storage with RDMA.",
       "authors": [
-        "Wei Bai 0001",
+        "Wei Bai",
         "Shanim Sainul Abdeen",
-        "Ankit Agrawal 0013",
+        "Ankit Agrawal",
         "Krishan Kumar Attre",
         "Paramvir Bahl",
         "Ameya Bhagat",
@@ -571,7 +571,7 @@
       "title": "Push-Button Reliability Testing for Cloud-Backed Applications with Rainmaker.",
       "authors": [
         "Yinfang Chen",
-        "Xudong Sun 0013",
+        "Xudong Sun",
         "Suman Nath",
         "Ze Yang",
         "Tianyin Xu"
@@ -597,7 +597,7 @@
       "authors": [
         "Yu Chen",
         "Liqun Li",
-        "Yu Kang 0006",
+        "Yu Kang",
         "Boyang Zheng",
         "Yehan Wang",
         "More Zhou",
@@ -628,9 +628,9 @@
       "authors": [
         "Yanqing Chen",
         "Bingchuan Tian",
-        "Chen Tian 0001",
+        "Chen Tian",
         "Li Dai",
-        "Yu Zhou 0008",
+        "Yu Zhou",
         "Mengjing Ma",
         "Ming Tang",
         "Hao Zheng",
@@ -683,7 +683,7 @@
       "title": "mmWall: A Steerable, Transflective Metamaterial Surface for NextG mmWave Networks.",
       "authors": [
         "Kun Woo Cho",
-        "Mohammad Hossein Mazaheri 0001",
+        "Mohammad Hossein Mazaheri",
         "Jeremy Gummeson",
         "Omid Abari",
         "Kyle Jamieson"
@@ -708,7 +708,7 @@
       "title": "Protego: Overload Control for Applications with Unpredictable Lock Contention.",
       "authors": [
         "Inho Cho",
-        "Ahmed Saeed 0001",
+        "Ahmed Saeed",
         "Seo Jin Park",
         "Mohammad Alizadeh",
         "Adam Belay"
@@ -736,7 +736,7 @@
         "Ellis Michael",
         "Yunfan Li",
         "Dan R. K. Ports",
-        "Jialin Li 0001"
+        "Jialin Li"
       ],
       "pages": "293-320",
       "type": "Conference and Workshop Papers",
@@ -757,13 +757,13 @@
       "year": 2023,
       "title": "LinkLab 2.0: A Multi-tenant Programmable IoT Testbed for Experimentation with Edge-Cloud Integration.",
       "authors": [
-        "Wei Dong 0001",
-        "Borui Li 0001",
+        "Wei Dong",
+        "Borui Li",
         "Haoyu Li",
         "Hao Wu",
         "Kaijie Gong",
         "Wenzhao Zhang",
-        "Yi Gao 0001"
+        "Yi Gao"
       ],
       "pages": "1683-1699",
       "type": "Conference and Workshop Papers",
@@ -787,7 +787,7 @@
         "Huayi Duan",
         "Rubén Fischer",
         "Jie Lou",
-        "Si Liu 0003",
+        "Si Liu",
         "David A. Basin",
         "Adrian Perrig"
       ],
@@ -877,9 +877,9 @@
       "authors": [
         "Changho Hwang",
         "KyoungSoo Park",
-        "Ran Shu 0001",
+        "Ran Shu",
         "Xinyuan Qu",
-        "Peng Cheng 0005",
+        "Peng Cheng",
         "Yongqiang Xiong"
       ],
       "pages": "87-101",
@@ -1029,8 +1029,8 @@
       "title": "Understanding RDMA Microarchitecture Resources for Performance Isolation.",
       "authors": [
         "Xinhao Kong",
-        "Jingrong Chen 0002",
-        "Wei Bai 0001",
+        "Jingrong Chen",
+        "Wei Bai",
         "Yechen Xu",
         "Mahmoud Elhaddad",
         "Shachar Raindel",
@@ -1091,7 +1091,7 @@
       "year": 2023,
       "title": "ModelKeeper: Accelerating DNN Training via Automated Training Warmup.",
       "authors": [
-        "Fan Lai 0001",
+        "Fan Lai",
         "Yinwei Dai",
         "Harsha V. Madhyastha",
         "Mosharaf Chowdhury"
@@ -1118,8 +1118,8 @@
         "Zeqi Lai",
         "Hewu Li",
         "Yangtao Deng",
-        "Qian Wu 0001",
-        "Jun Liu 0063",
+        "Qian Wu",
+        "Jun Liu",
         "Yuanjie Li",
         "Jihao Li",
         "Lixin Liu",
@@ -1145,8 +1145,8 @@
       "year": 2023,
       "title": "RF-Bouncer: A Programmable Dual-band Metasurface for Sub-6 Wireless Networks.",
       "authors": [
-        "Xinyi Li 0005",
-        "Chao Feng 0004",
+        "Xinyi Li",
+        "Chao Feng",
         "Xiaojing Wang",
         "Yangfan Zhang",
         "Yaxiong Xie",
@@ -1197,7 +1197,7 @@
       "authors": [
         "John Liagouris",
         "Vasiliki Kalavri",
-        "Muhammad Faisal 0001",
+        "Muhammad Faisal",
         "Mayank Varia"
       ],
       "pages": "1031-1056",
@@ -1221,11 +1221,11 @@
       "authors": [
         "Chieh-Jan Mike Liang",
         "Zilin Fang",
-        "Yuqing Xie 0005",
-        "Fan Yang 0024",
+        "Yuqing Xie",
+        "Fan Yang",
         "Zhao Lucis Li",
         "Li Lyna Zhang",
-        "Mao Yang 0004",
+        "Mao Yang",
         "Lidong Zhou"
       ],
       "pages": "1081-1095",
@@ -1247,15 +1247,15 @@
       "year": 2023,
       "title": "RF-Chord: Towards Deployable RFID Localization System for Logistic Networks.",
       "authors": [
-        "Bo Liang 0003",
+        "Bo Liang",
         "Purui Wang",
-        "Renjie Zhao 0001",
+        "Renjie Zhao",
         "Heyu Guo",
         "Pengyu Zhang",
         "Junchen Guo",
         "Shunmin Zhu",
         "Hongqiang Harry Liu",
-        "Xinyu Zhang 0003",
+        "Xinyu Zhang",
         "Chenren Xu"
       ],
       "pages": "1783-1799",
@@ -1306,9 +1306,9 @@
       "authors": [
         "Tianfeng Liu",
         "Yangrui Chen",
-        "Dan Li 0001",
-        "Chuan Wu 0001",
-        "Yibo Zhu 0001",
+        "Dan Li",
+        "Chuan Wu",
+        "Yibo Zhu",
         "Jun He",
         "Yanghua Peng",
         "Hongzheng Chen",
@@ -1335,7 +1335,7 @@
       "title": "Doing More with Less: Orchestrating Serverless Applications without an Orchestrator.",
       "authors": [
         "David H. Liu",
-        "Amit Levy 0001",
+        "Amit Levy",
         "Shadi A. Noghabi",
         "Sebastian Burckhardt"
       ],
@@ -1358,10 +1358,10 @@
       "year": 2023,
       "title": "Exploring Practical Vulnerabilities of Machine Learning-based Wireless Systems.",
       "authors": [
-        "Zikun Liu 0002",
+        "Zikun Liu",
         "Changming Xu",
         "Emerson Sie",
-        "Gagandeep Singh 0001",
+        "Gagandeep Singh",
         "Deepak Vasisht"
       ],
       "pages": "1801-1817",
@@ -1438,7 +1438,7 @@
       "authors": [
         "Kshiteej Mahajan",
         "Ching-Hsiang Chu",
-        "Srinivas Sridharan 0002",
+        "Srinivas Sridharan",
         "Aditya Akella"
       ],
       "pages": "809-824",
@@ -1491,9 +1491,9 @@
       "authors": [
         "Zili Meng",
         "Tingfeng Wang",
-        "Yixin Shen 0002",
-        "Bo Wang 0066",
-        "Mingwei Xu 0001",
+        "Yixin Shen",
+        "Bo Wang",
+        "Mingwei Xu",
         "Rui Han",
         "Honghao Liu",
         "Venkat Arun",
@@ -1524,7 +1524,7 @@
         "Muhammad Osama Shahid",
         "Bhuvana Krishnaswamy",
         "Krishna Chintalapudi",
-        "Suman Banerjee 0001"
+        "Suman Banerjee"
       ],
       "pages": "1165-1183",
       "type": "Conference and Workshop Papers",
@@ -1547,7 +1547,7 @@
       "authors": [
         "Tammam Mustafa",
         "Konstantinos Kallas",
-        "Pratyush Das 0001",
+        "Pratyush Das",
         "Nikos Vasilakis"
       ],
       "pages": "341-356",
@@ -1595,13 +1595,13 @@
       "title": "POLYCORN: Data-driven Cross-layer Multipath Networking for High-speed Railway through Composable Schedulerlets.",
       "authors": [
         "Yunzhe Ni",
-        "Feng Qian 0001",
+        "Feng Qian",
         "Taide Liu",
         "Yihua Cheng",
         "Zhiyao Ma",
-        "Jing Wang 0077",
+        "Jing Wang",
         "Zhongfeng Wang",
-        "Gang Huang 0001",
+        "Gang Huang",
         "Xuanzhe Liu",
         "Chenren Xu"
       ],
@@ -1679,12 +1679,12 @@
       "year": 2023,
       "title": "Hermit: Low-Latency, High-Throughput, and Transparent Remote Memory via Feedback-Directed Asynchrony.",
       "authors": [
-        "Yifan Qiao 0002",
-        "Chenxi Wang 0005",
+        "Yifan Qiao",
+        "Chenxi Wang",
         "Zhenyuan Ruan",
         "Adam Belay",
         "Qingda Lu",
-        "Yiying Zhang 0005",
+        "Yiying Zhang",
         "Miryung Kim",
         "Guoqing Harry Xu"
       ],
@@ -1707,9 +1707,9 @@
       "year": 2023,
       "title": "Synthesizing Runtime Programmable Switch Updates.",
       "authors": [
-        "Yiming Qiu 0001",
+        "Yiming Qiu",
         "Ryan Beckett",
-        "Ang Chen 0001"
+        "Ang Chen"
       ],
       "pages": "613-628",
       "type": "Conference and Workshop Papers",
@@ -1731,7 +1731,7 @@
       "title": "Practical Intent-driven Routing Configuration Synthesis.",
       "authors": [
         "Sivaramakrishnan Ramanathan",
-        "Ying Zhang 0022",
+        "Ying Zhang",
         "Mohab Gawish",
         "Yogesh Mundada",
         "Zhaodong Wang",
@@ -1861,7 +1861,7 @@
       "title": "DChannel: Accelerating Mobile Applications With Parallel High-bandwidth and Low-latency Channels.",
       "authors": [
         "William Sentosa",
-        "Balakrishnan Chandrasekaran 0002",
+        "Balakrishnan Chandrasekaran",
         "Philip Brighten Godfrey",
         "Haitham Hassanieh",
         "Bruce M. Maggs"
@@ -1891,7 +1891,7 @@
         "Saeed Maleki",
         "Madan Musuvathi",
         "Todd Mytkowicz",
-        "Jacob Nelson 0001",
+        "Jacob Nelson",
         "Olli Saarikivi"
       ],
       "pages": "593-612",
@@ -1937,7 +1937,7 @@
       "title": "μMote: Enabling Passive Chirp De-spreading and μW-level Long-Range Downlink for Backscatter Devices.",
       "authors": [
         "Yihang Song",
-        "Li Lu 0001",
+        "Li Lu",
         "Jiliang Wang",
         "Chong Zhang",
         "Hui Zheng",
@@ -2043,7 +2043,7 @@
         "John Thorpe",
         "Pengzhan Zhao",
         "Jonathan Eyolfson",
-        "Yifan Qiao 0002",
+        "Yifan Qiao",
         "Zhihao Jia",
         "Minjia Zhang",
         "Ravi Netravali",
@@ -2074,7 +2074,7 @@
         "Manya Ghobadi",
         "Zhihao Jia",
         "Dheevatsa Mudigere",
-        "Ying Zhang 0022",
+        "Ying Zhang",
         "Anthony Kewitsch"
       ],
       "pages": "739-767",
@@ -2096,17 +2096,17 @@
       "year": 2023,
       "title": "SRNIC: A Scalable Architecture for RDMA NICs.",
       "authors": [
-        "Zilong Wang 0007",
+        "Zilong Wang",
         "Layong Luo",
         "Qingsong Ning",
         "Chaoliang Zeng",
-        "Wenxue Li 0004",
+        "Wenxue Li",
         "Xinchen Wan",
         "Peng Xie",
         "Tao Feng",
         "Ke Cheng",
         "Xiongfei Geng",
-        "Tianhao Wang 0025",
+        "Tianhao Wang",
         "Weicheng Ling",
         "Kejia Huo",
         "Pingbo An",
@@ -2115,7 +2115,7 @@
         "Bin Xu",
         "Ruiqing Feng",
         "Tao Ding",
-        "Kai Chen 0005",
+        "Kai Chen",
         "Chuanxiong Guo"
       ],
       "pages": "1-14",
@@ -2140,7 +2140,7 @@
         "Weitao Wang",
         "Masoud Moshref",
         "Yuliang Li",
-        "Gautam Kumar 0001",
+        "Gautam Kumar",
         "T. S. Eugene Ng",
         "Neal Cardwell",
         "Nandita Dukkipati"
@@ -2164,8 +2164,8 @@
       "year": 2023,
       "title": "Canvas: Isolated and Adaptive Swapping for Multi-Applications on Remote Memory.",
       "authors": [
-        "Chenxi Wang 0005",
-        "Yifan Qiao 0002",
+        "Chenxi Wang",
+        "Yifan Qiao",
         "Haoran Ma",
         "Shi Liu",
         "Wenguang Chen",
@@ -2224,7 +2224,7 @@
         "Zili Zhang",
         "Zhihao Bai",
         "Xuanzhe Liu",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "69-85",
       "type": "Conference and Workshop Papers",
@@ -2249,7 +2249,7 @@
         "Weixin Deng",
         "Ryan Beckett",
         "Ratul Mahajan",
-        "David Walker 0001"
+        "David Walker"
       ],
       "pages": "1717-1732",
       "type": "Conference and Workshop Papers",
@@ -2326,7 +2326,7 @@
       "authors": [
         "Minchen Yu",
         "Tingjia Cao",
-        "Wei Wang 0030",
+        "Wei Wang",
         "Ruichuan Chen"
       ],
       "pages": "1489-1504",
@@ -2348,9 +2348,9 @@
       "year": 2023,
       "title": "VeCare: Statistical Acoustic Sensing for Automotive In-Cabin Monitoring.",
       "authors": [
-        "Yi Zhang 0017",
+        "Yi Zhang",
         "Weiying Hou",
-        "Zheng Yang 0002",
+        "Zheng Yang",
         "Chenshu Wu"
       ],
       "pages": "1185-1200",
@@ -2376,7 +2376,7 @@
         "Chao Jin",
         "Linpeng Tang",
         "Xuanzhe Liu",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "995-1011",
       "type": "Conference and Workshop Papers",
@@ -2401,9 +2401,9 @@
         "Yezhou Wang",
         "Lanqing Yang",
         "Mei Wang",
-        "Yi-Chao Chen 0001",
+        "Yi-Chao Chen",
         "Lili Qiu",
-        "Yihong Liu 0003",
+        "Yihong Liu",
         "Guangtao Xue",
         "Jiadi Yu"
       ],
@@ -2426,7 +2426,7 @@
       "year": 2023,
       "title": "The Benefit of Hindsight: Tracing Edge-Cases in Distributed Systems.",
       "authors": [
-        "Lei Zhang 0223",
+        "Lei Zhang",
         "Zhiqiang Xie",
         "Vaastav Anand",
         "Ymir Vigfusson",
@@ -2475,10 +2475,10 @@
       "year": 2023,
       "title": "SlimWiFi: Ultra-Low-Power IoT Radio Architecture Enabled by Asymmetric Communication.",
       "authors": [
-        "Renjie Zhao 0001",
+        "Renjie Zhao",
         "Kejia Wang",
-        "Kai Zheng 0003",
-        "Xinyu Zhang 0003",
+        "Kai Zheng",
+        "Xinyu Zhang",
         "Vincent Leung"
       ],
       "pages": "1201-1219",
@@ -2550,7 +2550,7 @@
       "title": "Shockwave: Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning.",
       "authors": [
         "Pengfei Zheng",
-        "Rui Pan 0003",
+        "Rui Pan",
         "Tarannum Khan",
         "Shivaram Venkataraman",
         "Aditya Akella"
@@ -2575,7 +2575,7 @@
       "title": "Addax: A fast, private, and accountable ad exchange infrastructure.",
       "authors": [
         "Ke Zhong",
-        "Yiping Ma 0001",
+        "Yiping Ma",
         "Yifeng Mao",
         "Sebastian Angel"
       ],

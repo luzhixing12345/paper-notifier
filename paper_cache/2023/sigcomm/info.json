@@ -8,7 +8,7 @@
       "authors": [
         "Saksham Agarwal",
         "Arvind Krishnamurthy",
-        "Rachit Agarwal 0001"
+        "Rachit Agarwal"
       ],
       "pages": "275-287",
       "type": "Conference and Workshop Papers",
@@ -29,7 +29,7 @@
       "year": 2023,
       "title": "A Formal Framework for End-to-End DNS Resolution.",
       "authors": [
-        "Si Liu 0003",
+        "Si Liu",
         "Huayi Duan",
         "Lukas Heimes",
         "Marco Bearzi",
@@ -82,7 +82,7 @@
         "João Romeiras Amado",
         "Francisco Chamiça Pereira",
         "Salvatore Signorello",
-        "Miguel Correia 0001",
+        "Miguel Correia",
         "Fernando M. V. Ramos"
       ],
       "pages": "1105-1107",
@@ -132,7 +132,7 @@
         "Mubashir Anwar",
         "Anduo Wang",
         "Fangping Lan",
-        "Matthew Caesar 0001"
+        "Matthew Caesar"
       ],
       "pages": "1188-1190",
       "type": "Conference and Workshop Papers",
@@ -209,9 +209,9 @@
       "title": "Veritas: Answering Causal Queries from Video Streaming Traces.",
       "authors": [
         "Chandan Bothra",
-        "Jianfei Gao 0001",
+        "Jianfei Gao",
         "Sanjay G. Rao",
-        "Bruno Ribeiro 0001"
+        "Bruno Ribeiro"
       ],
       "pages": "738-753",
       "type": "Conference and Workshop Papers",
@@ -340,10 +340,10 @@
       "year": 2023,
       "title": "Cowbird: Freeing CPUs to Compute by Offloading the Disaggregation of Memory.",
       "authors": [
-        "Xinyi Chen 0004",
+        "Xinyi Chen",
         "Liangcheng Yu",
-        "Vincent Liu 0001",
-        "Qizhen Zhang 0001"
+        "Vincent Liu",
+        "Qizhen Zhang"
       ],
       "pages": "1060-1073",
       "type": "Conference and Workshop Papers",
@@ -365,9 +365,9 @@
       "title": "Poster: Chameleon: Automatic and Adaptive Tuning for DCQCN Parameters in RDMA Networks.",
       "authors": [
         "Ziteng Chen",
-        "Menghao Zhang 0001",
+        "Menghao Zhang",
         "Guanyu Li",
-        "Mingwei Xu 0001"
+        "Mingwei Xu"
       ],
       "pages": "1091-1093",
       "type": "Conference and Workshop Papers",
@@ -391,7 +391,7 @@
         "Nicola Di Cicco",
         "Amir Al Sadi",
         "Chiara Grasselli",
-        "Andrea Melis 0001",
+        "Andrea Melis",
         "Gianni Antichi",
         "Massimo Tornatore"
       ],
@@ -472,8 +472,8 @@
         "Sandeep Hebbani",
         "Gaya Nagarajan",
         "Omar Baldonado",
-        "Lixin Gao 0001",
-        "Ying Zhang 0022"
+        "Lixin Gao",
+        "Ying Zhang"
       ],
       "pages": "346-359",
       "type": "Conference and Workshop Papers",
@@ -517,10 +517,10 @@
       "year": 2023,
       "title": "BitSense: Universal and Nearly Zero-Error Optimization for Sketch Counters with Compressive Sensing.",
       "authors": [
-        "Rui Ding 0014",
+        "Rui Ding",
         "Shibo Yang",
-        "Xiang Chen 0017",
-        "Qun Huang 0001"
+        "Xiang Chen",
+        "Qun Huang"
       ],
       "pages": "220-238",
       "type": "Conference and Workshop Papers",
@@ -572,7 +572,7 @@
         "Max Noormohammadpour",
         "Srivatsan Balasubramanian",
         "Satyajeet Singh Ahuja",
-        "Biao Lu 0003"
+        "Biao Lu"
       ],
       "pages": "333-345",
       "type": "Conference and Workshop Papers",
@@ -620,12 +620,12 @@
       "title": "Demo: NetVision: Efficient Visualization Front-End for Packet-level Discrete-Event Network Simulation.",
       "authors": [
         "Kaihui Gao",
-        "Li Chen 0008",
-        "Dan Li 0001",
-        "Vincent Liu 0001",
+        "Li Chen",
+        "Dan Li",
+        "Vincent Liu",
         "Xizheng Wang",
         "Ran Zhang",
-        "Lu Lu 0016"
+        "Lu Lu"
       ],
       "pages": "1179-1181",
       "type": "Conference and Workshop Papers",
@@ -647,12 +647,12 @@
       "title": "DONS: Fast and Affordable Discrete Event Network Simulation with Automatic Parallelization.",
       "authors": [
         "Kaihui Gao",
-        "Li Chen 0008",
-        "Dan Li 0001",
-        "Vincent Liu 0001",
+        "Li Chen",
+        "Dan Li",
+        "Vincent Liu",
         "Xizheng Wang",
         "Ran Zhang",
-        "Lu Lu 0016"
+        "Lu Lu"
       ],
       "pages": "167-181",
       "type": "Conference and Workshop Papers",
@@ -726,7 +726,7 @@
       "authors": [
         "Dong Guo",
         "Jian Luo",
-        "Kai Gao 0001",
+        "Kai Gao",
         "Y. Richard Yang"
       ],
       "pages": "1141-1143",
@@ -753,7 +753,7 @@
         "Chenxingyu Zhao",
         "Yuebin Bai",
         "Michael M. Swift",
-        "Ming Liu 0027"
+        "Ming Liu"
       ],
       "pages": "1012-1027",
       "type": "Conference and Workshop Papers",
@@ -853,10 +853,10 @@
       "title": "Poster: Connectivity topology generation with degree limitation for UOWN.",
       "authors": [
         "Bin Han",
-        "Lei Wang 0005",
+        "Lei Wang",
         "Jie Meng",
-        "Yu Tian 0014",
-        "Chi Lin 0001",
+        "Yu Tian",
+        "Chi Lin",
         "Zhenquan Qin",
         "Bingxian Lu"
       ],
@@ -880,7 +880,7 @@
       "title": "Murphy: Performance Diagnosis of Distributed Cloud Applications.",
       "authors": [
         "Vipul Harsh",
-        "Wenxuan Zhou 0003",
+        "Wenxuan Zhou",
         "Sachin Ashok",
         "Radhika Niranjan Mysore",
         "Brighten Godfrey",
@@ -954,12 +954,12 @@
       "title": "Poster: Programmable Cycle-Specified Queue for Deterministic Networking.",
       "authors": [
         "Yudong Huang",
-        "Shuo Wang 0006",
+        "Shuo Wang",
         "Shiyin Zhu",
         "Guoyu Peng",
-        "Xinyuan Zhang 0011",
-        "Tian Pan 0001",
-        "Tao Huang 0005",
+        "Xinyuan Zhang",
+        "Tian Pan",
+        "Tao Huang",
         "Lei Zhou",
         "Zuopin Cheng",
         "Daorong Guo",
@@ -967,10 +967,10 @@
         "Lianqing Zhang",
         "Juyan Lei",
         "Liangzhang Xu",
-        "Wei Wang 0494",
+        "Wei Wang",
         "Xinmin Liu",
         "Xuejun You",
-        "Yunjie Liu 0001"
+        "Yunjie Liu"
       ],
       "pages": "1132-1134",
       "type": "Conference and Workshop Papers",
@@ -994,7 +994,7 @@
         "Jinghui Jiang",
         "Zhenpei Huang",
         "Qiao Xiang",
-        "Lu Tang 0004",
+        "Lu Tang",
         "Jiwu Shu"
       ],
       "pages": "1123-1125",
@@ -1020,9 +1020,9 @@
         "Zili Zhang",
         "Xingyu Xiang",
         "Songyun Zou",
-        "Gang Huang 0001",
+        "Gang Huang",
         "Xuanzhe Liu",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "406-419",
       "type": "Conference and Workshop Papers",
@@ -1226,7 +1226,7 @@
         "Alon Simon Levin",
         "Igor Kadota",
         "Sasank Garikapati",
-        "Bo Zhang 0105",
+        "Bo Zhang",
         "Aditya Jolly",
         "Manav Kohli",
         "Mingoo Seok",
@@ -1252,21 +1252,21 @@
       "year": 2023,
       "title": "Poster: Triton: Accelerating vSwitch with Flexibility through Hardware Assisting not Bypassing Software.",
       "authors": [
-        "Xing Li 0007",
+        "Xing Li",
         "Xiaochong Jiang",
         "Ye Yang",
         "Lilong Chen",
-        "Tianyu Xu 0007",
-        "Chao Xu 0017",
+        "Tianyu Xu",
+        "Chao Xu",
         "Longbiao Xiao",
         "Fengmin Shi",
-        "Yi Wang 0004",
+        "Yi Wang",
         "Taotao Wu",
         "Yilong Lv",
         "Hangfeng Gao",
         "Zikang Chen",
         "Yisong Qiao",
-        "Hongwei Ding 0004",
+        "Hongwei Ding",
         "Yijian Dong",
         "Chengkun Wei",
         "Zihui Zhang",
@@ -1327,7 +1327,7 @@
         "Pedram Dashti",
         "Norm Jouppi",
         "Cedric F. Lam",
-        "Sheng Li 0007",
+        "Sheng Li",
         "Erji Mao",
         "Daniel Nelson",
         "George Papen",
@@ -1376,8 +1376,8 @@
       "year": 2023,
       "title": "A Millimeter Wave Backscatter Network for Two-Way Communication and Localization.",
       "authors": [
-        "Haofan Lu 0001",
-        "Mohammad Mazaheri 0001",
+        "Haofan Lu",
+        "Mohammad Mazaheri",
         "Reza Rezvani",
         "Omid Abari"
       ],
@@ -1431,10 +1431,10 @@
       "title": "Poster: PipeLLM: Pipeline LLM Inference on Heterogeneous Devices with Sequence Slicing.",
       "authors": [
         "Ruilong Ma",
-        "Jingyu Wang 0001",
-        "Qi Qi 0001",
+        "Jingyu Wang",
+        "Qi Qi",
         "Xiang Yang",
-        "Haifeng Sun 0001",
+        "Haifeng Sun",
         "Zirui Zhuang",
         "Jianxin Liao"
       ],
@@ -1462,7 +1462,7 @@
         "Marco Canini",
         "Ruiqiang Dai",
         "Shengli Zheng",
-        "Jilong Wang 0001",
+        "Jilong Wang",
         "Jiwu Bu",
         "Aleksandar Kuzmanovic",
         "Yachen Wang"
@@ -1488,15 +1488,15 @@
       "authors": [
         "Congcong Miao",
         "Zhizhen Zhong",
-        "Ying Zhang 0022",
+        "Ying Zhang",
         "Kunling He",
         "Fangchao Li",
         "Minggang Chen",
         "Yiren Zhao",
-        "Xiang Li 0223",
+        "Xiang Li",
         "Zekun He",
         "Xianneng Zou",
-        "Jilong Wang 0001"
+        "Jilong Wang"
       ],
       "pages": "319-332",
       "type": "Conference and Workshop Papers",
@@ -1521,13 +1521,13 @@
         "Zhilong Zheng",
         "Xianshang Lin",
         "Fengyu Gao",
-        "Xuan Zeng 0002",
+        "Xuan Zeng",
         "Yirui Liu",
         "Tao Xu",
         "Hua Wang",
         "Zhidong Zhang",
         "Senlang Du",
-        "Guang Yang 0006",
+        "Guang Yang",
         "Yuanchao Su",
         "Dennis Cai",
         "Hongqiang Harry Liu",
@@ -1611,7 +1611,7 @@
         "Neal Cardwell",
         "Willem de Bruijn",
         "Van Jacobson",
-        "Jasleen Kaur 0001",
+        "Jasleen Kaur",
         "David Wetherall",
         "Amin Vahdat"
       ],
@@ -1636,7 +1636,7 @@
       "authors": [
         "Ram Sundara Raman",
         "Louis-Henri Merino",
-        "Kevin Bock 0001",
+        "Kevin Bock",
         "Marwan Fayed",
         "Dave Levin",
         "Nick Sullivan",
@@ -1815,16 +1815,16 @@
       "title": "Network-Centric Distributed Tracing with DeepFlow: Troubleshooting Your Microservices in Zero Code.",
       "authors": [
         "Junxian Shen",
-        "Han Zhang 0009",
+        "Han Zhang",
         "Yang Xiang",
         "Xingang Shi",
         "Xinrui Li",
         "Yunxi Shen",
         "Zijian Zhang",
         "Yongxiang Wu",
-        "Xia Yin 0001",
-        "Jilong Wang 0001",
-        "Mingwei Xu 0001",
+        "Xia Yin",
+        "Jilong Wang",
+        "Mingwei Xu",
         "Yahui Li",
         "Jiping Yin",
         "Jianchang Song",
@@ -1898,7 +1898,7 @@
         "Xin Zhe Khooi",
         "Raj Joshi",
         "Inho Choi",
-        "Jialin Li 0001",
+        "Jialin Li",
         "Mun Choon Chan"
       ],
       "pages": "816-831",
@@ -1948,7 +1948,7 @@
       "title": "Poster: Understanding Interactions between Overload Control Core Allocation in Low-Latency Network Stacks.",
       "authors": [
         "Eric Stuhr",
-        "Ahmed Saeed 0001"
+        "Ahmed Saeed"
       ],
       "pages": "1159-1161",
       "type": "Conference and Workshop Papers",
@@ -1972,12 +1972,12 @@
         "Qiang Su",
         "Shaofeng Wu",
         "Zhixiong Niu",
-        "Ran Shu 0001",
-        "Peng Cheng 0005",
+        "Ran Shu",
+        "Peng Cheng",
         "Yongqiang Xiong",
         "Chun Jason Xue",
         "Zaoxing Liu",
-        "Hong Xu 0001"
+        "Hong Xu"
       ],
       "pages": "1114-1116",
       "type": "Conference and Workshop Papers",
@@ -2002,7 +2002,7 @@
         "Mingliang Jiang",
         "Xin Zhe Khooi",
         "Yunfan Li",
-        "Jialin Li 0001"
+        "Jialin Li"
       ],
       "pages": "239-254",
       "type": "Conference and Workshop Papers",
@@ -2023,11 +2023,11 @@
       "year": 2023,
       "title": "OmniWindow: A General and Efficient Window Mechanism Framework for Network Telemetry.",
       "authors": [
-        "Haifeng Sun 0004",
+        "Haifeng Sun",
         "Jiaheng Li",
         "Jintao He",
         "Jie Gui",
-        "Qun Huang 0001"
+        "Qun Huang"
       ],
       "pages": "867-880",
       "type": "Conference and Workshop Papers",
@@ -2098,7 +2098,7 @@
       "year": 2023,
       "title": "Towards Practical and Scalable Molecular Networks.",
       "authors": [
-        "Jiaming Wang 0003",
+        "Jiaming Wang",
         "Sevda Ögüt",
         "Haitham Al-Hassanieh",
         "Bhuvana Krishnaswamy"
@@ -2125,10 +2125,10 @@
         "Yanxiang Wang",
         "Guangrong Zhao",
         "Kenuo Xu",
-        "Yiran Shen 0001",
+        "Yiran Shen",
         "Chenren Xu",
         "Mahbub Hassan",
-        "Wen Hu 0001"
+        "Wen Hu"
       ],
       "pages": "1168-1169",
       "type": "Conference and Workshop Papers",
@@ -2150,13 +2150,13 @@
       "title": "Achelous: Enabling Programmability, Elasticity, and Reliability in Hyperscale Cloud Networks.",
       "authors": [
         "Chengkun Wei",
-        "Xing Li 0007",
+        "Xing Li",
         "Ye Yang",
         "Xiaochong Jiang",
-        "Tianyu Xu 0007",
+        "Tianyu Xu",
         "Bowen Yang",
         "Taotao Wu",
-        "Chao Xu 0017",
+        "Chao Xu",
         "Yilong Lv",
         "Haifeng Gao",
         "Zhentao Zhang",
@@ -2216,9 +2216,9 @@
       "title": "ZGaming: Zero-Latency 3D Cloud Gaming by Image Prediction.",
       "authors": [
         "Jiangkai Wu",
-        "Yu Guan 0005",
-        "Qi Mao 0002",
-        "Yong Cui 0001",
+        "Yu Guan",
+        "Qi Mao",
+        "Yong Cui",
         "Zongming Guo",
         "Xinggong Zhang"
       ],
@@ -2241,9 +2241,9 @@
       "year": 2023,
       "title": "Enabling Ubiquitous WiFi Sensing with Beamforming Reports.",
       "authors": [
-        "Chenhao Wu 0006",
-        "Xuan Huang 0001",
-        "Jun Huang 0001",
+        "Chenhao Wu",
+        "Xuan Huang",
+        "Jun Huang",
         "Guoliang Xing"
       ],
       "pages": "20-32",
@@ -2266,8 +2266,8 @@
       "title": "XRON: A Hybrid Elastic Cloud Overlay Network for Video Conferencing at Planetary Scale.",
       "authors": [
         "Bingyang Wu",
-        "Kun Qian 0004",
-        "Bo Li 0061",
+        "Kun Qian",
+        "Bo Li",
         "Yunfei Ma",
         "Qi Zhang",
         "Zhigang Jiang",
@@ -2275,7 +2275,7 @@
         "Dennis Cai",
         "Ennan Zhai",
         "Xuanzhe Liu",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "696-709",
       "type": "Conference and Workshop Papers",
@@ -2321,9 +2321,9 @@
       "title": "Beyond a Centralized Verifier: Scaling Data Plane Checking via Distributed, On-Device Verification.",
       "authors": [
         "Qiao Xiang",
-        "Chenyang Huang 0005",
+        "Chenyang Huang",
         "Ridi Wen",
-        "Yuxin Wang 0003",
+        "Yuxin Wang",
         "Xiwen Fan",
         "Zaoxing Liu",
         "Linghe Kong",
@@ -2377,7 +2377,7 @@
       "title": "Unleashing SmartNIC Packet Processing Performance in P4.",
       "authors": [
         "Jiarong Xing",
-        "Yiming Qiu 0001",
+        "Yiming Qiu",
         "Kuo-Feng Hsu",
         "Songyuan Sui",
         "Khalid Manaa",
@@ -2386,7 +2386,7 @@
         "Matty Kadosh",
         "Arvind Krishnamurthy",
         "T. S. Eugene Ng",
-        "Ang Chen 0001"
+        "Ang Chen"
       ],
       "pages": "1028-1042",
       "type": "Conference and Workshop Papers",
@@ -2436,14 +2436,14 @@
         "Wenquan Xu",
         "Zijian Zhang",
         "Yong Feng",
-        "Haoyu Song 0001",
+        "Haoyu Song",
         "Zhikang Chen",
         "Wenfei Wu",
         "Guyue Liu",
         "Yinchao Zhang",
         "Shuxin Liu",
         "Zerui Tian",
-        "Bin Liu 0001"
+        "Bin Liu"
       ],
       "pages": "798-815",
       "type": "Conference and Workshop Papers",
@@ -2490,12 +2490,12 @@
       "title": "Poster: TOO: Accelerating Loss Recovery by Taming On-Off Traffic Patterns.",
       "authors": [
         "Xu Yan",
-        "Tong Li 0014",
-        "Bo Wu 0002",
+        "Tong Li",
+        "Bo Wu",
         "Cheng Luo",
         "Fuyu Wang",
         "Haiyang Wang",
-        "Ke Xu 0002"
+        "Ke Xu"
       ],
       "pages": "1147-1149",
       "type": "Conference and Workshop Papers",
@@ -2517,8 +2517,8 @@
       "title": "Poster: Q-Scanner: A Fast Scanning Tool for Large-Scale SSL/TLS Configurations Measurement.",
       "authors": [
         "Rui Yan",
-        "Shuai Wang 0028",
-        "Dan Li 0001"
+        "Shuai Wang",
+        "Dan Li"
       ],
       "pages": "1135-1137",
       "type": "Conference and Workshop Papers",
@@ -2539,14 +2539,14 @@
       "year": 2023,
       "title": "ChameleMon: Shifting Measurement Attention as Network State Changes.",
       "authors": [
-        "Kaicheng Yang 0001",
-        "Yuhan Wu 0001",
+        "Kaicheng Yang",
+        "Yuhan Wu",
         "Ruijie Miao",
-        "Tong Yang 0003",
-        "Zirui Liu 0002",
+        "Tong Yang",
+        "Zirui Liu",
         "Zicang Xu",
         "Rui Qiu",
-        "Yikai Zhao 0001",
+        "Yikai Zhao",
         "Hanglong Lv",
         "Zhigang Ji",
         "Gaogang Xie"
@@ -2571,12 +2571,12 @@
       "title": "BMW Tree: Large-scale, High-throughput and Modular PIFO Implementation using Balanced Multi-Way Sorting Tree.",
       "authors": [
         "Ruyi Yao",
-        "Zhiyu Zhang 0012",
+        "Zhiyu Zhang",
         "Gaojian Fang",
         "Peixuan Gao",
-        "Sen Liu 0002",
+        "Sen Liu",
         "Yibo Fan",
-        "Yang Xu 0010",
+        "Yang Xu",
         "H. Jonathan Chao"
       ],
       "pages": "208-219",
@@ -2647,10 +2647,10 @@
       "authors": [
         "Zhuolong Yu",
         "Bowen Su",
-        "Wei Bai 0001",
+        "Wei Bai",
         "Shachar Raindel",
         "Vladimir Braverman",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "1074-1087",
       "type": "Conference and Workshop Papers",
@@ -2672,9 +2672,9 @@
       "title": "PacketGame: Multi-Stream Packet Gating for Concurrent Video Inference at Scale.",
       "authors": [
         "Mu Yuan",
-        "Lan Zhang 0002",
+        "Lan Zhang",
         "Xuanke You",
-        "Xiang-Yang Li 0001"
+        "Xiang-Yang Li"
       ],
       "pages": "724-737",
       "type": "Conference and Workshop Papers",
@@ -2695,13 +2695,13 @@
       "year": 2023,
       "title": "P4LRU: Towards An LRU Cache Entirely in Programmable Data Plane.",
       "authors": [
-        "Yikai Zhao 0001",
-        "Wenrui Liu 0006",
+        "Yikai Zhao",
+        "Wenrui Liu",
         "Fenghao Dong",
-        "Tong Yang 0003",
-        "Yuanpeng Li 0002",
-        "Kaicheng Yang 0001",
-        "Zirui Liu 0002",
+        "Tong Yang",
+        "Yuanpeng Li",
+        "Kaicheng Yang",
+        "Zirui Liu",
         "Zhengyi Jia",
         "Yongqiang Yang"
       ],
@@ -2727,13 +2727,13 @@
         "Yihao Zhao",
         "Xiaoxiang Zhang",
         "Hang Zhu",
-        "Ying Zhang 0022",
+        "Ying Zhang",
         "Zhaodong Wang",
         "Yuandong Tian",
         "Alex Nikulkov",
         "Joao Ferreira",
         "Xuanzhe Liu",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "783-797",
       "type": "Conference and Workshop Papers",
@@ -2810,9 +2810,9 @@
       "authors": [
         "Minyuan Zhou",
         "Xiao Zhang",
-        "Shuai Hao 0001",
-        "Xiaowei Yang 0001",
-        "Jiaqi Zheng 0001",
+        "Shuai Hao",
+        "Xiaowei Yang",
+        "Jiaqi Zheng",
         "Guihai Chen",
         "Wanchun Dou"
       ],
@@ -2836,13 +2836,13 @@
       "title": "Poster: PolyCC: Poly-Algorithmic Congestion Control.",
       "authors": [
         "Shuaipeng Zhu",
-        "Tong Li 0014",
+        "Tong Li",
         "Xinyu Ma",
-        "Yinfeng Zhu 0002",
+        "Yinfeng Zhu",
         "Taotao Zhang",
         "Senzhen Liu",
         "Haiyang Wang",
-        "Ke Xu 0002"
+        "Ke Xu"
       ],
       "pages": "1129-1131",
       "type": "Conference and Workshop Papers",

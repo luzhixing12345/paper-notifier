@@ -6,7 +6,7 @@
       "year": 2022,
       "title": "Adelie: continuous address space layout re-randomization for Linux drivers.",
       "authors": [
-        "Ruslan Nikolaev 0001",
+        "Ruslan Nikolaev",
         "Hassan Nadeem",
         "Cathlyn Stone",
         "Binoy Ravindran"
@@ -30,10 +30,10 @@
       "year": 2022,
       "title": "A tree clock data structure for causal orderings in concurrent executions.",
       "authors": [
-        "Umang Mathur 0001",
+        "Umang Mathur",
         "Andreas Pavlogiannis",
         "Hünkar Can Tunç",
-        "Mahesh Viswanathan 0001"
+        "Mahesh Viswanathan"
       ],
       "pages": "710-725",
       "type": "Conference and Workshop Papers",
@@ -54,7 +54,7 @@
       "year": 2022,
       "title": "Every walk's a hit: making page walks single-access cache hits.",
       "authors": [
-        "Chang Hyun Park 0001",
+        "Chang Hyun Park",
         "Ilias Vougioukas",
         "Andreas Sandberg",
         "David Black-Schaffer"
@@ -78,7 +78,7 @@
       "year": 2022,
       "title": "LILLIPUT: a lightweight low-latency lookup-table decoder for near-term Quantum error correction.",
       "authors": [
-        "Poulami Das 0005",
+        "Poulami Das",
         "Aditya Locharla",
         "Cody Jones"
       ],
@@ -102,7 +102,7 @@
       "title": "CirFix: automatically repairing defects in hardware design code.",
       "authors": [
         "Hammad Ahmad",
-        "Yu Huang 0015",
+        "Yu Huang",
         "Westley Weimer"
       ],
       "pages": "990-1003",
@@ -127,7 +127,7 @@
         "Maaz Bin Safeer Ahmad",
         "Alexander J. Root",
         "Andrew Adams",
-        "Shoaib Kamil 0001",
+        "Shoaib Kamil",
         "Alvin Cheung"
       ],
       "pages": "1004-1016",
@@ -199,7 +199,7 @@
       "title": "Efficiently detecting concurrency bugs in persistent memory programs.",
       "authors": [
         "Zhangyu Chen",
-        "Yu Hua 0001",
+        "Yu Hua",
         "Yongle Zhang",
         "Luochangqi Ding"
       ],
@@ -224,7 +224,7 @@
       "authors": [
         "Yanju Chen",
         "Junrui Liu",
-        "Yu Feng 0001",
+        "Yu Feng",
         "Rastislav Bodík"
       ],
       "pages": "1030-1042",
@@ -248,7 +248,7 @@
       "authors": [
         "Qihang Chen",
         "Boyu Tian",
-        "Mingyu Gao 0001"
+        "Mingyu Gao"
       ],
       "pages": "43-55",
       "type": "Conference and Workshop Papers",
@@ -295,7 +295,7 @@
         "Jinbum Park",
         "Adam Oest",
         "Tiffany Bao",
-        "Ruoyu Wang 0001",
+        "Ruoyu Wang",
         "Yan Shoshitaishvili",
         "Adam Doupé",
         "Gail-Joon Ahn"
@@ -378,9 +378,9 @@
         "Shuibing He",
         "Peiyi Hong",
         "Zhenxin Li",
-        "Xuechen Zhang 0001",
+        "Xuechen Zhang",
         "Xian-He Sun",
-        "Gang Chen 0001"
+        "Gang Chen"
       ],
       "pages": "115-127",
       "type": "Conference and Workshop Papers",
@@ -406,7 +406,7 @@
         "Thomas Bourgeat",
         "Jules Drean",
         "Joel S. Emer",
-        "Mengjia Yan 0001"
+        "Mengjia Yan"
       ],
       "pages": "329-343",
       "type": "Conference and Workshop Papers",
@@ -427,12 +427,12 @@
       "year": 2022,
       "title": "Serverless computing on heterogeneous computers.",
       "authors": [
-        "Dong Du 0003",
+        "Dong Du",
         "Qingyuan Liu",
         "Xueqiang Jiang",
         "Yubin Xia",
         "Binyu Zang",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "797-813",
       "type": "Conference and Workshop Papers",
@@ -483,8 +483,8 @@
       "title": "MineSweeper: a \"clean sweep\" for drop-in use-after-free prevention.",
       "authors": [
         "Márton Erdos",
-        "Sam Ainsworth 0001",
-        "Timothy M. Jones 0001"
+        "Sam Ainsworth",
+        "Timothy M. Jones"
       ],
       "pages": "212-225",
       "type": "Conference and Workshop Papers",
@@ -509,7 +509,7 @@
         "Stanko Novakovic",
         "Iñigo Goiri",
         "Gohar Irfan Chaudhry",
-        "Prateek Sharma 0001",
+        "Prateek Sharma",
         "Kapil Arya",
         "Kevin Broas",
         "Eugene Bak",
@@ -586,7 +586,7 @@
         "Yizhou Shan",
         "Xuhao Luo",
         "Yutong Huang",
-        "Yiying Zhang 0005"
+        "Yiying Zhang"
       ],
       "pages": "417-433",
       "type": "Conference and Workshop Papers",
@@ -638,7 +638,7 @@
         "Josef Bacik",
         "Chris Mason",
         "Chunqiang Tang",
-        "Dimitrios Skarlatos 0002"
+        "Dimitrios Skarlatos"
       ],
       "pages": "595-608",
       "type": "Conference and Workshop Papers",
@@ -688,8 +688,8 @@
       "year": 2022,
       "title": "JSONSki: streaming semi-structured data with bit-parallel fast-forwarding.",
       "authors": [
-        "Lin Jiang 0005",
-        "Zhijia Zhao 0001"
+        "Lin Jiang",
+        "Zhijia Zhao"
       ],
       "pages": "200-211",
       "type": "Conference and Workshop Papers",
@@ -714,10 +714,10 @@
         "Tianyi Xu",
         "Yajin Zhou",
         "Yufeng Hu",
-        "Ming Zhong 0009",
-        "Lei Wu 0012",
+        "Ming Zhong",
+        "Lei Wu",
         "Xiapu Luo",
-        "Kui Ren 0001"
+        "Kui Ren"
       ],
       "pages": "846-858",
       "type": "Conference and Workshop Papers",
@@ -762,7 +762,7 @@
       "authors": [
         "Hugo Lefeuvre",
         "Vlad-Andrei Badoiu",
-        "Alexander Jung 0002",
+        "Alexander Jung",
         "Stefan Lucian Teodorescu",
         "Sebastian Rauch",
         "Felipe Huici",
@@ -791,7 +791,7 @@
         "Tuo Li",
         "Jia-Ju Bai",
         "Yulei Sui",
-        "Shi-Min Hu 0001"
+        "Shi-Min Hu"
       ],
       "pages": "859-872",
       "type": "Conference and Workshop Papers",
@@ -812,10 +812,10 @@
       "year": 2022,
       "title": "FaaSFlow: enable efficient workflow execution for function-as-a-service.",
       "authors": [
-        "Zijun Li 0001",
-        "Yushi Liu 0003",
+        "Zijun Li",
+        "Yushi Liu",
         "Linsong Guo",
-        "Quan Chen 0002",
+        "Quan Chen",
         "Jiagan Cheng",
         "Wenli Zheng",
         "Minyi Guo"
@@ -843,8 +843,8 @@
         "Anbang Wu",
         "Yunong Shi",
         "Ali Javadi-Abhari",
-        "Yufei Ding 0001",
-        "Yuan Xie 0001"
+        "Yufei Ding",
+        "Yuan Xie"
       ],
       "pages": "554-569",
       "type": "Conference and Workshop Papers",
@@ -888,11 +888,11 @@
       "year": 2022,
       "title": "VELTAIR: towards high-performance multi-tenant deep learning services via adaptive compilation and scheduling.",
       "authors": [
-        "Zihan Liu 0002",
+        "Zihan Liu",
         "Jingwen Leng",
         "Zhihui Zhang",
-        "Quan Chen 0002",
-        "Chao Li 0009",
+        "Quan Chen",
+        "Chao Li",
         "Minyi Guo"
       ],
       "pages": "388-401",
@@ -916,9 +916,9 @@
       "authors": [
         "Ziheng Liu",
         "Shihao Xia",
-        "Yu Liang 0002",
+        "Yu Liang",
         "Linhai Song",
-        "Hong Hu 0004"
+        "Hong Hu"
       ],
       "pages": "888-902",
       "type": "Conference and Workshop Papers",
@@ -939,11 +939,11 @@
       "year": 2022,
       "title": "Debugging in the brave new world of reconfigurable hardware.",
       "authors": [
-        "Jiacheng Ma 0001",
+        "Jiacheng Ma",
         "Gefei Zuo",
         "Kevin Loughlin",
         "Haoyang Zhang",
-        "Andrew Quinn 0001",
+        "Andrew Quinn",
         "Baris Kasikci"
       ],
       "pages": "946-962",
@@ -1010,7 +1010,7 @@
       "title": "GenStore: a high-performance in-storage processing system for genome sequence analysis.",
       "authors": [
         "Nika Mansouri-Ghiasi",
-        "Jisung Park 0001",
+        "Jisung Park",
         "Harun Mustafa",
         "Jeremie S. Kim",
         "Ataberk Olgun",
@@ -1217,7 +1217,7 @@
       "authors": [
         "Boris Pismenny",
         "Liran Liss",
-        "Adam Morrison 0001",
+        "Adam Morrison",
         "Dan Tsafrir"
       ],
       "pages": "1130-1147",
@@ -1239,12 +1239,12 @@
       "year": 2022,
       "title": "DOTA: detect and omit weak attentions for scalable transformer acceleration.",
       "authors": [
-        "Zheng Qu 0002",
-        "Liu Liu 0017",
+        "Zheng Qu",
+        "Liu Liu",
         "Fengbin Tu",
-        "Zhaodong Chen 0001",
-        "Yufei Ding 0001",
-        "Yuan Xie 0001"
+        "Zhaodong Chen",
+        "Yufei Ding",
+        "Yuan Xie"
       ],
       "pages": "14-26",
       "type": "Conference and Workshop Papers",
@@ -1316,8 +1316,8 @@
       "title": "RSSD: defend against ransomware with hardware-isolated network-storage codesign and post-attack analysis.",
       "authors": [
         "Benjamin Reidys",
-        "Peng Liu 0005",
-        "Jian Huang 0006"
+        "Peng Liu",
+        "Jian Huang"
       ],
       "pages": "726-739",
       "type": "Conference and Workshop Papers",
@@ -1435,7 +1435,7 @@
       "title": "Parallel virtualized memory translation with nested elastic cuckoo page tables.",
       "authors": [
         "Jovan Stojkovic",
-        "Dimitrios Skarlatos 0002",
+        "Dimitrios Skarlatos",
         "Apostolos Kokolis",
         "Tianyin Xu",
         "Josep Torrellas"
@@ -1462,7 +1462,7 @@
         "Brian Suchy",
         "Souradip Ghosh",
         "Drew Kersnar",
-        "Siyuan Chai 0001",
+        "Siyuan Chai",
         "Zhen Huang",
         "Aaron Nelson",
         "Michael Cuevas",
@@ -1493,7 +1493,7 @@
       "authors": [
         "Tushar Swamy",
         "Alexander Rucker",
-        "Muhammad Shahbaz 0001",
+        "Muhammad Shahbaz",
         "Ishan Gaur",
         "Kunle Olukotun"
       ],
@@ -1517,7 +1517,7 @@
       "title": "HAMMER: boosting fidelity of noisy Quantum circuits by exploiting Hamming behavior of erroneous outcomes.",
       "authors": [
         "Swamit S. Tannu",
-        "Poulami Das 0005",
+        "Poulami Das",
         "Ramin Ayanzadeh",
         "Moinuddin K. Qureshi"
       ],
@@ -1542,7 +1542,7 @@
       "authors": [
         "Theodoros Theodoridis",
         "Tobias Grosser",
-        "Zhendong Su 0001"
+        "Zhendong Su"
       ],
       "pages": "977-989",
       "type": "Conference and Workshop Papers",
@@ -1565,7 +1565,7 @@
       "authors": [
         "Theodoros Theodoridis",
         "Manuel Rigger",
-        "Zhendong Su 0001"
+        "Zhendong Su"
       ],
       "pages": "697-709",
       "type": "Conference and Workshop Papers",
@@ -1613,12 +1613,12 @@
       "title": "A one-for-all and o(v log(v ))-cost solution for parallel merge style operations on sorted key-value arrays.",
       "authors": [
         "Bangyan Wang",
-        "Lei Deng 0003",
-        "Fei Sun 0002",
-        "Guohao Dai 0001",
-        "Liu Liu 0017",
-        "Yu Wang 0002",
-        "Yuan Xie 0001"
+        "Lei Deng",
+        "Fei Sun",
+        "Guohao Dai",
+        "Liu Liu",
+        "Yu Wang",
+        "Yuan Xie"
       ],
       "pages": "669-682",
       "type": "Conference and Workshop Papers",
@@ -1643,13 +1643,13 @@
         "Niket Agarwal",
         "Dan Schatzberg",
         "Leon Yang",
-        "Hao Wang 0011",
+        "Hao Wang",
         "Blaise Sanouillet",
         "Bikash Sharma",
         "Tejun Heo",
         "Mayank Jain",
         "Chunqiang Tang",
-        "Dimitrios Skarlatos 0002"
+        "Dimitrios Skarlatos"
       ],
       "pages": "609-621",
       "type": "Conference and Workshop Papers",
@@ -1702,7 +1702,7 @@
         "Jidong Zhai",
         "Zhenxing Zhang",
         "Jonathan Allcock",
-        "Shengyu Zhang 0002",
+        "Shengyu Zhang",
         "Yicong Zheng"
       ],
       "pages": "499-513",
@@ -1724,11 +1724,11 @@
       "year": 2022,
       "title": "Eavesdropping user credentials via GPU side channels on smartphones.",
       "authors": [
-        "Boyuan Yang 0001",
+        "Boyuan Yang",
         "Ruirong Chen",
-        "Kai Huang 0007",
-        "Jun Yang 0002",
-        "Wei Gao 0006"
+        "Kai Huang",
+        "Jun Yang",
+        "Wei Gao"
       ],
       "pages": "285-299",
       "type": "Conference and Workshop Papers",
@@ -1777,11 +1777,11 @@
       "year": 2022,
       "title": "Astraea: towards QoS-aware and resource-efficient multi-stage GPU services.",
       "authors": [
-        "Wei Zhang 0149",
-        "Quan Chen 0002",
+        "Wei Zhang",
+        "Quan Chen",
         "Kaihua Fu",
         "Ningxin Zheng",
-        "Zhiyi Huang 0001",
+        "Zhiyi Huang",
         "Jingwen Leng",
         "Minyi Guo"
       ],
@@ -1804,7 +1804,7 @@
       "year": 2022,
       "title": "A full-stack search technique for domain optimized deep learning accelerators.",
       "authors": [
-        "Dan Zhang 0004",
+        "Dan Zhang",
         "Safeen Huda",
         "Ebrahim M. Songhori",
         "Kartik Prabhu",
@@ -1831,10 +1831,10 @@
       "year": 2022,
       "title": "One size does not fit all: security hardening of MIPS embedded systems via static binary debloating for shared libraries.",
       "authors": [
-        "Haotian Zhang 0006",
-        "Mengfei Ren 0001",
-        "Yu Lei 0001",
-        "Jiang Ming 0002"
+        "Haotian Zhang",
+        "Mengfei Ren",
+        "Yu Lei",
+        "Jiang Ming"
       ],
       "pages": "255-270",
       "type": "Conference and Workshop Papers",
@@ -1878,7 +1878,7 @@
       "year": 2022,
       "title": "HeteroGen: transpiling C to heterogeneous HLS code with automated test generation and program repair.",
       "authors": [
-        "Qian Zhang 0020",
+        "Qian Zhang",
         "Jiyuan Wang",
         "Guoqing Harry Xu",
         "Miryung Kim"
@@ -1903,7 +1903,7 @@
       "title": "ShEF: shielded enclaves for cloud FPGAs.",
       "authors": [
         "Mark Zhao",
-        "Mingyu Gao 0001",
+        "Mingyu Gao",
         "Christos Kozyrakis"
       ],
       "pages": "1070-1085",
@@ -1927,7 +1927,7 @@
       "authors": [
         "Zirui Neil Zhao",
         "Houxiang Ji",
-        "Adam Morrison 0001",
+        "Adam Morrison",
         "Darko Marinov",
         "Josep Torrellas"
       ],
@@ -1954,10 +1954,10 @@
         "Fanxin Li",
         "Xusheng Chen",
         "Tianxiang Shen",
-        "Li Chen 0008",
-        "Sen Wang 0004",
+        "Li Chen",
+        "Sen Wang",
         "Nicholas Zhang",
-        "Cheng Li 0001",
+        "Cheng Li",
         "Heming Cui"
       ],
       "pages": "374-387",
@@ -1987,10 +1987,10 @@
         "Feiwen Zhu",
         "Wenyi Zhao",
         "Xiaoyong Liu",
-        "Jun Yang 0052",
+        "Jun Yang",
         "Jidong Zhai",
         "Shuaiwen Leon Song",
-        "Wei Lin 0016"
+        "Wei Lin"
       ],
       "pages": "359-373",
       "type": "Conference and Workshop Papers",
@@ -2011,11 +2011,11 @@
       "year": 2022,
       "title": "ValueExpert: exploring value patterns in GPU-accelerated applications.",
       "authors": [
-        "Keren Zhou 0001",
+        "Keren Zhou",
         "Yueming Hao",
         "John M. Mellor-Crummey",
         "Xiaozhu Meng",
-        "Xu Liu 0001"
+        "Xu Liu"
       ],
       "pages": "171-185",
       "type": "Conference and Workshop Papers",
@@ -2038,7 +2038,7 @@
       "authors": [
         "Babak Falsafi",
         "Michael Ferdman",
-        "Shan Lu 0001",
+        "Shan Lu",
         "Thomas F. Wenisch"
       ],
       "pages": "",

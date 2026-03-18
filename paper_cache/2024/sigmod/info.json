@@ -57,7 +57,7 @@
       "authors": [
         "David C. Y. Chu",
         "Alexandros Zeakis",
-        "Guangjing Wang 0001",
+        "Guangjing Wang",
         "Zichen Zhu"
       ],
       "pages": "89-90",
@@ -127,7 +127,7 @@
       "title": "Reproducibility Report for ACM SIGMOD 2024 Paper: 'On Efficient Large Sparse Matrix Chain Multiplication'.",
       "authors": [
         "Sami Hadouaj",
-        "Xiaojun Dong 0001"
+        "Xiaojun Dong"
       ],
       "pages": "82-84",
       "type": "Conference and Workshop Papers",
@@ -148,7 +148,7 @@
       "year": 2024,
       "title": "Reproducibility Report for ACM SIGMOD 2024 Paper: 'Hierarchical Cut Labelling - Scaling Up Distance Queries on Road Networks'.",
       "authors": [
-        "Yihao Hu 0001",
+        "Yihao Hu",
         "Gabriele Oliaro",
         "Jiani Yang",
         "Muhammad Farhan"
@@ -172,7 +172,7 @@
       "year": 2024,
       "title": "Reproducibility Report for ACM SIGMOD 2024 Paper: 'StarfishDB: A Query Execution Engine for Relational Probabilistic Programming'.",
       "authors": [
-        "Alexander Krause 0001",
+        "Alexander Krause",
         "Georgiy Lebedev",
         "Sami Hadouaj",
         "Ouael Ben Amara",
@@ -197,7 +197,7 @@
       "year": 2024,
       "title": "Reproducibility Report for ACM SIGMOD 2024 Paper: 'Can Learned Indexes be Built Efficiently? A Deep Dive into Sampling Trade-offs'.",
       "authors": [
-        "Yihao Liu 0008",
+        "Yihao Liu",
         "Yuanhui Luo",
         "Minguk Choi"
       ],
@@ -220,12 +220,12 @@
       "year": 2024,
       "title": "Reproducibility Report for ACM SIGMOD 2024 Paper: 'Temporal JSON Keyword Search'.",
       "authors": [
-        "Chenhao Ma 0001",
+        "Chenhao Ma",
         "Junchang Wang",
         "Curtis E. Dyreson",
         "Amani M. Shatnawi",
         "Sourav S. Bhowmick",
-        "Vishal Sharma 0005"
+        "Vishal Sharma"
       ],
       "pages": "10-11",
       "type": "Conference and Workshop Papers",
@@ -249,7 +249,7 @@
         "Hein Meling",
         "Yue Gong",
         "Kaiqiang Yu",
-        "Cheng Long 0001"
+        "Cheng Long"
       ],
       "pages": "91-93",
       "type": "Conference and Workshop Papers",
@@ -320,7 +320,7 @@
       "title": "Reproducibility Report for ACM SIGMOD 2024 Paper: 'CAFE: Towards Compact, Adaptive, and Fast Embedding for Large-scale Recommendation Models'.",
       "authors": [
         "Olga Ovcharenko",
-        "Xiang Lian 0001"
+        "Xiang Lian"
       ],
       "pages": "66-68",
       "type": "Conference and Workshop Papers",
@@ -391,7 +391,7 @@
       "title": "Reproducibility Report for ACM SIGMOD 2024 Paper: 'Faster Algorithms for Fair Max-Min Diversification in Rd'.",
       "authors": [
         "Lukas Schwerdtfeger",
-        "William Zhang 0001"
+        "William Zhang"
       ],
       "pages": "64-65",
       "type": "Conference and Workshop Papers",
@@ -412,12 +412,12 @@
       "year": 2024,
       "title": "Reproducibility Report for ACM SIGMOD 2024 Paper: 'PimPam: Efficient Graph Pattern Matching on Real Processing-in-Memory Hardware'.",
       "authors": [
-        "Mo Sha 0002",
+        "Mo Sha",
         "Kaiqiang Yu",
         "Shuangyu Cai",
         "Boyu Tian",
         "Huanchen Zhang",
-        "Mingyu Gao 0001"
+        "Mingyu Gao"
       ],
       "pages": "24-27",
       "type": "Conference and Workshop Papers",
@@ -441,8 +441,8 @@
         "Ayushi Singh",
         "Sven Helmer",
         "Yancan Mao",
-        "Jianjun Zhao 0003",
-        "Shuhao Zhang 0001"
+        "Jianjun Zhao",
+        "Shuhao Zhang"
       ],
       "pages": "1-4",
       "type": "Conference and Workshop Papers",
@@ -489,8 +489,8 @@
       "authors": [
         "Giorgio Vinciguerra",
         "Chuqing Gao",
-        "Shufan Zhang 0001",
-        "Xi He 0001"
+        "Shufan Zhang",
+        "Xi He"
       ],
       "pages": "44-50",
       "type": "Conference and Workshop Papers",
@@ -512,7 +512,7 @@
       "title": "Reproducibility Report for ACM SIGMOD 2024 Paper: 'On The Reasonable Effectiveness of Relational Diagrams'.",
       "authors": [
         "Giorgio Vinciguerra",
-        "Guang Yang 0044",
+        "Guang Yang",
         "Wolfgang Gatterbauer",
         "Cody Dunne"
       ],
@@ -536,7 +536,7 @@
       "title": "Reproducibility Report for ACM SIGMOD 2024 Paper: 'Proving Query Equivalence Using Linear Integer Arithmetic'.",
       "authors": [
         "Yinzhao Yan",
-        "Yicong Huang 0002",
+        "Yicong Huang",
         "Yingli Zhou",
         "Haoran Ding"
       ],
@@ -582,7 +582,7 @@
       "year": 2024,
       "title": "Reproducibility Report for ACM SIGMOD 2024 Paper: 'Query Refinement for Diverse Top-k Selection'.",
       "authors": [
-        "Yuxuan Zhu 0003",
+        "Yuxuan Zhu",
         "Maximilian Hüttner",
         "Kyle Deeds"
       ],
@@ -605,7 +605,7 @@
       "year": 2024,
       "title": "Beyond Bloom: A Tutorial on Future Feature-Rich Filters.",
       "authors": [
-        "Prashant Pandey 0001",
+        "Prashant Pandey",
         "Martín Farach-Colton",
         "Niv Dayan",
         "Huanchen Zhang"
@@ -629,7 +629,7 @@
       "year": 2024,
       "title": "Property Graph Stream Processing In Action with Seraph.",
       "authors": [
-        "Riccardo Tommasini 0001",
+        "Riccardo Tommasini",
         "Christopher Rost",
         "Angela Bonifati",
         "Emanuele Della Valle",
@@ -658,7 +658,7 @@
       "year": 2024,
       "title": "Similarity Joins of Sparse Features.",
       "authors": [
-        "Ahmed Metwally 0001",
+        "Ahmed Metwally",
         "Michael Shum"
       ],
       "pages": "80-92",
@@ -680,9 +680,9 @@
       "year": 2024,
       "title": "Demonstration of Udon: Line-by-line Debugging of User-Defined Functions in Data Workflows.",
       "authors": [
-        "Yicong Huang 0002",
+        "Yicong Huang",
         "Zuozhi Wang",
-        "Chen Li 0001"
+        "Chen Li"
       ],
       "pages": "476-479",
       "type": "Conference and Workshop Papers",
@@ -703,11 +703,11 @@
       "year": 2024,
       "title": "ByteCard: Enhancing ByteDance's Data Warehouse with Learned Cardinality Estimation.",
       "authors": [
-        "Yuxing Han 0002",
+        "Yuxing Han",
         "Haoyu Wang",
         "Lixiang Chen",
         "Yifeng Dong",
-        "Xing Chen 0023",
+        "Xing Chen",
         "Benquan Yu",
         "Chengcheng Yang",
         "Weining Qian"
@@ -731,14 +731,14 @@
       "year": 2024,
       "title": "Flux: Decoupled Auto-Scaling for Heterogeneous Query Workload in Alibaba AnalyticDB.",
       "authors": [
-        "Wei Li 0226",
-        "Jiachi Zhang 0002",
+        "Wei Li",
+        "Jiachi Zhang",
         "Ye Yin",
-        "Yan Li 0130",
+        "Yan Li",
         "Zhanyang Zhu",
         "Wenchao Zhou",
         "Liang Lin",
-        "Feifei Li 0001"
+        "Feifei Li"
       ],
       "pages": "255-268",
       "type": "Conference and Workshop Papers",
@@ -760,7 +760,7 @@
       "title": "Extending Polaris to Support Transactions.",
       "authors": [
         "Josep Aguilar-Saborit",
-        "Raghu Ramakrishnan 0001",
+        "Raghu Ramakrishnan",
         "Kevin Bocksrocker",
         "Alan Halverson",
         "Konstantin Kosinsky",
@@ -1022,7 +1022,7 @@
       "title": "An Overview of Continuous Querying in (Modern) Data Systems.",
       "authors": [
         "Angela Bonifati",
-        "Riccardo Tommasini 0001"
+        "Riccardo Tommasini"
       ],
       "pages": "605-612",
       "type": "Conference and Workshop Papers",
@@ -1045,10 +1045,10 @@
       "authors": [
         "Angela Bonifati",
         "M. Tamer Özsu",
-        "Yuanyuan Tian 0001",
+        "Yuanyuan Tian",
         "Hannes Voigt",
         "Wenyuan Yu",
-        "Wenjie Zhang 0001"
+        "Wenjie Zhang"
       ],
       "pages": "544-545",
       "type": "Conference and Workshop Papers",
@@ -1176,7 +1176,7 @@
       "title": "PG-Triggers: Triggers for Property Graphs.",
       "authors": [
         "Stefano Ceri",
-        "Anna Bernasconi 0002",
+        "Anna Bernasconi",
         "Alessia Gagliardi",
         "Davide Martinenghi",
         "Luigi Bellomarini",
@@ -1204,7 +1204,7 @@
         "Jiwon Chang",
         "Christina Dionysio",
         "Fatemeh Nargesian",
-        "Matthias Boehm 0001"
+        "Matthias Boehm"
       ],
       "pages": "528-531",
       "type": "Conference and Workshop Papers",
@@ -1226,18 +1226,18 @@
       "title": "Data-Juicer: A One-Stop Data Processing System for Large Language Models.",
       "authors": [
         "Daoyuan Chen",
-        "Yilun Huang 0004",
+        "Yilun Huang",
         "Zhijian Ma",
         "Hesen Chen",
         "Xuchen Pan",
         "Ce Ge",
         "Dawei Gao",
         "Yuexiang Xie",
-        "Zhaoyang Liu 0003",
+        "Zhaoyang Liu",
         "Jinyang Gao",
         "Yaliang Li",
         "Bolin Ding",
-        "Jingren Zhou 0001"
+        "Jingren Zhou"
       ],
       "pages": "120-134",
       "type": "Conference and Workshop Papers",
@@ -1259,7 +1259,7 @@
       "title": "Comquest: Large Scale User Comment Crawling and Integration.",
       "authors": [
         "Zhijia Chen",
-        "Lihong He 0001",
+        "Lihong He",
         "Arjun Mukherjee",
         "Eduard C. Dragut"
       ],
@@ -1288,8 +1288,8 @@
         "Xiangyu Sun",
         "Xiaoyao Feng",
         "Ju Fan",
-        "Xiaoyong Du 0001",
-        "Nan Tang 0001"
+        "Xiaoyong Du",
+        "Nan Tang"
       ],
       "pages": "484-487",
       "type": "Conference and Workshop Papers",
@@ -1312,8 +1312,8 @@
       "authors": [
         "Tingyang Chen",
         "Dazhuo Qiu",
-        "Yinghui Wu 0001",
-        "Arijit Khan 0001",
+        "Yinghui Wu",
+        "Arijit Khan",
         "Xiangyu Ke",
         "Yunjun Gao"
       ],
@@ -1338,7 +1338,7 @@
       "authors": [
         "Gao Cong",
         "Jingyi Yang",
-        "Yue Zhao 0031"
+        "Yue Zhao"
       ],
       "pages": "622-629",
       "type": "Conference and Workshop Papers",
@@ -1383,7 +1383,7 @@
       "title": "AI for Systems.",
       "authors": [
         "Carlo Curino",
-        "Raghu Ramakrishnan 0001"
+        "Raghu Ramakrishnan"
       ],
       "pages": "546",
       "type": "Conference and Workshop Papers",
@@ -1430,7 +1430,7 @@
       "authors": [
         "Jianjun Deng",
         "Jianan Lu",
-        "Hua Fan 0002",
+        "Hua Fan",
         "Chaoyang Liu",
         "Shi Cheng",
         "Cuiyun Fu",
@@ -1458,11 +1458,11 @@
         "Yuhao Deng",
         "Qiyan Deng",
         "Chengliang Chai",
-        "Lei Cao 0004",
-        "Nan Tang 0001",
+        "Lei Cao",
+        "Nan Tang",
         "Ju Fan",
-        "Jiayi Wang 0002",
-        "Ye Yuan 0001",
+        "Jiayi Wang",
+        "Ye Yuan",
         "Guoren Wang"
       ],
       "pages": "500-503",
@@ -1512,7 +1512,7 @@
       "year": 2024,
       "title": "Automated Multidimensional Data Layouts in Amazon Redshift.",
       "authors": [
-        "Jialin Ding 0001",
+        "Jialin Ding",
         "Matt Abrams",
         "Sanghita Bandyopadhyay",
         "Luciano Di Palma",
@@ -1618,7 +1618,7 @@
       "title": "SmartNICs in the Cloud: The Why, What and How of In-network Processing for Data-Intensive Applications.",
       "authors": [
         "Faeze Faghih",
-        "Tobias Ziegler 0001",
+        "Tobias Ziegler",
         "Zsolt István",
         "Carsten Binnig"
       ],
@@ -1642,7 +1642,7 @@
       "title": "Eighth Workshop on Human-In-the-Loop Data Analytics (HILDA).",
       "authors": [
         "Jean-Daniel Fekete",
-        "Kexin Rong 0001",
+        "Kexin Rong",
         "Behrooz Omidvar-Tehrani",
         "Roee Shraga"
       ],
@@ -1666,7 +1666,7 @@
       "title": "Responsible Sharing of Spatiotemporal Data.",
       "authors": [
         "Raul Castro Fernandez",
-        "Arnab Nandi 0001"
+        "Arnab Nandi"
       ],
       "pages": "580-584",
       "type": "Conference and Workshop Papers",
@@ -1797,25 +1797,25 @@
       "year": 2024,
       "title": "GraphScope Flex: LEGO-like Graph Computing Stack.",
       "authors": [
-        "Tao He 0013",
+        "Tao He",
         "Shuxian Hu",
         "Longbin Lai",
         "Dongze Li",
         "Neng Li",
-        "Xue Li 0024",
+        "Xue Li",
         "Lexiao Liu",
         "Xiaojian Luo",
         "Bingqing Lyu",
         "Ke Meng",
         "Sijie Shen",
-        "Li Su 0005",
-        "Lei Wang 0004",
-        "Jingbo Xu 0001",
+        "Li Su",
+        "Lei Wang",
+        "Jingbo Xu",
         "Wenyuan Yu",
         "Weibin Zeng",
-        "Lei Zhang 0201",
+        "Lei Zhang",
         "Siyuan Zhang",
-        "Jingren Zhou 0001",
+        "Jingren Zhou",
         "Xiaoli Zhou",
         "Diwen Zhu"
       ],
@@ -2022,15 +2022,15 @@
       "title": "A Demonstration of GPTuner: A GPT-Based Manual-Reading Database Tuning System.",
       "authors": [
         "Jiale Lao",
-        "Yibo Wang 0015",
+        "Yibo Wang",
         "Yufei Li",
         "Jianping Wang",
         "Yunjia Zhang",
-        "Zhiyuan Cheng 0010",
+        "Zhiyuan Cheng",
         "Wanghu Chen",
         "Yuanchun Zhou",
         "Mingjie Tang",
-        "Jianguo Wang 0001"
+        "Jianguo Wang"
       ],
       "pages": "504-507",
       "type": "Conference and Workshop Papers",
@@ -2052,7 +2052,7 @@
       "title": "ASM in Action: Fast and Practical Learned Cardinality Estimation.",
       "authors": [
         "Sangoh Lee",
-        "Kyoungmin Kim 0002",
+        "Kyoungmin Kim",
         "Wook-Shin Han"
       ],
       "pages": "460-463",
@@ -2137,10 +2137,10 @@
       "title": "UniTS: A Universal Time Series Analysis Framework Powered by Self-Supervised Representation Learning.",
       "authors": [
         "Zhiyu Liang",
-        "Chen Liang 0002",
-        "Zheng Liang 0002",
-        "Hongzhi Wang 0001",
-        "Bo Zheng 0012"
+        "Chen Liang",
+        "Zheng Liang",
+        "Hongzhi Wang",
+        "Bo Zheng"
       ],
       "pages": "480-483",
       "type": "Conference and Workshop Papers",
@@ -2162,7 +2162,7 @@
       "title": "Applications and Computation of the Shapley Value in Databases and Machine Learning.",
       "authors": [
         "Xuan Luo",
-        "Jian Pei 0001"
+        "Jian Pei"
       ],
       "pages": "630-635",
       "type": "Conference and Workshop Papers",
@@ -2211,7 +2211,7 @@
         "An Bo Chen",
         "Brit Youngmann",
         "Trinity Gao",
-        "Ziyu Zhang 0002",
+        "Ziyu Zhang",
         "Rana Shahout",
         "Peter Baile Chen",
         "Chunwei Liu",
@@ -2274,7 +2274,7 @@
       "authors": [
         "Xupeng Miao",
         "Zhihao Jia",
-        "Bin Cui 0001"
+        "Bin Cui"
       ],
       "pages": "547-555",
       "type": "Conference and Workshop Papers",
@@ -2349,8 +2349,8 @@
       "title": "Vector Database Management Techniques and Systems.",
       "authors": [
         "James Jie Pan",
-        "Jianguo Wang 0001",
-        "Guoliang Li 0001"
+        "Jianguo Wang",
+        "Guoliang Li"
       ],
       "pages": "597-604",
       "type": "Conference and Workshop Papers",
@@ -2409,7 +2409,7 @@
         "Rahul Sawhney",
         "Vaishali Jhalani",
         "Willis Lang",
-        "Qun Guo 0003",
+        "Qun Guo",
         "Anupriya Inumella",
         "Sanjana Dulipeta Sridhar",
         "Dheren Gala",
@@ -2440,7 +2440,7 @@
       "title": "Second Workshop on Simplicity in Management of Data (SiMoD).",
       "authors": [
         "Danica Porobic",
-        "Tianzheng Wang 0001"
+        "Tianzheng Wang"
       ],
       "pages": "647-648",
       "type": "Conference and Workshop Papers",
@@ -2537,7 +2537,7 @@
         "Yan Tong",
         "Eli Baum",
         "Sam Buxbaum",
-        "Muhammad Faisal 0001",
+        "Muhammad Faisal",
         "John Liagouris",
         "Vasiliki Kalavri",
         "Mayank Varia"
@@ -2616,9 +2616,9 @@
         "Peiyi Hong",
         "Shenglong Chen",
         "Dayi Yang",
-        "Ying Yan 0002",
+        "Ying Yan",
         "Zhiyong Jiang",
-        "Hui Zhang 0002",
+        "Hui Zhang",
         "Guofei Jiang"
       ],
       "pages": "161-174",
@@ -2640,7 +2640,7 @@
       "year": 2024,
       "title": "Demonstrating CAESURA: Language Models as Multi-Modal Query Planners.",
       "authors": [
-        "Matthias Urban 0001",
+        "Matthias Urban",
         "Carsten Binnig"
       ],
       "pages": "472-475",
@@ -2671,7 +2671,7 @@
         "Sebastián Ferrada",
         "Tristan Heuer",
         "Aidan Hogan",
-        "Gonzalo Navarro 0001",
+        "Gonzalo Navarro",
         "Alexander Pinto",
         "Juan L. Reutter",
         "Henry Rosales-Méndez",
@@ -2726,7 +2726,7 @@
       "year": 2024,
       "title": "Bouncer: Admission Control with Response Time Objectives for Low-latency Online Data Systems.",
       "authors": [
-        "Hao Xu 0048",
+        "Hao Xu",
         "Juan A. Colmenares"
       ],
       "pages": "400-413",
@@ -2750,9 +2750,9 @@
       "authors": [
         "Xinjun Yang",
         "Yingqiang Zhang",
-        "Hao Chen 0080",
-        "Feifei Li 0001",
-        "Bo Wang 0114",
+        "Hao Chen",
+        "Feifei Li",
+        "Bo Wang",
         "Jing Fang",
         "Chuan Sun",
         "Yuhui Wang"
@@ -2777,16 +2777,16 @@
       "title": "COSMO: A Large-Scale E-commerce Common Sense Knowledge Generation and Serving System at Amazon.",
       "authors": [
         "Changlong Yu",
-        "Xin Liu 0039",
+        "Xin Liu",
         "Jefferson Maia",
-        "Yang Li 0055",
-        "Tianyu Cao 0001",
-        "Yifan Gao 0001",
+        "Yang Li",
+        "Tianyu Cao",
+        "Yifan Gao",
         "Yangqiu Song",
         "Rahul Goutam",
         "Haiyang Zhang",
         "Bing Yin",
-        "Zheng Li 0018"
+        "Zheng Li"
       ],
       "pages": "148-160",
       "type": "Conference and Workshop Papers",
@@ -2810,13 +2810,13 @@
         "Yupu Zhang",
         "Guanglin Cong",
         "Jihan Qu",
-        "Ran Xu 0008",
+        "Ran Xu",
         "Yuan Fu",
         "Weiqi Li",
         "Feiran Hu",
         "Jing Liu",
         "Wenliang Zhang",
-        "Kai Zheng 0001"
+        "Kai Zheng"
       ],
       "pages": "201-213",
       "type": "Conference and Workshop Papers",
@@ -2838,7 +2838,7 @@
       "title": "BG3: A Cost Effective and I/O Efficient Graph Database in Bytedance.",
       "authors": [
         "Wei Zhang",
-        "Cheng Chen 0008",
+        "Cheng Chen",
         "Qiange Wang",
         "Wei Wang",
         "Shijiao Yang",
@@ -2874,12 +2874,12 @@
       "year": 2024,
       "title": "FinSQL: Model-Agnostic LLMs-based Text-to-SQL Framework for Financial Analysis.",
       "authors": [
-        "Chao Zhang 0111",
+        "Chao Zhang",
         "Yuren Mao",
         "Yijiang Fan",
         "Yu Mi",
         "Yunjun Gao",
-        "Lu Chen 0001",
+        "Lu Chen",
         "Dongfang Lou",
         "Jinshu Lin"
       ],
@@ -2904,7 +2904,7 @@
       "authors": [
         "Chenyang Zhang",
         "Junxiong Peng",
-        "Chen Xu 0001",
+        "Chen Xu",
         "Quanqing Xu",
         "Chuanhui Yang"
       ],
@@ -2927,13 +2927,13 @@
       "year": 2024,
       "title": "NPA: Improving Large-scale Graph Neural Networks with Non-parametric Attention.",
       "authors": [
-        "Wentao Zhang 0001",
+        "Wentao Zhang",
         "Guochen Yan",
-        "Yu Shen 0003",
-        "Ling Yang 0006",
+        "Yu Shen",
+        "Ling Yang",
         "Yangyu Tao",
-        "Bin Cui 0001",
-        "Jian Tang 0005"
+        "Bin Cui",
+        "Jian Tang"
       ],
       "pages": "414-427",
       "type": "Conference and Workshop Papers",
@@ -2957,7 +2957,7 @@
         "Rong Zhu",
         "Lianggui Weng",
         "Bolin Ding",
-        "Jingren Zhou 0001"
+        "Jingren Zhou"
       ],
       "pages": "561-569",
       "type": "Conference and Workshop Papers",
@@ -2981,7 +2981,7 @@
         "Pablo Barceló",
         "Nayat Sánchez-Pi",
         "Alexandra Meliou",
-        "S. Sudarshan 0001"
+        "S. Sudarshan"
       ],
       "pages": "",
       "type": "Editorship",

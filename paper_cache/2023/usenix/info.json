@@ -6,7 +6,7 @@
       "year": 2023,
       "title": "APRON: Authenticated and Progressive System Image Renovation.",
       "authors": [
-        "Sangho Lee 0001"
+        "Sangho Lee"
       ],
       "pages": "275-292",
       "type": "Conference and Workshop Papers",
@@ -27,7 +27,7 @@
       "year": 2023,
       "title": "The Hitchhiker's Guide to Operating Systems.",
       "authors": [
-        "Yanyan Jiang 0001"
+        "Yanyan Jiang"
       ],
       "pages": "929-943",
       "type": "Conference and Workshop Papers",
@@ -48,13 +48,13 @@
       "year": 2023,
       "title": "SOWalker: An I/O-Optimized Out-of-Core Graph Processing System for Second-Order Random Walks.",
       "authors": [
-        "Yutong Wu 0013",
-        "Zhan Shi 0001",
+        "Yutong Wu",
+        "Zhan Shi",
         "Shicai Huang",
         "Zhipeng Tian",
         "Pengwei Zuo",
-        "Peng Fang 0002",
-        "Dan Feng 0001"
+        "Peng Fang",
+        "Dan Feng"
       ],
       "pages": "87-100",
       "type": "Conference and Workshop Papers",
@@ -355,9 +355,9 @@
       "year": 2023,
       "title": "Adaptive Online Cache Capacity Optimization via Lightweight Working Set Size Estimation at Scale.",
       "authors": [
-        "Rong Gu 0001",
+        "Rong Gu",
         "Simian Li",
-        "Haipeng Dai 0001",
+        "Haipeng Dai",
         "Hancheng Wang",
         "Yili Luo",
         "Bin Fan",
@@ -366,7 +366,7 @@
         "Zhenyu Song",
         "Shouwei Chen",
         "Beinan Wang",
-        "Yihua Huang 0001",
+        "Yihua Huang",
         "Guihai Chen"
       ],
       "pages": "467-484",
@@ -390,8 +390,8 @@
       "authors": [
         "Chuangyi Gui",
         "Xiaofei Liao",
-        "Long Zheng 0003",
-        "Hai Jin 0001"
+        "Long Zheng",
+        "Hai Jin"
       ],
       "pages": "71-85",
       "type": "Conference and Workshop Papers",
@@ -440,11 +440,11 @@
       "authors": [
         "Zongyin Hao",
         "Quanfeng Huang",
-        "Chengpeng Wang 0001",
+        "Chengpeng Wang",
         "Jianfeng Wang",
         "Yushan Zhang",
         "Rongxin Wu",
-        "Charles Zhang 0001"
+        "Charles Zhang"
       ],
       "pages": "345-358",
       "type": "Conference and Workshop Papers",
@@ -489,7 +489,7 @@
       "title": "Zhuque: Failure is Not an Option, it's an Exception.",
       "authors": [
         "George Hodgkins",
-        "Yi Xu 0017",
+        "Yi Xu",
         "Steven Swanson",
         "Joseph Izraelevitz"
       ],
@@ -619,7 +619,7 @@
         "Mark Mansi",
         "Yan Sun",
         "Yifan Yuan",
-        "Jinghan Huang 0001",
+        "Jinghan Huang",
         "Reese Kuper",
         "Michael M. Swift",
         "Nam Sung Kim"
@@ -692,7 +692,7 @@
       "authors": [
         "Adi Kaufman",
         "Moshik Hershcovitch",
-        "Adam Morrison 0001"
+        "Adam Morrison"
       ],
       "pages": "719-733",
       "type": "Conference and Workshop Papers",
@@ -742,7 +742,7 @@
       "authors": [
         "Longbin Lai",
         "Yufan Yang",
-        "Zhibin Wang 0002",
+        "Zhibin Wang",
         "Yuxuan Liu",
         "Haotian Ma",
         "Sijie Shen",
@@ -750,10 +750,10 @@
         "Xiaoli Zhou",
         "Wenyuan Yu",
         "Zhengping Qian",
-        "Chen Tian 0001",
-        "Sheng Zhong 0002",
+        "Chen Tian",
+        "Sheng Zhong",
         "Yeh-Ching Chung",
-        "Jingren Zhou 0001"
+        "Jingren Zhou"
       ],
       "pages": "53-69",
       "type": "Conference and Workshop Papers",
@@ -778,7 +778,7 @@
         "Sheng Jiang",
         "Chen Chen",
         "Ashwini Raina",
-        "Xingyu Zhu 0015",
+        "Xingyu Zhu",
         "Changxu Luo",
         "Asaf Cidon"
       ],
@@ -801,11 +801,11 @@
       "year": 2023,
       "title": "Accelerating Distributed MoE Training and Inference with Lina.",
       "authors": [
-        "Jiamin Li 0002",
+        "Jiamin Li",
         "Yimin Jiang",
-        "Yibo Zhu 0001",
-        "Cong Wang 0001",
-        "Hong Xu 0001"
+        "Yibo Zhu",
+        "Cong Wang",
+        "Hong Xu"
       ],
       "pages": "945-959",
       "type": "Conference and Workshop Papers",
@@ -832,7 +832,7 @@
         "Yifan Tan",
         "Binyu Zang",
         "Haibing Guan",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "1-15",
       "type": "Conference and Workshop Papers",
@@ -856,7 +856,7 @@
         "Zhen Lin",
         "Lingfeng Xiang",
         "Jia Rao",
-        "Hui Lu 0001"
+        "Hui Lu"
       ],
       "pages": "801-815",
       "type": "Conference and Workshop Papers",
@@ -886,7 +886,7 @@
         "Jin Tan",
         "Chaofan Yu",
         "Benyu Zhang",
-        "Lei Wang 0152"
+        "Lei Wang"
       ],
       "pages": "17-33",
       "type": "Conference and Workshop Papers",
@@ -935,9 +935,9 @@
       "year": 2023,
       "title": "LPNS: Scalable and Latency-Predictable Local Storage Virtualization for Unpredictable NVMe SSDs in Clouds.",
       "authors": [
-        "Bo Peng 0043",
+        "Bo Peng",
         "Cheng Guo",
-        "Jianguo Yao 0002",
+        "Jianguo Yao",
         "Haibing Guan"
       ],
       "pages": "785-800",
@@ -961,7 +961,7 @@
       "authors": [
         "Haoran Qiu",
         "Weichao Mao",
-        "Chen Wang 0039",
+        "Chen Wang",
         "Hubertus Franke",
         "Alaa Youssef",
         "Zbigniew T. Kalbarczyk",
@@ -994,7 +994,7 @@
         "Wenjun Wu",
         "Xiangyu Zou",
         "Shiyi Li",
-        "Yu Hua 0001"
+        "Yu Hua"
       ],
       "pages": "101-116",
       "type": "Conference and Workshop Papers",
@@ -1068,7 +1068,7 @@
       "authors": [
         "Yingdi Shan",
         "Kang Chen",
-        "Yongwei Wu 0001"
+        "Yongwei Wu"
       ],
       "pages": "233-240",
       "type": "Conference and Workshop Papers",
@@ -1092,15 +1092,15 @@
         "Sijie Shen",
         "Zihang Yao",
         "Lin Shi",
-        "Lei Wang 0004",
+        "Lei Wang",
         "Longbin Lai",
         "Qian Tao",
-        "Li Su 0005",
-        "Rong Chen 0001",
+        "Li Su",
+        "Rong Chen",
         "Wenyuan Yu",
-        "Haibo Chen 0001",
+        "Haibo Chen",
         "Binyu Zang",
-        "Jingren Zhou 0001"
+        "Jingren Zhou"
       ],
       "pages": "181-196",
       "type": "Conference and Workshop Papers",
@@ -1123,8 +1123,8 @@
       "authors": [
         "Siyuan Sheng",
         "Huancheng Puyang",
-        "Qun Huang 0001",
-        "Lu Tang 0004",
+        "Qun Huang",
+        "Lu Tang",
         "Patrick P. C. Lee"
       ],
       "pages": "571-584",
@@ -1149,7 +1149,7 @@
         "Jiuchen Shi",
         "Hang Zhang",
         "Zhixin Tong",
-        "Quan Chen 0002",
+        "Quan Chen",
         "Kaihua Fu",
         "Minyi Guo"
       ],
@@ -1221,17 +1221,17 @@
       "year": 2023,
       "title": "Legion: Automatically Pushing the Envelope of Multi-GPU System for Billion-Scale GNN Training.",
       "authors": [
-        "Jie Sun 0017",
-        "Li Su 0005",
+        "Jie Sun",
+        "Li Su",
         "Zuocheng Shi",
         "Wenting Shen",
         "Zeke Wang",
-        "Lei Wang 0004",
-        "Jie Zhang 0081",
-        "Yong Li 0020",
+        "Lei Wang",
+        "Jie Zhang",
+        "Yong Li",
         "Wenyuan Yu",
-        "Jingren Zhou 0001",
-        "Fei Wu 0001"
+        "Jingren Zhou",
+        "Fei Wu"
       ],
       "pages": "165-179",
       "type": "Conference and Workshop Papers",
@@ -1254,9 +1254,9 @@
       "authors": [
         "Hsin-Hsuan Sung",
         "Jou-An Chen",
-        "Wei Niu 0002",
+        "Wei Niu",
         "Jiexiong Guan",
-        "Bin Ren 0002",
+        "Bin Ren",
         "Xipeng Shen"
       ],
       "pages": "865-877",
@@ -1279,7 +1279,7 @@
       "title": "MELF: Multivariant Executables for a Heterogeneous World.",
       "authors": [
         "Dominik Töllner",
-        "Christian Dietrich 0001",
+        "Christian Dietrich",
         "Illia Ostapyshyn",
         "Florian Rommel",
         "Daniel Lohmann"
@@ -1337,9 +1337,9 @@
       "authors": [
         "Yuke Wang",
         "Boyuan Feng",
-        "Zheng Wang 0075",
+        "Zheng Wang",
         "Guyue Huang",
-        "Yufei Ding 0001"
+        "Yufei Ding"
       ],
       "pages": "149-164",
       "type": "Conference and Workshop Papers",
@@ -1360,10 +1360,10 @@
       "year": 2023,
       "title": "Revisiting Secondary Indexing in LSM-based Storage Systems with Persistent Memory.",
       "authors": [
-        "Jing Wang 0158",
+        "Jing Wang",
         "Youyou Lu",
-        "Qing Wang 0031",
-        "Yuhao Zhang 0006",
+        "Qing Wang",
+        "Yuhao Zhang",
         "Jiwu Shu"
       ],
       "pages": "817-832",
@@ -1408,13 +1408,13 @@
       "year": 2023,
       "title": "Beware of Fragmentation: Scheduling GPU-Sharing Workloads with Fragmentation Gradient Descent.",
       "authors": [
-        "Qizhen Weng 0001",
+        "Qizhen Weng",
         "Lingyun Yang",
         "Yinghao Yu",
-        "Wei Wang 0030",
+        "Wei Wang",
         "Xiaochuan Tang",
         "Guodong Yang",
-        "Liping Zhang 0013"
+        "Liping Zhang"
       ],
       "pages": "995-1008",
       "type": "Conference and Workshop Papers",
@@ -1438,7 +1438,7 @@
         "Lars Wrenger",
         "Florian Rommel",
         "Alexander Halbuer",
-        "Christian Dietrich 0001",
+        "Christian Dietrich",
         "Daniel Lohmann"
       ],
       "pages": "897-914",
@@ -1460,14 +1460,14 @@
       "year": 2023,
       "title": "Overcoming the Memory Wall with CXL-Enabled SSDs.",
       "authors": [
-        "Shao-Peng Yang 0001",
-        "Minjae Kim 0015",
+        "Shao-Peng Yang",
+        "Minjae Kim",
         "Sanghyun Nam",
         "Juhyung Park",
         "Jin-Yong Choi",
         "Eyee Hyun Nam",
         "Eunji Lee",
-        "Sungjin Lee 0001",
+        "Sungjin Lee",
         "Bryan S. Kim"
       ],
       "pages": "601-617",
@@ -1489,17 +1489,17 @@
       "year": 2023,
       "title": "AAsclepius: Monitoring, Diagnosing, and Detouring at the Internet Peering Edge.",
       "authors": [
-        "Kaicheng Yang 0001",
-        "Yuanpeng Li 0002",
+        "Kaicheng Yang",
+        "Yuanpeng Li",
         "Sheng Long",
-        "Tong Yang 0003",
+        "Tong Yang",
         "Ruijie Miao",
-        "Yikai Zhao 0001",
+        "Yikai Zhao",
         "Chaoyang Ji",
         "Penghui Mi",
         "Guodong Yang",
         "Qiong Xie",
-        "Hao Wang 0005",
+        "Hao Wang",
         "Yinhua Wang",
         "Bo Deng",
         "Zhiqiang Liao",
@@ -1579,11 +1579,11 @@
       "title": "LoopDelta: Embedding Locality-aware Opportunistic Delta Compression in Inline Deduplication for Highly Efficient Data Reduction.",
       "authors": [
         "Yucheng Zhang",
-        "Hong Jiang 0001",
-        "Dan Feng 0001",
-        "Nan Jiang 0013",
+        "Hong Jiang",
+        "Dan Feng",
+        "Nan Jiang",
         "Taorong Qiu",
-        "Wei Huang 0013"
+        "Wei Huang"
       ],
       "pages": "133-148",
       "type": "Conference and Workshop Papers",
@@ -1604,17 +1604,17 @@
       "year": 2023,
       "title": "Bridging the Gap between QoE and QoS in Congestion Control: A Large-scale Mobile Web Service Perspective.",
       "authors": [
-        "Jia Zhang 0010",
+        "Jia Zhang",
         "Yixuan Zhang",
         "Enhuan Dong",
-        "Yan Zhang 0002",
+        "Yan Zhang",
         "Shaorui Ren",
         "Zili Meng",
-        "Mingwei Xu 0001",
+        "Mingwei Xu",
         "Xiaotian Li",
         "Zongzhi Hou",
         "Zhicheng Yang",
-        "Xiaoming Fu 0001"
+        "Xiaoming Fu"
       ],
       "pages": "553-569",
       "type": "Conference and Workshop Papers",
@@ -1639,7 +1639,7 @@
         "Satadru Pan",
         "Niket Agarwal",
         "Zhaoduo Wen",
-        "David Xu 0010",
+        "David Xu",
         "Anand Natarajan",
         "Pavan Kumar",
         "Shiva Shankar P.",
@@ -1673,14 +1673,14 @@
       "title": "Calcspar: A Contract-Aware LSM Store for Cloud Storage with Low Latency Spikes.",
       "authors": [
         "Yuanhui Zhou",
-        "Jian Zhou 0004",
+        "Jian Zhou",
         "Shuning Chen",
         "Peng Xu",
         "Peng Wu",
         "Yanguang Wang",
         "Xian Liu",
         "Ling Zhan",
-        "Jiguang Wan 0001"
+        "Jiguang Wan"
       ],
       "pages": "451-465",
       "type": "Conference and Workshop Papers",
@@ -1702,12 +1702,12 @@
       "title": "MSRL: Distributed Reinforcement Learning with Dataflow Fragments.",
       "authors": [
         "Huanzhou Zhu",
-        "Bo Zhao 0019",
+        "Bo Zhao",
         "Gang Chen",
         "Weifeng Chen",
         "Yijie Chen",
         "Liang Shi",
-        "Yaodong Yang 0001",
+        "Yaodong Yang",
         "Peter R. Pietzuch",
         "Lei Chen"
       ],

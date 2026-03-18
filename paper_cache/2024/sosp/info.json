@@ -6,10 +6,10 @@
       "year": 2024,
       "title": "Verus: A Practical Foundation for Systems Verification.",
       "authors": [
-        "Andrea Lattuada 0001",
+        "Andrea Lattuada",
         "Travis Hance",
         "Jay Bosamiya",
-        "Matthias Brun 0002",
+        "Matthias Brun",
         "Chanhee Cho",
         "Hayley LeBlanc",
         "Pranav Srinivasan",
@@ -121,7 +121,7 @@
         "Yile Gu",
         "Insu Jang",
         "Luoxi Meng",
-        "Nikhil Bansal 0001",
+        "Nikhil Bansal",
         "Mosharaf Chowdhury"
       ],
       "pages": "144-159",
@@ -146,7 +146,7 @@
         "Lazar Cvetkovic",
         "François Costa",
         "Mihajlo Djokic",
-        "Michal Friedman 0001",
+        "Michal Friedman",
         "Ana Klimovic"
       ],
       "pages": "369-384",
@@ -169,9 +169,9 @@
       "title": "Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving.",
       "authors": [
         "Yinwei Dai",
-        "Rui Pan 0003",
+        "Rui Pan",
         "Anand P. Iyer",
-        "Kai Li 0001",
+        "Kai Li",
         "Ravi Netravali"
       ],
       "pages": "607-623",
@@ -218,7 +218,7 @@
       "title": "DNS Congestion Control in Adversarial Settings.",
       "authors": [
         "Huayi Duan",
-        "Jihye Kim 0008",
+        "Jihye Kim",
         "Marc Wyss",
         "Adrian Perrig"
       ],
@@ -290,14 +290,14 @@
       "authors": [
         "Hao Ge",
         "Fangcheng Fu",
-        "Haoyang Li 0017",
+        "Haoyang Li",
         "Xuanyu Wang",
         "Sheng Lin",
         "Yujie Wang",
         "Xiaonan Nie",
-        "Hailin Zhang 0004",
+        "Hailin Zhang",
         "Xupeng Miao",
-        "Bin Cui 0001"
+        "Bin Cui"
       ],
       "pages": "178-194",
       "type": "Conference and Workshop Papers",
@@ -373,7 +373,7 @@
         "Ben Luo",
         "Yibin Shen",
         "Kaihuan Peng",
-        "Ning Luo 0003",
+        "Ning Luo",
         "Shengdong Dai",
         "Chen Liang",
         "Jianming Song",
@@ -403,7 +403,7 @@
         "Zhisheng Hu",
         "Pengfei Zuo",
         "Yizou Chen",
-        "Chao Wang 0125",
+        "Chao Wang",
         "Junliang Hu",
         "Ming-Chang Yang"
       ],
@@ -428,7 +428,7 @@
       "authors": [
         "Jialiang Huang",
         "Mingxing Zhang",
-        "Teng Ma 0006",
+        "Teng Ma",
         "Zheng Liu",
         "Sixing Lin",
         "Kang Chen",
@@ -437,9 +437,9 @@
         "Yingdi Shan",
         "Ning Zhang",
         "Mengting Lu",
-        "Tao Ma 0006",
+        "Tao Ma",
         "Haifeng Gong",
-        "YongWei Wu 0001"
+        "YongWei Wu"
       ],
       "pages": "421-437",
       "type": "Conference and Workshop Papers",
@@ -463,7 +463,7 @@
         "Anand Padmanabha Iyer",
         "Mingyu Guan",
         "Yinwei Dai",
-        "Rui Pan 0003",
+        "Rui Pan",
         "Swapnil Gandhi",
         "Ravi Netravali"
       ],
@@ -514,7 +514,7 @@
         "Yuekai Jia",
         "Kaifu Tian",
         "Yuyang You",
-        "Yu Chen 0004",
+        "Yu Chen",
         "Kang Chen"
       ],
       "pages": "265-279",
@@ -591,11 +591,11 @@
         "Siran Liu",
         "Chengxiang Qi",
         "Ying Cao",
-        "Chao Yang 0002",
+        "Chao Yang",
         "Weifang Hu",
         "Xuanhua Shi",
-        "Fan Yang 0024",
-        "Mao Yang 0004"
+        "Fan Yang",
+        "Mao Yang"
       ],
       "pages": "160-177",
       "type": "Conference and Workshop Papers",
@@ -622,7 +622,7 @@
         "Lingxiao Ma",
         "Ziming Miao",
         "Jilong Xue",
-        "Jian Huang 0006"
+        "Jian Huang"
       ],
       "pages": "505-521",
       "type": "Conference and Workshop Papers",
@@ -671,9 +671,9 @@
         "Xuchuan Luo",
         "Jiacheng Shen",
         "Pengfei Zuo",
-        "Xin Wang 0002",
+        "Xin Wang",
         "Michael R. Lyu",
-        "Yangfan Zhou 0002"
+        "Yangfan Zhou"
       ],
       "pages": "110-126",
       "type": "Conference and Workshop Papers",
@@ -724,7 +724,7 @@
         "Haoze Wu",
         "Tanakorn Leesatapornwongsa",
         "Suman Nath",
-        "Peng Huang 0005"
+        "Peng Huang"
       ],
       "pages": "46-62",
       "type": "Conference and Workshop Papers",
@@ -794,10 +794,10 @@
       "year": 2024,
       "title": "Unearthing Semantic Checks for Cloud Infrastructure-as-Code Programs.",
       "authors": [
-        "Yiming Qiu 0001",
+        "Yiming Qiu",
         "Patrick Tser Jern Kon",
         "Ryan Beckett",
-        "Ang Chen 0001"
+        "Ang Chen"
       ],
       "pages": "574-589",
       "type": "Conference and Workshop Papers",
@@ -820,14 +820,14 @@
       "authors": [
         "Jiaxing Qiu",
         "Zijie Zhou",
-        "Yang Li 0092",
-        "Zhenhua Li 0001",
-        "Feng Qian 0001",
-        "Hao Lin 0005",
+        "Yang Li",
+        "Zhenhua Li",
+        "Feng Qian",
+        "Hao Lin",
         "Di Gao",
         "Haitao Su",
         "Xin Miao",
-        "Yunhao Liu 0001",
+        "Yunhao Liu",
         "Tianyin Xu"
       ],
       "pages": "558-573",
@@ -852,7 +852,7 @@
         "Benny Rubin",
         "Saksham Agarwal",
         "Qizhe Cai",
-        "Rachit Agarwal 0001"
+        "Rachit Agarwal"
       ],
       "pages": "95-109",
       "type": "Conference and Workshop Papers",
@@ -874,7 +874,7 @@
       "title": "Icarus: Trustworthy Just-In-Time Compilers with Symbolic Meta-Execution.",
       "authors": [
         "Naomi Smith",
-        "Abhishek Sharma 0017",
+        "Abhishek Sharma",
         "John Renner",
         "David Thien",
         "Fraser Brown",
@@ -904,7 +904,7 @@
         "Yixin Song",
         "Zeyu Mi",
         "Haotong Xie",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "590-606",
       "type": "Conference and Workshop Papers",
@@ -929,7 +929,7 @@
         "Utsav Sethi",
         "Yiming Su",
         "Cyrus Zhou",
-        "Shan Lu 0001",
+        "Shan Lu",
         "Jonathan Mace",
         "Madanlal Musuvathi",
         "Suman Nath"
@@ -955,7 +955,7 @@
       "authors": [
         "Ariel Szekely",
         "Adam Belay",
-        "Robert Morris 0005",
+        "Robert Morris",
         "M. Frans Kaashoek"
       ],
       "pages": "385-402",
@@ -1007,7 +1007,7 @@
       "title": "Tiered Memory Management: Access Latency is the Key!",
       "authors": [
         "Midhul Vuppalapati",
-        "Rachit Agarwal 0001"
+        "Rachit Agarwal"
       ],
       "pages": "79-94",
       "type": "Conference and Workshop Papers",
@@ -1030,7 +1030,7 @@
       "authors": [
         "Marcel Wagenländer",
         "Guo Li",
-        "Bo Zhao 0019",
+        "Bo Zhao",
         "Luo Mai",
         "Peter R. Pietzuch"
       ],
@@ -1056,9 +1056,9 @@
         "Bingyang Wu",
         "Shengyu Liu",
         "Yinmin Zhong",
-        "Peng Sun 0006",
+        "Peng Sun",
         "Xuanzhe Liu",
-        "Xin Jin 0008"
+        "Xin Jin"
       ],
       "pages": "640-654",
       "type": "Conference and Workshop Papers",
@@ -1084,11 +1084,11 @@
         "Li Peng",
         "Yingbo Sun",
         "Ming-Chang Yang",
-        "Zhichao Cao 0002",
-        "Qiao Li 0001",
+        "Zhichao Cao",
+        "Qiao Li",
         "Myoungsoo Jung",
-        "Ke Zhou 0001",
-        "Jie Zhang 0048"
+        "Ke Zhou",
+        "Jie Zhang"
       ],
       "pages": "313-329",
       "type": "Conference and Workshop Papers",
@@ -1110,8 +1110,8 @@
       "title": "FBDetect: Catching Tiny Performance Regressions at Hyperscale through In-Production Monitoring.",
       "authors": [
         "Dong Young Yoon",
-        "Yang Wang 0009",
-        "Miao Yu 0023",
+        "Yang Wang",
+        "Miao Yu",
         "Elvis Huang",
         "Juan Ignacio Jones",
         "Abhinay Kukkadapu",

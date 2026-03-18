@@ -8,7 +8,7 @@
       "authors": [
         "Taehwan Ahn",
         "Chanhyeong Yu",
-        "Sangjin Lee 0003",
+        "Sangjin Lee",
         "Yongseok Son"
       ],
       "pages": "363-379",
@@ -32,15 +32,15 @@
       "authors": [
         "Yuda An",
         "Shushu Yi",
-        "Bo Mao 0003",
-        "Qiao Li 0001",
-        "Mingzhe Zhang 0005",
+        "Bo Mao",
+        "Qiao Li",
+        "Mingzhe Zhang",
         "Diyu Zhou",
-        "Ke Zhou 0001",
-        "Nong Xiao 0001",
-        "Guangyu Sun 0003",
+        "Ke Zhou",
+        "Nong Xiao",
+        "Guangyu Sun",
         "Yingwei Luo",
-        "Jie Zhang 0048"
+        "Jie Zhang"
       ],
       "pages": "329-345",
       "type": "Conference and Workshop Papers",
@@ -168,7 +168,7 @@
       "authors": [
         "Keyun Cheng",
         "Guodong Li",
-        "Xiaolu Li 0002",
+        "Xiaolu Li",
         "Sihuang Hu",
         "Patrick P. C. Lee"
       ],
@@ -242,7 +242,7 @@
         "Christoph Hellwig",
         "Kanchan Joshi",
         "Vikash Kumar",
-        "Javier González 0006",
+        "Javier González",
         "Roshan R. Nair",
         "Jinyoung Choi"
       ],
@@ -266,14 +266,14 @@
       "title": "Fast Cloud Storage for AI Jobs via Grouped I/O API with Transparent Read/Write Optimizations.",
       "authors": [
         "Yingyi Hao",
-        "Ting Yao 0001",
+        "Ting Yao",
         "Xingda Wei",
         "Dingyan Zhang",
         "Tianle Sun",
         "Yiwen Zhang",
         "Zhiyong Fu",
         "Huatao Wu",
-        "Rong Chen 0001"
+        "Rong Chen"
       ],
       "pages": "255-270",
       "type": "Conference and Workshop Papers",
@@ -296,7 +296,7 @@
       "authors": [
         "Qingda Hu",
         "Xinjun Yang",
-        "Feifei Li 0001",
+        "Feifei Li",
         "Junru Li",
         "Ya Lin",
         "Yuqi Zhou",
@@ -304,7 +304,7 @@
         "Junwei Zhang",
         "Rongbiao Xie",
         "Ling Zhou",
-        "Bin Wu 0003",
+        "Bin Wu",
         "Wenchao Zhou"
       ],
       "pages": "509-525",
@@ -381,7 +381,7 @@
       "title": "CETOFS: A High-Performance File System with Host-Server Collaboration for Remote Storage.",
       "authors": [
         "Wenqing Jia",
-        "Dejun Jiang 0001",
+        "Dejun Jiang",
         "Jin Xiong"
       ],
       "pages": "659-674",
@@ -438,9 +438,9 @@
         "Jeeyun Kim",
         "Seonggyun Oh",
         "Jungwoo Kim",
-        "Jisung Park 0001",
+        "Jisung Park",
         "Jaeho Kim",
-        "Sungjin Lee 0001",
+        "Sungjin Lee",
         "Sam H. Noh"
       ],
       "pages": "543-559",
@@ -463,13 +463,13 @@
       "title": "Accelerating Model Loading in LLM Inference by Programmable Page Cache.",
       "authors": [
         "Yubo Liu",
-        "Hongbo Li 0007",
+        "Hongbo Li",
         "Xiaojia Huang",
         "Yongfeng Wang",
         "Hanjun Guo",
         "Hui Chen",
-        "Yuxin Ren 0001",
-        "Ning Jia 0004"
+        "Yuxin Ren",
+        "Ning Jia"
       ],
       "pages": "117-132",
       "type": "Conference and Workshop Papers",
@@ -492,10 +492,10 @@
       "authors": [
         "Yang Liu",
         "Yunfei Gu",
-        "Liqiang Zhang 0010",
+        "Liqiang Zhang",
         "Chentao Wu",
         "Guangtao Xue",
-        "Jie Li 0002",
+        "Jie Li",
         "Minyi Guo",
         "Junhao Hu",
         "Jie Meng"
@@ -525,8 +525,8 @@
         "Keshi Ge",
         "Qiaoling Chen",
         "Peng Sun",
-        "Dongsheng Li 0001",
-        "Kai Lu 0001"
+        "Dongsheng Li",
+        "Kai Lu"
       ],
       "pages": "271-289",
       "type": "Conference and Workshop Papers",
@@ -550,9 +550,9 @@
         "Qingyuan Liu",
         "Mo Zou",
         "Hengbin Zhang",
-        "Dong Du 0003",
+        "Dong Du",
         "Yubin Xia",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "291-311",
       "type": "Conference and Workshop Papers",
@@ -622,7 +622,7 @@
       "title": "UnICom: A Universally High-Performant I/O Completion Mechanism for Modern Computer Systems.",
       "authors": [
         "Riwei Pan",
-        "Yu Liang 0004",
+        "Yu Liang",
         "Sam H. Noh",
         "Lei Li",
         "Nan Guan",
@@ -680,8 +680,8 @@
         "Leping Yang",
         "Xin Yao",
         "Renhai Chen",
-        "Gong Zhang 0001",
-        "Dongsheng Li 0001",
+        "Gong Zhang",
+        "Dongsheng Li",
         "Jiwu Shu",
         "Yiming Zhang"
       ],
@@ -706,8 +706,8 @@
       "authors": [
         "Yuanming Ren",
         "Siyuan Sheng",
-        "Zhang Cao 0005",
-        "Yongkun Li 0001",
+        "Zhang Cao",
+        "Yongkun Li",
         "Patrick P. C. Lee"
       ],
       "pages": "203-219",
@@ -758,7 +758,7 @@
       "authors": [
         "Inho Song",
         "Shoaib Asif Qazi",
-        "Javier González 0006",
+        "Javier González",
         "Matias Bjørling",
         "Sam H. Noh",
         "Huaicheng Li"
@@ -832,8 +832,8 @@
       "year": 2026,
       "title": "Cost-efficient Archive Cloud Storage with Tape: Design and Deployment.",
       "authors": [
-        "Qing Wang 0031",
-        "Fan Yang 0134",
+        "Qing Wang",
+        "Fan Yang",
         "Qiang Liu",
         "Geng Xiao",
         "Yongpeng Chen",
@@ -901,11 +901,11 @@
       "title": "DMTree: Towards Efficient Tree Indexing on Disaggregated Memory via Compute-side Collaborative Design.",
       "authors": [
         "Guoli Wei",
-        "Yongkun Li 0001",
+        "Yongkun Li",
         "Haoze Song",
         "Tao Li",
         "Lulu Yao",
-        "Yinlong Xu 0001",
+        "Yinlong Xu",
         "Heming Cui"
       ],
       "pages": "149-165",
@@ -936,7 +936,7 @@
         "Shoumeng Yan",
         "Jiwu Shu",
         "Hongliang Tian",
-        "Yiming Zhang 0003"
+        "Yiming Zhang"
       ],
       "pages": "443-459",
       "type": "Conference and Workshop Papers",
@@ -1072,13 +1072,13 @@
       "authors": [
         "Yekang Zhan",
         "Tianze Wang",
-        "Zheng Peng 0017",
+        "Zheng Peng",
         "Haichuan Hu",
         "Jiahao Wu",
-        "Xiangrui Yang 0001",
-        "Qiang Cao 0001",
-        "Hong Jiang 0001",
-        "Jie Yao 0001"
+        "Xiangrui Yang",
+        "Qiang Cao",
+        "Hong Jiang",
+        "Jie Yao"
       ],
       "pages": "579-595",
       "type": "Conference and Workshop Papers",
@@ -1100,12 +1100,12 @@
       "title": "ParaSync: Exploiting Fine-Grained Parallelism for Efficient File Synchronization.",
       "authors": [
         "Zhihao Zhang",
-        "Lu Tang 0004",
+        "Lu Tang",
         "Huiba Li",
-        "Yue Yu 0001",
+        "Yue Yu",
         "Guangtao Xue",
         "Jiwu Shu",
-        "Yiming Zhang 0003"
+        "Yiming Zhang"
       ],
       "pages": "477-492",
       "type": "Conference and Workshop Papers",
@@ -1127,7 +1127,7 @@
       "title": "An Efficient Cloud Storage Model with Compacted Metadata Management for Performance Monitoring Timeseries Systems.",
       "authors": [
         "Kai Zhang",
-        "Tianyu Wang 0009",
+        "Tianyu Wang",
         "Zili Shao"
       ],
       "pages": "167-181",
@@ -1151,10 +1151,10 @@
       "authors": [
         "Zhihao Zhang",
         "Huiba Li",
-        "Lu Tang 0004",
+        "Lu Tang",
         "Guangtao Xue",
         "Jiwu Shu",
-        "Yiming Zhang 0003"
+        "Yiming Zhang"
       ],
       "pages": "461-476",
       "type": "Conference and Workshop Papers",
@@ -1176,10 +1176,10 @@
       "title": "\"Range as a Key\" is the Key! Fast and Compact Cloud Block Store Index with RASK.",
       "authors": [
         "Haoru Zhao",
-        "Mingkai Dong 0002",
+        "Mingkai Dong",
         "Erci Xu",
         "Zhongyu Wang",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "183-201",
       "type": "Conference and Workshop Papers",
@@ -1205,7 +1205,7 @@
         "Jianxiang Gao",
         "Yixin Song",
         "Zeyu Mi",
-        "Haibo Chen 0001"
+        "Haibo Chen"
       ],
       "pages": "67-82",
       "type": "Conference and Workshop Papers",

@@ -66,6 +66,10 @@ function getPaperId(paper) {
   return [paper.conference, paper.year, paper.title].join("::");
 }
 
+function getPaperDownloadUrl(paper) {
+  return paper.source_url || paper.doi_url || paper.dblp_url || "";
+}
+
 function isLiked(paper) {
   return Boolean(state.preferences.liked[getPaperId(paper)]);
 }
@@ -113,6 +117,16 @@ function thumbsDownIcon(filled) {
     <svg viewBox="0 0 24 24" fill="${filled ? "currentColor" : "none"}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M17 14V2"></path>
       <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.95-2.45l1.46-6A2 2 0 0 1 5.62 4H17a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.95 1.55l-.63 2.49a1 1 0 0 1-1.94-.24V19a2 2 0 0 0-.72-1.54A2 2 0 0 1 9 18.12Z"></path>
+    </svg>
+  `;
+}
+
+function downloadIcon() {
+  return `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 3v12"></path>
+      <path d="m7 10 5 5 5-5"></path>
+      <path d="M5 21h14"></path>
     </svg>
   `;
 }
@@ -341,6 +355,7 @@ function renderResults() {
         <div class="meta">
           <div class="meta-tags">${tags.join("")}</div>
           <div class="meta-actions">
+            <button class="meta-icon-button" data-action="download" title="下载论文">${downloadIcon()}</button>
             <button class="meta-icon-button ${isViewed(paper) ? "is-active" : ""}" data-action="viewed" title="已看完">${checkIcon(isViewed(paper))}</button>
             <button class="meta-icon-button ${isLiked(paper) ? "is-active" : ""}" data-action="like" title="喜欢">${heartIcon(isLiked(paper))}</button>
             <button class="meta-icon-button ${isDisliked(paper) ? "is-active" : ""}" data-action="dislike" title="不喜欢">${thumbsDownIcon(isDisliked(paper))}</button>
@@ -460,6 +475,22 @@ function handlePreferenceClick(event) {
   const currentPaper = [...state.raw, ...getFavoritePapers(), ...getViewedPapers(), ...getDislikedPapers()]
     .find((paper) => getPaperId(paper) === paperId);
   if (!currentPaper) {
+    return;
+  }
+
+  if (button.dataset.action === "download") {
+    const url = getPaperDownloadUrl(currentPaper);
+    if (!url) {
+      return;
+    }
+    const link = document.createElement("a");
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.download = "";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
     return;
   }
 
