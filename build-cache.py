@@ -143,6 +143,28 @@ def clean_author_name(value: str) -> str:
     return compact_spaces(re.sub(r"\s+\d{4}$", "", value))
 
 
+def is_valid_conf_entry_name(entry_name: str, slug: str) -> bool:
+    if not re.fullmatch(r"[a-z0-9_-]+", entry_name):
+        return False
+    if not re.search(r"(19|20)\d{2}", entry_name):
+        return False
+    return entry_name.startswith(slug) or bool(re.fullmatch(r"(?:19|20)\d{2}[a-z0-9_-]*", entry_name))
+
+
+def dedupe_conf_entry_names(entries: list[str], slug: str) -> list[str]:
+    unique_entries = sorted(set(entries))
+    canonical_entries = set(unique_entries)
+    slug_prefixed_suffixes = {
+        entry[len(slug):]
+        for entry in unique_entries
+        if entry.startswith(slug) and re.fullmatch(r"(?:19|20)\d{2}[a-z0-9_-]*", entry[len(slug):])
+    }
+    for entry in unique_entries:
+        if not entry.startswith(slug) and entry in slug_prefixed_suffixes:
+            canonical_entries.discard(entry)
+    return sorted(canonical_entries)
+
+
 def is_metadata_entry(title: str, conference_label: str, year: int) -> bool:
     normalized = normalize_text(title)
     conference_token = conference_label.lower()
@@ -347,9 +369,28 @@ class PaperRepository:
         for conference, payload in conference_years.items():
             if not isinstance(payload, dict):
                 continue
+            venue = VENUES.get(conference, {})
+            slug = venue.get("dblp_slug", conference)
+            venue_kind = venue.get("venue_kind", "conf")
+            raw_year_entries = payload.get("year_entries", {})
+            sanitized_year_entries: dict[str, list[str]] = {}
+            if isinstance(raw_year_entries, dict):
+                for year_text, entries in raw_year_entries.items():
+                    if not isinstance(entries, list):
+                        continue
+                    if venue_kind == "journals":
+                        cleaned_entries = [entry for entry in entries if isinstance(entry, str)]
+                    else:
+                        cleaned_entries = dedupe_conf_entry_names([
+                            entry
+                            for entry in entries
+                            if isinstance(entry, str) and is_valid_conf_entry_name(entry, slug)
+                        ], slug)
+                    if cleaned_entries:
+                        sanitized_year_entries[str(year_text)] = sorted(set(cleaned_entries))
             sanitized[conference] = {
                 "years": payload.get("years", []),
-                "year_entries": payload.get("year_entries", {}),
+                "year_entries": sanitized_year_entries,
             }
         return sanitized
 
@@ -450,22 +491,17 @@ class PaperRepository:
             return self._extract_journal_year_entries(html_text, slug)
 
         entries: dict[int, set[str]] = {}
+        soup = BeautifulSoup(html_text, "html.parser")
 
-        toc_pattern = re.compile(rf"/db/conf/{re.escape(slug)}/([^\"/]*?(\d{{4}})[^\"/]*)\.html")
-        for match in toc_pattern.finditer(html_text):
-            entry_name = match.group(1)
-            if not entry_name.startswith(slug):
+        toc_pattern = re.compile(rf"/db/conf/{re.escape(slug)}/([^/?#]+)\.html(?:$|[?#])")
+        for anchor in soup.find_all("a", href=True):
+            href = anchor["href"]
+            match = toc_pattern.search(href)
+            if not match:
                 continue
-            year = int(match.group(2))
-            if year > current_year():
-                continue
-            entries.setdefault(year, set()).add(entry_name)
-
-        # Some venues such as DAC / HPCA expose year pages via dblp keys like `conf/dac/2025`
-        # instead of legacy `/db/conf/dac/dac2025.html` links.
-        dblp_key_pattern = re.compile(rf"\bconf/{re.escape(slug)}/([^<\s/]+)\b")
-        for match in dblp_key_pattern.finditer(html_text):
             entry_name = match.group(1)
+            if not is_valid_conf_entry_name(entry_name, slug):
+                continue
             year_match = re.search(r"(19|20)\d{2}", entry_name)
             if not year_match:
                 continue
@@ -473,7 +509,23 @@ class PaperRepository:
             if year > current_year():
                 continue
             entries.setdefault(year, set()).add(entry_name)
-        return {year: sorted(names) for year, names in entries.items()}
+
+        # Some venues such as DAC / HPCA expose year pages via dblp keys like `conf/dac/2025`
+        # instead of legacy `/db/conf/dac/dac2025.html` links.
+        if not entries:
+            dblp_key_pattern = re.compile(rf"\bconf/{re.escape(slug)}/((?:19|20)\d{{2}}[a-z0-9_-]*)\b")
+            for match in dblp_key_pattern.finditer(html_text):
+                entry_name = match.group(1)
+                if not is_valid_conf_entry_name(entry_name, slug):
+                    continue
+                year_match = re.search(r"(19|20)\d{2}", entry_name)
+                if not year_match:
+                    continue
+                year = int(year_match.group(0))
+                if year > current_year():
+                    continue
+                entries.setdefault(year, set()).add(entry_name)
+        return {year: dedupe_conf_entry_names(list(names), slug) for year, names in entries.items()}
 
     def _extract_journal_year_entries(self, html_text: str, slug: str) -> dict[int, list[str]]:
         entries: dict[int, set[str]] = {}
@@ -501,7 +553,14 @@ class PaperRepository:
         cached = self.cache["conference_years"].get(conference, {})
         year_entries = cached.get("year_entries", {})
         if str(year) in year_entries and year_entries[str(year)]:
-            return list(year_entries[str(year)])
+            entries = list(year_entries[str(year)])
+            if VENUES[conference].get("venue_kind") == "journals":
+                return entries
+            slug = VENUES[conference]["dblp_slug"]
+            return dedupe_conf_entry_names(
+                [entry for entry in entries if is_valid_conf_entry_name(entry, slug)],
+                slug,
+            )
         slug = VENUES[conference]["dblp_slug"]
         if VENUES[conference].get("venue_kind") == "journals":
             return []
