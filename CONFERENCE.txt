@@ -1,0 +1,21 @@
+# Configure supported conferences and the lookback window here.
+# Format:
+#   lookback_years=<number>
+#   conference_key
+# Conference keys should be lowercase and will be converted in code for display.
+
+lookback_years=5
+
+osdi
+nsdi
+sosp
+asplos
+eurosys
+fast
+dac
+isca
+micro
+hpca
+sigmod
+sigcomm
+usenix

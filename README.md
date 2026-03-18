@@ -1,18 +1,32 @@
 # paper-notifier
 
-系统A会论文更新速览过滤，用于浏览 OSDI、NSDI、SOSP、ASPLOS、EuroSys、FAST、DAC、ISCA、MICRO、HPCA、SIGMOD、SIGCOMM 近 5 年录稿论文，并尽量补齐摘要。
+系统A会论文更新速览过滤，用于抓取配置文件中定义的会议录稿论文，并尽量补齐摘要。
 
 ## 使用方式
 
 ```bash
-python3 app.py build-cache
+python3 build-cache.py build-cache
 ```
 
 默认行为也是构建缓存并导出静态数据：
 
 ```bash
-python3 app.py
+python3 build-cache.py
 ```
+
+会议列表和抓取年限都在 [CONFERENCE.txt](/home/lzx/paper_abstract/CONFERENCE.txt) 里维护。
+
+配置格式：
+
+```txt
+lookback_years=5
+osdi
+sigmod
+```
+
+- `lookback_years` 表示抓取近几年
+- 每个会议一行，只写会议的小写 key
+- 代码会自动把 key 转成展示名称和 `dblp_slug`
 
 ## 静态页面模式
 
@@ -21,13 +35,13 @@ python3 app.py
 基于缓存导出静态数据：
 
 ```bash
-python3 app.py build-static
+python3 build-cache.py build-static
 ```
 
 如果缓存还没生成，也可以直接：
 
 ```bash
-python3 app.py build-cache
+python3 build-cache.py build-cache
 ```
 
 这会同时更新 `paper_cache/` 和 `assets/papers-data.json`。生成后可以把 `assets/` 目录直接部署到任意静态托管。
@@ -42,6 +56,6 @@ python3 app.py build-cache
 
 - 服务会把拉取结果缓存在 `paper_cache/`
 - 目录结构为 `paper_cache/<year>/<conference>/info.json`
-- 不再内置网页服务，`app.py` 只负责抓取、缓存和导出静态 JSON
-- `python3 app.py build-cache` 默认只补新增会议和缺失年份，不会全量重建已有年份
-- 当前支持 `osdi`、`nsdi`、`sosp`、`asplos`、`eurosys`、`fast`、`dac`、`isca`、`micro`、`hpca`、`sigmod`、`sigcomm`
+- 不再内置网页服务，`build-cache.py` 只负责抓取、缓存和导出静态 JSON
+- 支持的会议和抓取年限由 `CONFERENCE.txt` 控制
+- `python3 build-cache.py build-cache` 默认只补新增会议和缺失年份，不会全量重建已有年份
