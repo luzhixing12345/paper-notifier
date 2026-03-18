@@ -6,7 +6,7 @@
 
 ## 在线预览
 
-https://luzhixing12345.github.io/paper-notifier/
+https://paper-notifier.vercel.app
 
 - 目前支持的会议：OSDI、NSDI、SOSP、ASPLOS、EUROSYS、FAST、DAC、ISCA、MICRO、HPCA、SIGMOD、SIGCOMM、USENIX
 - 目前支持的期刊：TACO、TCAD

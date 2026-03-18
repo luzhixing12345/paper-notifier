@@ -1,0 +1,27 @@
+name: Build Cache
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 00:00 UTC = 08:00 Asia/Shanghai
+    - cron: "0 0 * * *"
+
+jobs:
+  build-cache:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run build-cache
+        run: python3 build-cache.py
