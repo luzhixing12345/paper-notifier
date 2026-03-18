@@ -1,14 +1,18 @@
 const PREFERENCES_STORAGE_KEY = "paper-preferences";
 const PREFERENCES_STORAGE_VERSION = 2;
+const FILTER_STORAGE_KEY = "paper-filters";
+const FILTER_STORAGE_VERSION = 1;
 const INITIAL_RENDER_COUNT = 40;
 const RENDER_BATCH_SIZE = 20;
+
+const savedFilters = loadFilters();
 
 const state = {
   raw: [],
   filtered: [],
   visibleCount: INITIAL_RENDER_COUNT,
-  selectedConferences: new Set(),
-  selectedYears: new Set(),
+  selectedConferences: new Set(savedFilters.selectedConferences),
+  selectedYears: new Set(savedFilters.selectedYears),
   availableConferences: [],
   availableYears: [],
   activeView: "browse",
@@ -62,12 +66,65 @@ function createEmptyPreferences() {
   };
 }
 
+function loadFilters() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(FILTER_STORAGE_KEY) || "null");
+    if (!raw || raw.version !== FILTER_STORAGE_VERSION) {
+      return createEmptyFilters();
+    }
+    return {
+      version: FILTER_STORAGE_VERSION,
+      selectedConferences: Array.isArray(raw.selectedConferences) ? raw.selectedConferences : [],
+      selectedYears: Array.isArray(raw.selectedYears) ? raw.selectedYears : [],
+    };
+  } catch {
+    return createEmptyFilters();
+  }
+}
+
+function saveFilters() {
+  localStorage.setItem(
+    FILTER_STORAGE_KEY,
+    JSON.stringify({
+      version: FILTER_STORAGE_VERSION,
+      selectedConferences: [...state.selectedConferences],
+      selectedYears: [...state.selectedYears],
+    }),
+  );
+}
+
+function createEmptyFilters() {
+  return {
+    version: FILTER_STORAGE_VERSION,
+    selectedConferences: [],
+    selectedYears: [],
+  };
+}
+
 function getPaperId(paper) {
   return [paper.conference, paper.year, paper.title].join("::");
 }
 
 function getPaperDownloadUrl(paper) {
   return paper.source_url || paper.doi_url || paper.dblp_url || "";
+}
+
+function getPaperConferenceKey(paper) {
+  if (paper.conference) {
+    return String(paper.conference);
+  }
+  if (!paper.conference_label) {
+    return "";
+  }
+  const matched = state.availableConferences.find((conference) => conference.label === paper.conference_label);
+  return matched ? matched.key : "";
+}
+
+function getPaperYearKey(paper) {
+  if (paper.year === undefined || paper.year === null || paper.year === "") {
+    return "";
+  }
+  return String(paper.year);
 }
 
 function isLiked(paper) {
@@ -186,6 +243,15 @@ async function loadData() {
     state.raw = payload.papers || [];
     state.availableConferences = payload.available_conferences || [];
     state.availableYears = payload.available_years || [];
+    const availableConferenceKeys = new Set(state.availableConferences.map((conference) => conference.key));
+    const availableYearKeys = new Set(state.availableYears.map((year) => String(year)));
+    state.selectedConferences = new Set(
+      [...state.selectedConferences].filter((conference) => availableConferenceKeys.has(conference)),
+    );
+    state.selectedYears = new Set(
+      [...state.selectedYears].filter((year) => availableYearKeys.has(year)),
+    );
+    saveFilters();
     renderConferenceFilters();
     renderYearFilters();
     render();
@@ -214,52 +280,33 @@ function renderYearFilters() {
   `).join("");
 }
 
+function getBasePapersForActiveView() {
+  if (state.activeView === "favorites") {
+    return getFavoritePapers();
+  }
+  if (state.activeView === "viewed") {
+    return getViewedPapers();
+  }
+  if (state.activeView === "disliked") {
+    return getDislikedPapers();
+  }
+  return state.raw.filter((paper) => !isDisliked(paper) && !isLiked(paper) && !isViewed(paper));
+}
+
 function render() {
   state.visibleCount = INITIAL_RENDER_COUNT;
   syncViewTabs();
-  if (state.activeView === "favorites") {
-    filtersPanelEl.hidden = true;
-    state.filtered = getFavoritePapers().sort((a, b) => Number(b.year) - Number(a.year) || a.title.localeCompare(b.title));
-    updateStatus();
-    renderResults();
-    return;
-  }
-
-  if (state.activeView === "viewed") {
-    filtersPanelEl.hidden = true;
-    state.filtered = getViewedPapers().sort((a, b) => Number(b.year) - Number(a.year) || a.title.localeCompare(b.title));
-    updateStatus();
-    renderResults();
-    return;
-  }
-
-  if (state.activeView === "disliked") {
-    filtersPanelEl.hidden = true;
-    state.filtered = getDislikedPapers().sort((a, b) => Number(b.year) - Number(a.year) || a.title.localeCompare(b.title));
-    updateStatus();
-    renderResults();
-    return;
-  }
-
   filtersPanelEl.hidden = false;
   const keyword = keywordEl.value.trim().toLowerCase();
   const requireAbstract = hasAbstractEl.checked;
-
-  const papers = state.raw
+  const papers = getBasePapersForActiveView()
     .filter((paper) => {
-      if (isDisliked(paper)) {
+      const conferenceKey = getPaperConferenceKey(paper);
+      const yearKey = getPaperYearKey(paper);
+      if (state.selectedConferences.size && !state.selectedConferences.has(conferenceKey)) {
         return false;
       }
-      if (isLiked(paper)) {
-        return false;
-      }
-      if (isViewed(paper)) {
-        return false;
-      }
-      if (state.selectedConferences.size && !state.selectedConferences.has(paper.conference)) {
-        return false;
-      }
-      if (state.selectedYears.size && !state.selectedYears.has(String(paper.year))) {
+      if (state.selectedYears.size && !state.selectedYears.has(yearKey)) {
         return false;
       }
       if (requireAbstract && !paper.abstract) {
@@ -291,20 +338,20 @@ function render() {
 
 function updateStatus() {
   const renderedCount = Math.min(state.visibleCount, state.filtered.length);
+  const conferenceHint = state.selectedConferences.size ? `已选 ${state.selectedConferences.size} 个会议` : "全部会议";
+  const yearHint = state.selectedYears.size ? `已选 ${state.selectedYears.size} 个年份` : "全部年份";
   if (state.activeView === "favorites") {
-    loadingEl.textContent = `我的喜欢中共有 ${state.filtered.length} 篇论文，当前渲染 ${renderedCount} 篇。`;
+    loadingEl.textContent = `我的喜欢中共有 ${state.filtered.length} 篇论文，当前渲染 ${renderedCount} 篇，范围：${conferenceHint}，${yearHint}。`;
     return;
   }
   if (state.activeView === "viewed") {
-    loadingEl.textContent = `已看完列表中共有 ${state.filtered.length} 篇论文，当前渲染 ${renderedCount} 篇。`;
+    loadingEl.textContent = `已看完列表中共有 ${state.filtered.length} 篇论文，当前渲染 ${renderedCount} 篇，范围：${conferenceHint}，${yearHint}。`;
     return;
   }
   if (state.activeView === "disliked") {
-    loadingEl.textContent = `不感兴趣列表中共有 ${state.filtered.length} 篇论文，当前渲染 ${renderedCount} 篇。`;
+    loadingEl.textContent = `不感兴趣列表中共有 ${state.filtered.length} 篇论文，当前渲染 ${renderedCount} 篇，范围：${conferenceHint}，${yearHint}。`;
     return;
   }
-  const conferenceHint = state.selectedConferences.size ? `已选 ${state.selectedConferences.size} 个会议` : "全部会议";
-  const yearHint = state.selectedYears.size ? `已选 ${state.selectedYears.size} 个年份` : "全部年份";
   loadingEl.textContent = `当前匹配 ${state.filtered.length} 篇论文，已渲染 ${renderedCount} 篇，范围：${conferenceHint}，${yearHint}。`;
 }
 
@@ -421,6 +468,7 @@ function handleConferenceFilterClick(event) {
   } else {
     state.selectedConferences.add(key);
   }
+  saveFilters();
   renderConferenceFilters();
   render();
 }
@@ -439,6 +487,7 @@ function handleYearFilterClick(event) {
   } else {
     state.selectedYears.add(year);
   }
+  saveFilters();
   renderYearFilters();
   render();
 }
