@@ -164,7 +164,7 @@ async function loadData() {
   loadingEl.textContent = "正在加载数据...";
   resultsEl.innerHTML = "";
   try {
-    const res = await fetch("/assets/papers-data.json");
+    const res = await fetch("./papers-data.json");
     const payload = await res.json();
     if (!res.ok) {
       throw new Error(payload.detail || payload.error || "请求失败");
