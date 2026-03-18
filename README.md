@@ -14,7 +14,7 @@ python3 build-cache.py build-cache
 python3 build-cache.py
 ```
 
-会议列表和抓取年限都在 [CONFERENCE.txt](/home/lzx/paper_abstract/CONFERENCE.txt) 里维护。
+会议列表和抓取年限都在 [CONFERENCE.txt](/home/lzx/paper_abstract/CONFERENCE.txt) 和 [JOURNAL.txt](/home/lzx/paper_abstract/JOURNAL.txt) 里维护。
 
 配置格式：
 
@@ -25,7 +25,9 @@ sigmod
 ```
 
 - `lookback_years` 表示抓取近几年
-- 每个会议一行，只写会议的小写 key
+- 每个会议或期刊一行，只写小写 key
+- `CONFERENCE.txt` 走 `DBLP /db/conf/...`
+- `JOURNAL.txt` 走 `DBLP /db/journals/...`
 - 代码会自动把 key 转成展示名称和 `dblp_slug`
 
 ## 静态页面模式
@@ -57,5 +59,5 @@ python3 build-cache.py build-cache
 - 服务会把拉取结果缓存在 `paper_cache/`
 - 目录结构为 `paper_cache/<year>/<conference>/info.json`
 - 不再内置网页服务，`build-cache.py` 只负责抓取、缓存和导出静态 JSON
-- 支持的会议和抓取年限由 `CONFERENCE.txt` 控制
+- 支持的会议和期刊，以及抓取年限，分别由 `CONFERENCE.txt` 和 `JOURNAL.txt` 控制
 - `python3 build-cache.py build-cache` 默认只补新增会议和缺失年份，不会全量重建已有年份

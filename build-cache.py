@@ -20,6 +20,7 @@ CACHE_DIR = BASE_DIR / "paper_cache"
 ASSETS_DIR = BASE_DIR / "assets"
 STATIC_DATA_PATH = ASSETS_DIR / "papers-data.json"
 CONFERENCE_CONFIG_PATH = BASE_DIR / "CONFERENCE.txt"
+JOURNAL_CONFIG_PATH = BASE_DIR / "JOURNAL.txt"
 USER_AGENT = "paper-abstract-cache-builder/1.0"
 REQUEST_TIMEOUT = 20
 CACHE_TTL_SECONDS = 60 * 60 * 24
@@ -32,6 +33,7 @@ DEFAULT_LOOKBACK_YEARS = 5
 
 def format_conference_label(key: str) -> str:
     custom_labels = {
+        "atc": "USENIX ATC",
         "eurosys": "EuroSys",
         "hotnets": "HotNets",
         "hotos": "HotOS",
@@ -40,20 +42,24 @@ def format_conference_label(key: str) -> str:
         "middleware": "Middleware",
         "sensys": "SenSys",
         "sigmetrics": "SIGMETRICS",
+        "taco": "TACO",
+        "tcad": "TCAD",
     }
     return custom_labels.get(key, key.upper())
 
 
 def get_venue_kind(key: str) -> str:
-    return "conf"
+    return "journals" if key in {"taco", "tcad"} else "conf"
 
 
-def load_conference_config(config_path: Path = CONFERENCE_CONFIG_PATH) -> tuple[int, dict[str, dict[str, str]]]:
+def load_venue_config(config_path: Path, venue_kind: str) -> tuple[int, dict[str, dict[str, str]]]:
     if not config_path.exists():
+        if venue_kind == "journals":
+            return DEFAULT_LOOKBACK_YEARS, {}
         raise FileNotFoundError(f"Conference config not found: {config_path}")
 
     lookback_years = DEFAULT_LOOKBACK_YEARS
-    conferences: dict[str, dict[str, str]] = {}
+    venues: dict[str, dict[str, str]] = {}
     for line_number, raw_line in enumerate(config_path.read_text(encoding="utf-8").splitlines(), start=1):
         line = raw_line.strip()
         if not line or line.startswith("#"):
@@ -71,20 +77,24 @@ def load_conference_config(config_path: Path = CONFERENCE_CONFIG_PATH) -> tuple[
         key = line.lower()
         if not re.fullmatch(r"[a-z0-9][a-z0-9_-]*", key):
             raise ValueError(
-                f"Invalid conference key on line {line_number}: {line}. Use lowercase words like `osdi` or `sigcomm`."
+                f"Invalid venue key on line {line_number}: {line}. Use lowercase words like `osdi` or `sigcomm`."
             )
-        conferences[key] = {
+        venues[key] = {
             "label": format_conference_label(key),
             "dblp_slug": key,
-            "venue_kind": "conf",
+            "venue_kind": venue_kind,
+            "lookback_years": lookback_years,
         }
 
-    if not conferences:
+    if not venues and venue_kind == "conf":
         raise ValueError(f"No conferences configured in {config_path}")
-    return lookback_years, conferences
+    return lookback_years, venues
 
 
-LOOKBACK_YEARS, CONFERENCES = load_conference_config()
+CONFERENCE_LOOKBACK_YEARS, CONFERENCES = load_venue_config(CONFERENCE_CONFIG_PATH, "conf")
+JOURNAL_LOOKBACK_YEARS, JOURNALS = load_venue_config(JOURNAL_CONFIG_PATH, "journals")
+LOOKBACK_YEARS = CONFERENCE_LOOKBACK_YEARS
+VENUES = {**CONFERENCES, **JOURNALS}
 
 
 def current_year() -> int:
@@ -256,8 +266,11 @@ class PaperRepository:
         response.raise_for_status()
         return response.text
 
-    def get_latest_years(self, conference: str, lookback_years: int = LOOKBACK_YEARS) -> list[int]:
-        slug = CONFERENCES[conference]["dblp_slug"]
+    def get_latest_years(self, conference: str, lookback_years: int | None = None) -> list[int]:
+        venue = VENUES[conference]
+        slug = venue["dblp_slug"]
+        venue_kind = venue.get("venue_kind", "conf")
+        lookback_years = lookback_years or int(venue.get("lookback_years", LOOKBACK_YEARS))
         cached = self.cache["conference_years"].get(conference, {})
         cached_years = cached.get("years", [])
         cached_year_entries = cached.get("year_entries", {})
@@ -269,8 +282,8 @@ class PaperRepository:
         ):
             return cached["years"][:lookback_years]
 
-        html_text = self._get_text(f"https://dblp.org/db/conf/{slug}/index.html")
-        year_entries = self._extract_year_entries(html_text, slug)
+        html_text = self._get_text(f"https://dblp.org/db/{venue_kind}/{slug}/index.html")
+        year_entries = self._extract_year_entries(html_text, slug, venue_kind)
         found_years = sorted(year_entries.keys(), reverse=True)
         min_year = current_year() - lookback_years + 1
         years = [year for year in found_years if year >= min_year][:lookback_years]
@@ -283,7 +296,10 @@ class PaperRepository:
             self._save_cache()
         return years
 
-    def _extract_year_entries(self, html_text: str, slug: str) -> dict[int, list[str]]:
+    def _extract_year_entries(self, html_text: str, slug: str, venue_kind: str) -> dict[int, list[str]]:
+        if venue_kind == "journals":
+            return self._extract_journal_year_entries(html_text, slug)
+
         entries: dict[int, set[str]] = {}
         pattern = re.compile(rf"/db/conf/{re.escape(slug)}/([^\"/]*?(\d{{4}})[^\"/]*)\.html")
         for match in pattern.finditer(html_text):
@@ -296,12 +312,36 @@ class PaperRepository:
             entries.setdefault(year, set()).add(entry_name)
         return {year: sorted(names) for year, names in entries.items()}
 
+    def _extract_journal_year_entries(self, html_text: str, slug: str) -> dict[int, list[str]]:
+        entries: dict[int, set[str]] = {}
+        soup = BeautifulSoup(html_text, "html.parser")
+        pattern = re.compile(rf"/db/journals/{re.escape(slug)}/([^\"/]+)\.html?$")
+        for anchor in soup.find_all("a", href=True):
+            match = pattern.search(anchor["href"])
+            if not match:
+                continue
+            entry_name = match.group(1)
+            if not entry_name.startswith(slug):
+                continue
+            container = anchor.find_parent(["li", "cite", "div", "nav"]) or anchor.parent
+            context = container.get_text(" ", strip=True)
+            years = [int(match.group(0)) for match in re.finditer(r"\b(?:19|20)\d{2}\b", context)]
+            if not years:
+                continue
+            year = max(years)
+            if year > current_year():
+                continue
+            entries.setdefault(year, set()).add(entry_name)
+        return {year: sorted(names) for year, names in entries.items()}
+
     def _get_year_entry_names(self, conference: str, year: int) -> list[str]:
         cached = self.cache["conference_years"].get(conference, {})
         year_entries = cached.get("year_entries", {})
         if str(year) in year_entries and year_entries[str(year)]:
             return list(year_entries[str(year)])
-        slug = CONFERENCES[conference]["dblp_slug"]
+        slug = VENUES[conference]["dblp_slug"]
+        if VENUES[conference].get("venue_kind") == "journals":
+            return []
         return [f"{slug}{year}"]
 
     def get_cached_latest_years(self, conference: str) -> list[int]:
@@ -309,7 +349,7 @@ class PaperRepository:
         return list(cached.get("years", []))
 
     def has_usable_cache(self, conferences: list[str] | None = None) -> bool:
-        conferences = conferences or list(CONFERENCES.keys())
+        conferences = conferences or list(VENUES.keys())
         for conference in conferences:
             years = self.get_cached_latest_years(conference)
             if not years:
@@ -357,7 +397,7 @@ class PaperRepository:
         force_refresh: bool = False,
         show_progress: bool = True,
     ) -> dict[str, int]:
-        conferences = conferences or list(CONFERENCES.keys())
+        conferences = conferences or list(VENUES.keys())
         summary: dict[str, int] = {}
         conference_iter = tqdm(conferences, desc="conferences", unit="conf") if show_progress else conferences
         for conference in conference_iter:
@@ -373,17 +413,17 @@ class PaperRepository:
     def export_static_data(self, output_path: Path = STATIC_DATA_PATH) -> Path:
         papers_by_conference = {
             key: self.get_cached_papers(key)
-            for key in CONFERENCES
+            for key in VENUES
         }
         papers = [
             paper
-            for conference in CONFERENCES
+            for conference in VENUES
             for paper in papers_by_conference[conference]
         ]
         papers.sort(key=lambda item: (-int(item["year"]), item["conference"], item["title"].lower()))
         available_conferences = [
             {"key": key, "label": value["label"]}
-            for key, value in CONFERENCES.items()
+            for key, value in VENUES.items()
             if papers_by_conference[key]
         ]
         payload = {
@@ -425,7 +465,9 @@ class PaperRepository:
         return items
 
     def _fetch_dblp_papers(self, conference: str, year: int, show_progress: bool = False) -> list[dict[str, Any]]:
-        slug = CONFERENCES[conference]["dblp_slug"]
+        venue = VENUES[conference]
+        slug = venue["dblp_slug"]
+        venue_kind = venue.get("venue_kind", "conf")
         entry_names = self._get_year_entry_names(conference, year)
         list_progress = tqdm(
             total=len(entry_names),
@@ -436,7 +478,7 @@ class PaperRepository:
         )
         raw_hits: list[dict[str, Any]] = []
         for entry_name in entry_names:
-            query = urllib.parse.quote(f'toc:db/conf/{slug}/{entry_name}.bht:')
+            query = urllib.parse.quote(f'toc:db/{venue_kind}/{slug}/{entry_name}.bht:')
             url = f"https://dblp.org/search/publ/api?format=json&h=1000&q={query}"
             payload = self._get_json(url)
             entry_hits = payload.get("result", {}).get("hits", {}).get("hit", [])
@@ -459,11 +501,11 @@ class PaperRepository:
             if isinstance(authors, dict):
                 authors = [authors]
             title = clean_dblp_title(info.get("title", ""))
-            if is_metadata_entry(title, CONFERENCES[conference]["label"], int(info.get("year") or year)):
+            if is_metadata_entry(title, VENUES[conference]["label"], int(info.get("year") or year)):
                 continue
             paper = {
                 "conference": conference,
-                "conference_label": CONFERENCES[conference]["label"],
+                "conference_label": VENUES[conference]["label"],
                 "year": int(info.get("year") or year),
                 "title": title,
                 "authors": [compact_spaces(author.get("text", "")) for author in authors if author.get("text")],

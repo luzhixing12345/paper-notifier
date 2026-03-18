@@ -1,0 +1,10 @@
+# Configure supported journals and the lookback window here.
+# Format:
+#   lookback_years=<number>
+#   journal_key
+# Journal keys should be lowercase and correspond to DBLP journal slugs.
+
+lookback_years=5
+
+taco
+tcad
