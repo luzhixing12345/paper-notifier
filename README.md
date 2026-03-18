@@ -2,7 +2,7 @@
 
 快速筛选是否感兴趣的系统会议期刊录用论文，当有新会议/期刊更新时自动发送邮件通知。
 
-![demo.gif](./demo.gif)
+![20260318230916](https://raw.githubusercontent.com/learner-lu/picbed/master/20260318230916.png)
 
 ## 在线预览
 
