@@ -23,9 +23,11 @@ CONFERENCE_CONFIG_PATH = BASE_DIR / "CONFERENCE.txt"
 JOURNAL_CONFIG_PATH = BASE_DIR / "JOURNAL.txt"
 USER_AGENT = "paper-abstract-cache-builder/1.0"
 REQUEST_TIMEOUT = 20
-CACHE_TTL_SECONDS = 60 * 60 * 24
 MAX_OPENALEX_CANDIDATES = 10
 ABSTRACT_WORKERS = 8
+DBLP_ENTRY_WORKERS = 4
+YEAR_FETCH_WORKERS = 4
+BUILD_WORKERS = 4
 TRANSLATE_CHAR_LIMIT = 5000
 
 DEFAULT_LOOKBACK_YEARS = 5
@@ -186,19 +188,28 @@ class PaperRepository:
         self.cache_dir = cache_dir
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.lock = threading.Lock()
-        self.session = requests.Session()
-        self.session.headers.update({"User-Agent": USER_AGENT})
-        self.session.trust_env = False
-        self.translation_session = requests.Session()
-        self.translation_session.headers.update({"User-Agent": USER_AGENT})
-        self.translation_session.trust_env = True
+        self._thread_local = threading.local()
         self.cache = self._load_cache()
+
+    def _build_session(self, trust_env: bool) -> requests.Session:
+        session = requests.Session()
+        session.headers.update({"User-Agent": USER_AGENT})
+        session.trust_env = trust_env
+        return session
+
+    def _session_for(self, *, translation: bool = False) -> requests.Session:
+        attr_name = "translation_session" if translation else "session"
+        session = getattr(self._thread_local, attr_name, None)
+        if session is None:
+            session = self._build_session(trust_env=translation)
+            setattr(self._thread_local, attr_name, session)
+        return session
 
     def _empty_cache(self) -> dict[str, Any]:
         return {
             "papers": {},
             "conference_years": {},
-            "metadata": {"created_at": 0},
+            "metadata": {},
         }
 
     def _metadata_path(self) -> Path:
@@ -214,8 +225,8 @@ class PaperRepository:
             try:
                 metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
                 if isinstance(metadata, dict):
-                    cache["metadata"] = metadata.get("metadata", cache["metadata"])
-                    cache["conference_years"] = metadata.get("conference_years", {})
+                    cache["metadata"] = self._sanitize_metadata(metadata.get("metadata", cache["metadata"]))
+                    cache["conference_years"] = self._sanitize_conference_years(metadata.get("conference_years", {}))
             except (json.JSONDecodeError, OSError):
                 pass
 
@@ -235,9 +246,38 @@ class PaperRepository:
                 conference = conf_dir.name
                 year = int(year_dir.name)
                 cache_key = f"{conference}:{year}"
-                cache["papers"][cache_key] = payload
+                cache["papers"][cache_key] = self._sanitize_paper_payload(payload)
 
         return cache
+
+    def _sanitize_metadata(self, metadata: Any) -> dict[str, Any]:
+        if not isinstance(metadata, dict):
+            return {}
+        return {key: value for key, value in metadata.items() if key not in {"created_at", "last_build_at"}}
+
+    def _sanitize_conference_years(self, conference_years: Any) -> dict[str, dict[str, Any]]:
+        if not isinstance(conference_years, dict):
+            return {}
+
+        sanitized: dict[str, dict[str, Any]] = {}
+        for conference, payload in conference_years.items():
+            if not isinstance(payload, dict):
+                continue
+            sanitized[conference] = {
+                "years": payload.get("years", []),
+                "year_entries": payload.get("year_entries", {}),
+            }
+        return sanitized
+
+    def _sanitize_paper_payload(self, payload: Any) -> dict[str, Any]:
+        if not isinstance(payload, dict):
+            return {"items": []}
+
+        return {
+            key: value
+            for key, value in payload.items()
+            if key not in {"expires_at", "updated_at"}
+        }
 
     def _save_cache(self) -> None:
         metadata_payload = json.dumps(
@@ -257,12 +297,12 @@ class PaperRepository:
             info_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
     def _get_json(self, url: str) -> dict[str, Any]:
-        response = self.session.get(url, timeout=REQUEST_TIMEOUT)
+        response = self._session_for().get(url, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()
         return response.json()
 
     def _get_text(self, url: str) -> str:
-        response = self.session.get(url, timeout=REQUEST_TIMEOUT)
+        response = self._session_for().get(url, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()
         return response.text
 
@@ -291,7 +331,6 @@ class PaperRepository:
             self.cache["conference_years"][conference] = {
                 "years": years,
                 "year_entries": {str(year): year_entries.get(year, []) for year in years},
-                "expires_at": time.time() + CACHE_TTL_SECONDS,
             }
             self._save_cache()
         return years
@@ -365,16 +404,25 @@ class PaperRepository:
     def get_papers(self, conference: str, force_refresh: bool = False, show_progress: bool = False) -> list[dict[str, Any]]:
         years = self.get_latest_years(conference)
         papers: list[dict[str, Any]] = []
-        year_iter = tqdm(years, desc=f"{conference} years", unit="year", leave=False) if show_progress else years
-        for year in year_iter:
-            papers.extend(
-                self._get_papers_for_year(
+        progress = tqdm(total=len(years), desc=f"{conference} years", unit="year", leave=False) if show_progress else None
+        max_workers = min(YEAR_FETCH_WORKERS, max(1, len(years)))
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            future_map = {
+                executor.submit(
+                    self._get_papers_for_year,
                     conference,
                     year,
                     force_refresh=force_refresh,
                     show_progress=show_progress,
-                )
-            )
+                ): year
+                for year in years
+            }
+            for future in as_completed(future_map):
+                papers.extend(future.result())
+                if progress:
+                    progress.update(1)
+        if progress:
+            progress.close()
         papers.sort(key=lambda item: (-int(item["year"]), item["title"].lower()))
         return papers
 
@@ -399,13 +447,26 @@ class PaperRepository:
     ) -> dict[str, int]:
         conferences = conferences or list(VENUES.keys())
         summary: dict[str, int] = {}
-        conference_iter = tqdm(conferences, desc="conferences", unit="conf") if show_progress else conferences
-        for conference in conference_iter:
-            papers = self.get_papers(conference, force_refresh=force_refresh, show_progress=show_progress)
-            summary[conference] = len(papers)
-        self.cache.setdefault("metadata", {})
-        self.cache["metadata"]["last_build_at"] = time.time()
-        self.cache["metadata"]["mode"] = "prefetched"
+        progress = tqdm(total=len(conferences), desc="conferences", unit="conf") if show_progress else None
+        max_workers = min(BUILD_WORKERS, max(1, len(conferences)))
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            future_map = {
+                executor.submit(
+                    self.get_papers,
+                    conference,
+                    force_refresh=force_refresh,
+                    show_progress=show_progress,
+                ): conference
+                for conference in conferences
+            }
+            for future in as_completed(future_map):
+                conference = future_map[future]
+                summary[conference] = len(future.result())
+                if progress:
+                    progress.update(1)
+        if progress:
+            progress.close()
+        self.cache["metadata"] = {"mode": "prefetched"}
         self._save_cache()
         self.export_static_data()
         return summary
@@ -433,7 +494,6 @@ class PaperRepository:
             "available_years": sorted({paper["year"] for paper in papers}, reverse=True),
             "count": len(papers),
             "papers": papers,
-            "generated_at": int(time.time()),
         }
         output_path.parent.mkdir(parents=True, exist_ok=True)
         output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -458,8 +518,6 @@ class PaperRepository:
         with self.lock:
             self.cache["papers"][cache_key] = {
                 "items": items,
-                "expires_at": time.time() + CACHE_TTL_SECONDS,
-                "updated_at": time.time(),
             }
             self._save_cache()
         return items
@@ -477,15 +535,15 @@ class PaperRepository:
             disable=not show_progress,
         )
         raw_hits: list[dict[str, Any]] = []
-        for entry_name in entry_names:
-            query = urllib.parse.quote(f'toc:db/{venue_kind}/{slug}/{entry_name}.bht:')
-            url = f"https://dblp.org/search/publ/api?format=json&h=1000&q={query}"
-            payload = self._get_json(url)
-            entry_hits = payload.get("result", {}).get("hits", {}).get("hit", [])
-            if isinstance(entry_hits, dict):
-                entry_hits = [entry_hits]
-            raw_hits.extend(entry_hits)
-            list_progress.update(1)
+        max_workers = min(DBLP_ENTRY_WORKERS, max(1, len(entry_names)))
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            future_map = {
+                executor.submit(self._fetch_dblp_entry_hits, venue_kind, slug, entry_name): entry_name
+                for entry_name in entry_names
+            }
+            for future in as_completed(future_map):
+                raw_hits.extend(future.result())
+                list_progress.update(1)
         list_progress.close()
 
         papers: list[dict[str, Any]] = []
@@ -537,6 +595,15 @@ class PaperRepository:
             show_progress=show_progress,
         )
         return papers
+
+    def _fetch_dblp_entry_hits(self, venue_kind: str, slug: str, entry_name: str) -> list[dict[str, Any]]:
+        query = urllib.parse.quote(f'toc:db/{venue_kind}/{slug}/{entry_name}.bht:')
+        url = f"https://dblp.org/search/publ/api?format=json&h=1000&q={query}"
+        payload = self._get_json(url)
+        entry_hits = payload.get("result", {}).get("hits", {}).get("hit", [])
+        if isinstance(entry_hits, dict):
+            return [entry_hits]
+        return entry_hits
 
     def _normalize_links(self, item: dict[str, Any]) -> None:
         doi = item.get("doi") or extract_doi(item.get("source_url", "")) or extract_doi(item.get("doi_url", ""))
@@ -756,7 +823,7 @@ class PaperRepository:
             return ""
         try:
             url = "https://translate.googleapis.com/translate_a/single"
-            response = self.translation_session.get(
+            response = self._session_for(translation=True).get(
                 url,
                 params={"client": "gtx", "sl": "en", "tl": "zh-CN", "dt": "t", "q": source},
                 timeout=REQUEST_TIMEOUT,
