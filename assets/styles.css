@@ -132,9 +132,7 @@ select {
 
 .filters {
   display: grid;
-  grid-template-columns: 1.1fr 1fr 1.7fr 1fr auto;
-  gap: 12px;
-  align-items: end;
+  gap: 14px;
 }
 
 .field {
@@ -151,6 +149,54 @@ select {
 
 .field-grow {
   min-width: 0;
+}
+
+.filter-group {
+  display: grid;
+  gap: 10px;
+}
+
+.filter-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--muted-foreground);
+  cursor: pointer;
+  transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.filter-chip:hover {
+  color: var(--foreground);
+  border-color: #d4d4d8;
+}
+
+.filter-chip.is-active {
+  background: var(--foreground);
+  border-color: var(--foreground);
+  color: var(--accent-foreground);
+}
+
+.filter-toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: end;
 }
 
 input,
@@ -189,33 +235,6 @@ select:focus {
   margin: 0;
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 18px;
-}
-
-.stat {
-  padding: 18px;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: var(--card);
-  box-shadow: var(--shadow);
-}
-
-.stat-value {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-}
-
-.stat-label {
-  margin-top: 6px;
-  color: var(--muted-foreground);
-  font-size: 13px;
-}
-
 .status {
   margin: 16px 0 0;
   color: var(--muted-foreground);
@@ -226,6 +245,27 @@ select:focus {
   display: grid;
   gap: 14px;
   margin-top: 16px;
+}
+
+.results-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.load-more-button {
+  height: 42px;
+  padding: 0 18px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--foreground);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.load-more-button:hover {
+  border-color: #d4d4d8;
+  background: #fcfcfc;
 }
 
 .paper {
@@ -405,8 +445,9 @@ select:focus {
     flex-direction: column;
   }
 
-  .filters {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .filter-toolbar {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
@@ -421,9 +462,8 @@ select:focus {
     border-radius: 16px;
   }
 
-  .filters,
-  .stats {
-    grid-template-columns: 1fr;
+  .filter-chips {
+    gap: 8px;
   }
 
   .meta {

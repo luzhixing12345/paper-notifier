@@ -1,49 +1,65 @@
+const PREFERENCES_STORAGE_KEY = "paper-preferences";
+const PREFERENCES_STORAGE_VERSION = 2;
+const INITIAL_RENDER_COUNT = 40;
+const RENDER_BATCH_SIZE = 20;
+
 const state = {
   raw: [],
   filtered: [],
-  conference: "osdi",
+  visibleCount: INITIAL_RENDER_COUNT,
+  selectedConferences: new Set(),
+  selectedYears: new Set(),
+  availableConferences: [],
+  availableYears: [],
   activeView: "browse",
   preferences: loadPreferences(),
 };
 
-const conferenceEl = document.getElementById("conference");
-const yearEl = document.getElementById("year");
+const conferenceFiltersEl = document.getElementById("conferenceFilters");
+const yearFiltersEl = document.getElementById("yearFilters");
 const keywordEl = document.getElementById("keyword");
 const hasAbstractEl = document.getElementById("hasAbstract");
-const sortEl = document.getElementById("sort");
-const summaryEl = document.getElementById("summary");
 const resultsEl = document.getElementById("results");
 const loadingEl = document.getElementById("loading");
 const filtersPanelEl = document.getElementById("filtersPanel");
 const viewTabs = [...document.querySelectorAll(".view-tab")];
 
-conferenceEl.addEventListener("change", () => {
-  state.conference = conferenceEl.value;
-  loadData();
-});
-yearEl.addEventListener("change", render);
 keywordEl.addEventListener("input", render);
 hasAbstractEl.addEventListener("change", render);
-sortEl.addEventListener("change", render);
 resultsEl.addEventListener("click", handleAbstractToggle);
 resultsEl.addEventListener("click", handlePreferenceClick);
 viewTabs.forEach((tab) => tab.addEventListener("click", handleViewChange));
+conferenceFiltersEl.addEventListener("click", handleConferenceFilterClick);
+yearFiltersEl.addEventListener("click", handleYearFilterClick);
 
 function loadPreferences() {
   try {
-    const raw = JSON.parse(localStorage.getItem("paper-preferences") || "{}");
+    const raw = JSON.parse(localStorage.getItem(PREFERENCES_STORAGE_KEY) || "null");
+    if (!raw || raw.version !== PREFERENCES_STORAGE_VERSION) {
+      return createEmptyPreferences();
+    }
     return {
+      version: PREFERENCES_STORAGE_VERSION,
       liked: raw.liked && typeof raw.liked === "object" ? raw.liked : {},
       viewed: raw.viewed && typeof raw.viewed === "object" ? raw.viewed : {},
-      disliked: Array.isArray(raw.disliked) ? raw.disliked : [],
+      disliked: raw.disliked && typeof raw.disliked === "object" && !Array.isArray(raw.disliked) ? raw.disliked : {},
     };
   } catch {
-    return { liked: {}, viewed: {}, disliked: [] };
+    return createEmptyPreferences();
   }
 }
 
 function savePreferences() {
-  localStorage.setItem("paper-preferences", JSON.stringify(state.preferences));
+  localStorage.setItem(PREFERENCES_STORAGE_KEY, JSON.stringify(state.preferences));
+}
+
+function createEmptyPreferences() {
+  return {
+    version: PREFERENCES_STORAGE_VERSION,
+    liked: {},
+    viewed: {},
+    disliked: {},
+  };
 }
 
 function getPaperId(paper) {
@@ -55,7 +71,8 @@ function isLiked(paper) {
 }
 
 function isDisliked(paper) {
-  return state.preferences.disliked.includes(getPaperId(paper));
+  const paperId = getPaperId(paper);
+  return Boolean(state.preferences.disliked[paperId]);
 }
 
 function getFavoritePapers() {
@@ -68,6 +85,10 @@ function isViewed(paper) {
 
 function getViewedPapers() {
   return Object.values(state.preferences.viewed).filter((paper) => !isDisliked(paper));
+}
+
+function getDislikedPapers() {
+  return Object.values(state.preferences.disliked).filter(Boolean);
 }
 
 function checkIcon(filled) {
@@ -142,76 +163,89 @@ function getMatchPriority(paper, keyword) {
 async function loadData() {
   loadingEl.textContent = "正在加载数据...";
   resultsEl.innerHTML = "";
-  summaryEl.innerHTML = "";
   try {
-    const res = await fetch(`/api/papers?conference=${encodeURIComponent(state.conference)}`);
+    const res = await fetch("/assets/papers-data.json");
     const payload = await res.json();
     if (!res.ok) {
       throw new Error(payload.detail || payload.error || "请求失败");
     }
     state.raw = payload.papers || [];
-    fillYears(payload.available_years || []);
+    state.availableConferences = payload.available_conferences || [];
+    state.availableYears = payload.available_years || [];
+    renderConferenceFilters();
+    renderYearFilters();
     render();
-    loadingEl.textContent = state.activeView === "browse"
-      ? ""
-      : state.activeView === "viewed"
-        ? "已看完标记保存在当前浏览器中。"
-        : "我的喜欢保存在当前浏览器中。";
   } catch (error) {
-    loadingEl.textContent = `加载失败：${error.message}`;
+    loadingEl.textContent = `加载失败：${error.message}。请先执行 python3 app.py build-cache 生成静态数据。`;
   }
 }
 
-function fillYears(years) {
-  const current = yearEl.value;
-  yearEl.innerHTML = '<option value="">全部年份</option>';
-  years.forEach((year) => {
-    const option = document.createElement("option");
-    option.value = String(year);
-    option.textContent = String(year);
-    yearEl.appendChild(option);
-  });
-  if ([...yearEl.options].some((item) => item.value === current)) {
-    yearEl.value = current;
-  }
+function renderConferenceFilters() {
+  conferenceFiltersEl.innerHTML = state.availableConferences.map((conference) => `
+    <button
+      class="filter-chip ${state.selectedConferences.has(conference.key) ? "is-active" : ""}"
+      data-conference="${escapeHtml(conference.key)}"
+      type="button"
+    >${escapeHtml(conference.label)}</button>
+  `).join("");
+}
+
+function renderYearFilters() {
+  yearFiltersEl.innerHTML = state.availableYears.map((year) => `
+    <button
+      class="filter-chip ${state.selectedYears.has(String(year)) ? "is-active" : ""}"
+      data-year="${escapeHtml(String(year))}"
+      type="button"
+    >${escapeHtml(String(year))}</button>
+  `).join("");
 }
 
 function render() {
+  state.visibleCount = INITIAL_RENDER_COUNT;
   syncViewTabs();
   if (state.activeView === "favorites") {
     filtersPanelEl.hidden = true;
-    loadingEl.textContent = "我的喜欢保存在当前浏览器中。";
     state.filtered = getFavoritePapers().sort((a, b) => Number(b.year) - Number(a.year) || a.title.localeCompare(b.title));
-    renderSummary();
+    updateStatus();
     renderResults();
     return;
   }
 
   if (state.activeView === "viewed") {
     filtersPanelEl.hidden = true;
-    loadingEl.textContent = "已看完标记保存在当前浏览器中。";
     state.filtered = getViewedPapers().sort((a, b) => Number(b.year) - Number(a.year) || a.title.localeCompare(b.title));
-    renderSummary();
+    updateStatus();
+    renderResults();
+    return;
+  }
+
+  if (state.activeView === "disliked") {
+    filtersPanelEl.hidden = true;
+    state.filtered = getDislikedPapers().sort((a, b) => Number(b.year) - Number(a.year) || a.title.localeCompare(b.title));
+    updateStatus();
     renderResults();
     return;
   }
 
   filtersPanelEl.hidden = false;
-  loadingEl.textContent = "";
-  const year = yearEl.value;
   const keyword = keywordEl.value.trim().toLowerCase();
   const requireAbstract = hasAbstractEl.checked;
-  const sort = sortEl.value;
 
   const papers = state.raw
     .filter((paper) => {
       if (isDisliked(paper)) {
         return false;
       }
+      if (isLiked(paper)) {
+        return false;
+      }
       if (isViewed(paper)) {
         return false;
       }
-      if (year && String(paper.year) !== year) {
+      if (state.selectedConferences.size && !state.selectedConferences.has(paper.conference)) {
+        return false;
+      }
+      if (state.selectedYears.size && !state.selectedYears.has(String(paper.year))) {
         return false;
       }
       if (requireAbstract && !paper.abstract) {
@@ -233,40 +267,31 @@ function render() {
       if (matchDelta) {
         return matchDelta;
       }
-      if (sort === "title_asc") {
-        return a.title.localeCompare(b.title);
-      }
       return Number(b.year) - Number(a.year) || a.title.localeCompare(b.title);
     });
 
   state.filtered = papers;
-  renderSummary();
+  updateStatus();
   renderResults();
 }
 
-function renderSummary() {
-  const total = state.filtered.length;
-  const abstractCount = state.filtered.filter((item) => item.abstract).length;
-  const yearCount = new Set(state.filtered.map((item) => item.year)).size;
-  const labels = state.activeView === "favorites"
-    ? ["喜欢条目", "带摘要收藏", "收藏年份"]
-    : state.activeView === "viewed"
-      ? ["已看完条目", "带摘要已看完", "已看完年份"]
-      : ["当前结果", "带摘要论文", "覆盖年份"];
-  summaryEl.innerHTML = `
-    <article class="stat">
-      <div class="stat-value">${total}</div>
-      <div class="stat-label">${labels[0]}</div>
-    </article>
-    <article class="stat">
-      <div class="stat-value">${abstractCount}</div>
-      <div class="stat-label">${labels[1]}</div>
-    </article>
-    <article class="stat">
-      <div class="stat-value">${yearCount}</div>
-      <div class="stat-label">${labels[2]}</div>
-    </article>
-  `;
+function updateStatus() {
+  const renderedCount = Math.min(state.visibleCount, state.filtered.length);
+  if (state.activeView === "favorites") {
+    loadingEl.textContent = `我的喜欢中共有 ${state.filtered.length} 篇论文，当前渲染 ${renderedCount} 篇。`;
+    return;
+  }
+  if (state.activeView === "viewed") {
+    loadingEl.textContent = `已看完列表中共有 ${state.filtered.length} 篇论文，当前渲染 ${renderedCount} 篇。`;
+    return;
+  }
+  if (state.activeView === "disliked") {
+    loadingEl.textContent = `不感兴趣列表中共有 ${state.filtered.length} 篇论文，当前渲染 ${renderedCount} 篇。`;
+    return;
+  }
+  const conferenceHint = state.selectedConferences.size ? `已选 ${state.selectedConferences.size} 个会议` : "全部会议";
+  const yearHint = state.selectedYears.size ? `已选 ${state.selectedYears.size} 个年份` : "全部年份";
+  loadingEl.textContent = `当前匹配 ${state.filtered.length} 篇论文，已渲染 ${renderedCount} 篇，范围：${conferenceHint}，${yearHint}。`;
 }
 
 function renderResults() {
@@ -274,6 +299,8 @@ function renderResults() {
     resultsEl.innerHTML = `<div class="empty">${
       state.activeView === "favorites"
         ? "你还没有标记喜欢的论文。"
+        : state.activeView === "disliked"
+          ? "你还没有标记不感兴趣的论文。"
         : state.activeView === "viewed"
           ? "你还没有标记已看完的论文。"
           : "当前筛选条件下没有结果。"
@@ -281,7 +308,8 @@ function renderResults() {
     return;
   }
 
-  resultsEl.innerHTML = state.filtered.map((paper) => {
+  const visiblePapers = state.filtered.slice(0, state.visibleCount);
+  const cardsHtml = visiblePapers.map((paper) => {
     const paperId = getPaperId(paper);
     const tags = [
       `<span class="tag">${paper.conference_label}</span>`,
@@ -334,6 +362,19 @@ function renderResults() {
       </article>
     `;
   }).join("");
+
+  const hasMore = state.visibleCount < state.filtered.length;
+  const footerHtml = hasMore
+    ? `
+      <div class="results-footer">
+        <button class="load-more-button" type="button" data-action="load-more">
+          继续加载 ${Math.min(RENDER_BATCH_SIZE, state.filtered.length - state.visibleCount)} 篇
+        </button>
+      </div>
+    `
+    : "";
+
+  resultsEl.innerHTML = cardsHtml + footerHtml;
 }
 
 function syncViewTabs() {
@@ -348,6 +389,42 @@ function handleViewChange(event) {
     return;
   }
   state.activeView = nextView;
+  render();
+}
+
+function handleConferenceFilterClick(event) {
+  const button = event.target.closest("[data-conference]");
+  if (!button) {
+    return;
+  }
+  const key = button.dataset.conference;
+  if (!key) {
+    return;
+  }
+  if (state.selectedConferences.has(key)) {
+    state.selectedConferences.delete(key);
+  } else {
+    state.selectedConferences.add(key);
+  }
+  renderConferenceFilters();
+  render();
+}
+
+function handleYearFilterClick(event) {
+  const button = event.target.closest("[data-year]");
+  if (!button) {
+    return;
+  }
+  const year = button.dataset.year;
+  if (!year) {
+    return;
+  }
+  if (state.selectedYears.has(year)) {
+    state.selectedYears.delete(year);
+  } else {
+    state.selectedYears.add(year);
+  }
+  renderYearFilters();
   render();
 }
 
@@ -380,7 +457,8 @@ function handlePreferenceClick(event) {
     return;
   }
 
-  const currentPaper = [...state.raw, ...getFavoritePapers(), ...getViewedPapers()].find((paper) => getPaperId(paper) === paperId);
+  const currentPaper = [...state.raw, ...getFavoritePapers(), ...getViewedPapers(), ...getDislikedPapers()]
+    .find((paper) => getPaperId(paper) === paperId);
   if (!currentPaper) {
     return;
   }
@@ -390,7 +468,7 @@ function handlePreferenceClick(event) {
       delete state.preferences.liked[paperId];
     } else {
       state.preferences.liked[paperId] = currentPaper;
-      state.preferences.disliked = state.preferences.disliked.filter((id) => id !== paperId);
+      delete state.preferences.disliked[paperId];
     }
   }
 
@@ -399,17 +477,17 @@ function handlePreferenceClick(event) {
       delete state.preferences.viewed[paperId];
     } else {
       state.preferences.viewed[paperId] = currentPaper;
-      state.preferences.disliked = state.preferences.disliked.filter((id) => id !== paperId);
+      delete state.preferences.disliked[paperId];
     }
   }
 
   if (button.dataset.action === "dislike") {
     delete state.preferences.liked[paperId];
     delete state.preferences.viewed[paperId];
-    if (state.preferences.disliked.includes(paperId)) {
-      state.preferences.disliked = state.preferences.disliked.filter((id) => id !== paperId);
+    if (state.preferences.disliked[paperId]) {
+      delete state.preferences.disliked[paperId];
     } else {
-      state.preferences.disliked = [...state.preferences.disliked, paperId];
+      state.preferences.disliked[paperId] = currentPaper;
     }
   }
 
@@ -417,4 +495,16 @@ function handlePreferenceClick(event) {
   render();
 }
 
+function handleLoadMore(event) {
+  const button = event.target.closest('[data-action="load-more"]');
+  if (!button) {
+    return;
+  }
+  state.visibleCount = Math.min(state.visibleCount + RENDER_BATCH_SIZE, state.filtered.length);
+  updateStatus();
+  renderResults();
+}
+
+resultsEl.addEventListener("click", handleLoadMore);
+savePreferences();
 loadData();

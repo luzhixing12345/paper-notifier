@@ -1,15 +1,11 @@
 import argparse
 import difflib
 import json
-import mimetypes
 import re
 from html import unescape
-import socket
 import threading
 import time
 import urllib.parse
-from http import HTTPStatus
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -22,14 +18,13 @@ from tqdm import tqdm
 BASE_DIR = Path(__file__).resolve().parent
 CACHE_DIR = BASE_DIR / "paper_cache"
 ASSETS_DIR = BASE_DIR / "assets"
-USER_AGENT = "paper-abstract-local-service/1.0"
+STATIC_DATA_PATH = ASSETS_DIR / "papers-data.json"
+USER_AGENT = "paper-abstract-cache-builder/1.0"
 REQUEST_TIMEOUT = 20
 CACHE_TTL_SECONDS = 60 * 60 * 24
 DEFAULT_LOOKBACK_YEARS = 5
 MAX_OPENALEX_CANDIDATES = 10
 ABSTRACT_WORKERS = 8
-SERVER_HOST = "0.0.0.0"
-SERVER_PORT = 12315
 TRANSLATE_CHAR_LIMIT = 5000
 
 CONFERENCES = {
@@ -81,17 +76,6 @@ def inverted_index_to_abstract(index: dict[str, list[int]] | None) -> str:
                 tokens.extend([""] * (pos - len(tokens) + 1))
             tokens[pos] = word
     return compact_spaces(" ".join(tokens))
-
-
-def detect_local_ip() -> str:
-    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    try:
-        sock.connect(("10.255.255.255", 1))
-        return sock.getsockname()[0]
-    except OSError:
-        return "127.0.0.1"
-    finally:
-        sock.close()
 
 
 def strip_jats_tags(value: str) -> str:
@@ -339,7 +323,37 @@ class PaperRepository:
         self.cache["metadata"]["last_build_at"] = time.time()
         self.cache["metadata"]["mode"] = "prefetched"
         self._save_cache()
+        self.export_static_data()
         return summary
+
+    def export_static_data(self, output_path: Path = STATIC_DATA_PATH) -> Path:
+        papers_by_conference = {
+            key: self.get_cached_papers(key)
+            for key in CONFERENCES
+        }
+        papers = [
+            paper
+            for conference in CONFERENCES
+            for paper in papers_by_conference[conference]
+        ]
+        papers.sort(key=lambda item: (-int(item["year"]), item["conference"], item["title"].lower()))
+        available_conferences = [
+            {"key": key, "label": value["label"]}
+            for key, value in CONFERENCES.items()
+            if papers_by_conference[key]
+        ]
+        payload = {
+            "conference": "all",
+            "conference_label": "All Conferences",
+            "available_conferences": available_conferences,
+            "available_years": sorted({paper["year"] for paper in papers}, reverse=True),
+            "count": len(papers),
+            "papers": papers,
+            "generated_at": int(time.time()),
+        }
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        return output_path
 
     def _get_papers_for_year(
         self,
@@ -674,136 +688,18 @@ class PaperRepository:
 
 REPOSITORY = PaperRepository(CACHE_DIR)
 
-
-class PaperRequestHandler(BaseHTTPRequestHandler):
-    def do_GET(self) -> None:
-        parsed = urllib.parse.urlparse(self.path)
-        if parsed.path == "/":
-            self._send_asset("index.html")
-            return
-        if parsed.path.startswith("/assets/"):
-            self._send_asset(parsed.path.removeprefix("/assets/"))
-            return
-        if parsed.path == "/api/papers":
-            self._handle_api_papers(parsed.query)
-            return
-        self._send_json({"error": "Not found"}, status=HTTPStatus.NOT_FOUND)
-
-    def _handle_api_papers(self, query_string: str) -> None:
-        params = urllib.parse.parse_qs(query_string)
-        conference = params.get("conference", ["osdi"])[0].lower()
-        if conference not in CONFERENCES:
-            self._send_json(
-                {"error": f"Unsupported conference: {conference}"},
-                status=HTTPStatus.BAD_REQUEST,
-            )
-            return
-
-        papers = REPOSITORY.get_cached_papers(conference)
-        years = sorted({paper["year"] for paper in papers}, reverse=True)
-        if not papers:
-            self._send_json(
-                {
-                    "error": "No cached data available.",
-                    "detail": "Run `python3 app.py build-cache` first, then open the web page.",
-                },
-                status=HTTPStatus.SERVICE_UNAVAILABLE,
-            )
-            return
-
-        self._send_json(
-            {
-                "conference": conference,
-                "conference_label": CONFERENCES[conference]["label"],
-                "available_years": years,
-                "count": len(papers),
-                "papers": papers,
-            }
-        )
-
-    def _send_asset(self, asset_name: str) -> None:
-        assets_root = ASSETS_DIR.resolve()
-        asset_path = (ASSETS_DIR / asset_name).resolve()
-        if assets_root not in asset_path.parents and asset_path != assets_root:
-            self._send_json({"error": "Invalid asset path"}, status=HTTPStatus.BAD_REQUEST)
-            return
-        if not asset_path.exists() or not asset_path.is_file():
-            self._send_json({"error": "Asset not found"}, status=HTTPStatus.NOT_FOUND)
-            return
-
-        payload = asset_path.read_bytes()
-        content_type, _ = mimetypes.guess_type(str(asset_path))
-        if asset_path.suffix == ".js":
-            content_type = "application/javascript; charset=utf-8"
-        elif asset_path.suffix == ".css":
-            content_type = "text/css; charset=utf-8"
-        elif asset_path.suffix == ".html":
-            content_type = "text/html; charset=utf-8"
-
-        self.send_response(HTTPStatus.OK)
-        self.send_header("Content-Type", content_type or "application/octet-stream")
-        self.send_header("Content-Length", str(len(payload)))
-        self.send_header("Cache-Control", "no-store")
-        self.end_headers()
-        self.wfile.write(payload)
-
-    def _send_json(self, payload: dict[str, Any], status: HTTPStatus = HTTPStatus.OK) -> None:
-        data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-        self.send_response(status)
-        self.send_header("Content-Type", "application/json; charset=utf-8")
-        self.send_header("Content-Length", str(len(data)))
-        self.send_header("Cache-Control", "no-store")
-        self.end_headers()
-        self.wfile.write(data)
-
-    def log_message(self, format: str, *args: Any) -> None:
-        return
-
-
-def run_server() -> None:
-    server = ThreadingHTTPServer((SERVER_HOST, SERVER_PORT), PaperRequestHandler)
-    local_ip = detect_local_ip()
-    print(f"Serving on http://127.0.0.1:{SERVER_PORT}")
-    print(f"Serving on http://{local_ip}:{SERVER_PORT}")
-    try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        print("\nStopping server...")
-    finally:
-        server.shutdown()
-        server.server_close()
-        print("Server stopped.")
+def print_summary(summary: dict[str, int]) -> None:
+    for conference, count in summary.items():
+        print(f"{conference}: {count} papers cached")
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Conference paper cache builder and local viewer")
-    parser.add_argument(
-        "command",
-        nargs="?",
-        default="run",
-        choices=["run", "build-cache", "serve"],
-        help="run: check cache then serve; build-cache: incrementally build cache; serve: only serve cached data",
-    )
-    args = parser.parse_args()
 
-    if args.command == "build-cache":
-        print("Building missing cache data...")
-        summary = REPOSITORY.build_cache(force_refresh=False, show_progress=True)
-        for conference, count in summary.items():
-            print(f"{conference}: {count} papers cached")
-
-    if args.command == "run":
-        if REPOSITORY.has_usable_cache():
-            print("Cache found, starting server directly...")
-        else:
-            print("No usable cache found, building local cache...")
-            summary = REPOSITORY.build_cache(force_refresh=False, show_progress=True)
-            for conference, count in summary.items():
-                print(f"{conference}: {count} papers cached")
-        run_server()
-
-    if args.command == "serve":
-        run_server()
+    print("Building missing cache data...")
+    summary = REPOSITORY.build_cache(force_refresh=False, show_progress=True)
+    print_summary(summary)
+    print(f"static data exported to {STATIC_DATA_PATH}")
+    return
 
 
 if __name__ == "__main__":

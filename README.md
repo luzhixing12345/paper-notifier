@@ -6,23 +6,31 @@
 
 ```bash
 python3 app.py build-cache
-python3 app.py serve
 ```
 
-打开浏览器访问：
-
-- 本地访问：`http://127.0.0.1:12315`
-- 远程访问：`http://<本机IP>:12315`
-
-服务启动时会通过访问 `10.255.255.255` 自动探测本机 IP，并在终端输出可访问地址。
-
-也可以一步完成：
+默认行为也是构建缓存并导出静态数据：
 
 ```bash
 python3 app.py
 ```
 
-默认行为是检查缓存；如果缺少新增会议或缺失年份，再增量构建缓存，然后启动本地网页服务。
+## 静态页面模式
+
+前端默认直接读取 `assets/papers-data.json`，不依赖后端查询接口。
+
+基于缓存导出静态数据：
+
+```bash
+python3 app.py build-static
+```
+
+如果缓存还没生成，也可以直接：
+
+```bash
+python3 app.py build-cache
+```
+
+这会同时更新 `paper_cache/` 和 `assets/papers-data.json`。生成后可以把 `assets/` 目录直接部署到任意静态托管。
 
 ## 数据来源
 
@@ -34,6 +42,6 @@ python3 app.py
 
 - 服务会把拉取结果缓存在 `paper_cache/`
 - 目录结构为 `paper_cache/<year>/<conference>/info.json`
-- 网页服务本身只读取本地缓存，不再实时联网抓取
+- 不再内置网页服务，`app.py` 只负责抓取、缓存和导出静态 JSON
 - `python3 app.py build-cache` 默认只补新增会议和缺失年份，不会全量重建已有年份
 - 当前支持 `osdi`、`nsdi`、`sosp`、`asplos`、`eurosys`、`fast`、`dac`、`isca`、`micro`、`hpca`、`sigmod`、`sigcomm`

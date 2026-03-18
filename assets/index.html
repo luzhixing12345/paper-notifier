@@ -24,50 +24,30 @@
       <button class="view-tab is-active" data-view="browse">浏览论文</button>
       <button class="view-tab" data-view="favorites">我的喜欢</button>
       <button class="view-tab" data-view="viewed">已看完</button>
+      <button class="view-tab" data-view="disliked">不感兴趣</button>
     </section>
 
     <section class="panel filters" id="filtersPanel">
-      <label class="field">
-        <span>会议</span>
-        <select id="conference">
-          <option value="osdi">OSDI</option>
-          <option value="nsdi">NSDI</option>
-          <option value="sosp">SOSP</option>
-          <option value="asplos">ASPLOS</option>
-          <option value="eurosys">EuroSys</option>
-          <option value="fast">FAST</option>
-          <option value="dac">DAC</option>
-          <option value="isca">ISCA</option>
-          <option value="micro">MICRO</option>
-          <option value="hpca">HPCA</option>
-          <option value="sigmod">SIGMOD</option>
-          <option value="sigcomm">SIGCOMM</option>
-        </select>
-      </label>
-      <label class="field">
-        <span>年份</span>
-        <select id="year">
-          <option value="">全部年份</option>
-        </select>
-      </label>
-      <label class="field field-grow">
+      <div class="filter-group">
+        <span class="filter-label">会议</span>
+        <div class="filter-chips" id="conferenceFilters"></div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">年份</span>
+        <div class="filter-chips" id="yearFilters"></div>
+      </div>
+      <div class="filter-toolbar">
+        <label class="field field-grow">
         <span>关键词</span>
         <input id="keyword" type="search" placeholder="标题 / 作者 / 摘要" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-      </label>
-      <label class="field">
-        <span>排序</span>
-        <select id="sort">
-          <option value="year_desc">年份降序</option>
-          <option value="title_asc">标题 A-Z</option>
-        </select>
-      </label>
-      <label class="check">
-        <input id="hasAbstract" type="checkbox">
-        <span>只看有摘要</span>
-      </label>
+        </label>
+        <label class="check">
+          <input id="hasAbstract" type="checkbox">
+          <span>只看有摘要</span>
+        </label>
+      </div>
     </section>
 
-    <section class="stats" id="summary"></section>
     <div class="status" id="loading">正在加载数据...</div>
     <section class="results" id="results"></section>
   </main>
