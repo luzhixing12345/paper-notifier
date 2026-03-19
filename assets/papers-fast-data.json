@@ -1,7 +1,7 @@
 {
   "conference": "fast",
   "conference_label": "FAST",
-  "count": 165,
+  "count": 160,
   "papers": [
     {
       "conference": "fast",
@@ -23,28 +23,6 @@
       "source_url": "https://www.usenix.org/conference/fast26/presentation/zhao",
       "abstract": "In cloud block store, indexing is on the critical path of I/O operations and typically resides in memory. With the scaling of users and the emergence of denser storage media, the index has become a primary memory consumer, causing memory strain. Our extensive analysis of production traces reveals that write requests exhibit a strong tendency to target continuous block ranges in cloud storage systems. Thus, compared to current per-block indexing, our insight is that we should directly index block ranges (i.e., range-as-a-key) to save memory . In this paper, we propose RASK, a memory-efficient and high-performance tree-structured index that natively indexes ranges. While range-as-a-key offers the potential to save memory and improve performance, realizing this idea is challenging due to the range overlap and range fragmentation issues. To handle range overlap efficiently, RASK introduces the log-structured leaf, combined with range-tailored search and garbage collection. To reduce range fragmentation, RASK employs range-aware split and merge mechanisms. Our evaluations on four production traces show that RASK reduces memory footprint by up to 98.9% and increases throughput by up to 31.0× compared to ten state-of-the-art indexes.",
       "abstract_zh": "在云块存储中，索引位于 I/O 操作的关键路径上，通常驻留在内存中。随着用户规模的扩大和更密集存储介质的出现，索引已成为主要的内存消耗者，导致内存紧张。我们对生产跟踪的广泛分析表明，写入请求表现出以云存储系统中的连续块范围为目标的强烈趋势。因此，与当前的每块索引相比，我们的见解是我们应该直接索引块范围（即范围作为键）以节省内存。在本文中，我们提出了RASK，一种内存高效且高性能的树形结构索引，可以对范围进行本机索引。虽然范围作为键具有节省内存和提高性能的潜力，但由于范围重叠和范围碎片问题，实现这一想法具有挑战性。为了有效地处理范围重叠，RASK 引入了日志结构叶，并结合了范围定制搜索和垃圾收集。为了减少范围碎片，RASK 采用范围感知的拆分和合并机制。我们对四个生产跟踪的评估表明，与十个最先进的索引相比，RASK 将内存占用量减少了高达 98.9%，并将吞吐量提高了高达 31.0 倍。",
-      "abstract_source": "Source Page",
-      "openalex_id": "",
-      "doi": "",
-      "doi_url": ""
-    },
-    {
-      "conference": "fast",
-      "conference_label": "FAST",
-      "year": 2026,
-      "title": "24th USENIX Conference on File and Storage Technologies, FAST 2026, Santa Clara, CA, USA, February 24-26, 2026",
-      "authors": [
-        "André Brinkmann",
-        "Philip Shilane"
-      ],
-      "pages": "",
-      "type": "Editorship",
-      "access": "open",
-      "dblp_key": "conf/fast/2026",
-      "dblp_url": "https://dblp.org/rec/conf/fast/2026",
-      "source_url": "https://www.usenix.org/conference/fast26",
-      "abstract": "24th USENIX Conference on File and Storage Technologies (FAST '26), February 24–26, 2026, Hyatt Regency Santa Clara, Santa Clara, CA, USA. FAST brings together storage-system researchers and practitioners to explore new directions in the design, implementation, evaluation, and deployment of storage systems.",
-      "abstract_zh": "第 24 届 USENIX 文件和存储技术会议 (FAST '26)，2026 年 2 月 24 日至 26 日，美国加利福尼亚州圣克拉拉圣克拉拉凯悦酒店。 FAST 将存储系统研究人员和从业者聚集在一起，探索存储系统设计、实施、评估和部署的新方向。",
       "abstract_source": "Source Page",
       "openalex_id": "",
       "doi": "",
@@ -1249,28 +1227,6 @@
       "conference": "fast",
       "conference_label": "FAST",
       "year": 2025,
-      "title": "23rd USENIX Conference on File and Storage Technologies, FAST 2025, Santa Clara, CA, February 25-27, 2025.",
-      "authors": [
-        "Haryadi S. Gunawi",
-        "Vasily Tarasov"
-      ],
-      "pages": "",
-      "type": "Editorship",
-      "access": "open",
-      "dblp_key": "conf/fast/2025",
-      "dblp_url": "https://dblp.org/rec/conf/fast/2025",
-      "source_url": "https://www.usenix.org/conference/fast25",
-      "abstract": "23rd USENIX Conference on File and Storage Technologies (FAST '25), February 25–27, 2025, Hyatt Regency Santa Clara, Santa Clara, CA, USA. FAST brings together storage-system researchers and practitioners to explore new directions in the design, implementation, evaluation, and deployment of storage systems.",
-      "abstract_zh": "第 23 届 USENIX 文件和存储技术会议 (FAST '25)，2025 年 2 月 25 日至 27 日，美国加利福尼亚州圣克拉拉圣克拉拉凯悦酒店。 FAST 将存储系统研究人员和从业者聚集在一起，探索存储系统设计、实施、评估和部署的新方向。",
-      "abstract_source": "Source Page",
-      "openalex_id": "",
-      "doi": "",
-      "doi_url": ""
-    },
-    {
-      "conference": "fast",
-      "conference_label": "FAST",
-      "year": 2025,
       "title": "3L-Cache: Low Overhead and Precise Learning-based Eviction Policy for Caches.",
       "authors": [
         "Wenbin Zhou",
@@ -2215,28 +2171,6 @@
       "conference": "fast",
       "conference_label": "FAST",
       "year": 2024,
-      "title": "22nd USENIX Conference on File and Storage Technologies, FAST 2024, Santa Clara, CA, USA, February 27-29, 2024.",
-      "authors": [
-        "Xiaosong Ma",
-        "Youjip Won"
-      ],
-      "pages": "",
-      "type": "Editorship",
-      "access": "open",
-      "dblp_key": "conf/fast/2024",
-      "dblp_url": "https://dblp.org/rec/conf/fast/2024",
-      "source_url": "https://www.usenix.org/conference/fast24",
-      "abstract": "22nd USENIX Conference on File and Storage Technologies (FAST '24), February 26–29, 2024, Hyatt Regency Santa Clara, Santa Clara, CA, USA. FAST brings together storage-system researchers and practitioners to explore new directions in the design, implementation, evaluation, and deployment of storage systems.",
-      "abstract_zh": "第 22 届 USENIX 文件和存储技术会议 (FAST '24)，2024 年 2 月 26 日至 29 日，美国加利福尼亚州圣克拉拉圣克拉拉凯悦酒店。 FAST 将存储系统研究人员和从业者聚集在一起，探索存储系统设计、实施、评估和部署的新方向。",
-      "abstract_source": "Source Page",
-      "openalex_id": "",
-      "doi": "",
-      "doi_url": ""
-    },
-    {
-      "conference": "fast",
-      "conference_label": "FAST",
-      "year": 2024,
       "title": "Baleen: ML Admission & Prefetching for Flash Caches.",
       "authors": [
         "Daniel Lin-Kit Wong",
@@ -2817,28 +2751,6 @@
       "source_url": "https://www.usenix.org/conference/fast24/presentation/zhang-weidong",
       "abstract": "In this paper, we qualitatively and quantitatively discuss the design choices, production experience, and lessons in building the Elastic Block Storage (EBS) at Alibaba Cloud over the past decade. To cope with hardware advancement and users' demands, we shift our focus from design simplicity in EBS1 to high performance and space efficiency in EBS2, and finally reducing network traffic amplification in EBS3. In addition to the architectural evolutions, we also summarize the lessons and experiences in development as four topics, including: (i) achieving high elasticity in latency, throughput, IOPS and capacity; (ii) improving availability by minimizing the blast radius of individual, regional, and global failure events; (iii) identifying the motivations and key tradeoffs in various hardware offloading solutions; and (iv) identifying the pros/cons of the alternative solutions and explaining why seemingly promising ideas would not work in practice.",
       "abstract_zh": "在本文中，我们定性和定量地讨论了过去十年在阿里云构建弹性块存储（EBS）的设计选择、生产经验和教训。为了应对硬件的进步和用户的需求，我们将重点从EBS1的设计简单性转向EBS2的高性能和空间效率，最后到EBS3的减少网络流量放大。除了架构演进之外，我们还将开发过程中的经验教训总结为四个主题，包括：（i）实现延迟、吞吐量、IOPS和容量的高弹性； (ii) 通过最小化个别、区域和全球故障事件的爆炸半径来提高可用性； (iii) 确定各种硬件卸载解决方案的动机和关键权衡； (iv) 确定替代解决方案的优缺点，并解释为什么看似有希望的想法在实践中行不通。",
-      "abstract_source": "Source Page",
-      "openalex_id": "",
-      "doi": "",
-      "doi_url": ""
-    },
-    {
-      "conference": "fast",
-      "conference_label": "FAST",
-      "year": 2023,
-      "title": "21st USENIX Conference on File and Storage Technologies, FAST 2023, Santa Clara, CA, USA, February 21-23, 2023.",
-      "authors": [
-        "Ashvin Goel",
-        "Dalit Naor"
-      ],
-      "pages": "",
-      "type": "Editorship",
-      "access": "open",
-      "dblp_key": "conf/fast/2023",
-      "dblp_url": "https://dblp.org/rec/conf/fast/2023",
-      "source_url": "https://www.usenix.org/conference/fast23",
-      "abstract": "21st USENIX Conference on File and Storage Technologies (FAST '23), February 21–23, 2023, Hyatt Regency Santa Clara, Santa Clara, CA, USA. FAST brings together storage-system researchers and practitioners to explore new directions in the design, implementation, evaluation, and deployment of storage systems.",
-      "abstract_zh": "第 21 届 USENIX 文件和存储技术会议 (FAST '23)，2023 年 2 月 21 日至 23 日，美国加利福尼亚州圣克拉拉圣克拉拉凯悦酒店。 FAST 将存储系统研究人员和从业者聚集在一起，探索存储系统设计、实施、评估和部署的新方向。",
       "abstract_source": "Source Page",
       "openalex_id": "",
       "doi": "",
@@ -3651,28 +3563,6 @@
       "source_url": "https://www.usenix.org/conference/fast23/presentation/yang-zhe",
       "abstract": "The emerging computational storage device offers an opportunity for in-storage computing. It alleviates the overhead of data movement between the host and the device, and thus accelerates data-intensive applications. In this paper, we present λ-IO, a unified IO stack managing both computation and storage resources across the host and the device. We propose a set of designs – interface, runtime, and scheduling – to tackle three critical issues. We implement λ-IO in full-stack software and hardware environment, and evaluate it with synthetic and real applications against Linux IO, showing up to 5.12× performance improvement.",
       "abstract_zh": "新兴的计算存储设备为存储内计算提供了机会。它减轻了主机和设备之间数据移动的开销，从而加速数据密集型应用程序。在本文中，我们提出了 λ-IO，这是一个统一的 IO 堆栈，用于管理主机和设备上的计算和存储资源。我们提出了一套设计——界面、运行时和调度——来解决三个关键问题。我们在全栈软件和硬件环境中实现了 λ-IO，并通过针对 Linux IO 的综合和真实应用对其进行了评估，显示出高达 5.12 倍的性能提升。",
-      "abstract_source": "Source Page",
-      "openalex_id": "",
-      "doi": "",
-      "doi_url": ""
-    },
-    {
-      "conference": "fast",
-      "conference_label": "FAST",
-      "year": 2022,
-      "title": "20th USENIX Conference on File and Storage Technologies, FAST 2022, Santa Clara, CA, USA, February 22-24, 2022",
-      "authors": [
-        "Dean Hildebrand",
-        "Donald E. Porter"
-      ],
-      "pages": "",
-      "type": "Editorship",
-      "access": "open",
-      "dblp_key": "conf/fast/2022",
-      "dblp_url": "https://dblp.org/rec/conf/fast/2022",
-      "source_url": "https://www.usenix.org/conference/fast22",
-      "abstract": "20th USENIX Conference on File and Storage Technologies (FAST '22), February 22–24, 2022, Hyatt Regency Santa Clara, Santa Clara, CA, USA. FAST brings together storage-system researchers and practitioners to explore new directions in the design, implementation, evaluation, and deployment of storage systems.",
-      "abstract_zh": "第 20 届 USENIX 文件和存储技术会议 (FAST '22)，2022 年 2 月 22 日至 24 日，美国加利福尼亚州圣克拉拉圣克拉拉凯悦酒店。 FAST 将存储系统研究人员和从业者聚集在一起，探索存储系统设计、实施、评估和部署的新方向。",
       "abstract_source": "Source Page",
       "openalex_id": "",
       "doi": "",

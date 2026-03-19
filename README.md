@@ -1,6 +1,6 @@
 # paper-notifier
 
-快速筛选是否感兴趣的系统会议期刊录用论文，当有新会议/期刊更新时自动发送邮件通知。
+系统A会录用论文合集 + 会议更新通知
 
 ![20260318230916](https://raw.githubusercontent.com/learner-lu/picbed/master/20260318230916.png)
 
@@ -52,7 +52,7 @@ Building missing cache data...
   -> translation ok: chars=613
 ```
 
-最终所有数据按年份保存在 paper_cache 下，并汇总到 assets/papers-data.json，打开 index.html 即可浏览。
+最终所有数据按年份保存在 paper_cache/<year>/<conference> 下，并按照会议汇总到 assets/ 下，打开 index.html 即可浏览。
 
 > full_miss_abstract.py 用于补全某一个会议某年缺失的论文摘要，爬 doi.org 如果太狠了会被封ip，有的摘要会遗漏，这个脚本可以帮助补齐内容
 >

@@ -6,6 +6,5 @@ __pycache__
 
 .vscode/
 data/
-EMAIL.txt
 *.log
 setup_crontab.sh

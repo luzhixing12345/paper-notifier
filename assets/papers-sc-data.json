@@ -1,7 +1,7 @@
 {
   "conference": "sc",
   "conference_label": "SC",
-  "count": 1219,
+  "count": 1216,
   "papers": [
     {
       "conference": "sc",
@@ -18538,25 +18538,6 @@
       "conference": "sc",
       "conference_label": "SC",
       "year": 2024,
-      "title": "SC24-W: Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis, Atlanta, GA, USA, November 17-22, 2024",
-      "authors": [],
-      "pages": "",
-      "type": "Editorship",
-      "access": "",
-      "dblp_key": "conf/sc/2024w",
-      "dblp_url": "https://dblp.org/rec/conf/sc/2024w",
-      "source_url": "https://doi.org/10.1109/SCWorkshops63240.2024",
-      "abstract": "IEEE Xplore, delivering full text access to the world's highest quality technical literature in engineering and technology. | IEEE Xplore",
-      "abstract_zh": "IEEE Xplore，提供对世界上最高质量的工程和技术技术文献的全文访问。 | IEEE探索",
-      "abstract_source": "Source Page",
-      "openalex_id": "",
-      "doi": "10.1109/SCWorkshops63240.2024",
-      "doi_url": "https://doi.org/10.1109/SCWorkshops63240.2024"
-    },
-    {
-      "conference": "sc",
-      "conference_label": "SC",
-      "year": 2024,
       "title": "Scalable and Consistent Graph Neural Networks for Distributed Mesh-based Data-driven Modeling.",
       "authors": [
         "Shivam Barwey",
@@ -30171,25 +30152,6 @@
       "conference": "sc",
       "conference_label": "SC",
       "year": 2022,
-      "title": "IEEE/ACM Workshop on Latest Advances in Scalable Algorithms for Large-Scale Heterogeneous Systems, ScalAH@SC 2022, Dallas, TX, USA, November 13-18, 2022",
-      "authors": [],
-      "pages": "",
-      "type": "Editorship",
-      "access": "",
-      "dblp_key": "conf/sc/2022scalah",
-      "dblp_url": "https://dblp.org/rec/conf/sc/2022scalah",
-      "source_url": "https://doi.org/10.1109/ScalAH56622.2022",
-      "abstract": "IEEE Xplore, delivering full text access to the world's highest quality technical literature in engineering and technology. | IEEE Xplore",
-      "abstract_zh": "IEEE Xplore，提供对世界上最高质量的工程和技术技术文献的全文访问。 | IEEE探索",
-      "abstract_source": "Source Page",
-      "openalex_id": "",
-      "doi": "10.1109/ScalAH56622.2022",
-      "doi_url": "https://doi.org/10.1109/ScalAH56622.2022"
-    },
-    {
-      "conference": "sc",
-      "conference_label": "SC",
-      "year": 2022,
       "title": "Image Gradient Decomposition for Parallel and Memory-Efficient Ptychographic Reconstruction.",
       "authors": [
         "Xiao Wang",
@@ -30920,31 +30882,6 @@
       "openalex_id": "",
       "doi": "10.1109/SC41404.2022.00007",
       "doi_url": "https://doi.org/10.1109/SC41404.2022.00007"
-    },
-    {
-      "conference": "sc",
-      "conference_label": "SC",
-      "year": 2022,
-      "title": "SC22: International Conference for High Performance Computing, Networking, Storage and Analysis, Dallas, TX, USA, November 13-18, 2022",
-      "authors": [
-        "Felix Wolf",
-        "Sameer Shende",
-        "Candace Culhane",
-        "Sadaf R. Alam",
-        "Heike Jagode"
-      ],
-      "pages": "",
-      "type": "Editorship",
-      "access": "",
-      "dblp_key": "conf/sc/2022",
-      "dblp_url": "https://dblp.org/rec/conf/sc/2022",
-      "source_url": "https://doi.org/10.1109/SC41404.2022",
-      "abstract": "IEEE Xplore, delivering full text access to the world's highest quality technical literature in engineering and technology. | IEEE Xplore",
-      "abstract_zh": "IEEE Xplore，提供对世界上最高质量的工程和技术技术文献的全文访问。 | IEEE探索",
-      "abstract_source": "Source Page",
-      "openalex_id": "",
-      "doi": "10.1109/SC41404.2022",
-      "doi_url": "https://doi.org/10.1109/SC41404.2022"
     },
     {
       "conference": "sc",

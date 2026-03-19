@@ -1,8 +1,9 @@
 import argparse
+import json
 import re
 from pathlib import Path
 from typing import Any
-
+import json
 import requests
 from requests.adapters import HTTPAdapter
 from bs4 import BeautifulSoup
@@ -50,43 +51,66 @@ def is_probable_abstract(text: str) -> bool:
         "enable javascript and cookies",
         "page not found",
         "javascript is disabled",
-        "skip to main content",
-        "access provided by",
         "you do not have access",
+        "purchase this article",
+        "access provided by",
+        "accept & close",
     ]
     return not any(fragment in lowered for fragment in blocked_fragments)
 
 
+def extract_ieee_metadata_abstract(html_text: str) -> str:
+    match = re.search(r"xplGlobal\.document\.metadata\s*=\s*(\{.*?\});", html_text, flags=re.S)
+    if not match:
+        return ""
+    try:
+        metadata = json.loads(match.group(1))
+    except json.JSONDecodeError:
+        return ""
+    text = clean_abstract_heading(compact_spaces(metadata.get("abstract") or ""))
+    if is_probable_abstract(text):
+        return text
+    return ""
+
+
 def extract_abstract_from_html(html_text: str) -> str:
+    metadata_abstract = extract_ieee_metadata_abstract(html_text)
+    if metadata_abstract:
+        return metadata_abstract
+
     soup = BeautifulSoup(html_text, "html.parser")
     selectors = [
-        ".field-name-field-paper-description",
-        "section#summary-abstract",
-        "#summary-abstract",
-        "#core-tabbed-abstracts section[role='doc-abstract']",
-        "section#abstract",
-        ".abstractSection",
-        "#abstract",
-        "[data-title='Abstract']",
+        "div.abstract-text",
+        "section.abstract-text",
+        ".document-abstract .abstract-text",
+        ".abstract-desktop-div .abstract-text",
+        ".abstract-mobile-div .abstract-text",
+        "[class*='abstract-text']",
+        "meta[name='citation_abstract']",
     ]
+
     for selector in selectors:
         for node in soup.select(selector):
-            paragraph_nodes = node.select("[role='paragraph'], p")
+            if node.name == "meta":
+                text = clean_abstract_heading(compact_spaces(node.get("content") or ""))
+                if is_probable_abstract(text):
+                    return text
+                continue
+
+            paragraph_nodes = node.select("div, p")
             paragraphs: list[str] = []
             for paragraph_node in paragraph_nodes:
                 text = clean_abstract_heading(compact_spaces(paragraph_node.get_text(" ", strip=True)))
-                if text:
+                if text and is_probable_abstract(text):
                     paragraphs.append(text)
             if paragraphs:
-                text = "\n\n".join(paragraphs)
-            else:
-                raw_lines = [clean_abstract_heading(compact_spaces(line)) for line in node.get_text("\n", strip=True).splitlines()]
-                paragraphs = [line for line in raw_lines if line]
-                text = "\n\n".join(paragraphs)
+                return "\n\n".join(paragraphs)
+
+            text = clean_abstract_heading(compact_spaces(node.get_text(" ", strip=True)))
             if is_probable_abstract(text):
                 return text
 
-    meta_keys = {"citation_abstract", "description", "og:description", "twitter:description"}
+    meta_keys = {"description", "og:description", "twitter:description"}
     for meta in soup.find_all("meta"):
         key = (meta.get("name") or meta.get("property") or "").lower()
         if key not in meta_keys:
@@ -121,7 +145,7 @@ def warm_up_session(session: requests.Session, doi_url: str) -> None:
             return
 
 
-def fetch_doi_page(session: requests.Session, doi_url: str) -> dict[str, Any]:
+def fetch_ieee_page(session: requests.Session, doi_url: str) -> dict[str, Any]:
     headers = dict(BROWSER_HEADERS)
     headers["Referer"] = "https://doi.org/"
     try:
@@ -161,21 +185,20 @@ def looks_blocked(html_text: str, final_url: str, status_code: int | None) -> bo
         status_code in {401, 403}
         or "just a moment" in lowered
         or "enable javascript and cookies" in lowered
-        or ('challenge-platform' in lowered and 'cf-browser-verification' in lowered)
         or "cf-browser-verification" in lowered
-        or "dl.acm.org" in final_url and "captcha" in lowered
+        or ("ieeexplore.ieee.org" in final_url and "purchase this article" in lowered and "abstract" not in lowered)
     )
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Verify whether a DOI landing page exposes a full abstract.")
-    parser.add_argument("doi_url", help="DOI URL, e.g. https://doi.org/10.1145/3575693.3575714")
+    parser = argparse.ArgumentParser(description="Verify whether an IEEE DOI landing page exposes an abstract.")
+    parser.add_argument("doi_url", help="DOI URL, e.g. https://doi.org/10.1109/HPCA56546.2023.10070953")
     parser.add_argument("--output", default="", help="Optional JSON output path")
     args = parser.parse_args()
 
     session = build_session()
     warm_up_session(session, args.doi_url)
-    result = fetch_doi_page(session, args.doi_url)
+    result = fetch_ieee_page(session, args.doi_url)
     html_abstract = result["html_abstract"].strip()
     payload = {
         "doi_url": args.doi_url,

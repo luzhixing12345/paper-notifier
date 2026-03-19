@@ -1,7 +1,7 @@
 {
   "conference": "asplos",
   "conference_label": "ASPLOS",
-  "count": 766,
+  "count": 765,
   "papers": [
     {
       "conference": "asplos",
@@ -18152,30 +18152,6 @@
       "openalex_id": "",
       "doi": "10.1145/3503222.3507779",
       "doi_url": "https://doi.org/10.1145/3503222.3507779"
-    },
-    {
-      "conference": "asplos",
-      "conference_label": "ASPLOS",
-      "year": 2022,
-      "title": "ASPLOS '22: 27th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Lausanne, Switzerland, 28 February 2022 - 4 March 2022",
-      "authors": [
-        "Babak Falsafi",
-        "Michael Ferdman",
-        "Shan Lu",
-        "Thomas F. Wenisch"
-      ],
-      "pages": "",
-      "type": "Editorship",
-      "access": "",
-      "dblp_key": "conf/asplos/2022",
-      "dblp_url": "https://dblp.org/rec/conf/asplos/2022",
-      "source_url": "https://dl.acm.org/doi/abs/10.1145/3503222",
-      "abstract": "On behalf of the organizing committee, we are excited to welcome everyone to this 27th edition of the International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2022) held in person in Lausanne and live streamed all over the world. The past few years have been taxing on our community with personal and professional implications for many imposed by COVID-19. While technology has enabled a dramatic improvement for virtual conferences, we hope that with ASPLOS 2022 we can slowly bring back a physical experience and light at the end of the tunnel especially for the younger members of our community to benefit both technically and socially.",
-      "abstract_zh": "我们很高兴代表组委会欢迎大家参加在洛桑举行并在世界各地进行直播的第 27 届编程语言和操作系统架构支持国际会议 (ASPLOS 2022)。过去几年，我们的社区承受了沉重的负担，对许多因 COVID-19 造成的个人和职业影响。虽然技术使虚拟会议取得了巨大的进步，但我们希望通过 ASPLOS 2022，我们能够慢慢地在隧道尽头带回实体体验和光明，特别是让我们社区的年轻成员在技术和社交上受益。",
-      "abstract_source": "DOI Page",
-      "openalex_id": "",
-      "doi": "10.1145/3503222",
-      "doi_url": "https://doi.org/10.1145/3503222"
     },
     {
       "conference": "asplos",

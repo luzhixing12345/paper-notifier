@@ -127,6 +127,10 @@ function getPaperYearKey(paper) {
   return String(paper.year);
 }
 
+function isExcludedPaperType(paper) {
+  return String(paper.type || "").trim().toLowerCase() === "editorship";
+}
+
 function isLiked(paper) {
   return Boolean(state.preferences.liked[getPaperId(paper)]);
 }
@@ -137,7 +141,9 @@ function isDisliked(paper) {
 }
 
 function getFavoritePapers() {
-  return Object.values(state.preferences.liked).filter((paper) => !isDisliked(paper) && !isViewed(paper));
+  return Object.values(state.preferences.liked).filter(
+    (paper) => !isExcludedPaperType(paper) && !isDisliked(paper) && !isViewed(paper),
+  );
 }
 
 function isViewed(paper) {
@@ -145,11 +151,15 @@ function isViewed(paper) {
 }
 
 function getViewedPapers() {
-  return Object.values(state.preferences.viewed).filter((paper) => !isDisliked(paper));
+  return Object.values(state.preferences.viewed).filter(
+    (paper) => !isExcludedPaperType(paper) && !isDisliked(paper),
+  );
 }
 
 function getDislikedPapers() {
-  return Object.values(state.preferences.disliked).filter(Boolean);
+  return Object.values(state.preferences.disliked).filter(
+    (paper) => Boolean(paper) && !isExcludedPaperType(paper),
+  );
 }
 
 function checkIcon(filled) {
@@ -321,7 +331,9 @@ function getBasePapersForActiveView() {
   if (state.activeView === "disliked") {
     return getDislikedPapers();
   }
-  return state.raw.filter((paper) => !isDisliked(paper) && !isLiked(paper) && !isViewed(paper));
+  return state.raw.filter(
+    (paper) => !isExcludedPaperType(paper) && !isDisliked(paper) && !isLiked(paper) && !isViewed(paper),
+  );
 }
 
 function render() {
