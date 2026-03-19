@@ -85,6 +85,10 @@ def print_progress_item(conference_label: str, year: int, index: int, total: int
     print(f"{prefix} {short_title}")
 
 
+def static_data_shard_path(conference: str) -> Path:
+    return ASSETS_DIR / f"papers-{conference}-data.json"
+
+
 def send_email(subject: str = "New Paper Alert", body: str = "Check out the latest papers in your field!") -> None:
     if not EMAIL_CONFIG_PATH.exists():
         return
@@ -825,26 +829,39 @@ class PaperRepository:
             key: self.get_cached_papers(key)
             for key in VENUES
         }
-        papers = [
-            paper
-            for conference in VENUES
-            for paper in papers_by_conference[conference]
-        ]
-        papers.sort(key=lambda item: (-int(item["year"]), item["conference"], item["title"].lower()))
         available_conferences = [
             {"key": key, "label": value["label"]}
             for key, value in VENUES.items()
             if papers_by_conference[key]
         ]
-        payload = {
-            "conference": "all",
-            "conference_label": "All Conferences",
-            "available_conferences": available_conferences,
-            "available_years": sorted({paper["year"] for paper in papers}, reverse=True),
-            "count": len(papers),
-            "papers": papers,
-        }
         output_path.parent.mkdir(parents=True, exist_ok=True)
+
+        shard_files: list[dict[str, str]] = []
+        all_years: set[int] = set()
+        total_papers = 0
+        for conference in VENUES:
+            papers = papers_by_conference[conference]
+            if not papers:
+                continue
+            papers.sort(key=lambda item: (-int(item["year"]), item["title"].lower()))
+            all_years.update(int(paper["year"]) for paper in papers)
+            total_papers += len(papers)
+            shard_path = static_data_shard_path(conference)
+            shard_payload = {
+                "conference": conference,
+                "conference_label": VENUES[conference]["label"],
+                "count": len(papers),
+                "papers": papers,
+            }
+            shard_path.write_text(json.dumps(shard_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+            shard_files.append({"conference": conference, "file": shard_path.name})
+
+        payload = {
+            "available_conferences": available_conferences,
+            "available_years": sorted(all_years, reverse=True),
+            "count": total_papers,
+            "data_files": shard_files,
+        }
         output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         return output_path
 

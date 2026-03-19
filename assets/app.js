@@ -255,14 +255,25 @@ async function loadData() {
   loadingEl.textContent = "正在加载数据...";
   resultsEl.innerHTML = "";
   try {
-    const res = await fetch("./papers-data.json");
-    const payload = await res.json();
-    if (!res.ok) {
-      throw new Error(payload.detail || payload.error || "请求失败");
+    const indexRes = await fetch("./papers-data.json");
+    const indexPayload = await indexRes.json();
+    if (!indexRes.ok) {
+      throw new Error(indexPayload.detail || indexPayload.error || "请求失败");
     }
-    state.raw = payload.papers || [];
-    state.availableConferences = payload.available_conferences || [];
-    state.availableYears = payload.available_years || [];
+    const dataFiles = Array.isArray(indexPayload.data_files) ? indexPayload.data_files : [];
+    const shardPayloads = await Promise.all(
+      dataFiles.map(async ({ file }) => {
+        const res = await fetch(`./${file}`);
+        const payload = await res.json();
+        if (!res.ok) {
+          throw new Error(payload.detail || payload.error || `加载分片失败: ${file}`);
+        }
+        return payload;
+      }),
+    );
+    state.raw = shardPayloads.flatMap((payload) => payload.papers || []);
+    state.availableConferences = indexPayload.available_conferences || [];
+    state.availableYears = indexPayload.available_years || [];
     const availableConferenceKeys = new Set(state.availableConferences.map((conference) => conference.key));
     const availableYearKeys = new Set(state.availableYears.map((year) => String(year)));
     state.selectedConferences = new Set(
