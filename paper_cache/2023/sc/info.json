@@ -8652,8 +8652,8 @@
       "abstract_zh": "我们提出了简单云解析 E3SM 大气模型 (SCREAM) 的高效且高性能的可移植实现。SCREAM 是一个全功能的大气全球环流模型，具有非静水动力核心和最先进的微物理、潮湿湍流和辐射参数化。它是用 C++ 编写的，用于抽象 CPU 和 GPU 的节点上执行模型。SCREAM 是为数不多的全球大气环流模型之一。据我们所知，SCREAM 是第一个同时在 AMD GPU 和 NVIDIA GPU 上运行的此类模型，也是第一个在几乎整个 Exascale 系统（Frontier）上运行的模型。在 Frontier 上，我们获得了每天 1.26 模拟年的真实云解析模拟性能记录。",
       "abstract_source": "OpenAlex",
       "openalex_id": "https://openalex.org/W4390389431",
-      "doi": "",
-      "doi_url": ""
+      "doi": "10.1145/3581784.3627044",
+      "doi_url": "https://doi.org/10.1145/3581784.3627044"
     },
     {
       "conference": "sc",

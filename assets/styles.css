@@ -412,6 +412,18 @@ select:focus {
   display: block;
 }
 
+.abstract-paragraph {
+  display: block;
+}
+
+.abstract-paragraph + .abstract-paragraph {
+  margin-top: 0.5em;
+}
+
+.abstract-paragraph-zh {
+  text-indent: 0;
+}
+
 .search-hit {
   padding: 0 2px;
   border-radius: 4px;

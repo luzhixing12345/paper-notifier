@@ -1,6 +1,7 @@
 import argparse
 import difflib
 import json
+import os
 import re
 from html import unescape
 import threading
@@ -8,12 +9,11 @@ import time
 import urllib.parse
 from pathlib import Path
 from typing import Any
-from concurrent.futures import ThreadPoolExecutor, as_completed
-
+import datetime
 import requests
+from requests.adapters import HTTPAdapter
 from bs4 import BeautifulSoup
 from prettytable import PrettyTable
-from tqdm import tqdm
 import e2me
 
 
@@ -24,8 +24,12 @@ STATIC_DATA_PATH = ASSETS_DIR / "papers-data.json"
 CONFERENCE_CONFIG_PATH = BASE_DIR / "CONFERENCE.txt"
 JOURNAL_CONFIG_PATH = BASE_DIR / "JOURNAL.txt"
 EMAIL_CONFIG_PATH = BASE_DIR / "EMAIL.txt"
-USER_AGENT = "paper-abstract-cache-builder/1.0"
-REQUEST_TIMEOUT = 20
+USER_AGENT = (
+    "Mozilla/5.0 (X11; Linux x86_64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/134.0.0.0 Safari/537.36"
+)
+REQUEST_TIMEOUT = 5
 REQUEST_RETRIES = 4
 RETRY_BACKOFF_SECONDS = 1.5
 MAX_OPENALEX_CANDIDATES = 10
@@ -34,8 +38,51 @@ DBLP_ENTRY_WORKERS = 4
 YEAR_FETCH_WORKERS = 4
 BUILD_WORKERS = 4
 TRANSLATE_CHAR_LIMIT = 5000
+DEBUG_SLOW_REQUEST_SECONDS = 2.0
+DEBUG_SLOW_STAGE_SECONDS = 5.0
+BROWSER_HEADERS = {
+    "User-Agent": USER_AGENT,
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Cache-Control": "max-age=0",
+    "Pragma": "no-cache",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "sec-ch-ua": '"Chromium";v="134", "Google Chrome";v="134", "Not:A-Brand";v="99"',
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": '"Linux"',
+}
 
 DEFAULT_LOOKBACK_YEARS = 5
+
+
+def env_int(name: str, default: int) -> int:
+    raw = os.environ.get(name, "").strip()
+    if not raw:
+        return default
+    try:
+        return int(raw)
+    except ValueError:
+        return default
+
+
+REQUEST_TIMEOUT = env_int("BUILD_CACHE_REQUEST_TIMEOUT", REQUEST_TIMEOUT)
+ABSTRACT_WORKERS = env_int("BUILD_CACHE_ABSTRACT_WORKERS", 4)
+DBLP_ENTRY_WORKERS = env_int("BUILD_CACHE_DBLP_ENTRY_WORKERS", 2)
+YEAR_FETCH_WORKERS = env_int("BUILD_CACHE_YEAR_FETCH_WORKERS", 2)
+BUILD_WORKERS = env_int("BUILD_CACHE_BUILD_WORKERS", 2)
+
+
+def print_progress_item(conference_label: str, year: int, index: int, total: int, title: str, action: str = "") -> None:
+    short_title = title if len(title) <= 110 else title[:107] + "..."
+    prefix = f"[{conference_label} {year}][{index}/{total}]"
+    if action:
+        print(f"{prefix} {action} {short_title}")
+        return
+    print(f"{prefix} {short_title}")
 
 
 def send_email(subject: str = "New Paper Alert", body: str = "Check out the latest papers in your field!") -> None:
@@ -137,6 +184,18 @@ def normalize_text(value: str) -> str:
 
 def compact_spaces(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
+
+
+def compact_spaces_preserve_paragraphs(value: str) -> str:
+    paragraphs = [compact_spaces(part) for part in re.split(r"\n\s*\n", value or "")]
+    paragraphs = [part for part in paragraphs if part]
+    return "\n\n".join(paragraphs)
+
+
+def clean_abstract_heading(value: str) -> str:
+    text = value.strip()
+    text = re.sub(r"^\s*abstract\s*[:\-]?\s*", "", text, flags=re.I)
+    return text.strip()
 
 
 def clean_author_name(value: str) -> str:
@@ -282,21 +341,51 @@ class PaperRepository:
         self.cache_dir = cache_dir
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.lock = threading.Lock()
+        self._debug_lock = threading.Lock()
         self._thread_local = threading.local()
         self._new_cache_keys: set[str] = set()
+        self.debug_enabled = False
+        self.debug_filters: set[str] = set()
         self.cache = self._load_cache()
+
+    def configure_debug(self, enabled: bool, filters: list[str] | None = None) -> None:
+        self.debug_enabled = enabled
+        self.debug_filters = {value.lower() for value in (filters or []) if value.strip()}
+
+    def _debug_matches(self, context: str) -> bool:
+        if not self.debug_filters:
+            return True
+        lowered = context.lower()
+        return any(token in lowered for token in self.debug_filters)
+
+    def _debug(self, message: str, *, conference: str = "", year: int | None = None, force: bool = False) -> None:
+        if not self.debug_enabled:
+            return
+        context = " ".join(part for part in [conference, str(year) if year is not None else ""] if part)
+        if not force and not self._debug_matches(f"{context} {message}"):
+            return
+        timestamp = datetime.datetime.now().strftime("%H:%M:%S")
+        thread_name = threading.current_thread().name
+        prefix = f"[debug {timestamp} {thread_name}]"
+        if context:
+            prefix += f" [{context}]"
+        with self._debug_lock:
+            print(f"{prefix} {message}")
 
     def _build_session(self, trust_env: bool) -> requests.Session:
         session = requests.Session()
         session.headers.update({"User-Agent": USER_AGENT})
         session.trust_env = trust_env
+        adapter = HTTPAdapter(pool_connections=1, pool_maxsize=1, max_retries=0)
+        session.mount("http://", adapter)
+        session.mount("https://", adapter)
         return session
 
     def _session_for(self, *, translation: bool = False) -> requests.Session:
         attr_name = "translation_session" if translation else "session"
         session = getattr(self._thread_local, attr_name, None)
         if session is None:
-            session = self._build_session(trust_env=translation)
+            session = self._build_session(trust_env=True)
             setattr(self._thread_local, attr_name, session)
         return session
 
@@ -405,6 +494,7 @@ class PaperRepository:
         }
 
     def _save_cache(self) -> None:
+        started_at = time.perf_counter()
         metadata_payload = json.dumps(
             {
                 "metadata": self.cache.get("metadata", {}),
@@ -420,17 +510,50 @@ class PaperRepository:
             info_path = self._paper_info_path(conference, int(year_text))
             info_path.parent.mkdir(parents=True, exist_ok=True)
             info_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        duration = time.perf_counter() - started_at
+        if self.debug_enabled:
+            self._debug(
+                (
+                    f"_save_cache finished in {duration:.2f}s "
+                    f"(paper_entries={len(self.cache.get('papers', {}))}, "
+                    f"conference_entries={len(self.cache.get('conference_years', {}))})"
+                ),
+                force=duration >= DEBUG_SLOW_STAGE_SECONDS,
+            )
 
-    def _request(self, url: str, *, expect_json: bool) -> Any:
+    def _request(
+        self,
+        url: str,
+        *,
+        expect_json: bool,
+        headers: dict[str, str] | None = None,
+        session: requests.Session | None = None,
+    ) -> Any:
         last_error: requests.RequestException | None = None
         for attempt in range(REQUEST_RETRIES + 1):
+            started_at = time.perf_counter()
             try:
-                response = self._session_for().get(url, timeout=REQUEST_TIMEOUT)
+                response = (session or self._session_for()).get(url, timeout=REQUEST_TIMEOUT, headers=headers)
                 response.raise_for_status()
+                duration = time.perf_counter() - started_at
+                if self.debug_enabled and duration >= DEBUG_SLOW_REQUEST_SECONDS:
+                    self._debug(
+                        f"slow request {duration:.2f}s status={response.status_code} expect_json={expect_json} url={url}",
+                        force=True,
+                    )
                 return response.json() if expect_json else response.text
             except requests.RequestException as exc:
                 last_error = exc
-                if attempt >= REQUEST_RETRIES:
+                duration = time.perf_counter() - started_at
+                status_code = getattr(getattr(exc, "response", None), "status_code", None)
+                self._debug(
+                    (
+                        f"request failed attempt={attempt + 1}/{REQUEST_RETRIES + 1} "
+                        f"after {duration:.2f}s expect_json={expect_json} url={url} error={exc}"
+                    ),
+                    force=True,
+                )
+                if attempt >= REQUEST_RETRIES or status_code in {401, 403, 404}:
                     break
                 time.sleep(RETRY_BACKOFF_SECONDS * (2**attempt))
         assert last_error is not None
@@ -444,6 +567,18 @@ class PaperRepository:
 
     def _get_text(self, url: str) -> str:
         payload = self._request(url, expect_json=False)
+        if not isinstance(payload, str):
+            raise ValueError(f"Unexpected text payload type for {url}: {type(payload).__name__}")
+        return payload
+
+    def _get_text_with_headers(
+        self,
+        url: str,
+        *,
+        headers: dict[str, str],
+        session: requests.Session | None = None,
+    ) -> str:
+        payload = self._request(url, expect_json=False, headers=headers, session=session)
         if not isinstance(payload, str):
             raise ValueError(f"Unexpected text payload type for {url}: {type(payload).__name__}")
         return payload
@@ -462,13 +597,26 @@ class PaperRepository:
             and cached_year_entries
             and all(cached_year_entries.get(str(year)) for year in cached_years[:lookback_years])
         ):
+            self._debug(
+                f"using cached year list {cached['years'][:lookback_years]}",
+                conference=conference,
+            )
             return cached["years"][:lookback_years]
 
         fallback_years = self._infer_cached_paper_years(conference, lookback_years)
+        self._debug(
+            f"refreshing year list from DBLP, fallback_years={fallback_years}",
+            conference=conference,
+        )
         try:
             html_text = self._get_text(f"https://dblp.org/db/{venue_kind}/{slug}/index.html")
         except requests.RequestException:
             if fallback_years:
+                self._debug(
+                    f"failed to refresh year list, fallback to cached paper years={fallback_years}",
+                    conference=conference,
+                    force=True,
+                )
                 return fallback_years
             raise
 
@@ -477,6 +625,11 @@ class PaperRepository:
         min_year = current_year() - lookback_years + 1
         years = [year for year in found_years if year >= min_year][:lookback_years]
         if not years and fallback_years:
+            self._debug(
+                f"no recent years parsed from DBLP, fallback to cached paper years={fallback_years}",
+                conference=conference,
+                force=True,
+            )
             return fallback_years
         with self.lock:
             self.cache["conference_years"][conference] = {
@@ -484,6 +637,10 @@ class PaperRepository:
                 "year_entries": {str(year): year_entries.get(year, []) for year in years},
             }
             self._save_cache()
+        self._debug(
+            f"resolved years={years}, entry_counts={{{', '.join(f'{year}:{len(year_entries.get(year, []))}' for year in years)}}}",
+            conference=conference,
+        )
         return years
 
     def _extract_year_entries(self, html_text: str, slug: str, venue_kind: str) -> dict[int, list[str]]:
@@ -585,28 +742,27 @@ class PaperRepository:
         return True
 
     def get_papers(self, conference: str, force_refresh: bool = False, show_progress: bool = False) -> list[dict[str, Any]]:
+        started_at = time.perf_counter()
         years = self.get_latest_years(conference)
+        self._debug(f"start fetching years={years} force_refresh={force_refresh}", conference=conference)
         papers: list[dict[str, Any]] = []
-        progress = tqdm(total=len(years), desc=f"{conference} years", unit="year", leave=False) if show_progress else None
-        max_workers = min(YEAR_FETCH_WORKERS, max(1, len(years)))
-        with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            future_map = {
-                executor.submit(
-                    self._get_papers_for_year,
+        if show_progress:
+            print(f"[{VENUES[conference]['label']}] years={years}")
+        for year in years:
+            papers.extend(
+                self._get_papers_for_year(
                     conference,
                     year,
                     force_refresh=force_refresh,
                     show_progress=show_progress,
-                ): year
-                for year in years
-            }
-            for future in as_completed(future_map):
-                papers.extend(future.result())
-                if progress:
-                    progress.update(1)
-        if progress:
-            progress.close()
+                )
+            )
         papers.sort(key=lambda item: (-int(item["year"]), item["title"].lower()))
+        self._debug(
+            f"finished conference with papers={len(papers)} in {time.perf_counter() - started_at:.2f}s",
+            conference=conference,
+            force=True,
+        )
         return papers
 
     def get_cached_papers(self, conference: str) -> list[dict[str, Any]]:
@@ -628,40 +784,36 @@ class PaperRepository:
         force_refresh: bool = False,
         show_progress: bool = True,
     ) -> dict[str, int]:
+        started_at = time.perf_counter()
         conferences = conferences or list(VENUES.keys())
         summary: dict[str, int] = {}
         failures: dict[str, str] = {}
         self._new_cache_keys = set()
-        progress = tqdm(total=len(conferences), desc="conferences", unit="conf") if show_progress else None
-        max_workers = min(BUILD_WORKERS, max(1, len(conferences)))
-        with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            future_map = {
-                executor.submit(
-                    self.get_papers,
-                    conference,
-                    force_refresh=force_refresh,
-                    show_progress=show_progress,
-                ): conference
-                for conference in conferences
-            }
-            for future in as_completed(future_map):
-                conference = future_map[future]
-                try:
-                    summary[conference] = len(future.result())
-                except (requests.RequestException, ValueError) as exc:
-                    failures[conference] = str(exc)
-                    summary[conference] = 0
-                except Exception as exc:
-                    failures[conference] = repr(exc)
-                    summary[conference] = 0
-                if progress:
-                    progress.update(1)
-        if progress:
-            progress.close()
+        for index, conference in enumerate(conferences, start=1):
+            if show_progress:
+                print(f"[conference {index}/{len(conferences)}] {VENUES[conference]['label']} ({conference})")
+            try:
+                summary[conference] = len(
+                    self.get_papers(
+                        conference,
+                        force_refresh=force_refresh,
+                        show_progress=show_progress,
+                    )
+                )
+            except (requests.RequestException, ValueError) as exc:
+                failures[conference] = str(exc)
+                summary[conference] = 0
+            except Exception as exc:
+                failures[conference] = repr(exc)
+                summary[conference] = 0
         self.cache["metadata"] = {"mode": "prefetched"}
         self._save_cache()
         self.export_static_data()
         self._send_cache_fill_notification()
+        self._debug(
+            f"build_cache completed in {time.perf_counter() - started_at:.2f}s for {len(conferences)} conferences",
+            force=True,
+        )
         if failures:
             print("\nFailed conferences:")
             for conference in sorted(failures):
@@ -728,14 +880,17 @@ class PaperRepository:
         force_refresh: bool = False,
         show_progress: bool = False,
     ) -> list[dict[str, Any]]:
+        started_at = time.perf_counter()
         cache_key = f"{conference}:{year}"
         cached = self.cache["papers"].get(cache_key)
         if cached and cached.get("items") and not force_refresh:
             items = cached["items"]
             for item in items:
                 self._normalize_links(item)
+            self._debug(f"cache hit items={len(items)}", conference=conference, year=year)
             return items
 
+        self._debug("cache miss, fetching papers", conference=conference, year=year, force=True)
         items = self._fetch_dblp_papers(conference, year, show_progress=show_progress)
         with self.lock:
             self.cache["papers"][cache_key] = {
@@ -744,31 +899,37 @@ class PaperRepository:
             if not force_refresh:
                 self._new_cache_keys.add(cache_key)
             self._save_cache()
+        self._debug(
+            f"year fetch finished items={len(items)} in {time.perf_counter() - started_at:.2f}s",
+            conference=conference,
+            year=year,
+            force=True,
+        )
         return items
 
     def _fetch_dblp_papers(self, conference: str, year: int, show_progress: bool = False) -> list[dict[str, Any]]:
+        started_at = time.perf_counter()
         venue = VENUES[conference]
         slug = venue["dblp_slug"]
         venue_kind = venue.get("venue_kind", "conf")
         entry_names = self._get_year_entry_names(conference, year)
-        list_progress = tqdm(
-            total=len(entry_names),
-            desc=f"{conference} {year} 抓论文列表",
-            unit="step",
-            leave=False,
-            disable=not show_progress,
+        self._debug(
+            f"entry names={entry_names}",
+            conference=conference,
+            year=year,
+            force=True,
         )
         raw_hits: list[dict[str, Any]] = []
-        max_workers = min(DBLP_ENTRY_WORKERS, max(1, len(entry_names)))
-        with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            future_map = {
-                executor.submit(self._fetch_dblp_entry_hits, venue_kind, slug, entry_name): entry_name
-                for entry_name in entry_names
-            }
-            for future in as_completed(future_map):
-                raw_hits.extend(future.result())
-                list_progress.update(1)
-        list_progress.close()
+        for entry_name in entry_names:
+            entry_hits = self._fetch_dblp_entry_hits(venue_kind, slug, entry_name)
+            raw_hits.extend(entry_hits)
+            if show_progress:
+                print(f"[{VENUES[conference]['label']} {year}] entry {entry_name} hits={len(entry_hits)}")
+            self._debug(
+                f"entry {entry_name} returned hits={len(entry_hits)}",
+                conference=conference,
+                year=year,
+            )
 
         papers: list[dict[str, Any]] = []
         seen_keys: set[str] = set()
@@ -806,17 +967,44 @@ class PaperRepository:
             }
             papers.append(paper)
 
-        self._populate_abstracts(
+        self._debug(
+            f"parsed raw_hits={len(raw_hits)} unique_papers={len(papers)}",
+            conference=conference,
+            year=year,
+            force=True,
+        )
+
+        process_started_at = time.perf_counter()
+        processing_summary = self._populate_abstracts_and_translations_serial(
             papers,
             conference=conference,
             year=year,
             show_progress=show_progress,
         )
-        self._populate_translations(
-            papers,
+        abstracts_found = processing_summary["updated_abstracts"]
+        translated = processing_summary["updated_translations"]
+        failed_abstracts = processing_summary["failed_abstracts"]
+        if show_progress:
+            print("")
+            print("Done.")
+            print(f"Updated abstracts: {abstracts_found}")
+            print(f"Updated translations: {translated}")
+            print(f"Failed abstracts: {failed_abstracts}")
+            print(f"Repair command: python3 full_miss_abstract.py {conference} {year}")
+        self._debug(
+            (
+                f"paper processing finished in {time.perf_counter() - process_started_at:.2f}s "
+                f"with abstracts={abstracts_found}/{len(papers)} translated={translated}/{abstracts_found}"
+            ),
             conference=conference,
             year=year,
-            show_progress=show_progress,
+            force=True,
+        )
+        self._debug(
+            f"_fetch_dblp_papers finished in {time.perf_counter() - started_at:.2f}s",
+            conference=conference,
+            year=year,
+            force=True,
         )
         return papers
 
@@ -835,6 +1023,53 @@ class PaperRepository:
         item["doi_url"] = build_doi_url(doi)
         item["source_url"] = normalize_source_url(item.get("source_url") or item["doi_url"])
 
+    def _populate_abstracts_and_translations_serial(
+        self,
+        papers: list[dict[str, Any]],
+        conference: str,
+        year: int,
+        show_progress: bool = False,
+    ) -> dict[str, int]:
+        conference_label = VENUES.get(conference, {}).get("label", conference.upper())
+        total = len(papers)
+        updated_abstracts = 0
+        updated_translations = 0
+        failed_abstracts = 0
+        for index, paper in enumerate(papers, start=1):
+            title = paper.get("title", "<untitled>")
+            if show_progress:
+                print_progress_item(conference_label, year, index, total, title)
+            abstract_info = self._find_best_abstract(paper)
+            if abstract_info:
+                paper.update(abstract_info)
+                updated_abstracts += 1
+                if show_progress:
+                    print(
+                        f"  -> abstract ok: source={paper.get('abstract_source') or '<unknown>'}, "
+                        f"chars={len(paper.get('abstract', ''))}"
+                    )
+            else:
+                failed_abstracts += 1
+                if show_progress:
+                    print("  -> abstract failed")
+                continue
+
+            translated = self._translate_paper_abstract(paper)
+            if translated:
+                paper["abstract_zh"] = translated
+                updated_translations += 1
+                if show_progress:
+                    print(f"  -> translation ok: chars={len(translated)}")
+            else:
+                paper["abstract_zh"] = ""
+                if show_progress:
+                    print("  -> translation skipped/failed")
+        return {
+            "updated_abstracts": updated_abstracts,
+            "updated_translations": updated_translations,
+            "failed_abstracts": failed_abstracts,
+        }
+
     def _populate_abstracts(
         self,
         papers: list[dict[str, Any]],
@@ -842,24 +1077,10 @@ class PaperRepository:
         year: int,
         show_progress: bool = False,
     ) -> None:
-        progress = tqdm(
-            total=len(papers),
-            desc=f"{conference} {year} 抓原始摘要",
-            unit="paper",
-            leave=False,
-            disable=not show_progress,
-        )
-        with ThreadPoolExecutor(max_workers=ABSTRACT_WORKERS) as executor:
-            future_map = {
-                executor.submit(self._find_best_abstract, paper): paper
-                for paper in papers
-            }
-            for future in as_completed(future_map):
-                abstract_info = future.result()
-                if abstract_info:
-                    future_map[future].update(abstract_info)
-                progress.update(1)
-        progress.close()
+        for paper in papers:
+            abstract_info = self._find_best_abstract(paper)
+            if abstract_info:
+                paper.update(abstract_info)
 
     def _populate_translations(
         self,
@@ -868,25 +1089,12 @@ class PaperRepository:
         year: int,
         show_progress: bool = False,
     ) -> None:
-        targets = [paper for paper in papers if paper.get("abstract")]
-        progress = tqdm(
-            total=len(targets),
-            desc=f"{conference} {year} 翻译中文摘要",
-            unit="paper",
-            leave=False,
-            disable=not show_progress or not targets,
-        )
-        with ThreadPoolExecutor(max_workers=ABSTRACT_WORKERS) as executor:
-            future_map = {
-                executor.submit(self._translate_paper_abstract, paper): paper
-                for paper in targets
-            }
-            for future in as_completed(future_map):
-                translated = future.result()
-                if translated:
-                    future_map[future]["abstract_zh"] = translated
-                progress.update(1)
-        progress.close()
+        for paper in papers:
+            if not paper.get("abstract"):
+                continue
+            translated = self._translate_paper_abstract(paper)
+            if translated:
+                paper["abstract_zh"] = translated
 
     def _cached_items_need_upgrade(self, items: list[dict[str, Any]]) -> bool:
         return any(
@@ -925,22 +1133,108 @@ class PaperRepository:
         return items
 
     def _find_best_abstract(self, paper: dict[str, Any]) -> dict[str, str]:
-        abstract_info = self._find_source_abstract(paper)
+        doi = paper.get("doi") or extract_doi(paper.get("doi_url", "")) or extract_doi(paper.get("source_url", ""))
+        abstract_info: dict[str, str] = {}
+        if doi:
+            abstract_info = self._find_doi_landing_abstract(paper, doi)
+            if not abstract_info:
+                abstract_info = self._find_source_abstract(paper)
+            if not abstract_info:
+                abstract_info = self._find_acm_abstract_by_doi(doi)
+        else:
+            abstract_info = self._find_source_abstract(paper)
+            if not abstract_info:
+                abstract_info = self._find_openalex_abstract(paper["title"], paper["year"])
+                if abstract_info:
+                    self._debug(
+                        f"OpenAlex fallback matched title={paper['title'][:80]}",
+                        conference=paper.get("conference", ""),
+                        year=paper.get("year"),
+                    )
         if not abstract_info:
-            abstract_info = self._find_openalex_abstract(paper["title"], paper["year"])
+            self._debug(
+                f"no abstract found title={paper['title'][:80]}",
+                conference=paper.get("conference", ""),
+                year=paper.get("year"),
+            )
         return abstract_info
 
     def _translate_paper_abstract(self, paper: dict[str, Any]) -> str:
         return self._translate_to_chinese(paper.get("abstract", ""))
 
+    def _warm_up_doi_session(self, session: requests.Session, doi_url: str) -> None:
+        steps = [
+            ("https://doi.org/", {"Sec-Fetch-Site": "none", "Referer": ""}),
+            (doi_url, {"Sec-Fetch-Site": "same-origin", "Referer": "https://doi.org/"}),
+        ]
+        for url, overrides in steps:
+            headers = dict(BROWSER_HEADERS)
+            headers.update(overrides)
+            try:
+                self._get_text_with_headers(url, headers=headers, session=session)
+            except requests.RequestException:
+                return
+
+    def _find_doi_landing_abstract(self, paper: dict[str, Any], doi: str) -> dict[str, str]:
+        doi_url = build_doi_url(doi)
+        if not doi_url:
+            return {}
+        session = self._session_for()
+        self._warm_up_doi_session(session, doi_url)
+        headers = dict(BROWSER_HEADERS)
+        headers["Referer"] = "https://doi.org/"
+        try:
+            html_text = self._get_text_with_headers(doi_url, headers=headers, session=session)
+        except requests.RequestException as exc:
+            self._debug(
+                f"doi landing fetch failed doi={doi} url={doi_url} error={exc}",
+                conference=paper.get("conference", ""),
+                year=paper.get("year"),
+                force=True,
+            )
+            return {}
+
+        abstract = self._extract_abstract_from_html(html_text)
+        if not abstract:
+            self._debug(
+                f"doi landing returned no abstract doi={doi} url={doi_url}",
+                conference=paper.get("conference", ""),
+                year=paper.get("year"),
+            )
+            return {}
+
+        self._debug(
+            f"doi landing abstract matched doi={doi} url={doi_url}",
+            conference=paper.get("conference", ""),
+            year=paper.get("year"),
+            force=True,
+        )
+        return {
+            "abstract": abstract,
+            "abstract_source": "DOI Page",
+            "doi": doi,
+            "doi_url": doi_url,
+        }
+
     def _find_source_abstract(self, paper: dict[str, Any]) -> dict[str, str]:
         url = paper.get("source_url", "")
+        doi = extract_doi(url)
         if not url:
+            self._debug(
+                f"skip source fetch because source_url is empty title={paper['title'][:80]}",
+                conference=paper.get("conference", ""),
+                year=paper.get("year"),
+            )
             return {}
         try:
             html_text = self._get_text(url)
-        except requests.RequestException:
-            doi = extract_doi(url)
+        except requests.RequestException as exc:
+            self._debug(
+                f"source fetch failed, fallback to DOI={doi or '<none>'} url={url} error={exc}",
+                conference=paper.get("conference", ""),
+                year=paper.get("year"),
+                force=True,
+            )
             if not doi:
                 return {}
             return self._find_acm_abstract_by_doi(doi)
@@ -948,10 +1242,20 @@ class PaperRepository:
         abstract = self._extract_abstract_from_html(html_text)
         if not abstract:
             doi = extract_doi(url)
+            self._debug(
+                f"source page returned no abstract, fallback DOI={doi or '<none>'} url={url}",
+                conference=paper.get("conference", ""),
+                year=paper.get("year"),
+            )
             if doi:
                 return self._find_acm_abstract_by_doi(doi)
             return {}
 
+        self._debug(
+            f"source page abstract matched url={url}",
+            conference=paper.get("conference", ""),
+            year=paper.get("year"),
+        )
         return {
             "abstract": abstract,
             "abstract_source": "Source Page",
@@ -970,7 +1274,21 @@ class PaperRepository:
         ]
         for selector in selectors:
             for node in soup.select(selector):
-                text = compact_spaces(node.get_text(" ", strip=True))
+                paragraph_nodes = node.select("[role='paragraph'], p")
+                paragraphs: list[str] = []
+                for paragraph_node in paragraph_nodes:
+                    text = clean_abstract_heading(compact_spaces(paragraph_node.get_text(" ", strip=True)))
+                    if text:
+                        paragraphs.append(text)
+                if paragraphs:
+                    text = "\n\n".join(paragraphs)
+                else:
+                    raw_lines = [
+                        clean_abstract_heading(compact_spaces(line))
+                        for line in node.get_text("\n", strip=True).splitlines()
+                    ]
+                    paragraphs = [line for line in raw_lines if line]
+                    text = "\n\n".join(paragraphs)
                 if is_probable_abstract(text):
                     return text
 
@@ -979,7 +1297,7 @@ class PaperRepository:
             key = (meta.get("name") or meta.get("property") or "").lower()
             if key not in meta_keys:
                 continue
-            text = compact_spaces(meta.get("content") or "")
+            text = clean_abstract_heading(compact_spaces(meta.get("content") or ""))
             if is_probable_abstract(text):
                 return text
 
@@ -989,13 +1307,16 @@ class PaperRepository:
         api_url = f"https://api.crossref.org/works/{urllib.parse.quote(doi)}"
         try:
             message = self._get_json(api_url).get("message", {})
-        except requests.RequestException:
+        except requests.RequestException as exc:
+            self._debug(f"Crossref lookup failed doi={doi} error={exc}", force=True)
             return {}
 
         abstract = strip_jats_tags(message.get("abstract") or "")
         if not is_probable_abstract(abstract):
+            self._debug(f"Crossref lookup returned no usable abstract doi={doi}")
             return {}
 
+        self._debug(f"Crossref abstract matched doi={doi}")
         return {
             "abstract": abstract,
             "abstract_source": "Crossref",
@@ -1008,7 +1329,12 @@ class PaperRepository:
         url = f"https://api.openalex.org/works?search={encoded_title}&per-page={MAX_OPENALEX_CANDIDATES}"
         try:
             results = self._get_json(url).get("results", [])
-        except requests.RequestException:
+        except requests.RequestException as exc:
+            self._debug(
+                f"OpenAlex lookup failed title={title[:80]} error={exc}",
+                year=year,
+                force=True,
+            )
             return {}
 
         normalized_title = normalize_text(title)
@@ -1030,9 +1356,17 @@ class PaperRepository:
                 best = (score, item)
 
         if not best[1] or best[0] < 0.78:
+            self._debug(
+                f"OpenAlex no good match title={title[:80]} best_score={best[0]:.2f}",
+                year=year,
+            )
             return {}
 
         selected = best[1]
+        self._debug(
+            f"OpenAlex selected score={best[0]:.2f} title={title[:80]}",
+            year=year,
+        )
         return {
             "abstract": inverted_index_to_abstract(selected.get("abstract_inverted_index")),
             "abstract_source": "OpenAlex",
@@ -1042,25 +1376,30 @@ class PaperRepository:
         }
 
     def _translate_to_chinese(self, text: str) -> str:
-        source = compact_spaces(text)
+        source = compact_spaces_preserve_paragraphs(text)
         if not source or len(source) > TRANSLATE_CHAR_LIMIT:
             return ""
+        paragraphs = [part for part in re.split(r"\n\s*\n", source) if part]
         try:
             url = "https://translate.googleapis.com/translate_a/single"
-            response = self._session_for(translation=True).get(
-                url,
-                params={"client": "gtx", "sl": "en", "tl": "zh-CN", "dt": "t", "q": source},
-                timeout=REQUEST_TIMEOUT,
-            )
-            response.raise_for_status()
-            payload = response.json()
+            translated_paragraphs: list[str] = []
+            for paragraph in paragraphs:
+                response = self._session_for(translation=True).get(
+                    url,
+                    params={"client": "gtx", "sl": "en", "tl": "zh-CN", "dt": "t", "q": paragraph},
+                    timeout=REQUEST_TIMEOUT,
+                )
+                response.raise_for_status()
+                payload = response.json()
+                if not isinstance(payload, list) or not payload or not isinstance(payload[0], list):
+                    return ""
+                translated_parts = [part[0] for part in payload[0] if isinstance(part, list) and part and part[0]]
+                translated_paragraph = compact_spaces("".join(translated_parts))
+                if translated_paragraph:
+                    translated_paragraphs.append(translated_paragraph)
         except (requests.RequestException, ValueError, json.JSONDecodeError):
             return ""
-
-        if not isinstance(payload, list) or not payload or not isinstance(payload[0], list):
-            return ""
-        translated_parts = [part[0] for part in payload[0] if isinstance(part, list) and part and part[0]]
-        return compact_spaces("".join(translated_parts))
+        return "\n\n".join(translated_paragraphs)
 
 
 REPOSITORY = PaperRepository(CACHE_DIR)
@@ -1088,7 +1427,21 @@ def main() -> None:
             "build-static: export static JSON from existing cache"
         ),
     )
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Enable verbose debug logs for build-cache stages, requests, and abstract fetching.",
+    )
+    parser.add_argument(
+        "--debug-filter",
+        action="append",
+        default=[],
+        help="Only emit debug logs whose context or message contains this token. Repeatable.",
+    )
     args = parser.parse_args()
+    env_debug = os.environ.get("BUILD_CACHE_DEBUG", "").strip().lower() in {"1", "true", "yes", "on"}
+    env_filters = [value.strip() for value in os.environ.get("BUILD_CACHE_DEBUG_FILTER", "").split(",") if value.strip()]
+    REPOSITORY.configure_debug(args.debug or env_debug, [*env_filters, *args.debug_filter])
 
     if args.command == "build-cache":
         print("Building missing cache data...")
@@ -1106,4 +1459,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # print running start time (YY:MM:DD HH:MM:SS) for easier debugging of cache build duration and potential timeouts.
+    run_start_time = datetime.datetime.now()
+    print(f"Script started at {run_start_time.strftime('%Y-%m-%d %H:%M:%S')}")
     main()

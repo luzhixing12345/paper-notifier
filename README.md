@@ -26,24 +26,59 @@ pip install -r requirements.txt
 python3 build-cache.py
 ```
 
-执行效果如下（如果从0爬取的话），有的会议/期刊爬的速度比较慢
+执行效果如下，本项目没有采用并行爬取数据，因为很容易被 doi.org 封禁ip，完全串行所以速度会慢一些，但胜在一劳永逸
 
 ```bash
 $ python build-cache.py
+Script started at 2026-03-19 16:30:48
 Building missing cache data...
-conferences:  88%|████████████████████████████████████████████████████████████        | 15/17 [00:17<00:01,  1.16conf/s]
-ppopp years:   0%|                                                                              | 0/5 [00:00<?, ?year/s]
-ppopp 2026 抓原始摘要:  16%|█████████                                                 | 8/51 [00:50<02:51,  3.98s/paper]
-ppopp 2025 抓原始摘要:  16%|█████████▎                                                | 8/50 [00:44<01:02,  1.50s/paper]
-ppopp 2024 抓原始摘要:  18%|██████████▎                                               | 8/45 [00:48<02:08,  3.48s/paper]
-ppopp 2023 抓原始摘要:  19%|██████████▊                                               | 8/43 [00:49<01:37,  2.80s/paper]
-sc years:  25%|██████████████████▎                                                      | 1/4 [00:26<01:18, 26.05s/year]
-sc 2025 抓原始摘要:   2%|▉                                                           | 7/433 [00:44<16:48,  2.37s/paper]
-sc 2024 翻译中文摘要:  36%|████████████████████▍                                   | 122/335 [00:09<00:14, 14.54paper/s]
-sc 2023 抓原始摘要:   2%|█▎                                                          | 8/356 [00:46<16:08,  2.78s/paper]
+[conference 1/17] OSDI (osdi)
+[OSDI] years=[2025, 2024, 2023, 2022]
+[conference 2/17] NSDI (nsdi)
+[NSDI] years=[2025, 2024, 2023, 2022]
+[conference 3/17] SOSP (sosp)
+[SOSP] years=[2025, 2024, 2023]
+[conference 4/17] ASPLOS (asplos)
+[ASPLOS] years=[2026, 2025, 2024, 2023, 2022]
+[ASPLOS 2022] entry asplos2022 hits=81
+[ASPLOS 2022][1/81] Adelie: continuous address space layout re-randomization for Linux drivers.
+  -> abstract ok: source=DOI Page, chars=2194
+  -> translation ok: chars=793
+[ASPLOS 2022][2/81] A tree clock data structure for causal orderings in concurrent executions.
+  -> abstract ok: source=DOI Page, chars=1677
+  -> translation ok: chars=532
+[ASPLOS 2022][3/81] Every walk's a hit: making page walks single-access cache hits.
+  -> abstract ok: source=DOI Page, chars=1908
+  -> translation ok: chars=613
 ```
 
 最终所有数据按年份保存在 paper_cache 下，并汇总到 assets/papers-data.json，打开 index.html 即可浏览。
+
+> full_miss_abstract.py 用于补全某一个会议某年缺失的论文摘要，爬 doi.org 如果太狠了会被封ip，有的摘要会遗漏，这个脚本可以帮助补齐内容
+>
+> python full_miss_abstract.py <conference> <year>
+> 
+> ```bash
+> $ python full_miss_abstract.py asplos 2026
+> 
+> Processing 7 missing abstract(s) in /home/lzx/paper-notifier/paper_cache/2026/asplos/info.json
+> [1/7] fetching TetriServe: Efficiently Serving Mixed DiT Workloads.
+>   -> abstract ok: source=DOI Page, chars=1329
+> [1/7] translating TetriServe: Efficiently Serving Mixed DiT Workloads.
+>   -> translation ok: chars=519
+>   -> saved
+> [2/7] fetching Enabling Fast Networking in the Public Cloud.
+>   -> abstract ok: source=DOI Page, chars=908
+> [2/7] translating Enabling Fast Networking in the Public Cloud.
+>   -> translation ok: chars=353
+>   -> saved
+> ...
+> ```
+>
+> 最后再重新构建给 index.html 用的 json 索引
+> ```bash
+> python build-cache build-static
+> ```
 
 ## 设置定时任务
 

@@ -210,6 +210,26 @@ function highlightHtml(value, keyword) {
   return escaped.replace(pattern, '<mark class="search-hit">$1</mark>');
 }
 
+function renderAbstractHtml(value, keyword, lang) {
+  const text = String(value || "").trim();
+  if (!text) {
+    return highlightHtml(lang === "zh" ? "暂无中文摘要" : "暂无英文摘要", keyword);
+  }
+  const paragraphs = text
+    .split(/\n\s*\n/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+  return paragraphs
+    .map((paragraph) => {
+      const classes = ["abstract-paragraph"];
+      if (lang === "zh") {
+        classes.push("abstract-paragraph-zh");
+      }
+      return `<span class="${classes.join(" ")}">${highlightHtml(paragraph, keyword)}</span>`;
+    })
+    .join("");
+}
+
 function getMatchPriority(paper, keyword) {
   if (!keyword) {
     return 0;
@@ -416,8 +436,8 @@ function renderResults() {
             <button class="abstract-tab ${!paper.abstract_zh ? "is-active" : ""}" data-lang="en" ${paper.abstract ? "" : "disabled"}>英文摘要</button>
           </div>
           <div class="abstract-content">
-            <p class="abstract abstract-pane ${paper.abstract_zh ? "is-active" : ""}" data-lang="zh">${highlightHtml(paper.abstract_zh || "暂无中文摘要", keywordEl.value.trim())}</p>
-            <p class="abstract abstract-pane ${!paper.abstract_zh ? "is-active" : ""}" data-lang="en">${highlightHtml(paper.abstract || "暂无英文摘要", keywordEl.value.trim())}</p>
+            <div class="abstract abstract-pane ${paper.abstract_zh ? "is-active" : ""}" data-lang="zh">${renderAbstractHtml(paper.abstract_zh, keywordEl.value.trim(), "zh")}</div>
+            <div class="abstract abstract-pane ${!paper.abstract_zh ? "is-active" : ""}" data-lang="en">${renderAbstractHtml(paper.abstract, keywordEl.value.trim(), "en")}</div>
           </div>
         </div>
         <div class="links">${links.join("")}</div>
