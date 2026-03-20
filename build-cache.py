@@ -295,6 +295,62 @@ def strip_jats_tags(value: str) -> str:
     return compact_spaces(unescape(value))
 
 
+def normalize_latex_fragment(value: str) -> str:
+    text = compact_spaces(unescape(value or ""))
+    replacements = {
+        r"\times": "×",
+        r"\cdot": "·",
+        r"\leq": "<=",
+        r"\geq": ">=",
+        r"\neq": "!=",
+        r"\alpha": "alpha",
+        r"\beta": "beta",
+        r"\gamma": "gamma",
+        r"\lambda": "lambda",
+        r"\mu": "mu",
+    }
+    for source, target in replacements.items():
+        text = text.replace(source, target)
+    text = text.replace("{", "").replace("}", "")
+    text = text.strip("$")
+    return compact_spaces(text)
+
+
+def strip_inline_markup(value: str) -> str:
+    if not value:
+        return ""
+
+    text = unescape(value)
+
+    def replace_formula(match: re.Match[str]) -> str:
+        return f" {normalize_latex_fragment(match.group(1) or '')} "
+
+    text = re.sub(
+        r"<inline-formula\b[^>]*>.*?<tex-math\b[^>]*>(.*?)</tex-math>.*?</inline-formula>",
+        replace_formula,
+        text,
+        flags=re.I | re.S,
+    )
+    text = re.sub(
+        r"<inline-formula\b[^>]*>(.*?)</inline-formula>",
+        replace_formula,
+        text,
+        flags=re.I | re.S,
+    )
+    text = re.sub(r"</?(?:monospace|italic|bold|sub|sup)\b[^>]*>", " ", text, flags=re.I)
+    text = re.sub(r"<[^>]+>", " ", text)
+    return compact_spaces(text)
+
+
+def clean_abstract_text(value: str) -> str:
+    paragraphs: list[str] = []
+    for part in re.split(r"\n\s*\n", value or ""):
+        cleaned = strip_inline_markup(part)
+        if cleaned:
+            paragraphs.append(cleaned)
+    return "\n\n".join(paragraphs)
+
+
 def clean_dblp_title(value: str) -> str:
     text = value or ""
     if "<" in text and ">" in text:
@@ -532,11 +588,21 @@ class PaperRepository:
         if not isinstance(payload, dict):
             return {"items": []}
 
-        return {
+        sanitized = {
             key: value
             for key, value in payload.items()
             if key not in {"expires_at", "updated_at"}
         }
+        items = sanitized.get("items", [])
+        if isinstance(items, list):
+            for item in items:
+                if not isinstance(item, dict):
+                    continue
+                if item.get("abstract"):
+                    item["abstract"] = clean_abstract_text(str(item.get("abstract", "")))
+                if item.get("abstract_zh"):
+                    item["abstract_zh"] = clean_abstract_text(str(item.get("abstract_zh", "")))
+        return sanitized
 
     def _save_cache(self) -> None:
         started_at = time.perf_counter()
@@ -1376,7 +1442,7 @@ class PaperRepository:
         except json.JSONDecodeError:
             return ""
 
-        text = clean_abstract_heading(compact_spaces(metadata.get("abstract") or ""))
+        text = clean_abstract_heading(clean_abstract_text(metadata.get("abstract") or ""))
         if is_probable_abstract(text):
             return text
         return ""
@@ -1404,14 +1470,14 @@ class PaperRepository:
                 paragraph_nodes = node.select("[role='paragraph'], p")
                 paragraphs: list[str] = []
                 for paragraph_node in paragraph_nodes:
-                    text = clean_abstract_heading(compact_spaces(paragraph_node.get_text(" ", strip=True)))
+                    text = clean_abstract_heading(clean_abstract_text(paragraph_node.get_text(" ", strip=True)))
                     if text:
                         paragraphs.append(text)
                 if paragraphs:
                     text = "\n\n".join(paragraphs)
                 else:
                     raw_lines = [
-                        clean_abstract_heading(compact_spaces(line))
+                        clean_abstract_heading(clean_abstract_text(line))
                         for line in node.get_text("\n", strip=True).splitlines()
                     ]
                     paragraphs = [line for line in raw_lines if line]
@@ -1424,7 +1490,7 @@ class PaperRepository:
             key = (meta.get("name") or meta.get("property") or "").lower()
             if key not in meta_keys:
                 continue
-            text = clean_abstract_heading(compact_spaces(meta.get("content") or ""))
+            text = clean_abstract_heading(clean_abstract_text(meta.get("content") or ""))
             if is_probable_abstract(text):
                 return text
 
@@ -1438,7 +1504,7 @@ class PaperRepository:
             self._debug(f"Crossref lookup failed doi={doi} error={exc}", force=True)
             return {}
 
-        abstract = strip_jats_tags(message.get("abstract") or "")
+        abstract = clean_abstract_text(strip_jats_tags(message.get("abstract") or ""))
         if not is_probable_abstract(abstract):
             self._debug(f"Crossref lookup returned no usable abstract doi={doi}")
             return {}
@@ -1495,7 +1561,7 @@ class PaperRepository:
             year=year,
         )
         return {
-            "abstract": inverted_index_to_abstract(selected.get("abstract_inverted_index")),
+            "abstract": clean_abstract_text(inverted_index_to_abstract(selected.get("abstract_inverted_index"))),
             "abstract_source": "OpenAlex",
             "openalex_id": selected.get("id", ""),
             "doi": extract_doi(selected.get("doi") or ""),

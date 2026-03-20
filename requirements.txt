@@ -1,5 +1,5 @@
 beautifulsoup4
 requests
 tqdm
-e2me
+e2me==0.1.0
 prettytable

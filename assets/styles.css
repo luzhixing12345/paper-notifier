@@ -104,16 +104,21 @@ select {
 }
 
 .view-tabs {
-  display: inline-flex;
+  display: flex;
   gap: 8px;
   margin-top: 18px;
   padding: 4px;
   border: 1px solid var(--border);
   border-radius: 14px;
   background: var(--card);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
 }
 
 .view-tab {
+  flex: 0 0 auto;
   height: 38px;
   padding: 0 14px;
   border: 1px solid transparent;
@@ -121,6 +126,7 @@ select {
   background: var(--card);
   color: var(--muted-foreground);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .view-tab.is-active {

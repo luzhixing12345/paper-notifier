@@ -212,12 +212,7 @@ function escapeRegExp(value) {
 }
 
 function highlightHtml(value, keyword) {
-  const escaped = escapeHtml(value || "");
-  if (!keyword) {
-    return escaped;
-  }
-  const pattern = new RegExp(`(${escapeRegExp(keyword)})`, "ig");
-  return escaped.replace(pattern, '<mark class="search-hit">$1</mark>');
+  return escapeHtml(value || "");
 }
 
 function renderAbstractHtml(value, keyword, lang) {
@@ -419,9 +414,6 @@ function renderResults() {
       `<span class="tag">${paper.conference_label}</span>`,
       `<span class="tag">${paper.year}</span>`,
     ];
-    if (paper.pages) {
-      tags.push(`<span class="tag">pp. ${escapeHtml(paper.pages)}</span>`);
-    }
     if (paper.abstract_source) {
       tags.push(`<span class="tag">摘要: ${escapeHtml(paper.abstract_source)}</span>`);
     }
@@ -429,15 +421,6 @@ function renderResults() {
     const links = [];
     if (paper.source_url) {
       links.push(`<a href="${paper.source_url}" target="_blank" rel="noreferrer">原始页面</a>`);
-    }
-    if (paper.dblp_url) {
-      links.push(`<a href="${paper.dblp_url}" target="_blank" rel="noreferrer">DBLP</a>`);
-    }
-    if (paper.openalex_id) {
-      links.push(`<a href="${paper.openalex_id}" target="_blank" rel="noreferrer">OpenAlex</a>`);
-    }
-    if (paper.doi_url) {
-      links.push(`<a href="${paper.doi_url}" target="_blank" rel="noreferrer">DOI</a>`);
     }
 
     return `
