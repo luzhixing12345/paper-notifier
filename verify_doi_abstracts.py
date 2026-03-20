@@ -6,6 +6,7 @@ from typing import Any
 import requests
 from requests.adapters import HTTPAdapter
 from bs4 import BeautifulSoup
+import json
 
 USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) "
