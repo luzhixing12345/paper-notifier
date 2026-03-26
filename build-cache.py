@@ -23,7 +23,6 @@ ASSETS_DIR = BASE_DIR / "assets"
 STATIC_DATA_PATH = ASSETS_DIR / "papers-data.json"
 CONFERENCE_CONFIG_PATH = BASE_DIR / "CONFERENCE.txt"
 JOURNAL_CONFIG_PATH = BASE_DIR / "JOURNAL.txt"
-EMAIL_CONFIG_PATH = BASE_DIR / "EMAIL.txt"
 USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -126,25 +125,8 @@ def parse_year_filters(values: list[str] | None) -> list[int]:
 
 
 def send_email(subject: str = "New Paper Alert", body: str = "Check out the latest papers in your field!") -> None:
-    if not EMAIL_CONFIG_PATH.exists():
-        return
-
-    recipients: list[str] = []
-    for raw_line in EMAIL_CONFIG_PATH.read_text(encoding="utf-8").splitlines():
-        line = raw_line.strip()
-        if not line or line.startswith("#"):
-            continue
-        recipients.append(line)
-
-    if not recipients:
-        return
     
-    print("Sending cache fill notification email to: " + ", ".join(recipients))
-
-    for recipient in recipients:
-        e2me.send_email(subject, body, to=recipient)
-    print(f"Cache fill notification email sent to {len(recipients)} recipient(s).")
-
+    e2me.send_email(subject, body)
 
 def format_conference_label(key: str) -> str:
     custom_labels = {

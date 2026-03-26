@@ -52,7 +52,7 @@ Building missing cache data...
   -> translation ok: chars=613
 ```
 
-最终所有数据按年份保存在 paper_cache/<year>/<conference> 下，并按照会议汇总到 assets/ 下，打开 index.html 即可浏览。
+最终所有数据按年份保存在 paper_cache/`<year>`/`<conference>` 下，并按照会议汇总到 assets/ 下，打开 index.html 即可浏览。
 
 > full_miss_abstract.py 用于补全某一个会议某年缺失的论文摘要，爬 doi.org 如果太狠了会被封ip，有的摘要会遗漏，这个脚本可以帮助补齐内容
 >
@@ -80,27 +80,27 @@ Building missing cache data...
 > python build-cache build-static
 > ```
 
-## 设置定时任务
+## 接受邮件提醒
 
-我们希望当有新会议/期刊更新时自动发送邮件通知我，首先需要更新 `EMAIL.txt` 填入你的邮箱
+### Github Action
 
-然后执行如下脚本
+最简单的方式是 fork 此项目，本项目已经设置了 github action，每天早上8点会自动执行脚本，检测更新，如果有更新会发送邮件。
+
+本项目使用 e2me 进行邮件发送服务，您只需要添加两个环境变量 `E2ME_EMAIL` 和 `E2ME_PASSWD`，E2ME_EMAIL 为邮箱地址，E2ME_PASSWD 为邮箱的 smtp 密码，见 [e2me](https://github.com/luzhixing12345/e2me)
+
+![20260326222817](https://raw.githubusercontent.com/learner-lu/picbed/master/20260326222817.png)
+
+### 本地部署
+
+首先您需要初始化您的邮箱服务才能发送邮件，使用 `e2me init` 初始化您的邮箱配置，见 [e2me](https://github.com/luzhixing12345/e2me)
+
+初始化完成后执行脚本
 
 ```bash
 ./setup_crontab.sh
 ```
 
-它会创建一个每天北京时间8点的定时任务，爬取数据并检查是否有新的信息，如果有则发送一封邮件(如下所示)
-
-```txt
-Paper Notifier: OSDI [2025] 53 Papers
-
-Detected a newly cached venue-year entry during build-cache.
-
-Conference: OSDI (osdi)
-Year: 2025
-Papers: 53
-```
+它会创建一个每天北京时间8点的定时任务，爬取数据并检查是否有新的信息，如果有则发送一封邮件
 
 > 您可以简单删除 paper_cache/2025/osdi 目录然后重新执行 python3 build-cache.py 以查看邮件效果
 
