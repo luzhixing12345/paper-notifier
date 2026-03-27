@@ -1,0 +1,17 @@
+name: Print E2ME Env
+
+on:
+  workflow_dispatch:
+
+jobs:
+  print-e2me-env:
+    runs-on: ubuntu-latest
+    env:
+      E2ME_EMAIL: ${{ secrets.E2ME_EMAIL }}
+      E2ME_PASSWD: ${{ secrets.E2ME_PASSWD }}
+
+    steps:
+      - name: Print E2ME environment variables
+        run: |
+          echo "E2ME_EMAIL=${{ env.E2ME_EMAIL }}"
+          echo "E2ME_PASSWD=${{ env.E2ME_PASSWD }}"
