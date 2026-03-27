@@ -82,13 +82,22 @@ Building missing cache data...
 
 ## 接受邮件提醒
 
+### 抄送
+
+最简单的方式是在 issue [新增论文更新通知抄送](https://github.com/luzhixing12345/paper-notifier/issues/1) 中评论您的邮箱，我会将其添加到该 Github 仓库的抄送者中，会议更新时会一并抄送
+
 ### Github Action
 
-最简单的方式是 fork 此项目，本项目已经设置了 github action，每天早上8点会自动执行脚本，检测更新，如果有更新会发送邮件。
+另一种方式是 fork 此项目，本项目已经设置了 github action，每天早上8点会自动执行脚本，检测更新，如果有更新会发送邮件。
 
 本项目使用 e2me 进行邮件发送服务，您只需要添加两个secret环境变量 `E2ME_EMAIL` 和 `E2ME_PASSWD`，E2ME_EMAIL 为邮箱地址，E2ME_PASSWD 为邮箱的 smtp 密码，见 [e2me](https://github.com/luzhixing12345/e2me)
 
 ![20260327111117](https://raw.githubusercontent.com/learner-lu/picbed/master/20260327111117.png)
+
+您也可以设置 `E2ME_CC` 作为抄送者，就如同上面的一样
+
+> [!WARNING]
+> 该项目是通过爬虫来获取信息的，Github action 的沙箱网络可能会有波动导致获取信息失败，当更新后您可能需要检查一下 Github action 的运行是否有失败，例如 [build cache fail](https://github.com/luzhixing12345/paper-notifier/actions/runs/23632110156/job/68833652977)，此时需要手动到本地 git pull 后再次执行对应的提示命令，例如 python3 full_miss_abstract.py osdi 2025
 
 ### 本地部署
 
