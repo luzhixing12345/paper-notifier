@@ -394,17 +394,14 @@ def format_cache_fill_email_body(updates: dict[str, list[dict[str, Any]]]) -> st
         entry = entries[0]
         return "\n".join(
             [
-                "Detected a newly cached venue-year entry during build-cache.",
-                "",
                 f"Conference: {entry['conference_label']} ({entry['conference']})",
                 f"Year: {entry['year']}",
                 f"Papers: {entry['paper_count']}",
+                "visit paper for details: https://paper-notifier.vercel.app/",
             ]
         )
 
     lines = [
-        "Detected newly cached venue-year entries during build-cache.",
-        "",
         f"Total new venue-years: {total_venue_years}",
         "",
     ]
@@ -415,6 +412,7 @@ def format_cache_fill_email_body(updates: dict[str, list[dict[str, Any]]]) -> st
         for entry in entries:
             lines.append(f"- [{entry['year']}] {entry['paper_count']} paper(s)")
         lines.append("")
+        lines.append(f"visit paper for details: https://paper-notifier.vercel.app/")
     return "\n".join(lines).strip()
 
 
