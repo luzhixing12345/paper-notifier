@@ -86,9 +86,9 @@ Building missing cache data...
 
 最简单的方式是 fork 此项目，本项目已经设置了 github action，每天早上8点会自动执行脚本，检测更新，如果有更新会发送邮件。
 
-本项目使用 e2me 进行邮件发送服务，您只需要添加两个环境变量 `E2ME_EMAIL` 和 `E2ME_PASSWD`，E2ME_EMAIL 为邮箱地址，E2ME_PASSWD 为邮箱的 smtp 密码，见 [e2me](https://github.com/luzhixing12345/e2me)
+本项目使用 e2me 进行邮件发送服务，您只需要添加两个secret环境变量 `E2ME_EMAIL` 和 `E2ME_PASSWD`，E2ME_EMAIL 为邮箱地址，E2ME_PASSWD 为邮箱的 smtp 密码，见 [e2me](https://github.com/luzhixing12345/e2me)
 
-![20260326222817](https://raw.githubusercontent.com/learner-lu/picbed/master/20260326222817.png)
+![20260327111117](https://raw.githubusercontent.com/learner-lu/picbed/master/20260327111117.png)
 
 ### 本地部署
 

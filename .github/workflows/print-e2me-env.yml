@@ -7,8 +7,8 @@ jobs:
   print-e2me-env:
     runs-on: ubuntu-latest
     env:
-      E2ME_EMAIL: ${{ vars.E2ME_EMAIL }}
-      E2ME_PASSWD: ${{ vars.E2ME_PASSWD }}
+      E2ME_EMAIL: ${{ secrets.E2ME_EMAIL }}
+      E2ME_PASSWD: ${{ secrets.E2ME_PASSWD }}
 
     steps:
       - name: Checkout repository
