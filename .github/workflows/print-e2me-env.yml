@@ -7,11 +7,26 @@ jobs:
   print-e2me-env:
     runs-on: ubuntu-latest
     env:
-      E2ME_EMAIL: ${{ secrets.E2ME_EMAIL }}
-      E2ME_PASSWD: ${{ secrets.E2ME_PASSWD }}
+      E2ME_EMAIL: ${{ vars.E2ME_EMAIL }}
+      E2ME_PASSWD: ${{ vars.E2ME_PASSWD }}
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
       - name: Print E2ME environment variables
         run: |
           echo "E2ME_EMAIL=${{ env.E2ME_EMAIL }}"
           echo "E2ME_PASSWD=${{ env.E2ME_PASSWD }}"
+
+      - name: Install e2me
+        run: pip install e2me
+
+      - name: Run test.py
+        run: E2ME_EMAIL=${{ env.E2ME_EMAIL }} E2ME_PASSWD=${{ env.E2ME_PASSWD }} python3 test.py

@@ -27,7 +27,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run build-cache
-        run: E2ME_EMAIL=${{ secrets.E2ME_EMAIL }} E2ME_PASSWD=${{ secrets.E2ME_PASSWD }} python3 build-cache.py
+        run: E2ME_EMAIL=${{ vars.E2ME_EMAIL }} E2ME_PASSWD=${{ vars.E2ME_PASSWD }} python3 build-cache.py
 
       - name: Commit and push generated files
         run: |
