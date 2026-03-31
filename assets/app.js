@@ -316,7 +316,7 @@ function renderYearFilters() {
   `).join("");
 }
 
-function getBasePapersForActiveView() {
+function getBasePapersForActiveView(keyword = "") {
   if (state.activeView === "favorites") {
     return getFavoritePapers();
   }
@@ -326,9 +326,15 @@ function getBasePapersForActiveView() {
   if (state.activeView === "disliked") {
     return getDislikedPapers();
   }
-  return state.raw.filter(
-    (paper) => !isExcludedPaperType(paper) && !isDisliked(paper) && !isLiked(paper) && !isViewed(paper),
-  );
+  return state.raw.filter((paper) => {
+    if (isExcludedPaperType(paper)) {
+      return false;
+    }
+    if (keyword) {
+      return true;
+    }
+    return !isDisliked(paper) && !isLiked(paper) && !isViewed(paper);
+  });
 }
 
 function render() {
@@ -337,7 +343,7 @@ function render() {
   filtersPanelEl.hidden = false;
   const keyword = keywordEl.value.trim().toLowerCase();
   const requireAbstract = hasAbstractEl.checked;
-  const papers = getBasePapersForActiveView()
+  const papers = getBasePapersForActiveView(keyword)
     .filter((paper) => {
       const conferenceKey = getPaperConferenceKey(paper);
       const yearKey = getPaperYearKey(paper);
