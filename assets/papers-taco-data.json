@@ -1,8 +1,34 @@
 {
   "conference": "taco",
   "conference_label": "TACO",
-  "count": 334,
+  "count": 335,
   "papers": [
+    {
+      "conference": "taco",
+      "conference_label": "TACO",
+      "year": 2026,
+      "title": "Corrigendum: Unified and Efficient Factor Graph Accelerator Design for Robotic Optimization.",
+      "authors": [
+        "Qiang Liu",
+        "Yihao Hua",
+        "Yuhui Hao",
+        "Bo Yu",
+        "Shaoshan Liu",
+        "Yiming Gan"
+      ],
+      "pages": "C1:1",
+      "type": "Journal Articles",
+      "access": "open",
+      "dblp_key": "journals/taco/LiuHHYLG26",
+      "dblp_url": "https://dblp.org/rec/journals/taco/LiuHHYLG26",
+      "source_url": "https://dl.acm.org/doi/abs/10.1145/3787203",
+      "abstract": "This is a corrigendum for the article \"Unified and Efficient Factor Graph Accelerator Design for Robotic Optimization\" published in ACM Trans. Arch. Code Optim. 22, 4, Article 153 (December 2025), 23 pages.",
+      "abstract_zh": "本文是对 ACM Trans 上发表的文章《用于机器人优化的统一高效因子图加速器设计》的勘误。拱。代码优化。 22、4，第 153 条（2025 年 12 月），23 页。",
+      "abstract_source": "Crossref",
+      "openalex_id": "",
+      "doi": "10.1145/3787203",
+      "doi_url": "https://doi.org/10.1145/3787203"
+    },
     {
       "conference": "taco",
       "conference_label": "TACO",
