@@ -8,7 +8,7 @@ import threading
 import time
 import urllib.parse
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 import datetime
 import requests
 from requests.adapters import HTTPAdapter
@@ -39,6 +39,7 @@ BUILD_WORKERS = 4
 TRANSLATE_CHAR_LIMIT = 5000
 DEBUG_SLOW_REQUEST_SECONDS = 2.0
 DEBUG_SLOW_STAGE_SECONDS = 5.0
+SEMANTIC_SCHOLAR_RETRIES = 2
 BROWSER_HEADERS = {
     "User-Agent": USER_AGENT,
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
@@ -374,6 +375,15 @@ def normalize_source_url(url: str) -> str:
     if doi and doi.startswith("10.1145/"):
         return f"https://dl.acm.org/doi/abs/{doi}"
     return url
+
+
+def is_acm_doi_url(url: str) -> bool:
+    normalized = compact_spaces(url).lower()
+    return normalized.startswith("https://dl.acm.org/doi/")
+
+
+def is_acm_doi(doi: str) -> bool:
+    return compact_spaces(doi).lower().startswith("10.1145/")
 
 
 def format_cache_fill_email_subject(updates: dict[str, list[dict[str, Any]]]) -> str:
@@ -1045,6 +1055,16 @@ class PaperRepository:
         raw_hits: list[dict[str, Any]] = []
         for entry_name in entry_names:
             entry_hits = self._fetch_dblp_entry_hits(venue_kind, slug, entry_name)
+            if not entry_hits:
+                fallback_hits = self._fetch_dblp_entry_hits_from_html(venue_kind, slug, entry_name)
+                if fallback_hits:
+                    self._debug(
+                        f"entry {entry_name} API returned 0 hits, HTML fallback recovered {len(fallback_hits)} hits",
+                        conference=conference,
+                        year=year,
+                        force=True,
+                    )
+                    entry_hits = fallback_hits
             raw_hits.extend(entry_hits)
             if show_progress:
                 print(f"[{VENUES[conference]['label']} {year}] entry {entry_name} hits={len(entry_hits)}")
@@ -1100,12 +1120,15 @@ class PaperRepository:
             force=True,
         )
 
+        self._save_paper_snapshot(conference, year, papers)
+
         process_started_at = time.perf_counter()
         processing_summary = self._populate_abstracts_and_translations_serial(
             papers,
             conference=conference,
             year=year,
             show_progress=show_progress,
+            on_item_updated=lambda: self._save_paper_snapshot(conference, year, papers),
         )
         abstracts_found = processing_summary["updated_abstracts"]
         translated = processing_summary["updated_translations"]
@@ -1144,11 +1167,76 @@ class PaperRepository:
             return [entry_hits]
         return entry_hits
 
+    def _fetch_dblp_entry_hits_from_html(self, venue_kind: str, slug: str, entry_name: str) -> list[dict[str, Any]]:
+        if venue_kind != "conf":
+            return []
+
+        html_text = self._get_text(f"https://dblp.org/db/{venue_kind}/{slug}/{entry_name}.html")
+        soup = BeautifulSoup(html_text, "html.parser")
+        hits: list[dict[str, Any]] = []
+
+        for entry in soup.select("li.entry"):
+            classes = set(entry.get("class", []))
+            if "editor" in classes or "toc" in classes:
+                continue
+
+            dblp_key = (entry.get("id") or "").strip()
+            if not dblp_key:
+                continue
+
+            title_node = entry.select_one("cite .title")
+            title = clean_dblp_title(title_node.get_text(" ", strip=True) if title_node else "")
+            if not title:
+                continue
+
+            author_nodes = entry.select("cite span[itemprop='author'] span[itemprop='name']")
+            authors = [{"text": clean_author_name(node.get_text(" ", strip=True))} for node in author_nodes]
+
+            page_node = entry.select_one("cite span[itemprop='pagination']")
+            source_node = entry.select_one("li.ee a[href]")
+            details_node = entry.select_one("li.details a[href]")
+            box_icon = entry.select_one("div.box img[title]")
+            year_node = entry.select_one("meta[itemprop='datePublished']")
+            year_value = (
+                (year_node.get("content") or "").strip()
+                if year_node
+                else ""
+            )
+            if not year_value:
+                year_text_node = entry.select_one("span[itemprop='datePublished']")
+                year_value = year_text_node.get_text(" ", strip=True) if year_text_node else ""
+
+            hits.append(
+                {
+                    "info": {
+                        "key": dblp_key,
+                        "title": title,
+                        "authors": {"author": authors},
+                        "pages": page_node.get_text(" ", strip=True) if page_node else "",
+                        "type": box_icon.get("title", "") if box_icon else "",
+                        "access": "",
+                        "year": year_value,
+                        "url": details_node.get("href", "") if details_node else "",
+                        "ee": source_node.get("href", "") if source_node else "",
+                    }
+                }
+            )
+
+        return hits
+
     def _normalize_links(self, item: dict[str, Any]) -> None:
         doi = item.get("doi") or extract_doi(item.get("source_url", "")) or extract_doi(item.get("doi_url", ""))
         item["doi"] = doi
         item["doi_url"] = build_doi_url(doi)
         item["source_url"] = normalize_source_url(item.get("source_url") or item["doi_url"])
+
+    def _save_paper_snapshot(self, conference: str, year: int, papers: list[dict[str, Any]]) -> None:
+        cache_key = f"{conference}:{year}"
+        with self.lock:
+            self.cache["papers"][cache_key] = {
+                "items": papers,
+            }
+            self._save_cache()
 
     def _populate_abstracts_and_translations_serial(
         self,
@@ -1156,6 +1244,7 @@ class PaperRepository:
         conference: str,
         year: int,
         show_progress: bool = False,
+        on_item_updated: Callable[[], None] | None = None,
     ) -> dict[str, int]:
         conference_label = VENUES.get(conference, {}).get("label", conference.upper())
         total = len(papers)
@@ -1179,6 +1268,8 @@ class PaperRepository:
                 failed_abstracts += 1
                 if show_progress:
                     print("  -> \033[91mabstract failed\033[0m")
+                if on_item_updated:
+                    on_item_updated()
                 continue
 
             translated = self._translate_paper_abstract(paper)
@@ -1191,6 +1282,8 @@ class PaperRepository:
                 paper["abstract_zh"] = ""
                 if show_progress:
                     print("  -> \033[91mtranslation skipped/failed\033[0m")
+            if on_item_updated:
+                on_item_updated()
         return {
             "updated_abstracts": updated_abstracts,
             "updated_translations": updated_translations,
@@ -1264,21 +1357,25 @@ class PaperRepository:
             doi = paper.get("doi") or extract_doi(paper.get("doi_url", "")) or extract_doi(paper.get("source_url", ""))
             abstract_info: dict[str, str] = {}
             if doi:
-                abstract_info = self._find_doi_landing_abstract(paper, doi)
-                if not abstract_info:
-                    abstract_info = self._find_source_abstract(paper)
-                if not abstract_info:
-                    abstract_info = self._find_acm_abstract_by_doi(doi)
+                if is_acm_doi(doi):
+                    abstract_info = self._find_semantic_scholar_abstract_by_doi(doi)
+                    if not abstract_info:
+                        abstract_info = self._find_openalex_abstract(paper["title"], paper["year"])
+                else:
+                    abstract_info = self._find_doi_landing_abstract(paper, doi)
+                    if not abstract_info:
+                        source_url = paper.get("source_url", "")
+                        source_doi = extract_doi(source_url)
+                        if not (is_acm_doi_url(source_url) and source_doi == doi):
+                            abstract_info = self._find_source_abstract(paper)
+                    if not abstract_info:
+                        abstract_info = self._find_semantic_scholar_abstract_by_doi(doi)
+                    if not abstract_info:
+                        abstract_info = self._find_openalex_abstract(paper["title"], paper["year"])
             else:
                 abstract_info = self._find_source_abstract(paper)
                 if not abstract_info:
                     abstract_info = self._find_openalex_abstract(paper["title"], paper["year"])
-                    if abstract_info:
-                        self._debug(
-                            f"OpenAlex fallback matched title={paper['title'][:80]}",
-                            conference=paper.get("conference", ""),
-                            year=paper.get("year"),
-                        )
             if abstract_info:
                 return abstract_info
             print(f"  -> \033[93mretrying abstract fetch... (attempt {attempt}/{ABSTRACT_FETCH_RETRIES})\033[0m")
@@ -1389,7 +1486,10 @@ class PaperRepository:
             )
             if not doi:
                 return {}
-            return self._find_acm_abstract_by_doi(doi)
+            abstract_info = self._find_semantic_scholar_abstract_by_doi(doi)
+            if abstract_info:
+                return abstract_info
+            return self._find_openalex_abstract(paper["title"], paper["year"])
 
         abstract = self._extract_abstract_from_html(html_text)
         if not abstract:
@@ -1400,7 +1500,10 @@ class PaperRepository:
                 year=paper.get("year"),
             )
             if doi:
-                return self._find_acm_abstract_by_doi(doi)
+                abstract_info = self._find_semantic_scholar_abstract_by_doi(doi)
+                if abstract_info:
+                    return abstract_info
+                return self._find_openalex_abstract(paper["title"], paper["year"])
             return {}
 
         self._debug(
@@ -1476,7 +1579,7 @@ class PaperRepository:
 
         return ""
 
-    def _find_acm_abstract_by_doi(self, doi: str) -> dict[str, str]:
+    def _find_crossref_abstract_by_doi(self, doi: str) -> dict[str, str]:
         api_url = f"https://api.crossref.org/works/{urllib.parse.quote(doi)}"
         try:
             message = self._get_json(api_url).get("message", {})
@@ -1493,6 +1596,51 @@ class PaperRepository:
         return {
             "abstract": abstract,
             "abstract_source": "Crossref",
+            "doi": doi,
+            "doi_url": build_doi_url(doi),
+        }
+
+    def _find_semantic_scholar_abstract_by_doi(self, doi: str) -> dict[str, str]:
+        api_url = (
+            "https://api.semanticscholar.org/graph/v1/paper/"
+            f"DOI:{urllib.parse.quote(doi, safe='')}?fields=title,abstract,year,externalIds,url"
+        )
+        last_error = ""
+        for _ in range(SEMANTIC_SCHOLAR_RETRIES + 1):
+            try:
+                payload = self._get_json(api_url)
+                break
+            except requests.HTTPError as exc:
+                response = getattr(exc, "response", None)
+                status_code = getattr(response, "status_code", None)
+                if status_code == 429:
+                    retry_after_raw = (response.headers or {}).get("Retry-After", "").strip() if response is not None else ""
+                    try:
+                        retry_after = max(0.0, float(retry_after_raw)) if retry_after_raw else 2.0
+                    except ValueError:
+                        retry_after = 2.0
+                    last_error = (
+                        f"{status_code} Client Error: rate limited by Semantic Scholar"
+                        f", retrying after {retry_after:.0f}s"
+                    )
+                    time.sleep(retry_after)
+                    continue
+                last_error = str(exc)
+            except requests.RequestException as exc:
+                last_error = str(exc)
+        else:
+            self._debug(f"Semantic Scholar lookup failed doi={doi} error={last_error}", force=True)
+            return {}
+
+        abstract = clean_abstract_text(payload.get("abstract") or "")
+        if not is_probable_abstract(abstract):
+            self._debug(f"Semantic Scholar returned no usable abstract doi={doi}")
+            return {}
+
+        self._debug(f"Semantic Scholar abstract matched doi={doi}", force=True)
+        return {
+            "abstract": abstract,
+            "abstract_source": "Semantic Scholar",
             "doi": doi,
             "doi_url": build_doi_url(doi),
         }

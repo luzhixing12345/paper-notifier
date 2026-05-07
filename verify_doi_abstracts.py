@@ -1,12 +1,15 @@
 import argparse
+import json
 import re
+import time
+import urllib.parse
+from html import unescape
 from pathlib import Path
 from typing import Any
 
 import requests
-from requests.adapters import HTTPAdapter
 from bs4 import BeautifulSoup
-import json
+from requests.adapters import HTTPAdapter
 
 USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) "
@@ -14,6 +17,7 @@ USER_AGENT = (
     "Chrome/134.0.0.0 Safari/537.36"
 )
 REQUEST_TIMEOUT = 20
+SEMANTIC_SCHOLAR_RETRIES = 2
 BROWSER_HEADERS = {
     "User-Agent": USER_AGENT,
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
@@ -39,6 +43,28 @@ def clean_abstract_heading(value: str) -> str:
     text = value.strip()
     text = re.sub(r"^\s*abstract\s*[:\-]?\s*", "", text, flags=re.I)
     return text.strip()
+
+
+def extract_doi(url: str) -> str:
+    if not url:
+        return ""
+    match = re.search(r"10\.\d{4,9}/[-._;()/:a-z0-9]+", url, flags=re.I)
+    return match.group(0) if match else ""
+
+
+def strip_jats_tags(value: str) -> str:
+    value = re.sub(r"</?(jats:)?(p|i|b|sup|sub|sc|italic|bold)>", " ", value, flags=re.I)
+    value = re.sub(r"<[^>]+>", " ", value)
+    return compact_spaces(unescape(value))
+
+
+def clean_abstract_text(value: str) -> str:
+    paragraphs: list[str] = []
+    for part in re.split(r"\n\s*\n", value or ""):
+        cleaned = strip_jats_tags(part)
+        if cleaned:
+            paragraphs.append(cleaned)
+    return "\n\n".join(paragraphs)
 
 
 def is_probable_abstract(text: str) -> bool:
@@ -168,6 +194,87 @@ def looks_blocked(html_text: str, final_url: str, status_code: int | None) -> bo
     )
 
 
+def get_json(session: requests.Session, url: str) -> dict[str, Any]:
+    response = session.get(url, timeout=REQUEST_TIMEOUT)
+    response.raise_for_status()
+    payload = response.json()
+    if not isinstance(payload, dict):
+        raise ValueError(f"Unexpected JSON payload type for {url}: {type(payload).__name__}")
+    return payload
+
+
+def parse_retry_after_seconds(value: str) -> float:
+    text = compact_spaces(value)
+    if not text:
+        return 0.0
+    try:
+        return max(0.0, float(text))
+    except ValueError:
+        return 0.0
+
+
+def fetch_semantic_scholar_abstract(session: requests.Session, doi: str) -> dict[str, Any]:
+    if not doi:
+        return {
+            "ok": False,
+            "source": "Semantic Scholar",
+            "error": "missing doi",
+            "paper_id": "",
+            "title": "",
+            "year": None,
+            "abstract": "",
+        }
+
+    api_url = (
+        "https://api.semanticscholar.org/graph/v1/paper/"
+        f"DOI:{urllib.parse.quote(doi, safe='')}?fields=title,abstract,year,externalIds,url"
+    )
+    last_error = ""
+    for _ in range(SEMANTIC_SCHOLAR_RETRIES + 1):
+        try:
+            payload = get_json(session, api_url)
+            break
+        except requests.HTTPError as exc:
+            response = getattr(exc, "response", None)
+            status_code = getattr(response, "status_code", None)
+            if status_code == 429:
+                retry_after = parse_retry_after_seconds((response.headers or {}).get("Retry-After", ""))
+                wait_seconds = retry_after if retry_after > 0 else 2.0
+                last_error = (
+                    f"{status_code} Client Error: rate limited by Semantic Scholar"
+                    f"{f', retrying after {wait_seconds:.0f}s' if wait_seconds else ''}"
+                )
+                time.sleep(wait_seconds)
+                continue
+            last_error = str(exc)
+        except Exception as exc:
+            last_error = str(exc)
+    else:
+        return {
+            "ok": False,
+            "source": "Semantic Scholar",
+            "error": last_error,
+            "paper_id": "",
+            "title": "",
+            "year": None,
+            "abstract": "",
+        }
+
+    abstract = clean_abstract_text(payload.get("abstract") or "")
+    abstract_ok = is_probable_abstract(abstract)
+    paper_url = payload.get("url") or ""
+    paper_id = paper_url.rstrip("/").split("/")[-1] if paper_url else ""
+    return {
+        "ok": abstract_ok,
+        "source": "Semantic Scholar",
+        "error": "" if abstract_ok else "Semantic Scholar returned no usable abstract",
+        "paper_id": paper_id,
+        "title": payload.get("title") or "",
+        "year": payload.get("year"),
+        "abstract": abstract if abstract_ok else "",
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Verify whether a DOI landing page exposes a full abstract.")
     parser.add_argument("doi_url", help="DOI URL, e.g. https://doi.org/10.1145/3575693.3575714")
@@ -176,18 +283,45 @@ def main() -> None:
 
     session = build_session()
     warm_up_session(session, args.doi_url)
-    result = fetch_doi_page(session, args.doi_url)
-    html_abstract = result["html_abstract"].strip()
+    doi_result = fetch_doi_page(session, args.doi_url)
+    html_abstract = doi_result["html_abstract"].strip()
+    doi = extract_doi(args.doi_url)
+    semantic_scholar_result = {
+        "ok": False,
+        "source": "Semantic Scholar",
+        "error": "not attempted",
+        "paper_id": "",
+        "title": "",
+        "year": None,
+        "abstract": "",
+    }
+    if not html_abstract:
+        semantic_scholar_result = fetch_semantic_scholar_abstract(session, doi)
+
     payload = {
         "doi_url": args.doi_url,
-        "status_code": result["status_code"],
-        "blocked": result["blocked"],
-        "ok": result["ok"],
-        "final_url": result["final_url"],
-        "error": result["error"],
-        "html_abstract_chars": len(html_abstract),
-        "html_abstract_preview": html_abstract[:240],
-        "html_abstract": html_abstract,
+        "doi": doi,
+        "doi_page": {
+            "status_code": doi_result["status_code"],
+            "blocked": doi_result["blocked"],
+            "ok": doi_result["ok"],
+            "final_url": doi_result["final_url"],
+            "error": doi_result["error"],
+            "html_abstract_chars": len(html_abstract),
+            "html_abstract_preview": html_abstract[:240],
+            "html_abstract": html_abstract,
+        },
+        "semantic_scholar": {
+            "ok": semantic_scholar_result["ok"],
+            "source": semantic_scholar_result["source"],
+            "error": semantic_scholar_result["error"],
+            "paper_id": semantic_scholar_result["paper_id"],
+            "title": semantic_scholar_result["title"],
+            "year": semantic_scholar_result["year"],
+            "abstract_chars": len(semantic_scholar_result["abstract"]),
+            "abstract_preview": semantic_scholar_result["abstract"][:240],
+            "abstract": semantic_scholar_result["abstract"],
+        },
     }
     print(json.dumps(payload, ensure_ascii=False, indent=2))
 
