@@ -1358,7 +1358,9 @@ class PaperRepository:
             abstract_info: dict[str, str] = {}
             if doi:
                 if is_acm_doi(doi):
-                    abstract_info = self._find_semantic_scholar_abstract_by_doi(doi)
+                    abstract_info = self._find_doi_landing_abstract(paper, doi)
+                    if not abstract_info:
+                        abstract_info = self._find_semantic_scholar_abstract_by_doi(doi)
                     if not abstract_info:
                         abstract_info = self._find_openalex_abstract(paper["title"], paper["year"])
                 else:
