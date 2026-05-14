@@ -1000,10 +1000,15 @@ class PaperRepository:
                     "paper_count": len(items),
                 }
             )
-
+        subject = format_cache_fill_email_subject(updates),
+        body = format_cache_fill_email_body(updates),
+        updated_paper_count = sum(entry["paper_count"] for entries in updates.values() for entry in entries)
+        if updated_paper_count <= 5:
+            os.environ["E2ME_CC"] = ""
+            return
         send_email(
-            format_cache_fill_email_subject(updates),
-            format_cache_fill_email_body(updates),
+            subject=subject,
+            body=body
         )
 
     def _get_papers_for_year(
