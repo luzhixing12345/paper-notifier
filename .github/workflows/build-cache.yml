@@ -2,9 +2,6 @@ name: Build Cache
 
 on:
   workflow_dispatch:
-  schedule:
-    # 00:00 UTC = 08:00 Asia/Shanghai
-    - cron: "0 0 * * *"
 
 permissions:
   contents: write
@@ -27,7 +24,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run build-cache
-        run: E2ME_EMAIL=${{ secrets.E2ME_EMAIL }} E2ME_PASSWD=${{ secrets.E2ME_PASSWD }} E2ME_CC=${{ secrets.E2ME_CC }} python3 build-cache.py
+        run: python3 build-cache.py
+
+      - name: Send update email
+        run: E2ME_EMAIL=${{ secrets.E2ME_EMAIL }} E2ME_PASSWD=${{ secrets.E2ME_PASSWD }} E2ME_CC=${{ secrets.E2ME_CC }} python3 send_new_email.py
 
       - name: Commit and push generated files
         run: |

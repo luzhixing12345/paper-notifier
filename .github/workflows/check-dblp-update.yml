@@ -1,0 +1,27 @@
+name: Check DBLP Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 00:00 UTC = 08:00 Asia/Shanghai
+    - cron: "0 0 * * *"
+
+jobs:
+  check-dblp-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check DBLP update
+        run: E2ME_EMAIL=${{ secrets.E2ME_EMAIL }} E2ME_PASSWD=${{ secrets.E2ME_PASSWD }} E2ME_CC=${{ secrets.E2ME_CC }} python3 check_dblp_update.py

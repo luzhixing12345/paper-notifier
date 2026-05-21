@@ -14,13 +14,13 @@ import requests
 from requests.adapters import HTTPAdapter
 from bs4 import BeautifulSoup
 from prettytable import PrettyTable
-import e2me
 
 
 BASE_DIR = Path(__file__).resolve().parent
 CACHE_DIR = BASE_DIR / "paper_cache"
 ASSETS_DIR = BASE_DIR / "assets"
 STATIC_DATA_PATH = ASSETS_DIR / "papers-data.json"
+UPDATE_EMAIL_PATH = BASE_DIR / "new_update.txt"
 CONFERENCE_CONFIG_PATH = BASE_DIR / "CONFERENCE.txt"
 JOURNAL_CONFIG_PATH = BASE_DIR / "JOURNAL.txt"
 USER_AGENT = (
@@ -124,10 +124,6 @@ def parse_year_filters(values: list[str] | None) -> list[int]:
                 years.append(year)
     return years
 
-
-def send_email(subject: str = "New Paper Alert", body: str = "Check out the latest papers in your field!") -> None:
-    
-    e2me.send_email(subject, body)
 
 def format_conference_label(key: str) -> str:
     custom_labels = {
@@ -424,6 +420,17 @@ def format_cache_fill_email_body(updates: dict[str, list[dict[str, Any]]]) -> st
         lines.append("")
         lines.append(f"visit paper for details: https://paper-notifier.vercel.app/")
     return "\n".join(lines).strip()
+
+
+def clear_update_email_file() -> None:
+    try:
+        UPDATE_EMAIL_PATH.unlink()
+    except FileNotFoundError:
+        pass
+
+
+def write_update_email_file(subject: str, body: str) -> None:
+    UPDATE_EMAIL_PATH.write_text(f"Subject: {subject}\n\n{body.strip()}\n", encoding="utf-8")
 
 
 class PaperRepository:
@@ -984,6 +991,7 @@ class PaperRepository:
     def _send_cache_fill_notification(self) -> None:
         if not self._new_cache_keys:
             print("No new cache entries added.")
+            clear_update_email_file()
             return
 
         print("New cache entries added for: " + ", ".join(sorted(self._new_cache_keys)))
@@ -1000,16 +1008,15 @@ class PaperRepository:
                     "paper_count": len(items),
                 }
             )
-        subject = format_cache_fill_email_subject(updates),
-        body = format_cache_fill_email_body(updates),
+        subject = format_cache_fill_email_subject(updates)
+        body = format_cache_fill_email_body(updates)
         updated_paper_count = sum(entry["paper_count"] for entries in updates.values() for entry in entries)
         if updated_paper_count <= 5:
-            os.environ["E2ME_CC"] = ""
+            print("New update email skipped because updated paper count <= 5.")
+            clear_update_email_file()
             return
-        send_email(
-            subject=subject,
-            body=body
-        )
+        write_update_email_file(subject, body)
+        print(f"New update email content written to {UPDATE_EMAIL_PATH}")
 
     def _get_papers_for_year(
         self,

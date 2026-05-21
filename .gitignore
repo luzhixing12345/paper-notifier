@@ -8,3 +8,5 @@ __pycache__
 data/
 *.log
 setup_crontab.sh
+e2me.toml
+new_update.txt
