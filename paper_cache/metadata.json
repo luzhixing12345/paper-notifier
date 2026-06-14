@@ -250,12 +250,16 @@
     },
     "sigmod": {
       "years": [
+        2026,
         2025,
         2024,
         2023,
         2022
       ],
       "year_entries": {
+        "2026": [
+          "sigmod2026c"
+        ],
         "2025": [
           "sigmod2025ari",
           "sigmod2025c"
